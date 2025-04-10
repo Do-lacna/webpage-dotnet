@@ -11,6 +11,9 @@ on:
     paths:
       - 'Dolacna.Webpage/**'
       - '.github/workflows/ci.yml'
+permissions:
+  id-token: write
+  contents: read
 jobs:
   calculate-version:
     name: Calculate Version
