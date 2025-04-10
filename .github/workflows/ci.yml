@@ -72,6 +72,4 @@ jobs:
       - name: Deploy to Azure Container Apps
         uses: azure/container-apps-deploy-action@v1
         with:
-          app-name: webpage
-          resource-group: usetri
-          image: docker.io/offli/webpage:latest
+          imageToDeploy: docker.io/offli/webpage:latest
