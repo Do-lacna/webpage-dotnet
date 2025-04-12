@@ -11,7 +11,7 @@ on:
     paths:
       - 'Dolacna.Webpage/**'
       - '.github/workflows/ci.yml'
-permissions:
+permissions: # TODO 00 what is this
   id-token: write
   contents: read
 jobs:
@@ -82,3 +82,4 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           imageToDeploy: docker.io/offli/webpage:latest
+          resourceGroup: Usetri
