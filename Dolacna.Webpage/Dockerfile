@@ -1,10 +1,10 @@
-﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS base
+﻿FROM mcr.microsoft.com/dotnet/aspnet:8.0-alpine AS base
 USER $APP_UID
 WORKDIR /app
 EXPOSE 8080
 EXPOSE 8081
 
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-alpine AS build
 # Run commands to install node - it is needed to execute npm commands in project's csproj file. Versions for alpine: https://pkgs.alpinelinux.org/packages?branch=edge&repo=&arch=&maintainer=
 RUN apk add --update nodejs npm
 RUN echo $(node -v && npm -v)
