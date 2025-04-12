@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 160 10% 98%;
+    --foreground: 160 10% 5%;
+
+    --card: 160 10% 100%;
+    --card-foreground: 160 10% 5%;
+
+    --popover: 160 10% 100%;
+    --popover-foreground: 160 10% 5%;
+
+    --primary: #034f4a;
+    --primary-foreground: #ffffff;
+
+    --secondary: #e6eeed;
+    --secondary-foreground: #034f4a;
+
+    --muted: 160 10% 93%;
+    --muted-foreground: 160 10% 40%;
+
+    --accent: #62e46d;
+    --accent-foreground: #034f4a;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 160 10% 90%;
+    --input: 160 10% 90%;
+    --ring: 160 10% 75%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      'Roboto',
+      'Helvetica Neue',
+      sans-serif;
+  }
+
+  .dark {
+    --background: 160 10% 5%;
+    --foreground: 160 10% 98%;
+
+    --card: 160 10% 7%;
+    --card-foreground: 160 10% 98%;
+
+    --popover: 160 10% 7%;
+    --popover-foreground: 160 10% 98%;
+
+    --primary: #62e46d;
+    --primary-foreground: #034f4a;
+
+    --secondary: #034f4a;
+    --secondary-foreground: #e6eeed;
+
+    --muted: 160 10% 15%;
+    --muted-foreground: 160 10% 70%;
+
+    --accent: #62e46d;
+    --accent-foreground: #034f4a;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 160 10% 15%;
+    --input: 160 10% 15%;
+    --ring: 160 10% 30%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    padding: 0;
+    margin: 0;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-medium tracking-tight;
+  }
+
+  #root {
+    max-width: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+}
+
+/* Custom classes */
+@layer components {
+  .glass-panel {
+    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-soft rounded-2xl;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-brand-dark to-brand-accent;
+  }
+
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24;
+  }
+
+  .button-hover-effect {
+    @apply transition-all duration-300 hover:shadow-glow;
+  }
+
+  .pricing-badge {
+    @apply absolute -top-3 right-8 bg-brand-accent text-brand-dark text-sm font-medium px-3 py-1 rounded-full shadow-soft;
+  }
+}
+
+/* Animations */
+.reveal-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s ease-out;
+}
+
+.reveal-animation.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
