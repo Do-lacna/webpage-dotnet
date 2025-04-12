@@ -83,3 +83,4 @@ jobs:
         with:
           imageToDeploy: docker.io/offli/webpage:latest
           resourceGroup: Usetri
+          containerAppName: webpage
