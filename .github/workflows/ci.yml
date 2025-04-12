@@ -62,7 +62,7 @@ jobs:
           tags: "offli/webpage:${{ needs.calculate-version.outputs.semVer }},offli/webpage"
   az-deploy:
     runs-on: ubuntu-latest
-    needs: build
+    needs: [build, calculate-version]
     steps:
       - name: Azure login
         uses: azure/login@v2
@@ -81,6 +81,6 @@ jobs:
       - name: Deploy to Azure Container Apps
         uses: azure/container-apps-deploy-action@v1
         with:
-          imageToDeploy: docker.io/offli/webpage:${{ needs.calculate-version.outputs.semVer }}
+          imageToDeploy: "docker.io/offli/webpage:${{ needs.calculate-version.outputs.semVer }}"
           resourceGroup: Usetri
           containerAppName: webpage
