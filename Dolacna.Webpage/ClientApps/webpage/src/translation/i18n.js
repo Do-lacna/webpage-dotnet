@@ -14,7 +14,7 @@ i18n
       escapeValue: false, // React already handles escaping
     },
     backend: {
-      loadPath: '/locale/{{lng}}/translation.json', // Path to translation files
+      loadPath: '/webpage/locale/{{lng}}/translation.json', // Path to translation files
     },
     detection: {
       order: ['localStorage', 'navigator'], // Detect language from localStorage first, then browser settings
