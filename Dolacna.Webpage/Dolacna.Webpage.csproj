@@ -13,4 +13,20 @@
       </Content>
     </ItemGroup>
 
+    <Target Name="EnsureNodeIsInstalled" BeforeTargets="Build;NpmInstall">
+        <Exec Command="node --version" ContinueOnError="true">
+            <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
+        </Exec>
+        <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
+    </Target>
+
+    <Target Name="NpmInstall" BeforeTargets="Build">
+        <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
+        <Exec WorkingDirectory="./ClientApps/webpage" Command="npm install" />
+    </Target>
+
+    <Target Name="NpmBuildAndPublishAssets" AfterTargets="NpmInstall">
+        <Message Importance="high" Text="Running npm build in prod mode" />
+        <Exec WorkingDirectory="./ClientApps/webpage" Command="npm run build:dev" />
+    </Target>
 </Project>

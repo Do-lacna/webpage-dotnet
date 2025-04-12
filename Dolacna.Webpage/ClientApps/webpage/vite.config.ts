@@ -17,4 +17,8 @@ export default defineConfig(({ mode }) => ({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  build: {
+    outDir: path.resolve(__dirname, '../../wwwroot/webpage'), // Set output directory
+    emptyOutDir: true, // Clear the output directory before building
+  },
 }));
