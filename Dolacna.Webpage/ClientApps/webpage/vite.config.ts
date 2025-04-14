@@ -4,8 +4,10 @@ import path from 'path';
 import { componentTagger } from 'lovable-tagger';
 
 // https://vitejs.dev/config/
+
+export const BASE_PATH = '/webpage';
 export default defineConfig(({ mode }) => ({
-  base: '/webpage',
+  base: `${BASE_PATH}`,
   server: {
     host: '::',
     port: 8080,
@@ -19,7 +21,8 @@ export default defineConfig(({ mode }) => ({
     },
   },
   build: {
-    outDir: path.resolve(__dirname, '../../wwwroot/webpage'), // Set output directory
+    outDir: path.resolve(__dirname, `../../wwwroot${BASE_PATH}`), // Set output directory
     emptyOutDir: true, // Clear the output directory before building
+    // minify: mode === 'production', // Disable minification for non-production builds
   },
 }));
