@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Apple, ShoppingBag } from 'lucide-react';
+import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 14.png';
 
 const Download = () => {
   const { t } = useTranslation();
@@ -76,7 +77,7 @@ const Download = () => {
           <div className="md:w-1/2 relative reveal-animation">
             <div className="relative max-w-[280px] mx-auto">
               <img
-                src="/public/images/iMockup - iPhone 14.png"
+                src={IPhoneMockupPng}
                 alt="usetri.sk app preview"
                 className="w-full h-auto"
               />

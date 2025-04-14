@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import BlackTitaniumPng from '@/../public/images/Black-Titanium.png';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -90,7 +91,7 @@ const Hero = () => {
           ref={phoneRef}
           className="relative h-[900px] w-full max-w-[450px] mx-auto md:mx-0 md:ml-auto reveal-animation"
         >
-          <img src="public\images\Black-Titanium.png"></img>
+          <img src={BlackTitaniumPng} alt={"PhoneImage"}></img>
         </div>
 
         {/* Scroll Indicator */}
