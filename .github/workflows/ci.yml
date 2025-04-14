@@ -11,7 +11,7 @@ on:
     paths:
       - 'Dolacna.Webpage/**'
       - '.github/workflows/ci.yml'
-permissions: # TODO 00 what is this
+permissions: # needed to deploy
   id-token: write
   contents: read
 jobs:
