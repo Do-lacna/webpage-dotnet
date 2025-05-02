@@ -35,9 +35,9 @@ const Header = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <span className="text-2xl font-bold text-brand-dark">
+          <a href="/" className="text-2xl font-bold text-brand-dark">
             usetri<span className="text-brand-accent">.sk</span>
-          </span>
+          </a>
         </div>
 
         {/* Desktop Navigation */}
