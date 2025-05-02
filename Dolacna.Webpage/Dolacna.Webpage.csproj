@@ -13,6 +13,10 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="wwwroot\" />
+    </ItemGroup>
+
     <Target Name="EnsureNodeIsInstalled" BeforeTargets="Build;NpmInstall">
         <Exec Command="node --version" ContinueOnError="true">
             <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />

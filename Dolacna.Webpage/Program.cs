@@ -12,5 +12,5 @@ builder.Services.AddCors(options =>
 var app = builder.Build();
 app.UseCors("AllowAll");
 app.UseStaticFiles();
-app.MapFallbackToFile("/webpage/{*path:nonfile}", "webpage/index.html");
+app.MapFallbackToFile("/{*path:nonfile}", "index.html");
 app.Run();

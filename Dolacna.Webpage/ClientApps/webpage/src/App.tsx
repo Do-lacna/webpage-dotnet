@@ -13,8 +13,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      {/*// TODO 0 extract /webpage to BASE_PATH*/}
-      <BrowserRouter basename={"/webpage"}>
+      <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
