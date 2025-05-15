@@ -115,5 +115,50 @@
     "premiumBenefits": "Prémiové výhody",
     "allRightsReserved": "Všetky práva vyhradené.",
     "cookiePolicy": "Politika cookies"
+  },
+
+  "contact": {
+    "header": "Kontaktujte nás",
+    "subheader": "Radi vás vypočujeme! Kontaktujte nás pomocou nižšie uvedených informácií.",
+    "addressTitle": "Naša adresa",
+    "addressValue": "Hlavná 123, Poschodie 456\nMestovce, Slovensko 12345",
+    "emailTitle": "Email",
+    "emailValue": "kontakt@example.com",
+    "phoneTitle": "Telefón",
+    "phoneValue": "+421 (555) 123-456",
+    "hoursTitle": "Otváracie hodiny",
+    "hoursValue": "Pondelok - Piatok: 9:00 - 18:00\nSobota - Nedeľa: Zatvorené",
+    "formTitle": "Kontaktný formulár",
+    "formName": "Vaše meno",
+    "formEmail": "Váš email",
+    "formMessage": "Vaša správa",
+    "formButton": "Odoslať správu"
+  },
+
+  "team": {
+    "header": "Náš tím",
+    "subheader": "Zoznámte sa s ľuďmi, ktorí umožňujú našu misiu.",
+    "members": [
+      {
+        "name": "Adam Martiška",
+        "role": "CEO / Frontend vývojár"
+      },
+      {
+        "name": "Juraj Paška",
+        "role": "Backend vývojár"
+      },
+      {
+        "name": "Martin Lauš",
+        "role": "UI/UX dizajnér"
+      },
+      {
+        "name": "Róbert Jačko",
+        "role": "AI inžinier"
+      },
+      {
+        "name": "Eliška",
+        "role": "Právna poradkyňa"
+      }
+    ]
   }
 }

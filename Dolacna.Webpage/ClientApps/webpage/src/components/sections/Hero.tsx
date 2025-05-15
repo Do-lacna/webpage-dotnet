@@ -53,7 +53,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <Button className="button-hover-effect text-lg px-8 py-6 bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark">
-              {t('download_now')}
+              <a href="#download">{t('download_app')}</a>
             </Button>
             <Button
               variant="outline"
@@ -91,7 +91,7 @@ const Hero = () => {
           ref={phoneRef}
           className="relative h-[900px] w-full max-w-[450px] mx-auto md:mx-0 md:ml-auto reveal-animation"
         >
-          <img src={BlackTitaniumPng} alt={"PhoneImage"}></img>
+          <img src={BlackTitaniumPng} alt={'PhoneImage'}></img>
         </div>
 
         {/* Scroll Indicator */}

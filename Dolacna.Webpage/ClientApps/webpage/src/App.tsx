@@ -9,6 +9,7 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Cookies from './pages/Cookies';
 import Team from './pages/Team';
+import Contact from './pages/Contact';
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/TermsOfService" element={<TermsOfService />} />
           <Route path="/Cookies" element={<Cookies />} />
           <Route path="/AboutUs" element={<Team />} />
+          <Route path="/Contact" element={<Contact />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

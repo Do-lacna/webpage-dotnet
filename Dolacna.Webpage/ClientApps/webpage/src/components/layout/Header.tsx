@@ -3,11 +3,14 @@ import { cn } from '@/lib/utils';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Track scroll position for header styling
   useEffect(() => {
@@ -23,6 +26,22 @@ const Header = () => {
 
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
+  };
+
+  // Helper to handle navigation and scrolling
+  const handleNavClick = (e: React.MouseEvent, sectionId: string) => {
+    e.preventDefault();
+    if (location.pathname !== '/') {
+      navigate('/', { replace: false });
+      // Wait for navigation, then scroll
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100); // Adjust delay if needed
+    } else {
+      const el = document.getElementById(sectionId);
+      if (el) el.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -47,21 +66,25 @@ const Header = () => {
           <a
             href="#features"
             className="text-foreground hover:text-brand-accent transition-colors"
+            onClick={(e) => handleNavClick(e, 'features')}
           >
             {t('features_header')}
           </a>
           <a
-            href="#how-it-works"
-            className="text-foreground hover:text-brand-accent transition-colors"
-          >
-            {t('how_it_works')}
-          </a>
-          <a
             href="#premium"
             className="text-foreground hover:text-brand-accent transition-colors"
+            onClick={(e) => handleNavClick(e, 'premium')}
           >
             {t('premium_header')}
           </a>
+          <a
+            href="#how-it-works"
+            className="text-foreground hover:text-brand-accent transition-colors"
+            onClick={(e) => handleNavClick(e, 'how-it-works')}
+          >
+            {t('how_it_works')}
+          </a>
+
           <Button
             className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
             asChild
@@ -97,23 +120,32 @@ const Header = () => {
             <a
               href="#features"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => {
+                handleNavClick(e, 'features');
+                setMobileMenuOpen(false);
+              }}
             >
               {t('features_header')}
             </a>
             <a
-              href="#how-it-works"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {t('how_it_works')}
-            </a>
-            <a
               href="#premium"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={(e) => {
+                handleNavClick(e, 'premium');
+                setMobileMenuOpen(false);
+              }}
             >
               {t('premium_header')}
+            </a>
+            <a
+              href="#how-it-works"
+              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              onClick={(e) => {
+                handleNavClick(e, 'how-it-works');
+                setMobileMenuOpen(false);
+              }}
+            >
+              {t('how_it_works')}
             </a>
             <Button
               className="w-full bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"

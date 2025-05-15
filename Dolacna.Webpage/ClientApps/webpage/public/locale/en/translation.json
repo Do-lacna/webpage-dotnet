@@ -115,5 +115,50 @@
     "premiumBenefits": "Premium Benefits",
     "allRightsReserved": "All rights reserved.",
     "cookiePolicy": "Cookie Policy"
+  },
+
+  "contact": {
+    "header": "Contact Us",
+    "subheader": "We'd love to hear from you! Reach out using the information below.",
+    "addressTitle": "Our Address",
+    "addressValue": "123 Main Street, Suite 456\nCityville, Country 12345",
+    "emailTitle": "Email",
+    "emailValue": "contact@example.com",
+    "phoneTitle": "Phone",
+    "phoneValue": "+1 (555) 123-4567",
+    "hoursTitle": "Business Hours",
+    "hoursValue": "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday - Sunday: Closed",
+    "formTitle": "Contact Form",
+    "formName": "Your Name",
+    "formEmail": "Your Email",
+    "formMessage": "Your Message",
+    "formButton": "Send Message"
+  },
+
+  "team": {
+    "header": "Our Team",
+    "subheader": "Meet the people who make our mission possible.",
+    "members": [
+      {
+        "name": "Adam Martiška",
+        "role": "CEO / Frontend Developer"
+      },
+      {
+        "name": "Juraj Paška",
+        "role": "Backend Developer"
+      },
+      {
+        "name": "Martin Lauš",
+        "role": "UI/UX Designer"
+      },
+      {
+        "name": "Róbert Jačko",
+        "role": "AI Engineer"
+      },
+      {
+        "name": "Eliška",
+        "role": "Legal Advisor"
+      }
+    ]
   }
 }

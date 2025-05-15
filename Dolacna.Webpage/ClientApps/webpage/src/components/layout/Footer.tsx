@@ -53,25 +53,10 @@ const Footer = () => {
                   {t('footer.aboutUs')}
                 </a>
               </li>
+
               <li>
                 <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.careers')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.press')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="/Contact"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.contact')}
