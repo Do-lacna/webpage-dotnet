@@ -26,13 +26,6 @@ const Footer = () => {
               <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -54,7 +47,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="AboutUs"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.aboutUs')}
@@ -146,22 +139,6 @@ const Footer = () => {
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.googlePlay')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.features')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.premiumBenefits')}
                 </a>
               </li>
             </ul>

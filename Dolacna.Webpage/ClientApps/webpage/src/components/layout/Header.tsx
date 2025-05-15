@@ -19,6 +19,8 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const [language, setLanguage] = useState<'sk' | 'en'>('sk');
+
   const changeLanguage = (lng: string) => {
     i18n.changeLanguage(lng);
   };
@@ -43,7 +45,7 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
-            href="#features_header"
+            href="#features"
             className="text-foreground hover:text-brand-accent transition-colors"
           >
             {t('features_header')}
@@ -55,26 +57,27 @@ const Header = () => {
             {t('how_it_works')}
           </a>
           <a
-            href="#premium_header"
+            href="#premium"
             className="text-foreground hover:text-brand-accent transition-colors"
           >
             {t('premium_header')}
           </a>
-          <Button className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all">
-            {t('download_app')}
+          <Button
+            className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
+            asChild
+          >
+            <a href="#download">{t('download_app')}</a>
           </Button>
-
-          {/* Language Selector */}
-          <div className="text-foreground hover:text-brand-accent transition-colors">
-            <select
-              onChange={(e) => changeLanguage(e.target.value)}
-              value={i18n.language}
-              className="px-4 py-2 border rounded-md bg-white shadow-sm text-gray-800"
-            >
-              <option value="en">{t('language.english')}</option>
-              <option value="sk">{t('language.slovak')}</option>
-            </select>
-          </div>
+          <Button
+            variant="ghost"
+            onClick={() => {
+              setLanguage(language === 'sk' ? 'en' : 'sk');
+              changeLanguage(language === 'sk' ? 'en' : 'sk');
+            }}
+            className="ml-4"
+          >
+            {language.toUpperCase()}
+          </Button>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -92,7 +95,7 @@ const Header = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg animate-slide-down">
           <div className="px-4 py-6 space-y-4">
             <a
-              href="#features_header"
+              href="#features"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
@@ -106,7 +109,7 @@ const Header = () => {
               {t('how_it_works')}
             </a>
             <a
-              href="#premium_header"
+              href="#premium"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >

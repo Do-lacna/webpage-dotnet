@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import TermsOfService from './pages/TermsOfService';
 import Cookies from './pages/Cookies';
+import Team from './pages/Team';
 
 const queryClient = new QueryClient();
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
           <Route path="/TermsOfService" element={<TermsOfService />} />
           <Route path="/Cookies" element={<Cookies />} />
+          <Route path="/AboutUs" element={<Team />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
