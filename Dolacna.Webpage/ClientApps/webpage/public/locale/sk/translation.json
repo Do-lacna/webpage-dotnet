@@ -160,5 +160,56 @@
         "role": "Právna poradkyňa"
       }
     ]
+  },
+
+  "howItWorksPage": {
+    "title": "Ako to funguje",
+    "subtitle": "Naučte sa používať hlavné funkcie našej aplikácie pomocou podrobných návodov.",
+    "searchPlaceholder": "Vyhľadajte návody alebo funkcie...",
+    "noResults": "Nenašli sa žiadne výsledky.",
+    "features": {
+      "search": {
+        "name": "Vyhľadávanie",
+        "description": "Rýchlo nájdite produkty a recepty pomocou nášho výkonného vyhľadávača. Filtrovať môžete podľa kategórie, ceny alebo diétneho obmedzenia.",
+        "tutorials": [
+          {
+            "title": "Ako vyhľadávať produkty",
+            "content": "1. Prejdite na hlavnú stránku a nájdite vyhľadávací panel hore.\n2. Zadajte názov produktu alebo receptu, ktorý hľadáte.\n3. Použite filtre na zúženie výsledkov.\n4. Kliknite na výsledok pre viac detailov."
+          },
+          {
+            "title": "Používanie pokročilých filtrov",
+            "content": "1. Kliknite na tlačidlo \"Filtre\" vedľa vyhľadávacieho panela.\n2. Vyberte kategórie, cenové rozpätia alebo diétne štítky.\n3. Použite filtre na aktualizáciu výsledkov vyhľadávania."
+          }
+        ]
+      },
+      "shoppingList": {
+        "name": "Nákupný zoznam",
+        "description": "Jednoducho vytvárajte a spravujte svoje nákupné zoznamy. Pridávajte položky priamo z výsledkov vyhľadávania alebo receptov.",
+        "tutorials": [
+          {
+            "title": "Vytvorenie nákupného zoznamu",
+            "content": "1. Prejdite do sekcie \"Nákupný zoznam\" v hlavnom menu.\n2. Kliknite na \"Pridať položku\" a zadajte názov produktu.\n3. Nastavte množstvo a voliteľné poznámky.\n4. Uložte si zoznam na neskôr."
+          },
+          {
+            "title": "Pridávanie položiek z receptov",
+            "content": "1. Otvorte recept, ktorý sa vám páči.\n2. Kliknite na tlačidlo \"Pridať do nákupného zoznamu\".\n3. Ingrediencie sa automaticky pridajú do vášho nákupného zoznamu."
+          }
+        ]
+      },
+      "profile": {
+        "name": "Profil",
+        "description": "Spravujte svoj účet, preferencie a zobrazte si históriu svojej aktivity.",
+        "tutorials": [
+          {
+            "title": "Aktualizácia profilu",
+            "content": "1. Prejdite do sekcie \"Profil\" v menu.\n2. Kliknite na \"Upraviť profil\".\n3. Aktualizujte svoje osobné údaje a preferencie.\n4. Uložte zmeny pre aktualizáciu profilu."
+          },
+          {
+            "title": "Zobrazenie histórie aktivity",
+            "content": "1. V sekcii \"Profil\" prejdite nižšie na \"História aktivity\".\n2. Prezrite si svoje posledné vyhľadávania, zoznamy a zobrazené recepty."
+          }
+        ]
+      }
+    }
   }
 }

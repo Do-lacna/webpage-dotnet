@@ -78,9 +78,8 @@ const Header = () => {
             {t('premium_header')}
           </a>
           <a
-            href="#how-it-works"
+            href="/HowItWorks"
             className="text-foreground hover:text-brand-accent transition-colors"
-            onClick={(e) => handleNavClick(e, 'how-it-works')}
           >
             {t('how_it_works')}
           </a>

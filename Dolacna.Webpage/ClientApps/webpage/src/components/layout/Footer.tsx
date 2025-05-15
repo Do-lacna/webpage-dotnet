@@ -72,14 +72,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.helpCenter')}
-                </a>
-              </li>
-              <li>
-                <a
                   href="/PrivacyPolicy"
                   className="text-white/70 hover:text-white transition-colors"
                 >
