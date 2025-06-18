@@ -17,6 +17,10 @@
       <Folder Include="wwwroot\" />
     </ItemGroup>
 
+    <ItemGroup>
+      <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
+    </ItemGroup>
+
     <Target Name="EnsureNodeIsInstalled" BeforeTargets="Build;NpmInstall">
         <Exec Command="node --version" ContinueOnError="true">
             <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
