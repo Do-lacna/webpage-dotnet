@@ -26,13 +26,6 @@ const Footer = () => {
               <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"
-                aria-label="Twitter"
-              >
-                <Twitter size={20} />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"
                 aria-label="Instagram"
               >
                 <Instagram size={20} />
@@ -54,31 +47,16 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="AboutUs"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.aboutUs')}
                 </a>
               </li>
+
               <li>
                 <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.careers')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.press')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="/Contact"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.contact')}
@@ -94,15 +72,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.helpCenter')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
+                  href="/PrivacyPolicy"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.privacyPolicy')}
@@ -110,7 +80,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/TermsOfService"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.termsOfService')}
@@ -118,7 +88,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="/Cookies"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.cookieSettings')}
@@ -148,22 +118,6 @@ const Footer = () => {
                   {t('footer.googlePlay')}
                 </a>
               </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.features')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.premiumBenefits')}
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -173,13 +127,22 @@ const Footer = () => {
             © {currentYear} usetri.sk. {t('footer.allRightsReserved')}
           </div>
           <div className="mt-4 md:mt-0 flex space-x-6">
-            <a href="#" className="text-white/50 hover:text-white text-sm">
+            <a
+              href="PrivacyPolicy"
+              className="text-white/50 hover:text-white text-sm"
+            >
               {t('footer.privacyPolicy')}
             </a>
-            <a href="#" className="text-white/50 hover:text-white text-sm">
+            <a
+              href="TermsOfService"
+              className="text-white/50 hover:text-white text-sm"
+            >
               {t('footer.termsOfService')}
             </a>
-            <a href="#" className="text-white/50 hover:text-white text-sm">
+            <a
+              href="Cookies"
+              className="text-white/50 hover:text-white text-sm"
+            >
               {t('footer.cookiePolicy')}
             </a>
           </div>

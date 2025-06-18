@@ -1,0 +1,119 @@
+{
+  "save_money": "Save money on every shopping trip",
+  "compare_prices": "Compare grocery prices across Slovakia",
+  "across_slovakia": "across Slovakia",
+  "description": "usetri.sk finds the best deals on groceries by comparing prices at multiple supermarkets in real-time.",
+  "download_now": "Download Now",
+  "learn_more": "Learn More",
+  "supermarkets_count": "5+",
+  "supermarkets": "Supermarkets",
+  "products_count": "100s",
+  "products": "Products",
+  "savings_percentage": "20%",
+  "avg_savings": "Avg. Savings",
+  "scroll_to_explore": "Scroll to explore",
+  "features_header": "Features",
+  "how_it_works": "How It Works",
+  "premium_header": "Premium",
+  "download_app": "Download App",
+  "toggle_menu": "Toggle menu",
+  "language": {
+    "english": "English (English)",
+    "slovak": "Slovak (Slovenčina)"
+  },
+
+  "features": {
+    "heading": "Every Feature You Need to",
+    "headingAccent": "Save Money",
+    "subheading": "Our app is designed to make grocery shopping more efficient and economical, with smart tools to help you maximize your savings.",
+    "searchCompare": {
+      "title": "Search & Compare",
+      "description": "Easily search for products and compare prices across multiple supermarkets in Slovakia."
+    },
+    "shoppingLists": {
+      "title": "Shopping Lists",
+      "description": "Create and manage shopping lists that automatically calculate the best store for your entire list."
+    },
+    "dealAlerts": {
+      "title": "Deal Alerts",
+      "description": "Get notified when products on your watchlist go on sale or drop in price."
+    },
+    "realTimeUpdates": {
+      "title": "Real-time Updates",
+      "description": "Prices are updated daily to ensure you always have the latest information."
+    },
+    "priceHistory": {
+      "title": "Price History",
+      "description": "View price trends over time to make informed purchasing decisions."
+    },
+    "verifiedData": {
+      "title": "Verified Data",
+      "description": "All pricing data is verified for accuracy before being displayed in the app."
+    }
+  },
+
+  "premium": {
+    "heading": "Unlock the",
+    "headingAccent": "Full Potential",
+    "subheading": "Our premium subscription unlocks powerful features to maximize your savings on every shopping trip.",
+    "recommended": "Recommended",
+    "trialNote": "All plans come with a 7-day free trial. Cancel anytime.",
+    "plans": {
+      "free": {
+        "name": "Free",
+        "description": "Basic price comparison",
+        "cta": "Download Free"
+      },
+      "premium": {
+        "name": "Premium",
+        "period": "per month",
+        "description": "Advanced shopping experience",
+        "cta": "Get Premium"
+      }
+    },
+    "features": {
+      "searchCompare": "Search & compare prices",
+      "limitedViews": "View up to 5 products per day",
+      "basicHistory": "Basic price history (7 days)",
+      "shoppingList": "Shopping list feature",
+      "dealAlerts": "Deal alerts",
+      "adFree": "Ad-free experience",
+      "unlimitedSearches": "Unlimited product searches",
+      "fullHistory": "Full price history (90 days)",
+      "smartLists": "Smart shopping lists",
+      "fullAlerts": "Deal alerts for any product",
+      "recommendations": "Store recommendations"
+    }
+  },
+
+  "download": {
+    "heading": "Start Saving on Your",
+    "headingAccent": "Grocery Bills",
+    "subheading": "Download usetri.sk now and join thousands of smart shoppers who are already saving money on their grocery shopping across Slovakia.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "joinedBy": "Joined by",
+    "smartShoppers": "smart shoppers"
+  },
+
+  "footer": {
+    "description": "Helping you save money on groceries across Slovakia.",
+    "company": "Company",
+    "aboutUs": "About Us",
+    "careers": "Careers",
+    "press": "Press",
+    "contact": "Contact",
+    "resources": "Resources",
+    "helpCenter": "Help Center",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "cookieSettings": "Cookie Settings",
+    "getTheApp": "Get The App",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "features": "Features",
+    "premiumBenefits": "Premium Benefits",
+    "allRightsReserved": "All rights reserved.",
+    "cookiePolicy": "Cookie Policy"
+  }
+}

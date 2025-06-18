@@ -115,5 +115,104 @@
     "premiumBenefits": "Premium Benefits",
     "allRightsReserved": "All rights reserved.",
     "cookiePolicy": "Cookie Policy"
+  },
+
+  "contact": {
+    "header": "Contact Us",
+    "subheader": "We'd love to hear from you! Reach out using the information below.",
+    "addressTitle": "Our Address",
+    "addressValue": "123 Main Street, Suite 456\nCityville, Country 12345",
+    "emailTitle": "Email",
+    "emailValue": "contact@example.com",
+    "phoneTitle": "Phone",
+    "phoneValue": "+1 (555) 123-4567",
+    "hoursTitle": "Business Hours",
+    "hoursValue": "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday - Sunday: Closed",
+    "formTitle": "Contact Form",
+    "formName": "Your Name",
+    "formEmail": "Your Email",
+    "formMessage": "Your Message",
+    "formButton": "Send Message"
+  },
+
+  "team": {
+    "header": "Our Team",
+    "subheader": "Meet the people who make our mission possible.",
+    "members": [
+      {
+        "name": "Adam Martiška",
+        "role": "CEO / Frontend Developer"
+      },
+      {
+        "name": "Juraj Paška",
+        "role": "Backend Developer"
+      },
+      {
+        "name": "Martin Lauš",
+        "role": "UI/UX Designer"
+      },
+      {
+        "name": "Róbert Jačko",
+        "role": "AI Engineer"
+      },
+      {
+        "name": "Eliška",
+        "role": "Legal Advisor"
+      }
+    ]
+  },
+
+  "howItWorksPage": {
+    "title": "How It Works",
+    "subtitle": "Learn how to use the main features of our app with step-by-step tutorials.",
+    "features": {
+      "search": {
+        "name": "Search",
+        "description": "Quickly find products and recipes using our powerful search engine. Filter results by category, price, or dietary preferences.",
+        "tutorials": [
+          {
+            "title": "How to Search for Products",
+            "content": "1. Go to the main page and locate the search bar at the top.\n2. Enter the product or recipe name you are looking for.\n3. Use filters to narrow down your results.\n4. Click on a result to view more details."
+          },
+          {
+            "title": "Using Advanced Filters",
+            "content": "1. Click on the \"Filters\" button next to the search bar.\n2. Select categories, price ranges, or dietary tags.\n3. Apply filters to update your search results."
+          }
+        ]
+      },
+      "shoppingList": {
+        "name": "Shopping List",
+        "description": "Easily create and manage your shopping lists. Add items directly from search results or recipes.",
+        "tutorials": [
+          {
+            "title": "Creating a Shopping List",
+            "content": "1. Navigate to the \"Shopping List\" section from the main menu.\n2. Click \"Add Item\" and enter the product name.\n3. Set quantity and optional notes.\n4. Save your list for later use."
+          },
+          {
+            "title": "Adding Items from Recipes",
+            "content": "1. Open a recipe you like.\n2. Click the \"Add to Shopping List\" button.\n3. The ingredients will be added to your shopping list automatically."
+          }
+        ]
+      },
+      "profile": {
+        "name": "Profile",
+        "description": "Manage your account, preferences, and view your activity history.",
+        "tutorials": [
+          {
+            "title": "Updating Your Profile",
+            "content": "1. Go to the \"Profile\" section from the menu.\n2. Click \"Edit Profile\".\n3. Update your personal information and preferences.\n4. Save changes to update your profile."
+          },
+          {
+            "title": "Viewing Activity History",
+            "content": "1. In the \"Profile\" section, scroll down to \"Activity History\".\n2. Review your recent searches, lists, and recipes viewed."
+          }
+        ]
+      }
+    },
+
+    "searchPlaceholder": "Search tutorials or features...",
+    "noResults": "No results found."
   }
 }
+
+

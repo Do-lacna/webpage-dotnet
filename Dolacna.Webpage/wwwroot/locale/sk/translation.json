@@ -1,0 +1,119 @@
+{
+  "save_money": "Ušetrite peniaze pri každom nákupe",
+  "compare_prices": "Porovnajte ceny potravín",
+  "across_slovakia": "naprieč Slovenskom",
+  "description": "usetri.sk nájde najlepšie ponuky na potraviny porovnaním cien v rôznych supermarketoch v reálnom čase.",
+  "download_now": "Stiahnuť teraz",
+  "learn_more": "Viac informácií",
+  "supermarkets_count": "5+",
+  "supermarkets": "Supermarketov",
+  "products_count": "100ky",
+  "products": "Produktov",
+  "savings_percentage": "20%",
+  "avg_savings": "Priemerne ušetríte",
+  "scroll_to_explore": "Scrollnite pre viac",
+  "features_header": "Funkcie",
+  "how_it_works": "Ako to funguje",
+  "premium_header": "Prémium",
+  "download_app": "Stiahnuť aplikáciu",
+  "toggle_menu": "Prepínať menu",
+  "language": {
+    "english": "Anglicky (English)",
+    "slovak": "Slovensky (Slovenčina)"
+  },
+
+  "features": {
+    "heading": "Každá funkcia, ktorú potrebujete na",
+    "headingAccent": "Ušetrenie peňazí",
+    "subheading": "Naša aplikácia je navrhnutá tak, aby bol nákup potravín efektívnejší a úspornejší, s chytr7mi nástrojmi, ktoré vám pomôžu maximalizovať úspory.",
+    "searchCompare": {
+      "title": "Vyhľadávanie a porovnanie",
+      "description": "Jednoducho vyhľadajte produkty a porovnajte ceny v rôznych supermarketoch na Slovensku."
+    },
+    "shoppingLists": {
+      "title": "Nákupné zoznamy",
+      "description": "Vytvárajte a spravujte nákupné zoznamy, ktoré automaticky určia najvýhodnejší obchod pre celý nákup."
+    },
+    "dealAlerts": {
+      "title": "Upozornenia na zľavy",
+      "description": "Dostávajte upozornenia, keď sa produkty vo vašom zozname sledovaných dostanú do zľavy alebo zlacnia."
+    },
+    "realTimeUpdates": {
+      "title": "Aktuálne údaje",
+      "description": "Ceny sa aktualizujú denne, aby ste vždy mali najnovšie informácie."
+    },
+    "priceHistory": {
+      "title": "História cien",
+      "description": "Sledujte vývoj cien v čase a robte lepšie rozhodnutia pri nákupe."
+    },
+    "verifiedData": {
+      "title": "Overené údaje",
+      "description": "Všetky cenové údaje sú pred zverejnením v aplikácii dôkladne overené."
+    }
+  },
+
+  "premium": {
+    "heading": "Odomknite",
+    "headingAccent": "plný potenciál",
+    "subheading": "Prémiové predplatné odomyká výkonné funkcie, ktoré vám pomôžu maximalizovať úspory pri každom nákupe.",
+    "recommended": "Odporúčané",
+    "trialNote": "Všetky plány zahŕňajú 7-dňovú bezplatnú skúšobnú verziu. Možnosť zrušiť kedykoľvek.",
+    "plans": {
+      "free": {
+        "name": "Zdarma",
+        "description": "Základné porovnanie cien",
+        "cta": "Stiahnuť zdarma"
+      },
+      "premium": {
+        "name": "Premium",
+        "period": "mesačne",
+        "description": "Pokročilý nákupný zážitok",
+        "cta": "Získať Premium"
+      }
+    },
+    "features": {
+      "searchCompare": "Vyhľadávanie a porovnanie cien",
+      "limitedViews": "Zobrazenie až 5 produktov denne",
+      "basicHistory": "Základná história cien (7 dní)",
+      "shoppingList": "Funkcia nákupného zoznamu",
+      "dealAlerts": "Upozornenia na zľavy",
+      "adFree": "Bez reklám",
+      "unlimitedSearches": "Neobmedzené vyhľadávanie produktov",
+      "fullHistory": "Kompletná história cien (90 dní)",
+      "smartLists": "Inteligentné nákupné zoznamy",
+      "fullAlerts": "Upozornenia na zľavy pre akýkoľvek produkt",
+      "recommendations": "Odporúčania obchodov"
+    }
+  },
+
+  "download": {
+    "heading": "Začnite šetriť na svojich",
+    "headingAccent": "nákupoch",
+    "subheading": "Stiahnite si usetri.sk teraz a pridajte sa k šikovným nakupujúcim, ktorí už šetria na svojich nákupoch potravín po celom Slovensku.",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "joinedBy": "Pripojili sa k nám",
+    "smartShoppers": "šikovní nakupujúci"
+  },
+
+  "footer": {
+    "description": "Pomáhame vám šetriť na nákupoch potravín po celom Slovensku.",
+    "company": "Spoločnosť",
+    "aboutUs": "O nás",
+    "careers": "Kariéra",
+    "press": "Tlač",
+    "contact": "Kontakt",
+    "resources": "Zdroje",
+    "helpCenter": "Centrum pomoci",
+    "privacyPolicy": "Ochrana osobných údajov",
+    "termsOfService": "Podmienky služby",
+    "cookieSettings": "Nastavenia cookies",
+    "getTheApp": "Stiahnite si aplikáciu",
+    "appStore": "App Store",
+    "googlePlay": "Google Play",
+    "features": "Funkcie",
+    "premiumBenefits": "Prémiové výhody",
+    "allRightsReserved": "Všetky práva vyhradené.",
+    "cookiePolicy": "Politika cookies"
+  }
+}
