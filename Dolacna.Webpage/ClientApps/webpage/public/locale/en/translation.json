@@ -120,19 +120,11 @@
   "contact": {
     "header": "Contact Us",
     "subheader": "We'd love to hear from you! Reach out using the information below.",
-    "addressTitle": "Our Address",
-    "addressValue": "123 Main Street, Suite 456\nCityville, Country 12345",
+
     "emailTitle": "Email",
-    "emailValue": "contact@example.com",
+    "emailValue": "info@usetrislovensko.sk",
     "phoneTitle": "Phone",
-    "phoneValue": "+1 (555) 123-4567",
-    "hoursTitle": "Business Hours",
-    "hoursValue": "Monday - Friday: 9:00 AM - 6:00 PM\nSaturday - Sunday: Closed",
-    "formTitle": "Contact Form",
-    "formName": "Your Name",
-    "formEmail": "Your Email",
-    "formMessage": "Your Message",
-    "formButton": "Send Message"
+    "phoneValue": "+421 948 020 147"
   },
 
   "team": {
@@ -154,10 +146,6 @@
       {
         "name": "Róbert Jačko",
         "role": "AI Engineer"
-      },
-      {
-        "name": "Eliška",
-        "role": "Legal Advisor"
       }
     ]
   },

@@ -24,14 +24,24 @@ const Footer = () => {
                 <Facebook size={20} />
               </a>
               <a
-                href="#"
+                href="https://www.instagram.com/usetrislovensko"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"
                 aria-label="Instagram"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    'https://www.instagram.com/usetrislovensko',
+                    '_blank',
+                    'noopener,noreferrer',
+                  );
+                }}
               >
                 <Instagram size={20} />
               </a>
               <a
-                href="mailto:contact@usetri.sk"
+                href="mailto:info@usetrislovensko.sk"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"
                 aria-label="Email"
               >

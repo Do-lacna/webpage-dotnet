@@ -70,13 +70,7 @@ const Header = () => {
           >
             {t('features_header')}
           </a>
-          <a
-            href="#premium"
-            className="text-foreground hover:text-brand-accent transition-colors"
-            onClick={(e) => handleNavClick(e, 'premium')}
-          >
-            {t('premium_header')}
-          </a>
+
           <a
             href="/HowItWorks"
             className="text-foreground hover:text-brand-accent transition-colors"

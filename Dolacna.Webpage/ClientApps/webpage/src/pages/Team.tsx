@@ -10,11 +10,10 @@ type TeamMember = {
 };
 
 const images: string[] = [
-  '/images/team/bob.jpg',
-  '/images/team/bob.jpg',
-  '/images/team/carol.jpg',
-  '/images/team/david.jpg',
-  '/images/team/eva.jpg',
+  '/images/team/adam.jpg',
+  '/images/team/juro.jpg',
+  '/images/team/mato.jpg',
+  '/images/team/robo.jpg',
 ];
 
 const Team: React.FC = () => {

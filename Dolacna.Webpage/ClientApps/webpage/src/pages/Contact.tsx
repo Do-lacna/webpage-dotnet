@@ -8,36 +8,14 @@ const Contact = () => {
 
   const contactSections = [
     {
-      title: t("contact.addressTitle"),
-      content: t("contact.addressValue"),
-      isHtml: false,
-    },
-    {
-      title: t("contact.emailTitle"),
-      content: `<a href="mailto:${t("contact.emailValue")}" class="text-brand-accent underline">${t("contact.emailValue")}</a>`,
+      title: t('contact.emailTitle'),
+      content: `<a href="mailto:${t('contact.emailValue')}" class="text-brand-accent underline">${t('contact.emailValue')}</a>`,
       isHtml: true,
     },
     {
-      title: t("contact.phoneTitle"),
-      content: t("contact.phoneValue"),
+      title: t('contact.phoneTitle'),
+      content: t('contact.phoneValue'),
       isHtml: false,
-    },
-    {
-      title: t("contact.hoursTitle"),
-      content: t("contact.hoursValue"),
-      isHtml: false,
-    },
-    {
-      title: t("contact.formTitle"),
-      content: `
-<form class="space-y-4">
-  <input type="text" placeholder="${t("contact.formName")}" class="input input-bordered w-full" disabled />
-  <input type="email" placeholder="${t("contact.formEmail")}" class="input input-bordered w-full" disabled />
-  <textarea placeholder="${t("contact.formMessage")}" class="textarea textarea-bordered w-full" rows="4" disabled></textarea>
-  <button type="submit" class="btn btn-brand w-full" disabled>${t("contact.formButton")}</button>
-</form>
-      `,
-      isHtml: true,
     },
   ];
 
