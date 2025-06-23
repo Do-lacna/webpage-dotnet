@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import { useTranslation } from 'react-i18next';
 
 const Cookies = () => {
+  const { t } = useTranslation();
+
   useEffect(() => {
     // Initialize intersection observer for reveal animations
     const observer = new IntersectionObserver(
@@ -30,46 +33,11 @@ const Cookies = () => {
     };
   }, []);
 
-  const sections = [
-    {
-      title: '1. What Are Cookies?',
-      content:
-        'Cookies are small text files stored on your device to help websites remember information about your visit, like your preferred language or login status.',
-    },
-    {
-      title: '2. How We Use Cookies',
-      content:
-        'We use cookies to enhance your user experience, analyze app traffic, and understand how users interact with our platform. This helps us improve the performance and functionality of our services.',
-    },
-    {
-      title: '3. Types of Cookies We Use',
-      content: `
-- **Essential Cookies**: Required for the app to function properly.
-- **Analytics Cookies**: Help us track usage and performance.
-- **Preference Cookies**: Remember your preferences like language and layout.
-      `,
-    },
-    {
-      title: '4. Managing Cookies',
-      content:
-        'You can manage or disable cookies through your device or browser settings. However, disabling cookies may affect certain features or your user experience.',
-    },
-    {
-      title: '5. Third-Party Cookies',
-      content:
-        'We may allow trusted third parties, such as analytics providers, to place cookies on our app to gather usage data or serve relevant ads.',
-    },
-    {
-      title: '6. Updates to This Policy',
-      content:
-        'We may update this Cookie Policy from time to time. Changes will be posted here, and we encourage you to review the policy periodically.',
-    },
-    {
-      title: '7. Contact Us',
-      content:
-        'For any questions regarding our use of cookies, you can reach us at support@example.com.',
-    },
-  ];
+  const sections =
+    (t('cookiePolicy.sections', { returnObjects: true }) as Array<{
+      title: string;
+      content: string;
+    }>) || [];
 
   return (
     <div className="min-h-screen">
@@ -79,10 +47,14 @@ const Cookies = () => {
           <div className="section-container max-w-4xl mx-auto px-4">
             <div className="text-center mb-16 reveal-animation">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
-                Cookie <span className="text-brand-accent">Policy</span>
+                {t('cookiePolicy.pageTitle').split(' ')[0]}{' '}
+                <span className="text-brand-accent">
+                  {t('cookiePolicy.pageTitle').split(' ')[1] ||
+                    t('cookiePolicy.pageTitle').split(' ')[0]}
+                </span>
               </h2>
               <p className="text-lg text-muted-foreground">
-                Find out how and why we use cookies in our application.
+                {t('cookiePolicy.pageSubtitle')}
               </p>
             </div>
 
@@ -110,5 +82,7 @@ const Cookies = () => {
     </div>
   );
 };
+
+
 
 export default Cookies;

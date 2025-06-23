@@ -200,6 +200,127 @@
 
     "searchPlaceholder": "Search tutorials or features...",
     "noResults": "No results found."
+  },
+
+  "privacyPolicy": {
+    "pageTitle": "Privacy Policy",
+    "pageSubtitle": "Learn how we handle your data to keep your experience safe and private.",
+    "sections": [
+      {
+        "title": "1. Introduction",
+        "content": "This Privacy Policy outlines how our mobile application collects, uses, and protects your information when you interact with our app. By using the app, you agree to the practices described in this policy."
+      },
+      {
+        "title": "2. Information We Collect",
+        "content": "Our app may request access to certain features on your device that are necessary for its core functionality."
+      },
+      {
+        "title": "3. Camera Permission",
+        "content": "We require CAMERA permission to enable key features of the app. This includes:\n\n- Capturing photos and/or videos within the app\n- Processing image data for visual-based functionality\n\nThis access is solely for the features provided within the app and is not used beyond its intended purpose."
+      },
+      {
+        "title": "4. How We Use Your Information",
+        "content": "The camera data is used **only** within the app for functional purposes. Specifically:\n\n- Camera data is processed locally on your device\n- We do **not** collect, transmit, or store your photos or videos on our servers unless you explicitly choose to upload or share them\n- Camera data is **not** used for advertising, marketing, or analytics\n\nYour privacy is central to our app experience."
+      },
+      {
+        "title": "5. Data Storage and Security",
+        "content": "- All media (photos/videos) captured within the app are stored locally on your device\n- We implement reasonable security practices to help protect any in-app data processing\n- We do **not** sell, rent, or trade your personal information with third parties"
+      },
+      {
+        "title": "6. Your Choices",
+        "content": "You have full control over your data:\n\n- You can **deny or revoke** camera permissions at any time via your device settings\n- You may **delete any media** captured through the app using your device's file manager\n\nThe app's functionality may be limited without camera access, but it will remain secure and respectful of your choices."
+      },
+      {
+        "title": "7. Updates to This Policy",
+        "content": "We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated effective date. We encourage you to review the policy regularly for any changes."
+      },
+      {
+        "title": "8. Contact Us",
+        "content": "If you have any questions or concerns regarding this Privacy Policy, please contact us at:\n\nEmail: info@usetrislovensko.sk\nWebsite: usetrislovensko.sk"
+      },
+      {
+        "title": "Effective Date",
+        "content": "This policy is effective as of April 16, 2025."
+      }
+    ]
+  },
+
+  "termsOfService": {
+    "pageTitle": "Terms of Service",
+    "pageSubtitle": "Please read these terms carefully before using our application.",
+    "sections": [
+      {
+        "title": "1. Acceptance of Terms",
+        "content": "By accessing or using our application, you agree to be bound by these Terms of Service. If you do not agree, please do not use the app."
+      },
+      {
+        "title": "2. Use of the App",
+        "content": "You may use the app only for lawful purposes and in accordance with these Terms. You agree not to misuse the services or attempt to disrupt their normal operation."
+      },
+      {
+        "title": "3. Intellectual Property",
+        "content": "All content, trademarks, and intellectual property in the app are the property of their respective owners. You may not reproduce, modify, or distribute any part without permission."
+      },
+      {
+        "title": "4. User Accounts",
+        "content": "You are responsible for maintaining the confidentiality of your account information. You agree to notify us immediately of any unauthorized use of your account."
+      },
+      {
+        "title": "5. Termination",
+        "content": "We reserve the right to suspend or terminate your access to the app at any time, without notice, for any reason, including violation of these terms."
+      },
+      {
+        "title": "6. Limitation of Liability",
+        "content": "To the fullest extent permitted by law, we are not liable for any indirect, incidental, or consequential damages resulting from your use of the app."
+      },
+      {
+        "title": "7. Changes to Terms",
+        "content": "We may revise these Terms of Service at any time. Continued use of the app after changes means you accept the revised terms."
+      },
+      {
+        "title": "8. Governing Law",
+        "content": "These Terms are governed by the laws of the applicable jurisdiction, without regard to conflict of law principles."
+      },
+      {
+        "title": "9. Contact Us",
+        "content": "If you have any questions about these Terms, please reach out to us at info@usetrislovensko.sk."
+      }
+    ]
+  },
+
+  "cookiePolicy": {
+    "pageTitle": "Cookie Policy",
+    "pageSubtitle": "Find out how and why we use cookies in our application.",
+    "sections": [
+      {
+        "title": "1. What Are Cookies?",
+        "content": "Cookies are small text files stored on your device to help websites remember information about your visit, like your preferred language or login status."
+      },
+      {
+        "title": "2. How We Use Cookies",
+        "content": "We use cookies to enhance your user experience, analyze app traffic, and understand how users interact with our platform. This helps us improve the performance and functionality of our services."
+      },
+      {
+        "title": "3. Types of Cookies We Use",
+        "content": "- **Essential Cookies**: Required for the app to function properly.\n- **Analytics Cookies**: Help us track usage and performance.\n- **Preference Cookies**: Remember your preferences like language and layout."
+      },
+      {
+        "title": "4. Managing Cookies",
+        "content": "You can manage or disable cookies through your device or browser settings. However, disabling cookies may affect certain features or your user experience."
+      },
+      {
+        "title": "5. Third-Party Cookies",
+        "content": "We may allow trusted third parties, such as analytics providers, to place cookies on our app to gather usage data or serve relevant ads."
+      },
+      {
+        "title": "6. Updates to This Policy",
+        "content": "We may update this Cookie Policy from time to time. Changes will be posted here, and we encourage you to review the policy periodically."
+      },
+      {
+        "title": "7. Contact Us",
+        "content": "For any questions regarding our use of cookies, you can reach us at info@usetrislovensko.sk."
+      }
+    ]
   }
 }
 

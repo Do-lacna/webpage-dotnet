@@ -74,39 +74,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
-          <div>
-            <h3 className="text-lg font-medium mb-4 text-brand-accent">
-              {t('footer.resources')}
-            </h3>
-            <ul className="space-y-3">
-              <li>
-                <a
-                  href="/PrivacyPolicy"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.privacyPolicy')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/TermsOfService"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.termsOfService')}
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/Cookies"
-                  className="text-white/70 hover:text-white transition-colors"
-                >
-                  {t('footer.cookieSettings')}
-                </a>
-              </li>
-            </ul>
-          </div>
-
           <div>
             <h3 className="text-lg font-medium mb-4 text-brand-accent">
               {t('footer.getTheApp')}
@@ -130,11 +97,17 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+          <div>
+            <h3 className="text-lg font-medium mb-4 text-brand-accent">
+              {t('footer.resources')}
+            </h3>
+            <ul className="space-y-3"></ul>
+          </div>
         </div>
 
         <div className="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-white/50 text-sm">
-            © {currentYear} usetri.sk. {t('footer.allRightsReserved')}
+            © {currentYear} usetrislovensko.sk. {t('footer.allRightsReserved')}
           </div>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <a

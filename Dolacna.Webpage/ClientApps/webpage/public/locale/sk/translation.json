@@ -106,7 +106,7 @@
     "resources": "Zdroje",
     "helpCenter": "Centrum pomoci",
     "privacyPolicy": "Ochrana osobných údajov",
-    "termsOfService": "Podmienky služby",
+    "termsOfService": "Podmienky používania",
     "cookieSettings": "Nastavenia cookies",
     "getTheApp": "Stiahnite si aplikáciu",
     "appStore": "App Store",
@@ -199,5 +199,126 @@
         ]
       }
     }
+  },
+
+  "privacyPolicy": {
+    "pageTitle": "Ochrana osobných údajov",
+    "pageSubtitle": "Zistite, ako spracúvame vaše údaje, aby bol váš zážitok bezpečný a súkromný.",
+    "sections": [
+      {
+        "title": "1. Úvod",
+        "content": "Táto politika ochrany osobných údajov popisuje, ako naša mobilná aplikácia zhromažďuje, používa a chráni vaše informácie pri interakcii s našou aplikáciou. Používaním aplikácie súhlasíte s postupmi popísanými v tejto politike."
+      },
+      {
+        "title": "2. Informácie, ktoré zhromažďujeme",
+        "content": "Naša aplikácia môže požadovať prístup k určitým funkciám na vašom zariadení, ktoré sú potrebné pre jej základnú funkcionalitu."
+      },
+      {
+        "title": "3. Povolenie pre fotoaparát",
+        "content": "Vyžadujeme povolenie FOTOAPARÁT na povolenie kľúčových funkcií aplikácie. To zahŕňa:\n\n- Zachytávanie fotografií a/alebo videí v aplikácii\n- Spracovanie obrazových údajov pre funkcie založené na vizuálnom rozpoznávaní\n\nTento prístup je určený výhradne pre funkcie poskytované v rámci aplikácie a nie je používaný nad rámec zamýšľaného účelu."
+      },
+      {
+        "title": "4. Ako používame vaše informácie",
+        "content": "Údaje z fotoaparátu sa používajú **výhradne** v rámci aplikácie na funkčné účely. Konkrétne:\n\n- Údaje z fotoaparátu sa spracovávajú lokálne na vašom zariadení\n- **Nezhromažďujeme, neprenášame ani neukladáme** vaše fotografie alebo videá na našich serveroch, pokiaľ sa ich výslovne nerozhodnete nahrať alebo zdieľať\n- Údaje z fotoaparátu **nie sú** používané na reklamu, marketing alebo analytiku\n\nVaše súkromie je ústredným bodom zážitku z našej aplikácie."
+      },
+      {
+        "title": "5. Uchovávanie údajov a bezpečnosť",
+        "content": "- Všetky médiá (fotografie/videá) zachytené v aplikácii sú uložené lokálne na vašom zariadení\n- Implementujeme primerané bezpečnostné postupy na ochranu akéhokoľvek spracovania údajov v aplikácii\n- **Nepredávame, neprenajímame ani neobchodujeme** s vašimi osobnými údajmi tretím stranám"
+      },
+      {
+        "title": "6. Vaše možnosti",
+        "content": "Máte plnú kontrolu nad svojimi údajmi:\n\n- Môžete **odmietnuť alebo odvolať** povolenia fotoaparátu kedykoľvek prostredníctvom nastavení vášho zariadenia\n- Môžete **vymazať akékoľvek médiá** zachytené prostredníctvom aplikácie pomocou správcu súborov vášho zariadenia\n\nFunkcionalita aplikácie môže byť bez prístupu k fotoaparátu obmedzená, ale zostane bezpečná a bude rešpektovať vaše rozhodnutia."
+      },
+      {
+        "title": "7. Aktualizácie tejto politiky",
+        "content": "Túto politiku ochrany osobných údajov môžeme pravidelne aktualizovať. Akékoľvek zmeny budú zverejnené na tejto stránke s aktualizovaným dátumom účinnosti. Odporúčame vám pravidelne kontrolovať túto politiku, či nedošlo k zmenám."
+      },
+      {
+        "title": "8. Kontaktujte nás",
+        "content": "Ak máte akékoľvek otázky alebo obavy týkajúce sa tejto politiky ochrany osobných údajov, kontaktujte nás na:\n\nEmail: info@usetrislovensko.sk\nWebstránka: usetrislovensko.sk"
+      },
+      {
+        "title": "Dátum účinnosti",
+        "content": "Táto politika je účinná od 16. apríla 2025."
+      }
+    ]
+  },
+
+  "termsOfService": {
+    "pageTitle": "Podmienky používania",
+    "pageSubtitle": "Pred používaním našej aplikácie si pozorne prečítajte tieto podmienky.",
+    "sections": [
+      {
+        "title": "1. Prijatie podmienok",
+        "content": "Používaním našej aplikácie súhlasíte s týmito Podmienkami služby. Ak nesúhlasíte, aplikáciu prosím nepoužívajte."
+      },
+      {
+        "title": "2. Používanie aplikácie",
+        "content": "Aplikáciu môžete používať len na zákonné účely a v súlade s týmito Podmienkami. Súhlasíte, že nebudete zneužívať služby ani sa pokúšať narušiť ich normálne fungovanie."
+      },
+      {
+        "title": "3. Duševné vlastníctvo",
+        "content": "Všetok obsah, ochranné známky a duševné vlastníctvo v aplikácii sú majetkom príslušných vlastníkov. Žiadnu časť nesmiete reprodukovať, upravovať ani distribuovať bez povolenia."
+      },
+      {
+        "title": "4. Používateľské účty",
+        "content": "Ste zodpovední za zachovanie dôvernosti informácií o vašom účte. Súhlasíte, že nás budete okamžite informovať o akomkoľvek neoprávnenom použití vášho účtu."
+      },
+      {
+        "title": "5. Ukončenie",
+        "content": "Vyhradzujeme si právo pozastaviť alebo ukončiť váš prístup k aplikácii kedykoľvek, bez upozornenia, z akéhokoľvek dôvodu, vrátane porušenia týchto podmienok."
+      },
+      {
+        "title": "6. Obmedzenie zodpovednosti",
+        "content": "V najširšom rozsahu povolenom zákonom nenesieme zodpovednosť za žiadne nepriame, náhodné alebo následné škody vyplývajúce z vášho používania aplikácie."
+      },
+      {
+        "title": "7. Zmeny podmienok",
+        "content": "Tieto Podmienky služby môžeme kedykoľvek revidovať. Pokračovanie v používaní aplikácie po zmenách znamená, že akceptujete revidované podmienky."
+      },
+      {
+        "title": "8. Rozhodné právo",
+        "content": "Tieto Podmienky sa riadia zákonmi príslušnej jurisdikcie, bez ohľadu na princípy konfliktu zákonov."
+      },
+      {
+        "title": "9. Kontaktujte nás",
+        "content": "Ak máte akékoľvek otázky týkajúce sa týchto Podmienok, kontaktujte nás na info@usetrislovensko.sk."
+      }
+    ]
+  },
+
+  "cookiePolicy": {
+    "pageTitle": "Zásady cookies",
+    "pageSubtitle": "Zistite, ako a prečo používame cookies v našej aplikácii.",
+    "sections": [
+      {
+        "title": "1. Čo sú cookies?",
+        "content": "Cookies sú malé textové súbory uložené vo vašom zariadení, ktoré pomáhajú webstránkam zapamätať si informácie o vašej návšteve, ako napríklad preferovaný jazyk alebo stav prihlásenia."
+      },
+      {
+        "title": "2. Ako používame cookies",
+        "content": "Cookies používame na zlepšenie používateľskej skúsenosti, analýzu prevádzky aplikácie a pochopenie, ako používatelia interagujú s našou platformou. To nám pomáha zlepšovať výkon a funkcionalitu našich služieb."
+      },
+      {
+        "title": "3. Typy cookies, ktoré používame",
+        "content": "- **Nevyhnutné cookies**: Potrebné pre správne fungovanie aplikácie.\n- **Analytické cookies**: Pomáhajú nám sledovať používanie a výkon.\n- **Preferenčné cookies**: Zapamätajú si vaše preferencie, ako napríklad jazyk a rozloženie."
+      },
+      {
+        "title": "4. Správa cookies",
+        "content": "Cookies môžete spravovať alebo zakázať prostredníctvom nastavení vášho zariadenia alebo prehliadača. Zakázanie cookies však môže ovplyvniť určité funkcie alebo vašu používateľskú skúsenosť."
+      },
+      {
+        "title": "5. Cookies tretích strán",
+        "content": "Môžeme povoliť dôveryhodným tretím stranám, ako sú poskytovatelia analytických služieb, umiestniť cookies v našej aplikácii na zhromažďovanie údajov o používaní alebo zobrazovanie relevantných reklám."
+      },
+      {
+        "title": "6. Aktualizácie týchto zásad",
+        "content": "Tieto Zásady cookies môžeme z času na čas aktualizovať. Zmeny budú zverejnené tu a odporúčame vám tieto zásady pravidelne kontrolovať."
+      },
+      {
+        "title": "7. Kontaktujte nás",
+        "content": "Ak máte akékoľvek otázky týkajúce sa používania cookies, môžete nás kontaktovať na info@usetrislovensko.sk."
+      }
+    ]
   }
 }
