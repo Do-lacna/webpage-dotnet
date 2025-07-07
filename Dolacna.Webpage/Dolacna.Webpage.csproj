@@ -21,20 +21,21 @@
       <PackageReference Include="Serilog.AspNetCore" Version="8.0.3" />
     </ItemGroup>
 
-    <Target Name="EnsureNodeIsInstalled" BeforeTargets="Build;NpmInstall">
+    <Target Name="EnsureNodeIsInstalled" BeforeTargets="Build;NpmInstall" Condition="'$(SkipNodeTasks)' != 'true'">
         <Exec Command="node --version" ContinueOnError="true">
             <Output TaskParameter="ExitCode" PropertyName="ErrorCode" />
         </Exec>
         <Error Condition="'$(ErrorCode)' != '0'" Text="Node.js is required to build and run this project. To continue, please install Node.js from https://nodejs.org/, and then restart your command prompt or IDE." />
     </Target>
 
-    <Target Name="NpmInstall" BeforeTargets="Build">
+    <Target Name="NpmInstall" BeforeTargets="Build" Condition="'$(SkipNodeTasks)' != 'true'">
         <Message Importance="high" Text="Restoring dependencies using 'npm'. This may take several minutes..." />
-        <Exec WorkingDirectory="./ClientApps/webpage" Command="npm install" />
+        <Exec WorkingDirectory="./ClientApps/webpage" Command="npm ci --force" ContinueOnError="true" />
+        <Exec WorkingDirectory="./ClientApps/webpage" Command="npm install --force" Condition="$(ExitCode) != 0" />
     </Target>
 
-    <Target Name="NpmBuildAndPublishAssets" AfterTargets="NpmInstall">
-        <Message Importance="high" Text="Running npm build in prod mode" />
-        <Exec WorkingDirectory="./ClientApps/webpage" Command="npm run build:dev" />
+    <Target Name="NpmBuildAndPublishAssets" AfterTargets="NpmInstall" Condition="'$(SkipNodeTasks)' != 'true'">
+        <Message Importance="high" Text="Running npm build in dev mode" />
+        <Exec WorkingDirectory="./ClientApps/webpage" Command="npm run build:dev" ContinueOnError="false" />
     </Target>
 </Project>
