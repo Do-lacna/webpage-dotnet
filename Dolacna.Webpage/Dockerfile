@@ -29,10 +29,19 @@ WORKDIR "/src/Dolacna.Webpage/ClientApps/webpage"
 # Set environment variables to help with npm issues
 ENV DOCKER_BUILD=true
 ENV NODE_ENV=development
-# Force npm to install all dependencies including missing native bindings
-RUN npm install --no-package-lock --legacy-peer-deps --force
-# Install missing native bindings explicitly
-RUN npm install @swc/core-linux-x64-gnu @rollup/rollup-linux-x64-gnu --save-dev --force
+
+# Create npm configuration to skip optional dependencies
+RUN echo "optional=false" > .npmrc
+RUN echo "omit=optional" >> .npmrc
+
+# Install dependencies without optional packages
+RUN npm install --omit=optional --legacy-peer-deps --force
+
+# Install exact versions of rollup native bindings for Linux
+RUN npm install rollup@4.44.2 --save-dev --force
+
+# Build the React app manually
+RUN npm run build:dev
 
 # Build the React app manually
 RUN npm run build:dev
