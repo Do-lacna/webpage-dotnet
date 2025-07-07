@@ -21,13 +21,18 @@ RUN dotnet restore "Dolacna.Webpage/Dolacna.Webpage.csproj"
 COPY . .
 WORKDIR "/src/Dolacna.Webpage"
 
-# Clean any existing node_modules and install fresh
-RUN rm -rf ClientApps/webpage/node_modules
-RUN rm -rf ClientApps/webpage/package-lock.json
+# Clean any existing node_modules and lock files completely
+RUN rm -rf ClientApps/webpage/node_modules ClientApps/webpage/package-lock.json ClientApps/webpage/yarn.lock
 
-# Install npm dependencies manually before dotnet build
+# Install dependencies with proper npm configuration
 WORKDIR "/src/Dolacna.Webpage/ClientApps/webpage"
-RUN npm ci --force || npm install --force
+# Set environment variables to help with npm issues
+ENV DOCKER_BUILD=true
+ENV NODE_ENV=development
+# Force npm to install all dependencies including missing native bindings
+RUN npm install --no-package-lock --legacy-peer-deps --force
+# Install missing native bindings explicitly
+RUN npm install @swc/core-linux-x64-gnu @rollup/rollup-linux-x64-gnu --save-dev --force
 
 # Build the React app manually
 RUN npm run build:dev
