@@ -124,7 +124,23 @@
     "emailTitle": "Email",
     "emailValue": "info@usetrislovensko.sk",
     "phoneTitle": "Phone",
-    "phoneValue": "+421 948 020 147"
+    "phoneValue": "+421 948 020 147",
+
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more about your inquiry...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully.",
+      "error": "Sorry, there was an error sending your message. Please try again."
+    }
   },
 
   "team": {

@@ -12,7 +12,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
             <div className="text-2xl font-bold mb-4">
-              usetri<span className="text-brand-accent">.sk</span>
+              Ušetri<span className="text-brand-accent"> Slovensko</span>
             </div>
             <p className="text-white/70 mb-6">{t('footer.description')}</p>
             <div className="flex space-x-4">

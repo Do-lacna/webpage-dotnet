@@ -1,10 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { useTranslation } from "react-i18next";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const { t } = useTranslation();
+  
+  // Form state
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const contactSections = [
     {
@@ -12,12 +23,39 @@ const Contact = () => {
       content: `<a href="mailto:${t('contact.emailValue')}" class="text-brand-accent underline">${t('contact.emailValue')}</a>`,
       isHtml: true,
     },
-    {
-      title: t('contact.phoneTitle'),
-      content: t('contact.phoneValue'),
-      isHtml: false,
-    },
   ];
+
+  // Form handlers
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        'service_r729xcs',
+        'template_mhsasyo',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        'rO09eQIXhE-enzBl3'
+      );
+      
+      setSubmitStatus('success');
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   useEffect(() => {
     // Intersection observer for reveal animations
@@ -56,11 +94,11 @@ const Contact = () => {
               </p>
             </div>
             <div className="space-y-10">
-              {contactSections.map((section, index) => (
+              {contactSections.map((section) => (
                 <div
-                  key={index}
+                  key={section.title}
                   className="glass-panel p-6 reveal-animation"
-                  style={{ animationDelay: `${index * 0.1}s` }}
+                  style={{ animationDelay: `${contactSections.indexOf(section) * 0.1}s` }}
                 >
                   <h3 className="text-xl font-bold mb-2 text-brand-dark">
                     {section.title}
@@ -77,6 +115,101 @@ const Contact = () => {
                   )}
                 </div>
               ))}
+              
+              {/* Contact Form */}
+              <div className="glass-panel p-6 reveal-animation" style={{ animationDelay: `${contactSections.length * 0.1}s` }}>
+                <h3 className="text-xl font-bold mb-6 text-brand-dark">
+                  {t("contact.form.title")}
+                </h3>
+                
+                {submitStatus === 'success' && (
+                  <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
+                    {t("contact.form.success")}
+                  </div>
+                )}
+                
+                {submitStatus === 'error' && (
+                  <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
+                    {t("contact.form.error")}
+                  </div>
+                )}
+                
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-brand-dark mb-2">
+                        {t("contact.form.name")}
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder={t("contact.form.namePlaceholder")}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-colors"
+                      />
+                    </div>
+                    
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-brand-dark mb-2">
+                        {t("contact.form.email")}
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder={t("contact.form.emailPlaceholder")}
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-colors"
+                      />
+                    </div>
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="subject" className="block text-sm font-medium text-brand-dark mb-2">
+                      {t("contact.form.subject")}
+                    </label>
+                    <input
+                      type="text"
+                      id="subject"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      placeholder={t("contact.form.subjectPlaceholder")}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-colors"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label htmlFor="message" className="block text-sm font-medium text-brand-dark mb-2">
+                      {t("contact.form.message")}
+                    </label>
+                    <textarea
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder={t("contact.form.messagePlaceholder")}
+                      rows={6}
+                      required
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-colors resize-vertical"
+                    />
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="w-full bg-brand-accent text-white font-semibold py-3 px-6 rounded-lg hover:bg-brand-accent/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                  >
+                    {isSubmitting ? t("contact.form.sending") : t("contact.form.submit")}
+                  </button>
+                </form>
+              </div>
             </div>
           </div>
         </section>

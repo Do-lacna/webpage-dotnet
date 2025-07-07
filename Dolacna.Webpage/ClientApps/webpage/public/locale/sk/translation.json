@@ -2,7 +2,7 @@
   "save_money": "Ušetrite peniaze pri každom nákupe",
   "compare_prices": "Porovnajte ceny potravín",
   "across_slovakia": "naprieč Slovenskom",
-  "description": "usetri.sk nájde najlepšie ponuky na potraviny porovnaním cien v rôznych supermarketoch v reálnom čase.",
+  "description": "Ušetri nájde najlepšie ponuky na potraviny porovnaním cien v rôznych supermarketoch v reálnom čase.",
   "download_now": "Stiahnuť teraz",
   "learn_more": "Viac informácií",
   "supermarkets_count": "5+",
@@ -89,7 +89,7 @@
   "download": {
     "heading": "Začnite šetriť na svojich",
     "headingAccent": "nákupoch",
-    "subheading": "Stiahnite si usetri.sk teraz a pridajte sa k šikovným nakupujúcim, ktorí už šetria na svojich nákupoch potravín po celom Slovensku.",
+    "subheading": "Stiahnite si Ušetri teraz a pridajte sa k šikovným nakupujúcim, ktorí už šetria na svojich nákupoch potravín po celom Slovensku.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "joinedBy": "Pripojili sa k nám",
@@ -124,7 +124,23 @@
     "emailTitle": "Email",
     "emailValue": "info@usetrislovensko.sk",
     "phoneTitle": "Telefón",
-    "phoneValue": "+421 948 020 147"
+    "phoneValue": "+421 948 020 147",
+
+    "form": {
+      "title": "Pošlite nám správu",
+      "name": "Meno",
+      "namePlaceholder": "Vaše celé meno",
+      "email": "Emailová adresa",
+      "emailPlaceholder": "vas@email.sk",
+      "subject": "Predmet",
+      "subjectPlaceholder": "Čoho sa to týka?",
+      "message": "Správa",
+      "messagePlaceholder": "Povedzte nám viac o vašej otázke...",
+      "submit": "Odoslať správu",
+      "sending": "Odosielanie...",
+      "success": "Ďakujeme! Vaša správa bola úspešne odoslaná.",
+      "error": "Prepáčte, nastala chyba pri odosielaní správy. Skúste to znovu."
+    }
   },
 
   "team": {
