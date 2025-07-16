@@ -122,7 +122,7 @@
     "subheader": "We'd love to hear from you! Reach out using the information below.",
 
     "emailTitle": "Email",
-    "emailValue": "info@usetrislovensko.sk",
+    "emailValue": "usetripareur@gmail.com",
     "phoneTitle": "Phone",
     "phoneValue": "+421 948 020 147",
 
@@ -173,53 +173,70 @@
 
   "howItWorksPage": {
     "title": "How It Works",
-    "subtitle": "Learn how to use the main features of our app with step-by-step tutorials.",
-    "features": {
-      "search": {
-        "name": "Search",
-        "description": "Quickly find products and recipes using our powerful search engine. Filter results by category, price, or dietary preferences.",
-        "tutorials": [
-          {
-            "title": "How to Search for Products",
-            "content": "1. Go to the main page and locate the search bar at the top.\n2. Enter the product or recipe name you are looking for.\n3. Use filters to narrow down your results.\n4. Click on a result to view more details."
-          },
-          {
-            "title": "Using Advanced Filters",
-            "content": "1. Click on the \"Filters\" button next to the search bar.\n2. Select categories, price ranges, or dietary tags.\n3. Apply filters to update your search results."
-          }
+    "subtitle": "Discover how our platform helps you save money on groceries through smart price comparison and AI-powered categorization.",
+    "steps": [
+      {
+        "number": 1,
+        "title": "Data Collection",
+        "subtitle": "Multi-source grocery data",
+        "description": "We collect product data from multiple grocery store chains including Tesco, Kaufland, Billa, and other major retailers across Slovakia.",
+        "details": [
+          "Real-time price monitoring from 5+ major supermarket chains",
+          "Product information including names, descriptions, and categories",
+          "Special offers and discount tracking",
+          "Stock availability updates"
         ]
       },
-      "shoppingList": {
-        "name": "Shopping List",
-        "description": "Easily create and manage your shopping lists. Add items directly from search results or recipes.",
-        "tutorials": [
-          {
-            "title": "Creating a Shopping List",
-            "content": "1. Navigate to the \"Shopping List\" section from the main menu.\n2. Click \"Add Item\" and enter the product name.\n3. Set quantity and optional notes.\n4. Save your list for later use."
-          },
-          {
-            "title": "Adding Items from Recipes",
-            "content": "1. Open a recipe you like.\n2. Click the \"Add to Shopping List\" button.\n3. The ingredients will be added to your shopping list automatically."
-          }
+      {
+        "number": 2,
+        "title": "AI Categorization",
+        "subtitle": "Smart product organization",
+        "description": "Our AI system intelligently categorizes products into our unified database, ensuring accurate comparisons across different stores.",
+        "details": [
+          "Machine learning algorithms match similar products across stores",
+          "Automatic product classification by category and brand",
+          "Duplicate detection and product normalization",
+          "Quality scoring based on product attributes"
         ]
       },
-      "profile": {
-        "name": "Profile",
-        "description": "Manage your account, preferences, and view your activity history.",
-        "tutorials": [
-          {
-            "title": "Updating Your Profile",
-            "content": "1. Go to the \"Profile\" section from the menu.\n2. Click \"Edit Profile\".\n3. Update your personal information and preferences.\n4. Save changes to update your profile."
-          },
-          {
-            "title": "Viewing Activity History",
-            "content": "1. In the \"Profile\" section, scroll down to \"Activity History\".\n2. Review your recent searches, lists, and recipes viewed."
-          }
+      {
+        "number": 3,
+        "title": "Price Comparison",
+        "subtitle": "Find the best deals",
+        "description": "For each product, we provide comprehensive price comparisons showing you exactly where to find the best deals.",
+        "details": [
+          "Side-by-side price comparison across all participating stores",
+          "Historical price trends and savings opportunities",
+          "Discount and promotion highlighting",
+          "Price per unit calculations for accurate comparisons"
+        ]
+      },
+      {
+        "number": 4,
+        "title": "Smart Shopping Lists",
+        "subtitle": "Optimize your shopping",
+        "description": "Create shopping lists and our system will calculate which supermarket combination gives you the lowest total cost.",
+        "details": [
+          "Automatic cost calculation for entire shopping lists",
+          "Multi-store optimization for maximum savings",
+          "Suggested alternatives for out-of-stock items",
+          "Shopping route optimization within stores"
+        ]
+      },
+      {
+        "number": 5,
+        "title": "Savings Tracking",
+        "subtitle": "Monitor your savings",
+        "description": "Track your savings over time with detailed analytics showing how much you've saved this month and overall.",
+        "details": [
+          "Monthly and yearly savings summaries",
+          "Comparison with average market prices",
+          "Savings goals and achievement tracking",
+          "Detailed spending analytics and insights"
         ]
       }
-    },
-
-    "searchPlaceholder": "Search tutorials or features...",
+    ],
+    "searchPlaceholder": "Search steps or features...",
     "noResults": "No results found."
   },
 

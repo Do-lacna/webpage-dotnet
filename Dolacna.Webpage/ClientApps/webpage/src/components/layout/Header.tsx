@@ -143,12 +143,16 @@ const Header = () => {
               {t('premium_header')}
             </a>
             <a
-              href="#how-it-works"
+              href="/Contact"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
-              onClick={(e) => {
-                handleNavClick(e, 'how-it-works');
-                setMobileMenuOpen(false);
-              }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('footer.contact')}
+            </a>
+            <a
+              href="/HowItWorks"
+              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
             >
               {t('how_it_works')}
             </a>
@@ -157,6 +161,16 @@ const Header = () => {
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('download_app')}
+            </Button>
+            <Button
+              variant="ghost"
+              onClick={() => {
+                setLanguage(language === 'sk' ? 'en' : 'sk');
+                changeLanguage(language === 'sk' ? 'en' : 'sk');
+              }}
+              className="w-full"
+            >
+              {language.toUpperCase()}
             </Button>
           </div>
         </div>

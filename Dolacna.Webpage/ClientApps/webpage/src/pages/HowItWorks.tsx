@@ -1,45 +1,22 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { useTranslation } from 'react-i18next';
 
 const HowItWorks = () => {
   const { t } = useTranslation();
-  const [openStep, setOpenStep] = useState<{ [key: string]: number | null }>({});
-  const [search, setSearch] = useState('');
-  const [activeSection, setActiveSection] = useState<string>('search');
+  const [openStep, setOpenStep] = useState<number | null>(null);
 
-  // Refs for scrolling to sections
-  const sectionRefs = {
-    search: useRef<HTMLDivElement>(null),
-    shoppingList: useRef<HTMLDivElement>(null),
-    profile: useRef<HTMLDivElement>(null),
-  };
-
-  // Get features from translations
-  const features = [
-    {
-      key: 'search',
-      name: t('howItWorksPage.features.search.name'),
-      description: t('howItWorksPage.features.search.description'),
-      tutorials: t('howItWorksPage.features.search.tutorials', { returnObjects: true }) as Array<{ title: string; content: string }>,
-    },
-    {
-      key: 'shoppingList',
-      name: t('howItWorksPage.features.shoppingList.name'),
-      description: t('howItWorksPage.features.shoppingList.description'),
-      tutorials: t('howItWorksPage.features.shoppingList.tutorials', { returnObjects: true }) as Array<{ title: string; content: string }>,
-    },
-    {
-      key: 'profile',
-      name: t('howItWorksPage.features.profile.name'),
-      description: t('howItWorksPage.features.profile.description'),
-      tutorials: t('howItWorksPage.features.profile.tutorials', { returnObjects: true }) as Array<{ title: string; content: string }>,
-    },
-  ];
+  const steps = t('howItWorksPage.steps', { returnObjects: true }) as Array<{
+    number: number;
+    title: string;
+    subtitle: string;
+    description: string;
+    details: string[];
+  }>;
 
   useEffect(() => {
-    // Reveal animation logic (same as Cookies page)
+    // Reveal animation logic
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -64,120 +41,158 @@ const HowItWorks = () => {
     };
   }, []);
 
-  // Scroll to section when search result is clicked
-  const handleSectionClick = (key: string) => {
-    setActiveSection(key);
-    const ref = sectionRefs[key as keyof typeof sectionRefs];
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+  const handleToggle = (stepNumber: number) => {
+    setOpenStep(openStep === stepNumber ? null : stepNumber);
   };
-
-  const handleToggle = (featureKey: string, idx: number) => {
-    setOpenStep((prev) => ({
-      ...prev,
-      [featureKey]: prev[featureKey] === idx ? null : idx,
-    }));
-  };
-
-  // Filter features and tutorials by search
-  const filteredFeatures = search.trim() === ''
-    ? features
-    : features
-        .map((feature) => {
-          // Filter tutorials by search
-          const filteredTutorials = feature.tutorials.filter(
-            (tut) =>
-              tut.title.toLowerCase().includes(search.toLowerCase()) ||
-              tut.content.toLowerCase().includes(search.toLowerCase())
-          );
-          // If feature name/desc matches, show all tutorials, else only filtered
-          const featureMatches =
-            feature.name.toLowerCase().includes(search.toLowerCase()) ||
-            feature.description.toLowerCase().includes(search.toLowerCase());
-          return featureMatches || filteredTutorials.length > 0
-            ? {
-                ...feature,
-                tutorials: featureMatches ? feature.tutorials : filteredTutorials,
-              }
-            : null;
-        })
-        .filter(Boolean);
 
   return (
     <div className="min-h-screen">
       <Header />
       <main>
         <section className="py-20 bg-white" id="how-it-works">
-          <div className="section-container max-w-3xl mx-auto px-4">
-            <div className="text-center mb-8 reveal-animation">
+          <div className="section-container max-w-4xl mx-auto px-4">
+            <div className="text-center mb-12 reveal-animation">
               <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
-                {t('howItWorksPage.title').split(' ').map((word, i, arr) =>
-                  i === arr.length - 2
-                    ? <span key={i}>{word} </span>
-                    : i === arr.length - 1
-                      ? <span key={i} className="text-brand-accent">{word}</span>
-                      : <span key={i}>{word} </span>
-                )}
+                {t('howItWorksPage.title')
+                  .split(' ')
+                  .map((word, i, arr) =>
+                    i === arr.length - 2 ? (
+                      <span key={i}>{word} </span>
+                    ) : i === arr.length - 1 ? (
+                      <span key={i} className="text-brand-accent">
+                        {word}
+                      </span>
+                    ) : (
+                      <span key={i}>{word} </span>
+                    ),
+                  )}
               </h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <p className="text-lg text-muted-foreground mb-8">
                 {t('howItWorksPage.subtitle')}
               </p>
-              <div className="flex justify-center">
-                <input
-                  type="text"
-                  value={search}
-                  onChange={e => setSearch(e.target.value)}
-                  placeholder={t('howItWorksPage.searchPlaceholder') || 'Search tutorials or features...'}
-                  className="w-full max-w-md px-4 py-2 border rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-accent transition"
-                />
-              </div>
             </div>
 
-            <div className="space-y-10">
-              {filteredFeatures.length === 0 && (
-                <div className="text-center text-muted-foreground">{t('howItWorksPage.noResults') || 'No results found.'}</div>
-              )}
-              {filteredFeatures.map((feature, fIdx) => (
-                <div
-                  key={feature.key}
-                  ref={sectionRefs[feature.key as keyof typeof sectionRefs]}
-                  className="glass-panel p-6 reveal-animation scroll-mt-32"
-                  style={{ animationDelay: `${fIdx * 0.1}s` }}
-                  id={feature.key}
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <button
-                      className="text-brand-accent underline text-lg font-bold focus:outline-none"
-                      onClick={() => handleSectionClick(feature.key)}
-                      tabIndex={-1}
-                      aria-label={feature.name}
+            <div className="space-y-8">
+              {steps.map((step, idx) => (
+                <div key={step.number}>
+                  <div
+                    className={`glass-panel p-8 reveal-animation max-w-2xl ${
+                      idx % 2 === 0 ? 'ml-0 mr-auto' : 'ml-auto mr-0'
+                    }`}
+                    style={{ animationDelay: `${idx * 0.1}s` }}
+                  >
+                    <div
+                      className={`flex items-start gap-6 ${
+                        idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                      }`}
                     >
-                      {feature.name}
-                    </button>
-                  </div>
-                  <p className="text-muted-foreground mb-4">{feature.description}</p>
-                  <div className="space-y-4">
-                    {feature.tutorials.map((step, sIdx) => (
-                      <div key={step.title} className="border rounded-lg">
-                        <button
-                          className="w-full flex justify-between items-center px-4 py-3 text-left font-medium text-brand-dark hover:bg-brand-accent/10 transition"
-                          onClick={() => handleToggle(feature.key, sIdx)}
-                          aria-expanded={openStep[feature.key] === sIdx}
+                      <div className="flex-shrink-0 relative z-10">
+                        <div className="w-12 h-12 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
+                          {step.number}
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <h3
+                          className={`text-2xl font-bold text-brand-dark mb-2 ${
+                            idx % 2 === 0 ? 'text-left' : 'text-right'
+                          }`}
                         >
-                          <span>{step.title}</span>
-                          <span className="ml-2">
-                            {openStep[feature.key] === sIdx ? '−' : '+'}
-                          </span>
-                        </button>
-                        {openStep[feature.key] === sIdx && (
-                          <div className="px-4 pb-4 text-muted-foreground whitespace-pre-line animate-fade-in">
-                            {step.content}
+                          {step.title}
+                        </h3>
+                        <p
+                          className={`text-brand-accent font-medium mb-4 ${
+                            idx % 2 === 0 ? 'text-left' : 'text-right'
+                          }`}
+                        >
+                          {step.subtitle}
+                        </p>
+                        <p
+                          className={`text-muted-foreground mb-6 text-lg ${
+                            idx % 2 === 0 ? 'text-left' : 'text-right'
+                          }`}
+                        >
+                          {step.description}
+                        </p>
+
+                        <div
+                          className={`flex ${
+                            idx % 2 === 0 ? 'justify-start' : 'justify-end'
+                          }`}
+                        >
+                          <button
+                            className="flex items-center gap-2 text-brand-accent hover:text-brand-accent/80 font-medium transition"
+                            onClick={() => handleToggle(step.number)}
+                            aria-expanded={openStep === step.number}
+                          >
+                            <span>Learn more details</span>
+                            <span className="transform transition-transform duration-200">
+                              {openStep === step.number ? '−' : '+'}
+                            </span>
+                          </button>
+                        </div>
+
+                        {openStep === step.number && (
+                          <div className="mt-6 p-6 bg-gray-50 rounded-lg animate-fade-in">
+                            <ul className="space-y-3">
+                              {step.details.map((detail, detailIdx) => (
+                                <li
+                                  key={detailIdx}
+                                  className={`flex items-start gap-3 ${
+                                    idx % 2 === 0
+                                      ? 'flex-row'
+                                      : 'flex-row-reverse'
+                                  }`}
+                                >
+                                  <span className="w-2 h-2 bg-brand-accent rounded-full mt-2 flex-shrink-0"></span>
+                                  <span
+                                    className={`text-muted-foreground ${
+                                      idx % 2 === 0 ? 'text-left' : 'text-right'
+                                    }`}
+                                  >
+                                    {detail}
+                                  </span>
+                                </li>
+                              ))}
+                            </ul>
                           </div>
                         )}
                       </div>
-                    ))}
+                    </div>
                   </div>
+
+                  {/* Vertical arrow between cards - positioned on alternating sides */}
+                  {idx < steps.length - 1 && (
+                    <div
+                      className={`flex my-8 ${
+                        idx % 2 === 0
+                          ? 'justify-center pl-40'
+                          : 'justify-center pr-40'
+                      }`}
+                    >
+                      <svg
+                        width="40"
+                        height="60"
+                        viewBox="0 0 40 60"
+                        className="text-brand-accent/70"
+                      >
+                        {/* Vertical line */}
+                        <line
+                          x1="20"
+                          y1="10"
+                          x2="20"
+                          y2="40"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                        />
+                        {/* Arrow head */}
+                        <polygon
+                          points="20,50 15,40 25,40"
+                          fill="currentColor"
+                        />
+                      </svg>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
