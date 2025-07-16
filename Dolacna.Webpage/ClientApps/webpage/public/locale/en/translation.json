@@ -124,12 +124,33 @@
     "emailTitle": "Email",
     "emailValue": "info@usetrislovensko.sk",
     "phoneTitle": "Phone",
-    "phoneValue": "+421 948 020 147"
+    "phoneValue": "+421 948 020 147",
+
+    "form": {
+      "title": "Send us a message",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "your@email.com",
+      "subject": "Subject",
+      "subjectPlaceholder": "What is this about?",
+      "message": "Message",
+      "messagePlaceholder": "Tell us more about your inquiry...",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "success": "Thank you! Your message has been sent successfully.",
+      "error": "Sorry, there was an error sending your message. Please try again."
+    }
   },
 
   "team": {
     "header": "Our Team",
     "subheader": "Meet the people who make our mission possible.",
+    "aboutUs": {
+      "header": "About Us",
+      "paragraph1": "We are a group of longtime friends united not only by friendship, but also by a shared passion for technology and improving people's daily lives. We've known each other since high school and later studied together at the Slovak University of Technology in Bratislava. During years of shared study and extracurricular projects, we created a strong team that can complement and motivate each other.",
+      "paragraph2": "Our current goal is to create a practical mobile application that will help people in Slovakia easily track current discounts and promotions in supermarkets. We believe that through technology we can save time and money, while helping people better plan their shopping."
+    },
     "members": [
       {
         "name": "Adam Martiška",
@@ -323,5 +344,3 @@
     ]
   }
 }
-
-
