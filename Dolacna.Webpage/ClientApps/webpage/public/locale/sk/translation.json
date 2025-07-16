@@ -146,6 +146,11 @@
   "team": {
     "header": "Náš tím",
     "subheader": "Zoznámte sa s ľuďmi, ktorí umožňujú našu misiu.",
+    "aboutUs": {
+      "header": "O nás",
+      "paragraph1": "Sme skupina dlhoročných kamarátov, ktorých spojilo nielen priateľstvo, ale aj spoločná vášeň pre technológie a zlepšovanie každodenného života ľudí. Poznáme sa už od strednej školy a neskôr sme spolu študovali na Slovenskej technickej univerzite v Bratislave. Počas rokov spoločného štúdia a mimoškolských projektov sme si vytvorili silný tím, ktorý sa dokáže navzájom dopĺňať a motivovať.",
+      "paragraph2": "Naším aktuálnym cieľom je vytvoriť praktickú mobilnú aplikáciu, ktorá ľuďom na Slovensku pomôže jednoducho sledovať aktuálne zľavy a akcie v supermarketoch. Veríme, že vďaka technológii môžeme ušetriť čas aj peniaze, a zároveň pomôcť ľuďom lepšie plánovať svoje nákupy."
+    },
     "members": [
       {
         "name": "Adam Martiška",

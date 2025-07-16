@@ -43,7 +43,7 @@ const Contact = () => {
       await Promise.all([
         emailjs.send(
           'service_r729xcs',
-          'template_tc11491',
+          'template_mhsasyo',
           {
             from_name: formData.name,
             from_email: formData.email,
@@ -53,7 +53,8 @@ const Contact = () => {
         ),
         emailjs.send(
           'service_r729xcs',
-          'template_mhsasyo',
+          'template_tc11491',
+
           {
             from_name: formData.name,
             from_email: formData.email,
