@@ -93,14 +93,6 @@ const Hero = () => {
         >
           <img src={BlackTitaniumPng} alt={'PhoneImage'}></img>
         </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center md:bottom-40">
-          <span className="text-sm font-medium mb-2 text-brand-dark">
-            {t('scroll_to_explore')}
-          </span>
-          <ChevronDown className="w-6 h-6 text-brand-dark" />
-        </div>
       </div>
     </section>
   );

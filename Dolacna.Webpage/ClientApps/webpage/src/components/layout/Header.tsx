@@ -57,7 +57,7 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center">
           <a href="/" className="text-2xl font-bold text-brand-dark">
-            usetri<span className="text-brand-accent">.sk</span>
+            Ušetri<span className="text-brand-accent"> Slovensko</span>
           </a>
         </div>
 
@@ -70,7 +70,19 @@ const Header = () => {
           >
             {t('features_header')}
           </a>
-
+          <a
+            href="#premium"
+            className="text-foreground hover:text-brand-accent transition-colors"
+            onClick={(e) => handleNavClick(e, 'premium')}
+          >
+            {t('premium_header')}
+          </a>
+          <a
+            href="/Contact"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
+            {t('footer.contact')}
+          </a>
           <a
             href="/HowItWorks"
             className="text-foreground hover:text-brand-accent transition-colors"
