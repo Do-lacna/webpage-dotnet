@@ -1,16 +1,13 @@
 import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
-import { ChevronDown } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import BlackTitaniumPng from '@/../public/images/Black-Titanium.png';
 
 const Hero = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
   const phoneRef = useRef<HTMLDivElement>(null);
-
-  const supermarketsCount = 5;
-  const productsCount = 1000;
-  const avgSavings = 20;
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -52,8 +49,11 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
-            <Button className="button-hover-effect text-lg px-8 py-6 bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark">
-              <a href="#download">{t('download_app')}</a>
+            <Button
+              className="button-hover-effect text-lg px-8 py-6 bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark"
+              onClick={() => navigate('/Download')}
+            >
+              {t('download_app')}
             </Button>
             <Button
               variant="outline"
@@ -66,21 +66,21 @@ const Hero = () => {
           <div className="flex items-center gap-x-8 pt-6">
             <div className="flex flex-col">
               <span className="text-3xl font-bold text-brand-dark">
-                {supermarketsCount}+
+                {t('supermarkets_count')}
               </span>
               <span className="text-muted-foreground">{t('supermarkets')}</span>
             </div>
             <div className="w-px h-10 bg-border"></div>
             <div className="flex flex-col">
               <span className="text-3xl font-bold text-brand-dark">
-                {productsCount}
+                {t('products_count')}
               </span>
               <span className="text-muted-foreground">{t('products')}</span>
             </div>
             <div className="w-px h-10 bg-border"></div>
             <div className="flex flex-col">
               <span className="text-3xl font-bold text-brand-dark">
-                {avgSavings}%
+                {t('savings_percentage')}
               </span>
               <span className="text-muted-foreground">{t('avg_savings')}</span>
             </div>

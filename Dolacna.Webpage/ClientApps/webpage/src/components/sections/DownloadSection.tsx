@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Apple, ShoppingBag } from 'lucide-react';
 import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 14.png';
 
-const Download = () => {
+const DownloadSection = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
@@ -89,4 +89,4 @@ const Download = () => {
   );
 };
 
-export default Download;
+export default DownloadSection;

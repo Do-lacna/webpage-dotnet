@@ -72,6 +72,14 @@ const Footer = () => {
                   {t('footer.contact')}
                 </a>
               </li>
+              <li>
+                <a
+                  href="/FAQ"
+                  className="text-white/70 hover:text-white transition-colors"
+                >
+                  {t('faq_header')}
+                </a>
+              </li>
             </ul>
           </div>
           <div>

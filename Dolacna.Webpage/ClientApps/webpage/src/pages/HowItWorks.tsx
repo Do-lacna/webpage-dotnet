@@ -15,6 +15,16 @@ const HowItWorks = () => {
     details: string[];
   }>;
 
+  // Map images to step numbers - using public folder paths
+  const stepImages = {
+    1: '/images/howItWorks/undraw_groceries_4via.png',
+    2: '/images/howItWorks/undraw_data-analysis_b7cp.png',
+    3: '/images/howItWorks/undraw_discount_igfl.png',
+    4: '/images/howItWorks/undraw_empty-cart_574u.png',
+    5: '/images/howItWorks/undraw_savings_uwjn.png',
+    // Add more mappings as needed
+  };
+
   useEffect(() => {
     // Reveal animation logic
     const observer = new IntersectionObserver(
@@ -76,29 +86,40 @@ const HowItWorks = () => {
               {steps.map((step, idx) => (
                 <div key={step.number}>
                   <div
-                    className={`glass-panel p-8 reveal-animation max-w-2xl ${
+                    className={`glass-panel p-8 reveal-animation max-w-4xl ${
                       idx % 2 === 0 ? 'ml-0 mr-auto' : 'ml-auto mr-0'
                     }`}
                     style={{ animationDelay: `${idx * 0.1}s` }}
                   >
                     <div
-                      className={`flex items-start gap-6 ${
+                      className={`flex items-start gap-8 ${
                         idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
                       }`}
                     >
-                      <div className="flex-shrink-0 relative z-10">
-                        <div className="w-12 h-12 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg">
-                          {step.number}
-                        </div>
+                      {/* Image section */}
+                      <div className="flex-shrink-0 w-80 h-60">
+                        <img
+                          src={stepImages[step.number]}
+                          alt={`${step.title} - Step ${step.number}`}
+                          className="w-full h-full object-cover rounded-lg"
+                        />
                       </div>
-                      <div className="flex-1">
-                        <h3
-                          className={`text-2xl font-bold text-brand-dark mb-2 ${
-                            idx % 2 === 0 ? 'text-left' : 'text-right'
-                          }`}
-                        >
-                          {step.title}
-                        </h3>
+
+                      {/* Content section */}
+                      <div className="flex-1 flex flex-col">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg flex-shrink-0">
+                            {step.number}
+                          </div>
+                          <h3
+                            className={`text-2xl font-bold text-brand-dark ${
+                              idx % 2 === 0 ? 'text-left' : 'text-right'
+                            }`}
+                          >
+                            {step.title}
+                          </h3>
+                        </div>
+
                         <p
                           className={`text-brand-accent font-medium mb-4 ${
                             idx % 2 === 0 ? 'text-left' : 'text-right'

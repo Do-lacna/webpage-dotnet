@@ -5,9 +5,9 @@
   "description": "Ušetri nájde najlepšie ponuky na potraviny porovnaním cien v rôznych supermarketoch v reálnom čase.",
   "download_now": "Stiahnuť teraz",
   "learn_more": "Viac informácií",
-  "supermarkets_count": "5+",
+  "supermarkets_count": "4+",
   "supermarkets": "Supermarketov",
-  "products_count": "100ky",
+  "products_count": "1000ky",
   "products": "Produktov",
   "savings_percentage": "20%",
   "avg_savings": "Priemerne ušetríte",
@@ -15,6 +15,7 @@
   "features_header": "Funkcie",
   "how_it_works": "Ako to funguje",
   "premium_header": "Prémium",
+  "faq_header": "FAQ",
   "download_app": "Stiahnuť aplikáciu",
   "toggle_menu": "Prepínať menu",
   "language": {
@@ -53,12 +54,37 @@
   },
 
   "premium": {
-    "heading": "Odomknite",
-    "headingAccent": "plný potenciál",
-    "subheading": "Prémiové predplatné odomyká výkonné funkcie, ktoré vám pomôžu maximalizovať úspory pri každom nákupe.",
+    "heading": "Odomknite pokročilé",
+    "headingAccent": "nákupné funkcie",
+    "subheading": "Objavte, čo prichádza s naším prémiovým predplatným na maximalizáciu úspor pri každom nákupe.",
+    "betaSubheading": "Začnite s našou bezplatnou beta verziou a buďte prvý, kto zažije prémiové funkcie, keď sa spustia čoskoro.",
     "recommended": "Odporúčané",
     "trialNote": "Všetky plány zahŕňajú 7-dňovú bezplatnú skúšobnú verziu. Možnosť zrušiť kedykoľvek.",
+    "whyGoPremium": {
+      "heading": "Prečo ísť na Premium?",
+      "subheading": "Odomknite pokročilé funkcie navrhnuté na maximalizáciu vašich úspor a zlepšenie nákupného zážitku.",
+      "unlimitedSearches": {
+        "title": "Neobmedzené vyhľadávanie",
+        "description": "Vyhľadávajte akýkoľvek produkt bez denných limitov"
+      },
+      "adFreeExperience": {
+        "title": "Bez reklám",
+        "description": "Prehliadajte bez prerušení alebo reklám"
+      },
+      "smartRecommendations": {
+        "title": "Inteligentné odporúčania",
+        "description": "Získajte personalizované odporúčania obchodov a produktov"
+      }
+    },
     "plans": {
+      "currentAndFuture": "Aktuálne a budúce plány",
+      "currentAndFutureSubheading": "Začnite s našou bezplatnou beta verziou dnes, prémiové funkcie prichádzajú čoskoro",
+      "freeBeta": {
+        "name": "Bezplatná beta",
+        "description": "Pomôžte nám testovať a zlepšovať základné funkcie",
+        "cta": "Pripojiť sa k beta testu",
+        "badge": "DOSTUPNÉ TERAZ"
+      },
       "free": {
         "name": "Zdarma",
         "description": "Základné porovnanie cien",
@@ -67,14 +93,17 @@
       "premium": {
         "name": "Premium",
         "period": "mesačne",
-        "description": "Pokročilý nákupný zážitok",
-        "cta": "Získať Premium"
+        "description": "Pokročilé funkcie prichádzajú čoskoro",
+        "cta": "Dozvedieť sa viac o Premium",
+        "badge": "ČOSKORO"
       }
     },
     "features": {
       "searchCompare": "Vyhľadávanie a porovnanie cien",
       "limitedViews": "Zobrazenie až 5 produktov denne",
       "basicHistory": "Základná história cien (7 dní)",
+      "betaTestingAccess": "Prístup k beta testovaniu",
+      "communityFeedback": "Spätná väzba komunity",
       "shoppingList": "Funkcia nákupného zoznamu",
       "dealAlerts": "Upozornenia na zľavy",
       "adFree": "Bez reklám",
@@ -83,6 +112,65 @@
       "smartLists": "Inteligentné nákupné zoznamy",
       "fullAlerts": "Upozornenia na zľavy pre akýkoľvek produkt",
       "recommendations": "Odporúčania obchodov"
+    },
+    "featureComparison": {
+      "heading": "Porovnanie funkcií",
+      "subheading": "Pozrite si presne, co dostanete s každým plánom",
+      "features": "Funkcie",
+      "free": "Zdarma",
+      "premium": "Premium"
+    },
+    "roadmap": {
+      "heading": "Náš vývojový plán",
+      "subheading": "Pozrite si, čo prichádza ďalej, keď pokračujeme v zlepšovaní vášho nákupného zážitku",
+      "phase1": {
+        "title": "Fáza 1",
+        "subtitle": "Bezplatná testovacia verzia",
+        "badge": "AKTUÁLNE",
+        "availableNow": "Dostupné teraz",
+        "features": {
+          "corePriceComparison": "Základné porovnanie cien",
+          "basicSearchFunctionality": "Základná vyhľadávacia funkcionalita",
+          "essentialShopping": "Základné nákupné funkcie",
+          "feedbackCollection": "Zbieranie spätnej väzby od používateľov"
+        }
+      },
+      "phase2": {
+        "title": "Fáza 2",
+        "subtitle": "Prémiové funkcie",
+        "badge": "ČOSKORO",
+        "timeline": "Prichádza čoskoro",
+        "features": {
+          "unlimitedSearches": "Neobmedzené vyhľadávanie",
+          "advancedPriceTracking": "Pokročilé sledovanie cien",
+          "smartShoppingLists": "Inteligentné nákupné zoznamy",
+          "personalizedAlerts": "Personalizované upozornenia"
+        }
+      },
+      "phase3": {
+        "title": "Fáza 3",
+        "subtitle": "Inovácie dopredu",
+        "badge": "BUDÚCNOSŤ",
+        "timeline": "Budúcnosť čaká...",
+        "features": {
+          "aiRecommendations": "AI-poháňané odporúčania",
+          "communityFeatures": "Komunitné funkcie",
+          "smartMealPlanning": "Inteligentné plánovanie jedál",
+          "innovativeSurprises": "Inovatívne prekvapenia"
+        }
+      },
+      "bePartOfJourney": {
+        "heading": "Buďte súčasťou našej cesty",
+        "description": "Začnite s našou bezplatnou testovacou verziou dnes a pomôžte formovať budúcnosť inteligentného nakupovania na Slovensku.",
+        "cta": "Pripojiť sa k beta testu"
+      }
+    },
+    "callToAction": {
+      "heading": "Začnite svoju cestu inteligentného nakupovania",
+      "description": "Pripojte sa k našej bezplatnej beta testovacej fáze a pomôžte nám budovať budúcnosť nákupu potravín na Slovensku. Prémiové funkcie čoskoro!",
+      "joinBetaTest": "Pripojiť sa k beta testu",
+      "learnMore": "Dozvedieť sa viac",
+      "footer": "Bezplatná testovacia verzia • Prémiové funkcie čoskoro • Bez záväzkov"
     }
   },
 
@@ -120,11 +208,6 @@
   "contact": {
     "header": "Kontaktujte nás",
     "subheader": "Radi vás vypočujeme! Kontaktujte nás pomocou nižšie uvedených informácií.",
-
-    "emailTitle": "Email",
-    "emailValue": "info@usetrislovensko.sk",
-    "phoneTitle": "Telefón",
-    "phoneValue": "+421 948 020 147",
 
     "form": {
       "title": "Pošlite nám správu",
@@ -181,7 +264,7 @@
         "subtitle": "Údaje z viacerých obchodov",
         "description": "Zbierame údaje o produktoch z viacerých obchodných reťazcov vrátane Tesco, Kaufland, Billa a ďalších hlavných predajcov na Slovensku.",
         "details": [
-          "Monitorovanie cien v reálnom čase z 5+ hlavných obchodných reťazcov",
+          "Monitorovanie cien v reálnom čase z 4+ hlavných obchodných reťazcov",
           "Informácie o produktoch vrátane názvov, opisov a kategórií",
           "Sledovanie špeciálnych ponúk a zliav",
           "Aktualizácie dostupnosti tovaru"
@@ -195,8 +278,7 @@
         "details": [
           "Algoritmy strojového učenia spárujú podobné produkty medzi obchodmi",
           "Automatická klasifikácia produktov podľa kategórie a značky",
-          "Detekcia duplikátov a normalizácia produktov",
-          "Hodnotenie kvality na základe atribútov produktu"
+          "Detekcia duplikátov a normalizácia produktov"
         ]
       },
       {
@@ -218,9 +300,7 @@
         "description": "Vytvorte si nákupné zoznamy a náš systém vypočíta, ktorá kombinácia obchodov vám poskytne najnižšie celkové náklady.",
         "details": [
           "Automatický výpočet nákladov pre celé nákupné zoznamy",
-          "Optimalizácia viacerých obchodov pre maximálne úspory",
-          "Navrhované alternatívy pre vypredané položky",
-          "Optimalizácia nákupnej trasy v obchodoch"
+          "Optimalizácia viacerých obchodov pre maximálne úspory"
         ]
       },
       {
@@ -231,8 +311,7 @@
         "details": [
           "Mesačné a ročné súhrny úspor",
           "Porovnanie s priemernými tržnými cenami",
-          "Ciele úspor a sledovanie ich plnenia",
-          "Podrobná analytika výdajov a poznatky"
+          "Ciele úspor a sledovanie ich plnenia"
         ]
       }
     ],
@@ -359,5 +438,81 @@
         "content": "Ak máte akékoľvek otázky týkajúce sa používania cookies, môžete nás kontaktovať na info@usetrislovensko.sk."
       }
     ]
+  },
+
+  "faq": {
+    "title": "Často kladené otázky",
+    "subtitle": "Nájdite odpovede na najčastejšie otázky o Ušetri Slovensko. Nenašli ste to, čo hľadáte? Kontaktujte náš tím podpory.",
+    "contactTitle": "Stále máte otázky?",
+    "contactDescription": "Nemôžete nájsť odpoveď, ktorú hľadáte? Náš priateľský tím podpory vám rád pomôže.",
+    "contactButton": "Kontaktovať podporu",
+    "general": {
+      "title": "Všeobecné otázky",
+      "q1": {
+        "question": "Čo je Ušetri Slovensko?",
+        "answer": "Ušetri Slovensko je aplikácia pre porovnávanie cien, ktorá vám pomáha ušetriť peniaze za potraviny porovnávaním cien vo viacerých supermarketoch na Slovensku. Poskytujeme aktuálne cenové údaje, aby sme vám pomohli nájsť najlepšie ponuky na produkty, ktoré potrebujete."
+      },
+      "q2": {
+        "question": "Ako funguje porovnávanie cien?",
+        "answer": "Náš systém automaticky zbiera a aktualizuje cenové údaje z hlavných supermarketov na Slovensku. Keď vyhľadáte produkt, zobrazíme vám aktuálne ceny z rôznych obchodov, čo vám umožní vybrať si, kde nakupovať za najlepšiu hodnotu."
+      },
+      "q3": {
+        "question": "Ktoré supermarkety pokrývate?",
+        "answer": "V súčasnosti pokrývame viac ako 4 hlavné reťazce supermarketov na Slovensku, vrátane najpopulárnejších obchodov s potravinami. Kontinuálne pracujeme na rozšírení nášho pokrytia o ďalších predajcov."
+      },
+      "q4": {
+        "question": "Aké presné sú ceny?",
+        "answer": "Naše cenové údaje aktualizujeme denne, aby sme zabezpečili presnosť. Ceny sa však môžu zmeniť v obchode a odporúčame overiť si ceny pri platení. Snažíme sa udržať 99% presnosť našich cenových informácií."
+      }
+    },
+    "app": {
+      "title": "Používanie aplikácie",
+      "q1": {
+        "question": "Ako vytvorím nákupný zoznam?",
+        "answer": "Jednoducho vyhľadajte produkty, ktoré chcete kúpiť, a pridajte ich do nákupného zoznamu. Aplikácia automaticky vypočíta, ktoré obchody ponúkajú najlepšie ceny pre váš celý zoznam, čím vám pomôže ušetriť peniaze a čas."
+      },
+      "q2": {
+        "question": "Môžem dostávať upozornenia na zníženie cien?",
+        "answer": "Áno! S našou funkciou Upozornenia na ponuky môžete pridať produkty do sledovaného zoznamu a dostávať upozornenia, keď sa dostanú do výpredaja alebo ich ceny výrazne klesnú."
+      },
+      "q3": {
+        "question": "Ako si môžem pozrieť históriu cien?",
+        "answer": "Každá stránka produktu obsahuje graf histórie cien, ktorý ukazuje, ako sa ceny menili v čase. To vám pomáha identifikovať trendy a robiť informované rozhodnutia o tom, kedy nakupovať."
+      },
+      "q4": {
+        "question": "Je aplikácia dostupná offline?",
+        "answer": "Aj keď potrebujete internetové pripojenie na získanie najnovších cien, môžete si offline prezerať uložené nákupné zoznamy a predtým načítané informácie o produktoch."
+      }
+    },
+    "pricing": {
+      "title": "Ceny a Premium",
+      "q1": {
+        "question": "Je aplikácia bezplatná?",
+        "answer": "Áno, základná verzia Ušetri Slovensko je úplne bezplatná a zahŕňa porovnávanie cien, základné nákupné zoznamy a funkciu vyhľadávania produktov."
+      },
+      "q2": {
+        "question": "Aké dodatočné funkcie ponúka Premium?",
+        "answer": "Prémioví predplatitelia získajú pokročilé funkcie ako neobmedzené nákupné zoznamy, podrobné analýzy histórie cien, prioritnú zákaznícku podporu, pokročilé upozornenia na ponuky a exkluzívne zľavy od partnerských obchodov."
+      },
+      "q3": {
+        "question": "Koľko stojí Premium?",
+        "answer": "Naše prémiové predplatné má konkurencieschopnú cenu, ktorá poskytuje vynikajúcu hodnotu. Navštívte našu Premium stránku pre aktuálne ceny a možnosti predplatného. Často ponúkame špeciálne akcie pre nových používateľov."
+      }
+    },
+    "technical": {
+      "title": "Technická podpora",
+      "q1": {
+        "question": "Ktoré zariadenia sú podporované?",
+        "answer": "Naša aplikácia je dostupná pre zariadenia iOS aj Android. Máme aj webovú verziu, ktorá funguje v akomkoľvek modernom prehliadači, čím je prístupná z počítačov a tabletov."
+      },
+      "q2": {
+        "question": "Mám problémy s aplikáciou. Čo mám robiť?",
+        "answer": "Najprv skúste reštartovať aplikáciu alebo skontrolovať internetové pripojenie. Ak problém pretrváva, kontaktujte náš tím podpory cez aplikáciu alebo e-mailom. Uveďte podrobnosti o vašom zariadení a probléme, ktorý zažívate."
+      },
+      "q3": {
+        "question": "Ako aktualizujem aplikáciu?",
+        "answer": "Aktualizácie sú dostupné cez App Store (iOS) alebo Google Play Store (Android). Odporúčame povoliť automatické aktualizácie, aby ste vždy mali najnovšie funkcie a opravy chýb."
+      }
+    }
   }
 }

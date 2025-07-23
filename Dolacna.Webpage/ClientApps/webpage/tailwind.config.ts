@@ -67,7 +67,7 @@ export default {
           ring: 'hsl(var(--sidebar-ring))',
         },
         brand: {
-          dark: '#034F4A',
+          dark: '#2B2B2B',
           light: '#E6EEED',
           accent: '#62E46D',
         },

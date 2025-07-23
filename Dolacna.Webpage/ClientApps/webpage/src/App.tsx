@@ -11,6 +11,9 @@ import Cookies from './pages/Cookies';
 import Team from './pages/Team';
 import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks';
+import Premium from './pages/Premium';
+import Download from './pages/Download';
+import Faq from './pages/Faq';
 
 const queryClient = new QueryClient();
 
@@ -29,6 +32,9 @@ const App = () => (
           <Route path="/AboutUs" element={<Team />} />
           <Route path="/Contact" element={<Contact />} />
           <Route path="/HowItWorks" element={<HowItWorks />} />
+          <Route path="/Premium" element={<Premium />} />
+          <Route path="/Download" element={<Download />} />
+          <Route path="/FAQ" element={<Faq />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import { Check, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-const Premium = () => {
+const PremiumSection = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -25,21 +27,6 @@ const Premium = () => {
   }, []);
 
   const plans = [
-    {
-      name: t('premium.plans.free.name'),
-      price: '€0',
-      description: t('premium.plans.free.description'),
-      features: [
-        { name: t('premium.features.searchCompare'), included: true },
-        { name: t('premium.features.limitedViews'), included: true },
-        { name: t('premium.features.basicHistory'), included: true },
-        { name: t('premium.features.shoppingList'), included: false },
-        { name: t('premium.features.dealAlerts'), included: false },
-        { name: t('premium.features.adFree'), included: false },
-      ],
-      cta: t('premium.plans.free.cta'),
-      highlighted: false,
-    },
     {
       name: t('premium.plans.premium.name'),
       price: '€2.99',
@@ -76,11 +63,11 @@ const Premium = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="flex justify-center max-w-lg mx-auto">
           {plans.map((plan, i) => (
             <div
-              key={i}
-              className={`relative rounded-2xl overflow-hidden transition-all duration-500 reveal-animation ${
+              key={plan.name}
+              className={`relative rounded-2xl overflow-hidden transition-all duration-500 reveal-animation w-full ${
                 plan.highlighted
                   ? 'bg-brand-dark text-white border-2 border-brand-accent shadow-lg'
                   : 'bg-white border border-border'
@@ -123,26 +110,30 @@ const Premium = () => {
                 </p>
 
                 <div className="space-y-4 mb-8">
-                  {plan.features.map((feature, j) => (
-                    <div key={j} className="flex items-start">
-                      {feature.included ? (
-                        <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                      ) : (
-                        <X className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
-                      )}
-                      <span
-                        className={`ml-3 ${
-                          feature.included
-                            ? plan.highlighted
-                              ? 'text-white'
-                              : 'text-foreground'
-                            : 'text-muted-foreground'
-                        }`}
+                  {plan.features.map((feature, j) => {
+                    let textColor = 'text-muted-foreground';
+                    if (feature.included) {
+                      textColor = plan.highlighted
+                        ? 'text-white'
+                        : 'text-foreground';
+                    }
+
+                    return (
+                      <div
+                        key={`${plan.name}-${feature.name}`}
+                        className="flex items-start"
                       >
-                        {feature.name}
-                      </span>
-                    </div>
-                  ))}
+                        {feature.included ? (
+                          <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                        ) : (
+                          <X className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
+                        )}
+                        <span className={`ml-3 ${textColor}`}>
+                          {feature.name}
+                        </span>
+                      </div>
+                    );
+                  })}
                 </div>
 
                 <Button
@@ -151,6 +142,9 @@ const Premium = () => {
                       ? 'bg-brand-accent text-brand-dark hover:bg-white hover:text-brand-dark button-hover-effect'
                       : 'border border-brand-dark text-white hover:bg-brand-dark hover:text-brand-accent'
                   }`}
+                  onClick={() => {
+                    navigate('/Premium');
+                  }}
                 >
                   {plan.cta}
                 </Button>
@@ -167,4 +161,4 @@ const Premium = () => {
   );
 };
 
-export default Premium;
+export default PremiumSection;

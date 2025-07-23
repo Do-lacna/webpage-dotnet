@@ -2,12 +2,12 @@
   "save_money": "Save money on every shopping trip",
   "compare_prices": "Compare grocery prices across Slovakia",
   "across_slovakia": "across Slovakia",
-  "description": "usetri.sk finds the best deals on groceries by comparing prices at multiple supermarkets in real-time.",
+  "description": "Ušetri Slovensko finds the best deals on groceries by comparing prices at multiple supermarkets in real-time.",
   "download_now": "Download Now",
   "learn_more": "Learn More",
-  "supermarkets_count": "5+",
+  "supermarkets_count": "4+",
   "supermarkets": "Supermarkets",
-  "products_count": "100s",
+  "products_count": "1000+",
   "products": "Products",
   "savings_percentage": "20%",
   "avg_savings": "Avg. Savings",
@@ -15,6 +15,7 @@
   "features_header": "Features",
   "how_it_works": "How It Works",
   "premium_header": "Premium",
+  "faq_header": "FAQ",
   "download_app": "Download App",
   "toggle_menu": "Toggle menu",
   "language": {
@@ -53,12 +54,33 @@
   },
 
   "premium": {
-    "heading": "Unlock the",
-    "headingAccent": "Full Potential",
-    "subheading": "Our premium subscription unlocks powerful features to maximize your savings on every shopping trip.",
+    "heading": "Unlock Advanced",
+    "headingAccent": "Shopping Features",
+    "subheading": "Discover what's coming in our premium subscription to maximize your savings on every shopping trip.",
+    "betaSubheading": "Start with our free beta version and be the first to experience premium features when they launch soon.",
     "recommended": "Recommended",
     "trialNote": "All plans come with a 7-day free trial. Cancel anytime.",
+    "whyGoPremium": {
+      "heading": "Why Go Premium?",
+      "subheading": "Unlock advanced features designed to maximize your savings and enhance your shopping experience.",
+      "unlimitedSearches": {
+        "title": "Unlimited Searches",
+        "description": "Search for any product without daily limits"
+      },
+      "smartRecommendations": {
+        "title": "Smart Recommendations",
+        "description": "Get personalized store and product recommendations"
+      }
+    },
     "plans": {
+      "currentAndFuture": "Current & Future Plans",
+      "currentAndFutureSubheading": "Start with our free beta version today, premium features coming soon",
+      "freeBeta": {
+        "name": "Free Beta",
+        "description": "Help us test and improve the core features",
+        "cta": "Join Beta Test",
+        "badge": "AVAILABLE NOW"
+      },
       "free": {
         "name": "Free",
         "description": "Basic price comparison",
@@ -67,29 +89,90 @@
       "premium": {
         "name": "Premium",
         "period": "per month",
-        "description": "Advanced shopping experience",
-        "cta": "Get Premium"
+        "description": "Advanced features coming soon",
+        "cta": "Learn More About Premium",
+        "badge": "COMING SOON"
       }
     },
     "features": {
       "searchCompare": "Search & compare prices",
       "limitedViews": "View up to 5 products per day",
       "basicHistory": "Basic price history (7 days)",
+      "betaTestingAccess": "Beta testing access",
+      "communityFeedback": "Community feedback",
       "shoppingList": "Shopping list feature",
       "dealAlerts": "Deal alerts",
-      "adFree": "Ad-free experience",
       "unlimitedSearches": "Unlimited product searches",
       "fullHistory": "Full price history (90 days)",
       "smartLists": "Smart shopping lists",
       "fullAlerts": "Deal alerts for any product",
       "recommendations": "Store recommendations"
+    },
+    "featureComparison": {
+      "heading": "Feature Comparison",
+      "subheading": "See exactly what you get with each plan",
+      "features": "Features",
+      "free": "Free",
+      "premium": "Premium"
+    },
+    "roadmap": {
+      "heading": "Our Development Roadmap",
+      "subheading": "See what's coming next as we continue to enhance your shopping experience",
+      "phase1": {
+        "title": "Phase 1",
+        "subtitle": "Free Testing Version",
+        "badge": "CURRENT",
+        "availableNow": "Available Now",
+        "features": {
+          "corePriceComparison": "Core price comparison",
+          "basicSearchFunctionality": "Basic search functionality",
+          "essentialShopping": "Essential shopping features",
+          "feedbackCollection": "User feedback collection"
+        }
+      },
+      "phase2": {
+        "title": "Phase 2",
+        "subtitle": "Premium Features",
+        "badge": "COMING SOON",
+        "timeline": "Coming soon",
+        "features": {
+          "unlimitedSearches": "Unlimited searches",
+          "advancedPriceTracking": "Advanced price tracking",
+          "smartShoppingLists": "Smart shopping lists",
+          "personalizedAlerts": "Personalized alerts"
+        }
+      },
+      "phase3": {
+        "title": "Phase 3",
+        "subtitle": "Innovation Ahead",
+        "badge": "FUTURE",
+        "timeline": "The future awaits...",
+        "features": {
+          "aiRecommendations": "AI-powered recommendations",
+          "communityFeatures": "Community features",
+          "smartMealPlanning": "Smart meal planning",
+          "innovativeSurprises": "Innovative surprises"
+        }
+      },
+      "bePartOfJourney": {
+        "heading": "Be Part of Our Journey",
+        "description": "Start with our free testing version today and help shape the future of smart shopping in Slovakia.",
+        "cta": "Join the Beta Test"
+      }
+    },
+    "callToAction": {
+      "heading": "Start Your Smart Shopping Journey",
+      "description": "Join our free beta testing phase and help us build the future of grocery shopping in Slovakia. Premium features coming soon!",
+      "joinBetaTest": "Join Beta Test",
+      "learnMore": "Learn More",
+      "footer": "Free testing version • Premium features coming soon • No commitment required"
     }
   },
 
   "download": {
     "heading": "Start Saving on Your",
     "headingAccent": "Grocery Bills",
-    "subheading": "Download usetri.sk now and join thousands of smart shoppers who are already saving money on their grocery shopping across Slovakia.",
+    "subheading": "Download Ušetri Slovensko now and join thousands of smart shoppers who are already saving money on their grocery shopping across Slovakia.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "joinedBy": "Joined by",
@@ -181,7 +264,7 @@
         "subtitle": "Multi-source grocery data",
         "description": "We collect product data from multiple grocery store chains including Tesco, Kaufland, Billa, and other major retailers across Slovakia.",
         "details": [
-          "Real-time price monitoring from 5+ major supermarket chains",
+          "Real-time price monitoring from 4+ major supermarket chains",
           "Product information including names, descriptions, and categories",
           "Special offers and discount tracking",
           "Stock availability updates"
@@ -195,8 +278,7 @@
         "details": [
           "Machine learning algorithms match similar products across stores",
           "Automatic product classification by category and brand",
-          "Duplicate detection and product normalization",
-          "Quality scoring based on product attributes"
+          "Duplicate detection and product normalization"
         ]
       },
       {
@@ -218,9 +300,7 @@
         "description": "Create shopping lists and our system will calculate which supermarket combination gives you the lowest total cost.",
         "details": [
           "Automatic cost calculation for entire shopping lists",
-          "Multi-store optimization for maximum savings",
-          "Suggested alternatives for out-of-stock items",
-          "Shopping route optimization within stores"
+          "Multi-store optimization for maximum savings"
         ]
       },
       {
@@ -231,8 +311,7 @@
         "details": [
           "Monthly and yearly savings summaries",
           "Comparison with average market prices",
-          "Savings goals and achievement tracking",
-          "Detailed spending analytics and insights"
+          "Savings goals and achievement tracking"
         ]
       }
     ],
@@ -359,5 +438,81 @@
         "content": "For any questions regarding our use of cookies, you can reach us at info@usetrislovensko.sk."
       }
     ]
+  },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to the most common questions about Ušetri Slovensko. Can't find what you're looking for? Contact our support team.",
+    "contactTitle": "Still have questions?",
+    "contactDescription": "Can't find the answer you're looking for? Our friendly support team is here to help.",
+    "contactButton": "Contact Support",
+    "general": {
+      "title": "General Questions",
+      "q1": {
+        "question": "What is Ušetri Slovensko?",
+        "answer": "Ušetri Slovensko is a price comparison app that helps you save money on groceries by comparing prices across multiple supermarkets in Slovakia. We provide real-time price data to help you find the best deals on the products you need."
+      },
+      "q2": {
+        "question": "How does price comparison work?",
+        "answer": "Our system automatically collects and updates price data from major supermarkets across Slovakia. When you search for a product, we show you current prices from different stores, allowing you to choose where to shop for the best value."
+      },
+      "q3": {
+        "question": "Which supermarkets do you cover?",
+        "answer": "We currently cover 4+ major supermarket chains in Slovakia, including the most popular grocery stores. We're continuously working to expand our coverage to include more retailers."
+      },
+      "q4": {
+        "question": "How accurate are the prices?",
+        "answer": "We update our price data daily to ensure accuracy. However, prices may change in-store, and we recommend verifying prices at checkout. We strive to maintain 99% accuracy in our price information."
+      }
+    },
+    "app": {
+      "title": "Using the App",
+      "q1": {
+        "question": "How do I create a shopping list?",
+        "answer": "Simply search for products you want to buy and add them to your shopping list. The app will automatically calculate which stores offer the best prices for your entire list, helping you save money and time."
+      },
+      "q2": {
+        "question": "Can I get notifications for price drops?",
+        "answer": "Yes! With our Deal Alerts feature, you can add products to your watchlist and receive notifications when they go on sale or their prices drop significantly."
+      },
+      "q3": {
+        "question": "How do I view price history?",
+        "answer": "Each product page includes a price history chart showing how prices have changed over time. This helps you identify trends and make informed decisions about when to buy."
+      },
+      "q4": {
+        "question": "Is the app available offline?",
+        "answer": "While you need an internet connection to get the latest prices, you can view your saved shopping lists and previously loaded product information offline."
+      }
+    },
+    "pricing": {
+      "title": "Pricing & Premium",
+      "q1": {
+        "question": "Is the app free to use?",
+        "answer": "Yes, the basic version of Ušetri Slovensko is completely free and includes price comparison, basic shopping lists, and product search functionality."
+      },
+      "q2": {
+        "question": "What additional features does Premium offer?",
+        "answer": "Premium subscribers get advanced features like unlimited shopping lists, detailed price history analytics, priority customer support, advanced deal alerts, and exclusive discounts from partner stores."
+      },
+      "q3": {
+        "question": "How much does Premium cost?",
+        "answer": "Our Premium subscription is competitively priced to provide excellent value. Visit our Premium page for current pricing and subscription options. We often offer special promotions for new users."
+      }
+    },
+    "technical": {
+      "title": "Technical Support",
+      "q1": {
+        "question": "Which devices are supported?",
+        "answer": "Our app is available for both iOS and Android devices. We also have a web version that works on any modern browser, making it accessible from computers and tablets."
+      },
+      "q2": {
+        "question": "I'm having trouble with the app. What should I do?",
+        "answer": "First, try restarting the app or checking your internet connection. If the problem persists, contact our support team through the app or via email. Include details about your device and the issue you're experiencing."
+      },
+      "q3": {
+        "question": "How do I update the app?",
+        "answer": "Updates are available through the App Store (iOS) or Google Play Store (Android). We recommend enabling automatic updates to ensure you always have the latest features and bug fixes."
+      }
+    }
   }
 }

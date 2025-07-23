@@ -64,16 +64,8 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
-            href="#features"
+            href="/Premium"
             className="text-foreground hover:text-brand-accent transition-colors"
-            onClick={(e) => handleNavClick(e, 'features')}
-          >
-            {t('features_header')}
-          </a>
-          <a
-            href="#premium"
-            className="text-foreground hover:text-brand-accent transition-colors"
-            onClick={(e) => handleNavClick(e, 'premium')}
           >
             {t('premium_header')}
           </a>
@@ -89,12 +81,18 @@ const Header = () => {
           >
             {t('how_it_works')}
           </a>
+          <a
+            href="/FAQ"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
+            {t('faq_header')}
+          </a>
 
           <Button
             className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
-            asChild
+            onClick={() => navigate('/Download')}
           >
-            <a href="#download">{t('download_app')}</a>
+            {t('download_app')}
           </Button>
           <Button
             variant="ghost"
@@ -133,12 +131,9 @@ const Header = () => {
               {t('features_header')}
             </a>
             <a
-              href="#premium"
+              href="/Premium"
               className="block py-2 text-foreground hover:text-brand-accent transition-colors"
-              onClick={(e) => {
-                handleNavClick(e, 'premium');
-                setMobileMenuOpen(false);
-              }}
+              onClick={() => setMobileMenuOpen(false)}
             >
               {t('premium_header')}
             </a>
@@ -156,9 +151,19 @@ const Header = () => {
             >
               {t('how_it_works')}
             </a>
+            <a
+              href="/FAQ"
+              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('faq_header')}
+            </a>
             <Button
               className="w-full bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
-              onClick={() => setMobileMenuOpen(false)}
+              onClick={() => {
+                setMobileMenuOpen(false);
+                navigate('/Download');
+              }}
             >
               {t('download_app')}
             </Button>
