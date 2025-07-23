@@ -59,10 +59,10 @@ const HowItWorks = () => {
     <div className="min-h-screen">
       <Header />
       <main>
-        <section className="py-20 bg-white" id="how-it-works">
-          <div className="section-container max-w-4xl mx-auto px-4">
-            <div className="text-center mb-12 reveal-animation">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+        <section className="py-12 md:py-20 bg-white" id="how-it-works">
+          <div className="section-container max-w-4xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-8 md:mb-12 reveal-animation">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-4 px-2 leading-tight">
                 {t('howItWorksPage.title')
                   .split(' ')
                   .map((word, i, arr) =>
@@ -81,7 +81,7 @@ const HowItWorks = () => {
                     ),
                   )}
               </h2>
-              <p className="text-lg text-gray-600 mb-8">
+              <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 px-4 max-w-3xl mx-auto leading-relaxed">
                 {t('howItWorksPage.subtitle')}
               </p>
             </div>
@@ -90,22 +90,26 @@ const HowItWorks = () => {
               {steps.map((step, idx) => (
                 <div key={step.number}>
                   <div
-                    className={`glass-panel p-8 reveal-animation max-w-4xl ${
+                    className={`glass-panel p-4 md:p-8 reveal-animation max-w-4xl ${
                       idx % 2 === 0 ? 'ml-0 mr-auto' : 'ml-auto mr-0'
                     }`}
                     style={{ animationDelay: `${idx * 0.1}s` }}
                   >
                     <div
-                      className={`flex items-start gap-8 ${
-                        idx % 2 === 0 ? 'flex-row' : 'flex-row-reverse'
+                      className={`flex flex-col md:flex-row items-start gap-4 md:gap-8 ${
+                        idx % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                       }`}
                     >
                       {/* Image section */}
-                      <div className="flex-shrink-0 w-80 h-60">
+                      <div className="flex-shrink-0 w-full md:w-80 h-48 md:h-60">
                         <img
                           src={stepImages[step.number]}
                           alt={`${step.title} - Step ${step.number}`}
-                          className="w-full h-full object-cover rounded-lg"
+                          className="w-full h-full object-cover rounded-lg bg-gray-100"
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
                         />
                       </div>
 
@@ -116,8 +120,8 @@ const HowItWorks = () => {
                             {step.number}
                           </div>
                           <h3
-                            className={`text-2xl font-bold text-brand-dark ${
-                              idx % 2 === 0 ? 'text-left' : 'text-right'
+                            className={`text-xl md:text-2xl font-bold text-brand-dark text-left ${
+                              idx % 2 === 0 ? 'md:text-left' : 'md:text-right'
                             }`}
                           >
                             {step.title}
@@ -125,27 +129,29 @@ const HowItWorks = () => {
                         </div>
 
                         <p
-                          className={`text-brand-accent font-medium mb-4 ${
-                            idx % 2 === 0 ? 'text-left' : 'text-right'
+                          className={`text-brand-accent font-medium mb-4 text-left ${
+                            idx % 2 === 0 ? 'md:text-left' : 'md:text-right'
                           }`}
                         >
                           {step.subtitle}
                         </p>
                         <p
-                          className={`text-muted-foreground mb-6 text-lg ${
-                            idx % 2 === 0 ? 'text-left' : 'text-right'
+                          className={`text-muted-foreground mb-6 text-base md:text-lg text-left ${
+                            idx % 2 === 0 ? 'md:text-left' : 'md:text-right'
                           }`}
                         >
                           {step.description}
                         </p>
 
                         <div
-                          className={`flex ${
-                            idx % 2 === 0 ? 'justify-start' : 'justify-end'
+                          className={`flex justify-start ${
+                            idx % 2 === 0
+                              ? 'md:justify-start'
+                              : 'md:justify-end'
                           }`}
                         >
                           <button
-                            className="flex items-center gap-2 text-brand-accent hover:text-brand-accent/80 font-medium transition"
+                            className="flex items-center gap-2 text-brand-accent hover:text-brand-accent/80 font-medium transition py-2 px-3 -ml-3 rounded-md hover:bg-gray-50 min-h-[44px]"
                             onClick={() => handleToggle(step.number)}
                             aria-expanded={openStep === step.number}
                           >
@@ -157,21 +163,23 @@ const HowItWorks = () => {
                         </div>
 
                         {openStep === step.number && (
-                          <div className="mt-6 p-6 bg-gray-50 rounded-lg animate-fade-in">
+                          <div className="mt-6 p-4 md:p-6 bg-gray-50 rounded-lg animate-fade-in">
                             <ul className="space-y-3">
                               {step.details.map((detail, detailIdx) => (
                                 <li
-                                  key={detailIdx}
-                                  className={`flex items-start gap-3 ${
+                                  key={`${step.number}-detail-${detailIdx}`}
+                                  className={`flex items-start gap-3 flex-row ${
                                     idx % 2 === 0
-                                      ? 'flex-row'
-                                      : 'flex-row-reverse'
+                                      ? 'md:flex-row'
+                                      : 'md:flex-row-reverse'
                                   }`}
                                 >
                                   <span className="w-2 h-2 bg-brand-accent rounded-full mt-2 flex-shrink-0"></span>
                                   <span
-                                    className={`text-muted-foreground ${
-                                      idx % 2 === 0 ? 'text-left' : 'text-right'
+                                    className={`text-muted-foreground text-left ${
+                                      idx % 2 === 0
+                                        ? 'md:text-left'
+                                        : 'md:text-right'
                                     }`}
                                   >
                                     {detail}
@@ -188,10 +196,10 @@ const HowItWorks = () => {
                   {/* Vertical arrow between cards - positioned on alternating sides */}
                   {idx < steps.length - 1 && (
                     <div
-                      className={`flex my-8 ${
+                      className={`flex my-8 justify-center ${
                         idx % 2 === 0
-                          ? 'justify-center pl-40'
-                          : 'justify-center pr-40'
+                          ? 'md:justify-center md:pl-40'
+                          : 'md:justify-center md:pr-40'
                       }`}
                     >
                       <svg
