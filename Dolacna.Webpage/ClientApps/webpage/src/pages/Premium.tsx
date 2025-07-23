@@ -111,13 +111,13 @@ const Premium = () => {
       <section className="pt-32 pb-16 bg-gradient-to-b from-brand-light to-white">
         <div className="section-container">
           <div className="text-center max-w-4xl mx-auto reveal-animation">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-brand-dark">
-              {t('premium.heading')}{' '}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-brand-dark">{t('premium.heading')} </span>
               <span className="text-brand-accent">
                 {t('premium.headingAccent')}
               </span>
             </h1>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-xl text-gray-600 mb-8">
               {t('premium.betaSubheading')}
             </p>
             <div className="inline-flex items-center px-4 py-2 bg-brand-accent/10 rounded-full text-brand-dark font-medium">
@@ -132,10 +132,18 @@ const Premium = () => {
       <section className="py-16 bg-white">
         <div className="section-container">
           <div className="text-center mb-12 reveal-animation">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
-              {t('premium.whyGoPremium.heading')}
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              <span className="text-brand-dark">
+                {t('premium.whyGoPremium.heading').split(' ')[0]}{' '}
+              </span>
+              <span className="text-brand-accent">
+                {t('premium.whyGoPremium.heading')
+                  .split(' ')
+                  .slice(1)
+                  .join(' ')}
+              </span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {t('premium.whyGoPremium.subheading')}
             </p>
           </div>
@@ -164,10 +172,18 @@ const Premium = () => {
       <section className="py-20 bg-gradient-to-b from-white to-brand-light">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto mb-16 reveal-animation">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
-              {t('premium.plans.currentAndFuture')}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <span className="text-brand-dark">
+                {t('premium.plans.currentAndFuture').split(' ')[0]}{' '}
+              </span>
+              <span className="text-brand-accent">
+                {t('premium.plans.currentAndFuture')
+                  .split(' ')
+                  .slice(1)
+                  .join(' ')}
+              </span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-gray-600">
               {t('premium.plans.currentAndFutureSubheading')}
             </p>
           </div>
@@ -255,10 +271,18 @@ const Premium = () => {
       <section className="py-20 bg-white">
         <div className="section-container">
           <div className="text-center mb-12 reveal-animation">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
-              {t('premium.featureComparison.heading')}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <span className="text-brand-dark">
+                {t('premium.featureComparison.heading').split(' ')[0]}{' '}
+              </span>
+              <span className="text-brand-accent">
+                {t('premium.featureComparison.heading')
+                  .split(' ')
+                  .slice(1)
+                  .join(' ')}
+              </span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-gray-600">
               {t('premium.featureComparison.subheading')}
             </p>
           </div>
@@ -374,10 +398,15 @@ const Premium = () => {
       <section className="py-20 bg-gradient-to-b from-white to-brand-light">
         <div className="section-container">
           <div className="text-center mb-16 reveal-animation">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
-              {t('premium.roadmap.heading')}
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <span className="text-brand-dark">
+                {t('premium.roadmap.heading').split(' ')[0]}{' '}
+              </span>
+              <span className="text-brand-accent">
+                {t('premium.roadmap.heading').split(' ').slice(1).join(' ')}
+              </span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               {t('premium.roadmap.subheading')}
             </p>
           </div>
@@ -571,7 +600,7 @@ const Premium = () => {
       <section className="py-20 bg-brand-dark">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto reveal-animation">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
               {t('premium.callToAction.heading')}
             </h2>
             <p className="text-lg text-gray-300 mb-8">

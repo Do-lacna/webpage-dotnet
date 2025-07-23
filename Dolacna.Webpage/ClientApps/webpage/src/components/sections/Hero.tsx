@@ -58,6 +58,7 @@ const Hero = () => {
             <Button
               variant="outline"
               className="text-lg px-8 py-6 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white"
+              onClick={() => navigate('/HowItWorks')}
             >
               {t('learn_more')}
             </Button>

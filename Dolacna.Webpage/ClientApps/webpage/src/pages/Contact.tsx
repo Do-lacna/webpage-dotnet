@@ -105,13 +105,15 @@ const Contact = () => {
         <section className="py-20 bg-white" id="contact">
           <div className="section-container max-w-4xl mx-auto px-4">
             <div className="text-center mb-16 reveal-animation">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
-                {t('contact.header')}{' '}
-                <span className="text-brand-accent"></span>
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+                <span className="text-brand-dark">
+                  {t('contact.header').split(' ')[0]}{' '}
+                </span>
+                <span className="text-brand-accent">
+                  {t('contact.header').split(' ').slice(1).join(' ')}
+                </span>
               </h2>
-              <p className="text-lg text-muted-foreground">
-                {t('contact.subheader')}
-              </p>
+              <p className="text-lg text-gray-600">{t('contact.subheader')}</p>
             </div>
             <div className="space-y-10">
               {contactSections.map((section) => (

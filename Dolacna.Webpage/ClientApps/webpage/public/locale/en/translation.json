@@ -176,7 +176,59 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "joinedBy": "Joined by",
-    "smartShoppers": "smart shoppers"
+    "smartShoppers": "smart shoppers",
+    "pageTitle": "Download App",
+    "pageSubtitle": "Get the Ušetri Slovensko app and start saving money on your grocery shopping today.",
+    "features": {
+      "realtimeComparison": {
+        "title": "Real-time Price Comparison",
+        "description": "Compare prices across all major Slovak retailers instantly"
+      },
+      "storeLocator": {
+        "title": "Store Locator",
+        "description": "Find the nearest stores with the best deals in your area"
+      },
+      "trustedSecure": {
+        "title": "Trusted & Secure",
+        "description": "Your data is protected with enterprise-grade security"
+      },
+      "lightningFast": {
+        "title": "Lightning Fast",
+        "description": "Get instant results with our optimized search engine"
+      }
+    },
+    "benefits": {
+      "title": "What You Get",
+      "subtitle": "Features designed to maximize your savings",
+      "list": [
+        "Save up to 20% on your grocery bills",
+        "Track price history and trends",
+        "Create and share shopping lists",
+        "Get notifications for price drops",
+        "Discover weekly deals and promotions"
+      ]
+    },
+    "stats": {
+      "activeUsers": "Active Users",
+      "partnerStores": "Partner Stores",
+      "totalSavings": "Total Savings",
+      "appRating": "App Rating"
+    },
+    "compatibility": {
+      "title": "Available on All Devices",
+      "subtitle": "Download Ušetri Slovensko on your preferred platform and start saving today.",
+      "ios": "iOS",
+      "iosDevices": "iPhone & iPad",
+      "android": "Android",
+      "androidDevices": "Phone & Tablet"
+    },
+    "finalCta": {
+      "title": "Ready to Start Saving?",
+      "subtitle": "Join the Ušetri Slovensko community and discover how much you can save on your next grocery trip.",
+      "downloadOn": "Download on the",
+      "getItOn": "Get it on",
+      "trustedBy": "Trusted by 10,000+ users across Slovakia"
+    }
   },
 
   "footer": {

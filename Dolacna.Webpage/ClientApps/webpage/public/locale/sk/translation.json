@@ -172,11 +172,63 @@
   "download": {
     "heading": "Začnite šetriť na svojich",
     "headingAccent": "nákupoch",
-    "subheading": "Stiahnite si Ušetri teraz a pridajte sa k šikovným nakupujúcim, ktorí už šetria na svojich nákupoch potravín po celom Slovensku.",
+    "subheading": "Stiahnite si Ušetri Slovensko teraz a pridajte sa k šikovným nakupujúcim, ktorí už šetria na svojich nákupoch potravín po celom Slovensku.",
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "joinedBy": "Pripojili sa k nám",
-    "smartShoppers": "šikovní nakupujúci"
+    "smartShoppers": "šikovní nakupujúci",
+    "pageTitle": "Stiahnuť aplikáciu",
+    "pageSubtitle": "Získajte aplikáciu Ušetri Slovensko a začnite šetriť peniaze pri nákupoch potravín už dnes.",
+    "features": {
+      "realtimeComparison": {
+        "title": "Porovnanie cien v reálnom čase",
+        "description": "Porovnajte ceny vo všetkých hlavných slovenských obchodoch okamžite"
+      },
+      "storeLocator": {
+        "title": "Vyhľadávač obchodov",
+        "description": "Nájdite najbližšie obchody s najlepšími ponukami vo vašej oblasti"
+      },
+      "trustedSecure": {
+        "title": "Dôveryhodné a bezpečné",
+        "description": "Vaše údaje sú chránené bezpečnosťou na podnikovej úrovni"
+      },
+      "lightningFast": {
+        "title": "Bleskovo rýchle",
+        "description": "Získajte okamžité výsledky s naším optimalizovaným vyhľadávačom"
+      }
+    },
+    "benefits": {
+      "title": "Čo získate",
+      "subtitle": "Funkcie navrhnuté na maximalizáciu vašich úspor",
+      "list": [
+        "Ušetrite až 20% na vašich nákupoch potravín",
+        "Sledujte históriu cien a trendy",
+        "Vytvárajte a zdieľajte nákupné zoznamy",
+        "Dostávajte upozornenia na pokles cien",
+        "Objavujte týždenné zľavy a akcie"
+      ]
+    },
+    "stats": {
+      "activeUsers": "Aktívni používatelia",
+      "partnerStores": "Partnerské obchody",
+      "totalSavings": "Celkové úspory",
+      "appRating": "Hodnotenie aplikácie"
+    },
+    "compatibility": {
+      "title": "Dostupné na všetkých zariadeniach",
+      "subtitle": "Stiahnite si Ušetri Slovensko na vašej preferovanej platforme a začnite šetriť už dnes.",
+      "ios": "iOS",
+      "iosDevices": "iPhone a iPad",
+      "android": "Android",
+      "androidDevices": "Telefón a tablet"
+    },
+    "finalCta": {
+      "title": "Pripravení začať šetriť?",
+      "subtitle": "Pripojte sa ku komunite Ušetri Slovensko a objavte, koľko môžete ušetriť pri vašom ďalšom nákupe potravín.",
+      "downloadOn": "Stiahnuť z",
+      "getItOn": "Získať z",
+      "trustedBy": "Dôveruje nám viac ako 10 000 používateľov po celom Slovensku"
+    }
   },
 
   "footer": {
@@ -203,6 +255,9 @@
   "contact": {
     "header": "Kontaktujte nás",
     "subheader": "Radi vás vypočujeme! Kontaktujte nás pomocou nižšie uvedených informácií.",
+
+    "emailTitle": "Email",
+    "emailValue": "usetripareur@gmail.com",
 
     "form": {
       "title": "Pošlite nám správu",

@@ -127,10 +127,15 @@ const Faq = () => {
       <section className="pt-20 pb-12 bg-gradient-to-br from-brand-primary/5 via-brand-accent/5 to-transparent">
         <div className="container mx-auto px-4">
           <div className="text-center reveal-animation opacity-0 translate-y-8 transition-all duration-700">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-brand-text mb-6">
-              {t('faq.title')}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+              <span className="text-brand-dark">
+                {t('faq.title').split(' ')[0]}{' '}
+              </span>
+              <span className="text-brand-accent">
+                {t('faq.title').split(' ').slice(1).join(' ')}
+              </span>
             </h1>
-            <p className="text-lg md:text-xl text-brand-text/80 max-w-3xl mx-auto mb-8">
+            <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-8">
               {t('faq.subtitle')}
             </p>
           </div>
