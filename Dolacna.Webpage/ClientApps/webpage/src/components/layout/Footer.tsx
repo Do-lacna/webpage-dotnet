@@ -17,9 +17,17 @@ const Footer = () => {
             <p className="text-white/70 mb-6">{t('footer.description')}</p>
             <div className="flex space-x-4">
               <a
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61575249665020"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"
                 aria-label="Facebook"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.open(
+                    'https://www.facebook.com/profile.php?id=61575249665020',
+                    '_blank',
+                    'noopener,noreferrer',
+                  );
+                }}
               >
                 <Facebook size={20} />
               </a>
@@ -41,7 +49,7 @@ const Footer = () => {
                 <Instagram size={20} />
               </a>
               <a
-                href="mailto:info@usetrislovensko.sk"
+                href="mailto:usetripareur@gmail.com"
                 className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-accent hover:text-brand-dark transition-colors"
                 aria-label="Email"
               >

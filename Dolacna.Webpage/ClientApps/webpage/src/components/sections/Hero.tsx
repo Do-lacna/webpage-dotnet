@@ -64,22 +64,22 @@ const Hero = () => {
             </Button>
           </div>
 
-          <div className="flex items-center gap-x-8 pt-6">
-            <div className="flex flex-col">
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-x-8 pt-6">
+            <div className="flex flex-col text-center sm:text-left">
               <span className="text-3xl font-bold text-brand-dark">
                 {t('supermarkets_count')}
               </span>
               <span className="text-muted-foreground">{t('supermarkets')}</span>
             </div>
-            <div className="w-px h-10 bg-border"></div>
-            <div className="flex flex-col">
+            <div className="hidden sm:block w-px h-10 bg-border"></div>
+            <div className="flex flex-col text-center sm:text-left">
               <span className="text-3xl font-bold text-brand-dark">
                 {t('products_count')}
               </span>
               <span className="text-muted-foreground">{t('products')}</span>
             </div>
-            <div className="w-px h-10 bg-border"></div>
-            <div className="flex flex-col">
+            <div className="hidden sm:block w-px h-10 bg-border"></div>
+            <div className="flex flex-col text-center sm:text-left">
               <span className="text-3xl font-bold text-brand-dark">
                 {t('savings_percentage')}
               </span>

@@ -64,6 +64,12 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
+            href="/HowItWorks"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
+            {t('how_it_works')}
+          </a>
+          <a
             href="/Premium"
             className="text-foreground hover:text-brand-accent transition-colors"
           >
@@ -75,12 +81,7 @@ const Header = () => {
           >
             {t('footer.contact')}
           </a>
-          <a
-            href="/HowItWorks"
-            className="text-foreground hover:text-brand-accent transition-colors"
-          >
-            {t('how_it_works')}
-          </a>
+
           <a
             href="/FAQ"
             className="text-foreground hover:text-brand-accent transition-colors"

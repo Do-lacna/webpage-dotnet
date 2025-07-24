@@ -38,7 +38,6 @@ const PremiumSection = () => {
         { name: t('premium.features.smartLists'), included: true },
         { name: t('premium.features.fullAlerts'), included: true },
         { name: t('premium.features.recommendations'), included: true },
-        { name: t('premium.features.adFree'), included: true },
       ],
       cta: t('premium.plans.premium.cta'),
       highlighted: true,
