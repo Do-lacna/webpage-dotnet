@@ -105,7 +105,7 @@ const HowItWorks = () => {
                         <img
                           src={stepImages[step.number]}
                           alt={`${step.title} - Step ${step.number}`}
-                          className="w-full h-full object-cover rounded-lg bg-gray-100"
+                          className="w-full h-full object-contain md:object-cover rounded-lg bg-white"
                           loading="lazy"
                           onError={(e) => {
                             e.currentTarget.style.display = 'none';
@@ -128,28 +128,14 @@ const HowItWorks = () => {
                           </h3>
                         </div>
 
-                        <p
-                          className={`text-brand-accent font-medium mb-4 text-left ${
-                            idx % 2 === 0 ? 'md:text-left' : 'md:text-right'
-                          }`}
-                        >
+                        <p className="text-brand-accent font-medium mb-4 text-left">
                           {step.subtitle}
                         </p>
-                        <p
-                          className={`text-muted-foreground mb-6 text-base md:text-lg text-left ${
-                            idx % 2 === 0 ? 'md:text-left' : 'md:text-right'
-                          }`}
-                        >
+                        <p className="text-muted-foreground mb-6 text-base md:text-lg text-left">
                           {step.description}
                         </p>
 
-                        <div
-                          className={`flex justify-start ${
-                            idx % 2 === 0
-                              ? 'md:justify-start'
-                              : 'md:justify-end'
-                          }`}
-                        >
+                        <div className={`flex justify-start `}>
                           <button
                             className="flex items-center gap-2 text-brand-accent hover:text-brand-accent/80 font-medium transition py-2 px-3 -ml-3 rounded-md hover:bg-gray-50 min-h-[44px]"
                             onClick={() => handleToggle(step.number)}
@@ -168,20 +154,10 @@ const HowItWorks = () => {
                               {step.details.map((detail, detailIdx) => (
                                 <li
                                   key={`${step.number}-detail-${detailIdx}`}
-                                  className={`flex items-start gap-3 flex-row ${
-                                    idx % 2 === 0
-                                      ? 'md:flex-row'
-                                      : 'md:flex-row-reverse'
-                                  }`}
+                                  className="flex items-start gap-3"
                                 >
                                   <span className="w-2 h-2 bg-brand-accent rounded-full mt-2 flex-shrink-0"></span>
-                                  <span
-                                    className={`text-muted-foreground text-left ${
-                                      idx % 2 === 0
-                                        ? 'md:text-left'
-                                        : 'md:text-right'
-                                    }`}
-                                  >
+                                  <span className="text-muted-foreground text-left">
                                     {detail}
                                   </span>
                                 </li>
