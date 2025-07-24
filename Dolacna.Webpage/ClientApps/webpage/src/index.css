@@ -135,7 +135,7 @@
   }
 
   .pricing-badge {
-    @apply absolute -top-3 right-8 bg-brand-accent text-brand-dark text-sm font-medium px-3 py-1 rounded-full shadow-soft;
+    @apply absolute -top-3 right-3 bg-brand-dark text-brand-accent text-sm font-medium px-2 py-1 rounded-full shadow-soft;
   }
 }
 

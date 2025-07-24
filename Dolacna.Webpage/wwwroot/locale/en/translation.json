@@ -58,6 +58,8 @@
     "headingAccent": "Shopping Features",
     "subheading": "Discover what's coming in our premium subscription to maximize your savings on every shopping trip.",
     "betaSubheading": "Start with our free beta version and be the first to experience premium features when they launch soon.",
+    "contactForTesting": "Contact us for testing",
+    "freePhaseBadge": "Free testing phase • Premium coming soon",
     "recommended": "Recommended",
     "trialNote": "All plans come with a 7-day free trial. Cancel anytime.",
     "whyGoPremium": {
@@ -321,7 +323,8 @@
       }
     ],
     "searchPlaceholder": "Search steps or features...",
-    "noResults": "No results found."
+    "noResults": "No results found.",
+    "learnMoreDetails": "Learn more details"
   },
 
   "privacyPolicy": {
@@ -463,11 +466,11 @@
       },
       "q3": {
         "question": "Which supermarkets do you cover?",
-        "answer": "We currently cover 4+ major supermarket chains in Slovakia, including the most popular grocery stores. We're continuously working to expand our coverage to include more retailers."
+        "answer": "We are currently covering Tesco, Billa, Kaufland, and Lidl in the Bratislava region. We're continuously working to expand our coverage to include more retailers and regions."
       },
       "q4": {
-        "question": "How accurate are the prices?",
-        "answer": "We update our price data daily to ensure accuracy. However, prices may change in-store, and we recommend verifying prices at checkout. We strive to maintain 99% accuracy in our price information."
+        "question": "How often are prices updated?",
+        "answer": "Our prices are checked and updated weekly to ensure you have current pricing information. However, prices may change in-store between updates, and we recommend verifying prices at checkout."
       }
     },
     "app": {
@@ -493,26 +496,26 @@
       "title": "Pricing & Premium",
       "q1": {
         "question": "Is the app free to use?",
-        "answer": "Yes, the basic version of Ušetri Slovensko is completely free and includes price comparison, basic shopping lists, and product search functionality."
+        "answer": "The app is free for checking a limited amount of products. This allows you to try out our service and see the value we provide before upgrading."
       },
       "q2": {
         "question": "What additional features does Premium offer?",
-        "answer": "Premium subscribers get advanced features like unlimited shopping lists, detailed price history analytics, priority customer support, advanced deal alerts, and exclusive discounts from partner stores."
+        "answer": "Premium version includes unlimited search, shopping list functionality, longer price history, and discount notifications. These features help you maximize your savings and manage your shopping more effectively."
       },
       "q3": {
         "question": "How much does Premium cost?",
-        "answer": "Our Premium subscription is competitively priced to provide excellent value. Visit our Premium page for current pricing and subscription options. We often offer special promotions for new users."
+        "answer": "Our Premium subscription is competitively priced to provide excellent value. Visit our <a href='/Premium' class='text-brand-accent hover:text-brand-accent/80 underline'>Premium page</a> for current pricing and subscription options. We often offer special promotions for new users."
       }
     },
     "technical": {
       "title": "Technical Support",
       "q1": {
         "question": "Which devices are supported?",
-        "answer": "Our app is available for both iOS and Android devices. We also have a web version that works on any modern browser, making it accessible from computers and tablets."
+        "answer": "Our app is available for both iOS and Android mobile devices. We focus on providing the best mobile experience for price comparison on the go."
       },
       "q2": {
         "question": "I'm having trouble with the app. What should I do?",
-        "answer": "First, try restarting the app or checking your internet connection. If the problem persists, contact our support team through the app or via email. Include details about your device and the issue you're experiencing."
+        "answer": "First, try restarting the app or checking your internet connection. If the problem persists, please <a href='/Contact' class='text-brand-accent hover:text-brand-accent/80 underline'>contact our support team</a> with details about your device and the issue you're experiencing."
       },
       "q3": {
         "question": "How do I update the app?",

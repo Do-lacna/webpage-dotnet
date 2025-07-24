@@ -58,6 +58,8 @@
     "headingAccent": "nákupné funkcie",
     "subheading": "Objavte, čo prichádza s naším prémiovým predplatným na maximalizáciu úspor pri každom nákupe.",
     "betaSubheading": "Začnite s našou bezplatnou beta verziou a buďte prvý, kto zažije prémiové funkcie, keď sa spustia čoskoro.",
+    "contactForTesting": "Kontaktujte nás pre testovanie",
+    "freePhaseBadge": "Bezplatná testovacia fáza • Premium čoskoro",
     "recommended": "Odporúčané",
     "trialNote": "Všetky plány zahŕňajú 7-dňovú bezplatnú skúšobnú verziu. Možnosť zrušiť kedykoľvek.",
     "whyGoPremium": {
@@ -316,7 +318,8 @@
       }
     ],
     "searchPlaceholder": "Vyhľadajte kroky alebo funkcie...",
-    "noResults": "Nenašli sa žiadne výsledky."
+    "noResults": "Nenašli sa žiadne výsledky.",
+    "learnMoreDetails": "Zobraziť viac detailov"
   },
 
   "privacyPolicy": {
@@ -458,11 +461,11 @@
       },
       "q3": {
         "question": "Ktoré supermarkety pokrývate?",
-        "answer": "V súčasnosti pokrývame viac ako 4 hlavné reťazce supermarketov na Slovensku, vrátane najpopulárnejších obchodov s potravinami. Kontinuálne pracujeme na rozšírení nášho pokrytia o ďalších predajcov."
+        "answer": "V súčasnosti pokrývame Tesco, Billa, Kaufland a Lidl v bratislavskom regióne. Kontinuálne pracujeme na rozšírení nášho pokrytia o ďalších predajcov a regióny."
       },
       "q4": {
-        "question": "Aké presné sú ceny?",
-        "answer": "Naše cenové údaje aktualizujeme denne, aby sme zabezpečili presnosť. Ceny sa však môžu zmeniť v obchode a odporúčame overiť si ceny pri platení. Snažíme sa udržať 99% presnosť našich cenových informácií."
+        "question": "Ako často sa ceny aktualizujú?",
+        "answer": "Naše ceny sú kontrolované a aktualizované týždenne, aby ste mali aktuálne cenové informácie. Ceny sa však môžu zmeniť v obchode medzi aktualizáciami a odporúčame overiť si ceny pri platení."
       }
     },
     "app": {
@@ -488,26 +491,26 @@
       "title": "Ceny a Premium",
       "q1": {
         "question": "Je aplikácia bezplatná?",
-        "answer": "Áno, základná verzia Ušetri Slovensko je úplne bezplatná a zahŕňa porovnávanie cien, základné nákupné zoznamy a funkciu vyhľadávania produktov."
+        "answer": "Aplikácia je bezplatná pre kontrolu obmedzeného množstva produktov. To vám umožní vyskúšať našu službu a vidieť hodnotu, ktorú poskytujeme, pred upgradom."
       },
       "q2": {
         "question": "Aké dodatočné funkcie ponúka Premium?",
-        "answer": "Prémioví predplatitelia získajú pokročilé funkcie ako neobmedzené nákupné zoznamy, podrobné analýzy histórie cien, prioritnú zákaznícku podporu, pokročilé upozornenia na ponuky a exkluzívne zľavy od partnerských obchodov."
+        "answer": "Premium verzia zahŕňa neobmedzené vyhľadávanie, funkciu nákupného zoznamu, dlhšiu históriu cien a upozornenia na zľavy. Tieto funkcie vám pomôžu maximalizovať úspory a efektívnejšie spravovať nákupy."
       },
       "q3": {
         "question": "Koľko stojí Premium?",
-        "answer": "Naše prémiové predplatné má konkurencieschopnú cenu, ktorá poskytuje vynikajúcu hodnotu. Navštívte našu Premium stránku pre aktuálne ceny a možnosti predplatného. Často ponúkame špeciálne akcie pre nových používateľov."
+        "answer": "Naše prémiové predplatné má konkurencieschopnú cenu, ktorá poskytuje vynikajúcu hodnotu. Navštívte našu <a href='/Premium' class='text-brand-accent hover:text-brand-accent/80 underline'>Premium stránku</a> pre aktuálne ceny a možnosti predplatného. Často ponúkame špeciálne akcie pre nových používateľov."
       }
     },
     "technical": {
       "title": "Technická podpora",
       "q1": {
         "question": "Ktoré zariadenia sú podporované?",
-        "answer": "Naša aplikácia je dostupná pre zariadenia iOS aj Android. Máme aj webovú verziu, ktorá funguje v akomkoľvek modernom prehliadači, čím je prístupná z počítačov a tabletov."
+        "answer": "Naša aplikácia je dostupná pre mobilné zariadenia iOS aj Android. Zameriavame sa na poskytovanie najlepšieho mobilného zážitku pre porovnávanie cien na cestách."
       },
       "q2": {
         "question": "Mám problémy s aplikáciou. Čo mám robiť?",
-        "answer": "Najprv skúste reštartovať aplikáciu alebo skontrolovať internetové pripojenie. Ak problém pretrváva, kontaktujte náš tím podpory cez aplikáciu alebo e-mailom. Uveďte podrobnosti o vašom zariadení a probléme, ktorý zažívate."
+        "answer": "Najprv skúste reštartovať aplikáciu alebo skontrolovať internetové pripojenie. Ak problém pretrváva, prosím <a href='/Contact' class='text-brand-accent hover:text-brand-accent/80 underline'>kontaktujte náš tím podpory</a> s podrobnosťami o vašom zariadení a probléme, ktorý zažívate."
       },
       "q3": {
         "question": "Ako aktualizujem aplikáciu?",

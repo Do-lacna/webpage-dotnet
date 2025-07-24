@@ -155,7 +155,7 @@ const HowItWorks = () => {
                             onClick={() => handleToggle(step.number)}
                             aria-expanded={openStep === step.number}
                           >
-                            <span>Learn more details</span>
+                            <span>{t('howItWorksPage.learnMoreDetails')}</span>
                             <span className="transform transition-transform duration-200">
                               {openStep === step.number ? '−' : '+'}
                             </span>

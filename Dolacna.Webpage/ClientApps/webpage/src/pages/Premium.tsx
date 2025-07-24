@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import {
   Check,
   X,
   Star,
   Zap,
-  Shield,
   Crown,
   Users,
   Sparkles,
@@ -18,6 +18,7 @@ import { Button } from '@/components/ui/button';
 
 const Premium = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     // Initialize intersection observer for reveal animations
@@ -50,12 +51,14 @@ const Premium = () => {
       price: '€0',
       description: t('premium.plans.freeBeta.description'),
       features: [
-        { name: t('premium.features.searchCompare'), included: true },
+        { name: t('premium.features.limitedProductSearch'), included: true },
+        { name: t('premium.features.basicPriceHistory'), included: true },
         { name: t('premium.features.betaTestingAccess'), included: true },
-        { name: t('premium.features.basicHistory'), included: true },
         { name: t('premium.features.communityFeedback'), included: true },
+        { name: t('premium.features.unlimitedSearch'), included: false },
         { name: t('premium.features.shoppingList'), included: false },
-        { name: t('premium.features.dealAlerts'), included: false },
+        { name: t('premium.features.discountNotifications'), included: false },
+        { name: t('premium.features.extendedPriceHistory'), included: false },
       ],
       cta: t('premium.plans.freeBeta.cta'),
       highlighted: true,
@@ -68,12 +71,11 @@ const Premium = () => {
       period: t('premium.plans.premium.period'),
       description: t('premium.plans.premium.description'),
       features: [
-        { name: t('premium.features.unlimitedSearches'), included: true },
-        { name: t('premium.features.fullHistory'), included: true },
-        { name: t('premium.features.smartLists'), included: true },
-        { name: t('premium.features.fullAlerts'), included: true },
-        { name: t('premium.features.recommendations'), included: true },
-        { name: t('premium.features.adFree'), included: true },
+        { name: t('premium.features.unlimitedSearch'), included: true },
+        { name: t('premium.features.smartShoppingList'), included: true },
+        { name: t('premium.features.discountNotifications'), included: true },
+        { name: t('premium.features.extendedPriceHistory'), included: true },
+        { name: t('premium.features.prioritySupport'), included: true },
       ],
       cta: t('premium.plans.premium.cta'),
       highlighted: false,
@@ -82,33 +84,12 @@ const Premium = () => {
     },
   ];
 
-  const premiumBenefits = [
-    {
-      icon: Zap,
-      title: t('premium.whyGoPremium.unlimitedSearches.title'),
-      description: t('premium.whyGoPremium.unlimitedSearches.description'),
-      color: 'text-yellow-500',
-    },
-    {
-      icon: Shield,
-      title: t('premium.whyGoPremium.adFreeExperience.title'),
-      description: t('premium.whyGoPremium.adFreeExperience.description'),
-      color: 'text-green-500',
-    },
-    {
-      icon: Star,
-      title: t('premium.whyGoPremium.smartRecommendations.title'),
-      description: t('premium.whyGoPremium.smartRecommendations.description'),
-      color: 'text-blue-500',
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-white">
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-b from-brand-light to-white">
+      <section className="pt-32 bg-gradient-to-b from-brand-light to-white">
         <div className="section-container">
           <div className="text-center max-w-4xl mx-auto reveal-animation">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
@@ -122,72 +103,15 @@ const Premium = () => {
             </p>
             <div className="inline-flex items-center px-4 py-2 bg-brand-accent/10 rounded-full text-brand-dark font-medium">
               <Star className="w-5 h-5 mr-2 text-brand-accent" />
-              Free beta testing • Premium coming soon • {t('premium.trialNote')}
+              {t('premium.freePhaseBadge')} • {t('premium.contactForTesting')}
             </div>
           </div>
         </div>
       </section>
 
-      {/* Premium Benefits Overview */}
-      <section className="py-16 bg-white">
-        <div className="section-container">
-          <div className="text-center mb-12 reveal-animation">
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">
-              <span className="text-brand-dark">
-                {t('premium.whyGoPremium.heading').split(' ')[0]}{' '}
-              </span>
-              <span className="text-brand-accent">
-                {t('premium.whyGoPremium.heading')
-                  .split(' ')
-                  .slice(1)
-                  .join(' ')}
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              {t('premium.whyGoPremium.subheading')}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            {premiumBenefits.map((benefit, i) => (
-              <div
-                key={benefit.title}
-                className="text-center p-6 rounded-lg border border-border hover:shadow-lg transition-all duration-300 reveal-animation"
-                style={{ animationDelay: `${i * 0.2}s` }}
-              >
-                <benefit.icon
-                  className={`w-12 h-12 mx-auto mb-4 ${benefit.color}`}
-                />
-                <h3 className="text-xl font-semibold mb-2 text-brand-dark">
-                  {benefit.title}
-                </h3>
-                <p className="text-muted-foreground">{benefit.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Pricing Plans */}
-      <section className="py-20 bg-gradient-to-b from-white to-brand-light">
+      <section className=" bg-white">
         <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto mb-16 reveal-animation">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="text-brand-dark">
-                {t('premium.plans.currentAndFuture').split(' ')[0]}{' '}
-              </span>
-              <span className="text-brand-accent">
-                {t('premium.plans.currentAndFuture')
-                  .split(' ')
-                  .slice(1)
-                  .join(' ')}
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              {t('premium.plans.currentAndFutureSubheading')}
-            </p>
-          </div>
-
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {plans.map((plan, i) => (
               <div
@@ -199,7 +123,7 @@ const Premium = () => {
                 }`}
                 style={{ animationDelay: `${i * 0.2}s` }}
               >
-                <div className="pricing-badge mt-7">{plan.badge}</div>
+                <div className="pricing-badge mt-5">{plan.badge}</div>
                 <div className="p-8">
                   <div className="flex items-center mb-4">
                     <plan.icon className="w-8 h-8 mr-3 text-brand-dark" />
@@ -253,6 +177,7 @@ const Premium = () => {
                         : 'bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark border border-brand-dark'
                     }`}
                     disabled={!plan.highlighted}
+                    onClick={() => plan.highlighted && navigate('/Contact')}
                   >
                     {plan.cta}
                   </Button>
@@ -263,133 +188,6 @@ const Premium = () => {
 
           <div className="mt-12 text-center text-muted-foreground reveal-animation">
             <p className="text-lg">{t('premium.trialNote')}</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Feature Comparison Table */}
-      <section className="py-20 bg-white">
-        <div className="section-container">
-          <div className="text-center mb-12 reveal-animation">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="text-brand-dark">
-                {t('premium.featureComparison.heading').split(' ')[0]}{' '}
-              </span>
-              <span className="text-brand-accent">
-                {t('premium.featureComparison.heading')
-                  .split(' ')
-                  .slice(1)
-                  .join(' ')}
-              </span>
-            </h2>
-            <p className="text-lg text-gray-600">
-              {t('premium.featureComparison.subheading')}
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto reveal-animation">
-            <div className="bg-white rounded-2xl border border-border shadow-lg overflow-hidden">
-              <div className="grid grid-cols-3 bg-brand-light">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-brand-dark">
-                    {t('premium.featureComparison.features')}
-                  </h3>
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-brand-dark">
-                    {t('premium.featureComparison.free')}
-                  </h3>
-                </div>
-                <div className="p-6 text-center bg-brand-dark text-white">
-                  <h3 className="text-xl font-bold">
-                    {t('premium.featureComparison.premium')}
-                  </h3>
-                </div>
-              </div>
-
-              {[
-                {
-                  name: t('premium.features.searchCompare'),
-                  free: true,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.limitedViews'),
-                  free: true,
-                  premium: false,
-                },
-                {
-                  name: t('premium.features.unlimitedSearches'),
-                  free: false,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.basicHistory'),
-                  free: true,
-                  premium: false,
-                },
-                {
-                  name: t('premium.features.fullHistory'),
-                  free: false,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.shoppingList'),
-                  free: false,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.smartLists'),
-                  free: false,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.dealAlerts'),
-                  free: false,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.fullAlerts'),
-                  free: false,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.recommendations'),
-                  free: false,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.adFree'),
-                  free: false,
-                  premium: true,
-                },
-              ].map((feature, i) => (
-                <div
-                  key={feature.name}
-                  className={`grid grid-cols-3 border-b border-border last:border-b-0 ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
-                >
-                  <div className="p-4">
-                    <span className="text-foreground font-medium">
-                      {feature.name}
-                    </span>
-                  </div>
-                  <div className="p-4 text-center">
-                    {feature.free ? (
-                      <Check className="w-5 h-5 text-brand-accent mx-auto" />
-                    ) : (
-                      <X className="w-5 h-5 text-muted-foreground mx-auto" />
-                    )}
-                  </div>
-                  <div className="p-4 text-center">
-                    {feature.premium ? (
-                      <Check className="w-5 h-5 text-brand-accent mx-auto" />
-                    ) : (
-                      <X className="w-5 h-5 text-muted-foreground mx-auto" />
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
@@ -436,31 +234,27 @@ const Premium = () => {
                     <li className="flex items-start">
                       <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
-                        {t(
-                          'premium.roadmap.phase1.features.corePriceComparison',
-                        )}
+                        {t('premium.roadmap.phase1.features.productSearch')}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t(
-                          'premium.roadmap.phase1.features.basicSearchFunctionality',
+                          'premium.roadmap.phase1.features.shoppingListTesting',
                         )}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
-                        {t('premium.roadmap.phase1.features.essentialShopping')}
+                        {t('premium.roadmap.phase1.features.basicPriceHistory')}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
-                        {t(
-                          'premium.roadmap.phase1.features.feedbackCollection',
-                        )}
+                        {t('premium.roadmap.phase1.features.contactForTesting')}
                       </span>
                     </li>
                   </ul>
@@ -498,14 +292,20 @@ const Premium = () => {
                     <li className="flex items-start">
                       <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
-                        {t('premium.roadmap.phase2.features.unlimitedSearches')}
+                        {t('premium.roadmap.phase2.features.unlimitedSearch')}
+                      </span>
+                    </li>
+                    <li className="flex items-start">
+                      <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <span className="ml-3 text-foreground">
+                        {t('premium.roadmap.phase2.features.smartShoppingList')}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t(
-                          'premium.roadmap.phase2.features.advancedPriceTracking',
+                          'premium.roadmap.phase2.features.discountNotifications',
                         )}
                       </span>
                     </li>
@@ -513,15 +313,7 @@ const Premium = () => {
                       <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t(
-                          'premium.roadmap.phase2.features.smartShoppingLists',
-                        )}
-                      </span>
-                    </li>
-                    <li className="flex items-start">
-                      <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
-                      <span className="ml-3 text-foreground">
-                        {t(
-                          'premium.roadmap.phase2.features.personalizedAlerts',
+                          'premium.roadmap.phase2.features.extendedPriceHistory',
                         )}
                       </span>
                     </li>
@@ -560,27 +352,25 @@ const Premium = () => {
                     <li className="flex items-start">
                       <Sparkles className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
-                        {t('premium.roadmap.phase3.features.aiRecommendations')}
+                        {t('premium.roadmap.phase3.features.moreSupermarkets')}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Users className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
-                        {t('premium.roadmap.phase3.features.communityFeatures')}
+                        {t('premium.roadmap.phase3.features.moreProducts')}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Calendar className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
-                        {t('premium.roadmap.phase3.features.smartMealPlanning')}
+                        {t('premium.roadmap.phase3.features.newFeatures')}
                       </span>
                     </li>
                     <li className="flex items-start">
                       <Zap className="w-5 h-5 text-purple-500 mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
-                        {t(
-                          'premium.roadmap.phase3.features.innovativeSurprises',
-                        )}
+                        {t('premium.roadmap.phase3.features.customerFeedback')}
                       </span>
                     </li>
                   </ul>
@@ -596,6 +386,113 @@ const Premium = () => {
         </div>
       </section>
 
+      {/* Feature Comparison Table */}
+      <section className="py-20 bg-white">
+        <div className="section-container">
+          <div className="text-center mb-12 reveal-animation">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+              <span className="text-brand-dark">
+                {t('premium.featureComparison.heading').split(' ')[0]}{' '}
+              </span>
+              <span className="text-brand-accent">
+                {t('premium.featureComparison.heading')
+                  .split(' ')
+                  .slice(1)
+                  .join(' ')}
+              </span>
+            </h2>
+            <p className="text-lg text-gray-600">
+              {t('premium.featureComparison.subheading')}
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto reveal-animation">
+            <div className="bg-white rounded-2xl border border-border shadow-lg overflow-hidden">
+              <div className="grid grid-cols-3 bg-brand-light">
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-brand-dark">
+                    {t('premium.featureComparison.features')}
+                  </h3>
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="text-xl font-bold text-brand-dark">
+                    {t('premium.featureComparison.free')}
+                  </h3>
+                </div>
+                <div className="p-6 text-center bg-brand-dark text-white">
+                  <h3 className="text-xl font-bold">
+                    {t('premium.featureComparison.premium')}
+                  </h3>
+                </div>
+              </div>
+
+              {[
+                {
+                  name: t('premium.features.unlimitedSearch'),
+                  free: false,
+                  premium: true,
+                },
+                {
+                  name: t('premium.features.extendedPriceHistory'),
+                  free: false,
+                  premium: true,
+                },
+                {
+                  name: t('premium.features.betaTestingAccess'),
+                  free: true,
+                  premium: true,
+                },
+                {
+                  name: t('premium.features.smartShoppingList'),
+                  free: false,
+                  premium: true,
+                },
+                {
+                  name: t('premium.features.discountNotifications'),
+                  free: false,
+                  premium: true,
+                },
+                {
+                  name: t('premium.features.prioritySupport'),
+                  free: false,
+                  premium: true,
+                },
+                {
+                  name: t('premium.features.communityFeedback'),
+                  free: true,
+                  premium: true,
+                },
+              ].map((feature, i) => (
+                <div
+                  key={feature.name}
+                  className={`grid grid-cols-3 border-b border-border last:border-b-0 ${i % 2 === 0 ? 'bg-gray-50' : 'bg-white'}`}
+                >
+                  <div className="p-4">
+                    <span className="text-foreground font-medium">
+                      {feature.name}
+                    </span>
+                  </div>
+                  <div className="p-4 text-center">
+                    {feature.free ? (
+                      <Check className="w-5 h-5 text-brand-accent mx-auto" />
+                    ) : (
+                      <X className="w-5 h-5 text-muted-foreground mx-auto" />
+                    )}
+                  </div>
+                  <div className="p-4 text-center">
+                    {feature.premium ? (
+                      <Check className="w-5 h-5 text-brand-accent mx-auto" />
+                    ) : (
+                      <X className="w-5 h-5 text-muted-foreground mx-auto" />
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-20 bg-brand-dark">
         <div className="section-container">
@@ -606,12 +503,12 @@ const Premium = () => {
             <p className="text-lg text-gray-300 mb-8">
               {t('premium.callToAction.description')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-brand-accent text-brand-dark hover:bg-white hover:text-brand-dark px-8 py-6 text-lg font-semibold button-hover-effect">
-                {t('premium.callToAction.joinBetaTest')}
-              </Button>
-              <Button className="bg-transparent border-2 border-brand-accent text-brand-accent hover:bg-brand-accent hover:text-brand-dark px-8 py-6 text-lg font-semibold">
-                {t('premium.callToAction.learnMore')}
+            <div className="flex justify-center">
+              <Button
+                className="bg-brand-accent text-brand-dark hover:bg-white hover:text-brand-dark px-8 py-6 text-lg font-semibold button-hover-effect"
+                onClick={() => navigate('/Contact')}
+              >
+                {t('premium.callToAction.contactUs')}
               </Button>
             </div>
             <div className="mt-6 text-sm text-gray-400">

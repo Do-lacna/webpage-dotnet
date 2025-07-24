@@ -57,7 +57,9 @@
     "heading": "Unlock Advanced",
     "headingAccent": "Shopping Features",
     "subheading": "Discover what's coming in our premium subscription to maximize your savings on every shopping trip.",
-    "betaSubheading": "Start with our free beta version and be the first to experience premium features when they launch soon.",
+    "betaSubheading": "Start with our free testing phase and be the first to experience premium features when they launch soon.",
+    "contactForTesting": "Contact us for testing",
+    "freePhaseBadge": "Free testing phase • Premium coming soon",
     "recommended": "Recommended",
     "trialNote": "All plans come with a 7-day free trial. Cancel anytime.",
     "whyGoPremium": {
@@ -67,18 +69,22 @@
         "title": "Unlimited Searches",
         "description": "Search for any product without daily limits"
       },
-      "smartRecommendations": {
-        "title": "Smart Recommendations",
-        "description": "Get personalized store and product recommendations"
+      "smartShoppingList": {
+        "title": "Smart Shopping Lists",
+        "description": "Create intelligent shopping lists with automatic optimization"
+      },
+      "discountNotifications": {
+        "title": "Discount Notifications",
+        "description": "Get instant alerts when your favorite products go on sale"
       }
     },
     "plans": {
       "currentAndFuture": "Current & Future Plans",
-      "currentAndFutureSubheading": "Start with our free beta version today, premium features coming soon",
+      "currentAndFutureSubheading": "Start with our free testing version today, premium features coming soon",
       "freeBeta": {
-        "name": "Free Beta",
-        "description": "Help us test and improve the core features",
-        "cta": "Join Beta Test",
+        "name": "Free Testing",
+        "description": "Help us test and improve the core features during our testing phase",
+        "cta": "Join Testing Phase",
         "badge": "AVAILABLE NOW"
       },
       "free": {
@@ -89,24 +95,22 @@
       "premium": {
         "name": "Premium",
         "period": "per month",
-        "description": "Advanced features coming soon",
+        "description": "Advanced features for serious shoppers",
         "cta": "Learn More About Premium",
         "badge": "COMING SOON"
       }
     },
     "features": {
-      "searchCompare": "Search & compare prices",
-      "limitedViews": "View up to 5 products per day",
-      "basicHistory": "Basic price history (7 days)",
+      "limitedProductSearch": "Limited product search",
+      "basicPriceHistory": "Basic price history (limited time)",
       "betaTestingAccess": "Beta testing access",
       "communityFeedback": "Community feedback",
+      "unlimitedSearch": "Unlimited product searches",
       "shoppingList": "Shopping list feature",
-      "dealAlerts": "Deal alerts",
-      "unlimitedSearches": "Unlimited product searches",
-      "fullHistory": "Full price history (90 days)",
-      "smartLists": "Smart shopping lists",
-      "fullAlerts": "Deal alerts for any product",
-      "recommendations": "Store recommendations"
+      "smartShoppingList": "Smart shopping lists",
+      "discountNotifications": "Discount notifications",
+      "extendedPriceHistory": "Extended price history",
+      "prioritySupport": "Priority support"
     },
     "featureComparison": {
       "heading": "Feature Comparison",
@@ -120,52 +124,52 @@
       "subheading": "See what's coming next as we continue to enhance your shopping experience",
       "phase1": {
         "title": "Phase 1",
-        "subtitle": "Free Testing Version",
+        "subtitle": "Free Testing Phase",
         "badge": "CURRENT",
         "availableNow": "Available Now",
         "features": {
-          "corePriceComparison": "Core price comparison",
-          "basicSearchFunctionality": "Basic search functionality",
-          "essentialShopping": "Essential shopping features",
-          "feedbackCollection": "User feedback collection"
+          "productSearch": "Product search functionality",
+          "shoppingListTesting": "Shopping list testing",
+          "basicPriceHistory": "Basic price history",
+          "contactForTesting": "Contact us for testing access"
         }
       },
       "phase2": {
         "title": "Phase 2",
-        "subtitle": "Premium Features",
+        "subtitle": "Premium Launch",
         "badge": "COMING SOON",
         "timeline": "Coming soon",
         "features": {
-          "unlimitedSearches": "Unlimited searches",
-          "advancedPriceTracking": "Advanced price tracking",
-          "smartShoppingLists": "Smart shopping lists",
-          "personalizedAlerts": "Personalized alerts"
+          "unlimitedSearch": "Unlimited product searches",
+          "smartShoppingList": "Smart shopping lists",
+          "discountNotifications": "Discount notifications",
+          "extendedPriceHistory": "Extended price history"
         }
       },
       "phase3": {
         "title": "Phase 3",
-        "subtitle": "Innovation Ahead",
+        "subtitle": "Expansion & Innovation",
         "badge": "FUTURE",
         "timeline": "The future awaits...",
         "features": {
-          "aiRecommendations": "AI-powered recommendations",
-          "communityFeatures": "Community features",
-          "smartMealPlanning": "Smart meal planning",
-          "innovativeSurprises": "Innovative surprises"
+          "moreSupermarkets": "More supermarkets integration",
+          "moreProducts": "More products for better comparison",
+          "newFeatures": "New features based on discussion",
+          "customerFeedback": "Customer feedback implementation"
         }
       },
       "bePartOfJourney": {
         "heading": "Be Part of Our Journey",
         "description": "Start with our free testing version today and help shape the future of smart shopping in Slovakia.",
-        "cta": "Join the Beta Test"
+        "cta": "Join the Testing Phase"
       }
     },
     "callToAction": {
       "heading": "Start Your Smart Shopping Journey",
-      "description": "Join our free beta testing phase and help us build the future of grocery shopping in Slovakia. Premium features coming soon!",
-      "joinBetaTest": "Join Beta Test",
-      "learnMore": "Learn More",
-      "footer": "Free testing version • Premium features coming soon • No commitment required"
+      "description": "Join our free testing phase and help us build the future of grocery shopping in Slovakia. Contact us if you're interested in testing!",
+      "joinTesting": "Join Testing Phase",
+      "contactUs": "Contact Us",
+      "footer": "Free testing version • Premium features coming soon"
     }
   },
 
@@ -368,7 +372,8 @@
       }
     ],
     "searchPlaceholder": "Search steps or features...",
-    "noResults": "No results found."
+    "noResults": "No results found.",
+    "learnMoreDetails": "Learn more details"
   },
 
   "privacyPolicy": {
@@ -497,7 +502,7 @@
     "subtitle": "Find answers to the most common questions about Ušetri Slovensko. Can't find what you're looking for? Contact our support team.",
     "contactTitle": "Still have questions?",
     "contactDescription": "Can't find the answer you're looking for? Our friendly support team is here to help.",
-    "contactButton": "Contact Support",
+    "contactButton": "Contact Us",
     "general": {
       "title": "General Questions",
       "q1": {
@@ -510,11 +515,11 @@
       },
       "q3": {
         "question": "Which supermarkets do you cover?",
-        "answer": "We currently cover 4+ major supermarket chains in Slovakia, including the most popular grocery stores. We're continuously working to expand our coverage to include more retailers."
+        "answer": "We are currently covering Tesco, Billa, Kaufland, and Lidl in the Bratislava region. We're continuously working to expand our coverage to include more retailers and regions."
       },
       "q4": {
-        "question": "How accurate are the prices?",
-        "answer": "We update our price data daily to ensure accuracy. However, prices may change in-store, and we recommend verifying prices at checkout. We strive to maintain 99% accuracy in our price information."
+        "question": "How often are prices updated?",
+        "answer": "Our prices are checked and updated weekly to ensure you have current pricing information. However, prices may change in-store between updates, and we recommend verifying prices at checkout."
       }
     },
     "app": {
@@ -540,26 +545,26 @@
       "title": "Pricing & Premium",
       "q1": {
         "question": "Is the app free to use?",
-        "answer": "Yes, the basic version of Ušetri Slovensko is completely free and includes price comparison, basic shopping lists, and product search functionality."
+        "answer": "The app is free for checking a limited amount of products. This allows you to try out our service and see the value we provide before upgrading."
       },
       "q2": {
         "question": "What additional features does Premium offer?",
-        "answer": "Premium subscribers get advanced features like unlimited shopping lists, detailed price history analytics, priority customer support, advanced deal alerts, and exclusive discounts from partner stores."
+        "answer": "Premium version includes unlimited search, shopping list functionality, longer price history, and discount notifications. These features help you maximize your savings and manage your shopping more effectively."
       },
       "q3": {
         "question": "How much does Premium cost?",
-        "answer": "Our Premium subscription is competitively priced to provide excellent value. Visit our Premium page for current pricing and subscription options. We often offer special promotions for new users."
+        "answer": "Our Premium subscription is competitively priced to provide excellent value. Visit our <a href='/Premium' class='text-brand-accent hover:text-brand-accent/80 underline'>Premium page</a> for current pricing and subscription options. We often offer special promotions for new users."
       }
     },
     "technical": {
       "title": "Technical Support",
       "q1": {
         "question": "Which devices are supported?",
-        "answer": "Our app is available for both iOS and Android devices. We also have a web version that works on any modern browser, making it accessible from computers and tablets."
+        "answer": "Our app is available for both iOS and Android mobile devices. We focus on providing the best mobile experience for price comparison on the go."
       },
       "q2": {
         "question": "I'm having trouble with the app. What should I do?",
-        "answer": "First, try restarting the app or checking your internet connection. If the problem persists, contact our support team through the app or via email. Include details about your device and the issue you're experiencing."
+        "answer": "First, try restarting the app or checking your internet connection. If the problem persists, please <a href='/Contact' class='text-brand-accent hover:text-brand-accent/80 underline'>contact us</a> with details about your device and the issue you're experiencing."
       },
       "q3": {
         "question": "How do I update the app?",
