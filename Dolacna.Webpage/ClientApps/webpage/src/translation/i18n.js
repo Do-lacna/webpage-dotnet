@@ -19,7 +19,12 @@ i18n
     detection: {
       order: ['localStorage', 'navigator'],
       caches: ['localStorage'],
+      lookupLocalStorage: 'i18nextLng',
+      lookupSessionStorage: 'i18nextLng',
+      checkWhitelist: true,
     },
+    supportedLngs: ['sk', 'en'],
+    preload: ['sk'],
   });
 
 export default i18n;
