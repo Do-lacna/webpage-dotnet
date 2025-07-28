@@ -293,19 +293,23 @@
     "members": [
       {
         "name": "Adam Martiška",
-        "role": "CEO / Frontend Developer"
+        "role": "CEO / Frontend Developer",
+        "linkedin": "https://linkedin.com/in/adam-martiska"
       },
       {
         "name": "Juraj Paška",
-        "role": "Backend Developer"
+        "role": "Backend Developer",
+        "linkedin": "https://linkedin.com/in/juraj-paska"
       },
       {
         "name": "Martin Lauš",
-        "role": "UI/UX Designer"
+        "role": "UI/UX Designer",
+        "linkedin": "https://linkedin.com/in/martin-laus"
       },
       {
         "name": "Róbert Jačko",
-        "role": "AI Engineer"
+        "role": "AI Engineer",
+        "linkedin": "https://linkedin.com/in/robert-jacko"
       }
     ]
   },

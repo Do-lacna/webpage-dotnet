@@ -88,6 +88,12 @@ const Header = () => {
           >
             {t('faq_header')}
           </a>
+          <a
+            href="/AboutUs"
+            className="text-foreground hover:text-brand-accent transition-colors"
+          >
+            {t('footer.aboutUs')}
+          </a>
 
           <Button
             className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
