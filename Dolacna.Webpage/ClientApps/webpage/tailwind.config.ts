@@ -68,7 +68,7 @@ export default {
         },
         brand: {
           dark: '#2B2B2B',
-          light: '#E6EEED',
+          light: '#F2F2F2',
           accent: '#62E46D',
         },
       },

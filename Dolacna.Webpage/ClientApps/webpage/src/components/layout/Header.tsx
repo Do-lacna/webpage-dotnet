@@ -49,15 +49,22 @@ const Header = () => {
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-4 px-4 sm:px-6',
         isScrolled
-          ? 'bg-white/80 backdrop-blur-lg shadow-sm'
-          : 'bg-transparent',
+          ? 'bg-brand-dark/90 backdrop-blur-lg shadow-sm'
+          : 'bg-brand-dark/80 backdrop-blur-sm',
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <a href="/" className="text-2xl font-bold text-brand-dark">
-            Ušetri<span className="text-brand-accent"> Slovensko</span>
+          <a href="/" className="flex items-center space-x-3">
+            <img
+              src="/images/usetri-logo.svg"
+              alt="Ušetri Slovensko Logo"
+              className="h-8 w-auto"
+            />
+            <span className="text-2xl font-bold text-white">
+              Ušetri<span className="text-brand-accent"> Slovensko</span>
+            </span>
           </a>
         </div>
 
@@ -65,38 +72,38 @@ const Header = () => {
         <nav className="hidden md:flex items-center space-x-8">
           <a
             href="/HowItWorks"
-            className="text-foreground hover:text-brand-accent transition-colors"
+            className="nav-link text-white hover:text-brand-accent transition-colors"
           >
             {t('how_it_works')}
           </a>
           <a
             href="/Premium"
-            className="text-foreground hover:text-brand-accent transition-colors"
+            className="nav-link text-white hover:text-brand-accent transition-colors"
           >
             {t('premium_header')}
           </a>
           <a
             href="/Contact"
-            className="text-foreground hover:text-brand-accent transition-colors"
+            className="nav-link text-white hover:text-brand-accent transition-colors"
           >
             {t('footer.contact')}
           </a>
 
           <a
             href="/FAQ"
-            className="text-foreground hover:text-brand-accent transition-colors"
+            className="nav-link text-white hover:text-brand-accent transition-colors"
           >
             {t('faq_header')}
           </a>
           <a
             href="/AboutUs"
-            className="text-foreground hover:text-brand-accent transition-colors"
+            className="nav-link text-white hover:text-brand-accent transition-colors"
           >
             {t('footer.aboutUs')}
           </a>
 
           <Button
-            className="bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark transition-all"
+            className="bg-brand-accent text-brand-dark hover:bg-white hover:text-brand-dark transition-all"
             onClick={() => navigate('/Download')}
           >
             {t('download_app')}
@@ -107,7 +114,7 @@ const Header = () => {
               setLanguage(language === 'sk' ? 'en' : 'sk');
               changeLanguage(language === 'sk' ? 'en' : 'sk');
             }}
-            className="ml-4"
+            className="ml-4 text-white hover:text-brand-accent hover:bg-white/10"
           >
             {language.toUpperCase()}
           </Button>
@@ -115,7 +122,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-foreground"
+          className="md:hidden text-white"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label={t('toggle_menu')}
         >
@@ -129,7 +136,7 @@ const Header = () => {
           <div className="px-4 py-6 space-y-4">
             <a
               href="#features"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              className="nav-link block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={(e) => {
                 handleNavClick(e, 'features');
                 setMobileMenuOpen(false);
@@ -139,28 +146,28 @@ const Header = () => {
             </a>
             <a
               href="/Premium"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              className="nav-link block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('premium_header')}
             </a>
             <a
               href="/Contact"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              className="nav-link block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('footer.contact')}
             </a>
             <a
               href="/HowItWorks"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              className="nav-link block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('how_it_works')}
             </a>
             <a
               href="/FAQ"
-              className="block py-2 text-foreground hover:text-brand-accent transition-colors"
+              className="nav-link block py-2 text-foreground hover:text-brand-accent transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('faq_header')}

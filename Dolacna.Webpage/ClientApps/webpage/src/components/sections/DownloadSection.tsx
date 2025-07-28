@@ -26,17 +26,20 @@ const DownloadSection = () => {
   }, []);
 
   return (
-    <section id="download" className="py-20 bg-brand-dark text-white">
+    <section
+      id="download"
+      className="py-20 bg-gradient-to-b from-brand-light via-brand-dark/10 to-brand-dark"
+    >
       <div className="section-container">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="md:w-1/2 text-left reveal-animation">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-dark">
               {t('download.heading')}{' '}
               <span className="text-brand-accent">
                 {t('download.headingAccent')}
               </span>
             </h2>
-            <p className="text-lg text-white/80 mb-8">
+            <p className="text-lg text-gray-600 mb-8">
               {t('download.subheading')}
             </p>
 
@@ -62,13 +65,13 @@ const DownloadSection = () => {
                 <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-dark font-medium">
                   MN
                 </div>
-                <div className="w-10 h-10 rounded-full border border-white flex items-center justify-center text-white font-medium">
+                <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center text-gray-600 font-medium">
                   +
                 </div>
               </div>
-              <div className="text-sm text-white/80">
+              <div className="text-sm text-gray-600">
                 {t('download.joinedBy')}{' '}
-                <span className="font-bold text-white">10,000+</span>{' '}
+                <span className="font-bold text-brand-dark">10,000+</span>{' '}
                 {t('download.smartShoppers')}
               </div>
             </div>
