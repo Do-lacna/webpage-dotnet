@@ -42,7 +42,7 @@ const Hero = () => {
             <span className="text-brand-accent">{t('across_slovakia')}</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-gray-700 max-w-lg">
+          <p className="text-lg md:text-xl text-white md:text-gray-700 max-w-lg">
             {t('description')}
           </p>
 
@@ -67,21 +67,27 @@ const Hero = () => {
               <span className="text-3xl font-bold text-brand-dark">
                 {t('supermarkets_count')}
               </span>
-              <span className="text-gray-600">{t('supermarkets')}</span>
+              <span className="text-white md:text-gray-700">
+                {t('supermarkets')}
+              </span>
             </div>
             <div className="hidden sm:block w-px h-10 bg-gray-400"></div>
             <div className="flex flex-col text-center sm:text-left">
               <span className="text-3xl font-bold text-brand-dark">
                 {t('products_count')}
               </span>
-              <span className="text-gray-600">{t('products')}</span>
+              <span className="text-white md:text-gray-700">
+                {t('products')}
+              </span>
             </div>
             <div className="hidden sm:block w-px h-10 bg-gray-400"></div>
             <div className="flex flex-col text-center sm:text-left">
               <span className="text-3xl font-bold text-brand-dark">
                 {t('savings_percentage')}
               </span>
-              <span className="text-gray-600">{t('avg_savings')}</span>
+              <span className="text-white md:text-gray-700">
+                {t('avg_savings')}
+              </span>
             </div>
           </div>
         </div>
