@@ -64,7 +64,7 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-x-8 pt-6">
             <div className="flex flex-col text-center sm:text-left">
-              <span className="text-3xl font-bold text-brand-dark">
+              <span className="text-3xl font-bold text-white md:text-gray-700">
                 {t('supermarkets_count')}
               </span>
               <span className="text-white md:text-gray-700">
@@ -73,7 +73,7 @@ const Hero = () => {
             </div>
             <div className="hidden sm:block w-px h-10 bg-gray-400"></div>
             <div className="flex flex-col text-center sm:text-left">
-              <span className="text-3xl font-bold text-brand-dark">
+              <span className="text-3xl font-bold text-white md:text-gray-700">
                 {t('products_count')}
               </span>
               <span className="text-white md:text-gray-700">
@@ -82,7 +82,7 @@ const Hero = () => {
             </div>
             <div className="hidden sm:block w-px h-10 bg-gray-400"></div>
             <div className="flex flex-col text-center sm:text-left">
-              <span className="text-3xl font-bold text-brand-dark">
+              <span className="text-3xl font-bold text-white md:text-gray-700">
                 {t('savings_percentage')}
               </span>
               <span className="text-white md:text-gray-700">
