@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Apple, ShoppingBag } from 'lucide-react';
-import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 14.png';
+import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 15 Pro Max.png';
 
 const DownloadSection = () => {
   const { t } = useTranslation();

@@ -4,7 +4,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { Button } from '@/components/ui/button';
 import { Apple, ShoppingBag, Smartphone, Check } from 'lucide-react';
-import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 14.png';
+import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 15 Pro Max.png';
 
 const Download = () => {
   const { t } = useTranslation();

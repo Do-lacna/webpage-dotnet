@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import BlackTitaniumPng from '@/../public/images/Black-Titanium.png';
+import BlackTitaniumPng from '@/../public/images/iPhone 16 Pro.png';
 
 const Hero = () => {
   const { t } = useTranslation();
