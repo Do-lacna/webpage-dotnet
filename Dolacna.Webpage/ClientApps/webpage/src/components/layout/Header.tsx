@@ -77,12 +77,6 @@ const Header = () => {
             {t('how_it_works')}
           </a>
           <a
-            href="/Premium"
-            className="nav-link text-white hover:text-brand-accent transition-colors"
-          >
-            {t('premium_header')}
-          </a>
-          <a
             href="/Contact"
             className="nav-link text-white hover:text-brand-accent transition-colors"
           >

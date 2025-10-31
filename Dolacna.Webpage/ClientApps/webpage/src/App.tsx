@@ -14,6 +14,7 @@ import HowItWorks from './pages/HowItWorks';
 import Premium from './pages/Premium';
 import Download from './pages/Download';
 import Faq from './pages/Faq';
+import LogoPage from './pages/Logo';
 
 const queryClient = new QueryClient();
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/Premium" element={<Premium />} />
           <Route path="/Download" element={<Download />} />
           <Route path="/FAQ" element={<Faq />} />
+          <Route path="/Logo" element={<LogoPage />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>

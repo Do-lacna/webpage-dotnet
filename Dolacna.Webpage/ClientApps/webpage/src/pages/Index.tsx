@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Header from '@/components/layout/Header';
 import Hero from '@/components/sections/Hero';
 import Features from '@/components/sections/Features';
-import PremiumSection from '@/components/sections/PremiumSection';
+import NewsletterSection from '@/components/sections/NewsletterSection';
 import DownloadSection from '@/components/sections/DownloadSection';
 import Footer from '@/components/layout/Footer';
 
@@ -40,7 +40,7 @@ const Index = () => {
       <main>
         <Hero />
         <Features />
-        <PremiumSection />
+        <NewsletterSection />
         <DownloadSection />
       </main>
       <Footer />

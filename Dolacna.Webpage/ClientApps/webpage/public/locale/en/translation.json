@@ -1,5 +1,5 @@
 {
-  "save_money": "Save money on every shopping trip",
+  "save_money": "Release date - December 2025",
   "compare_prices": "Compare grocery prices",
   "across_slovakia": "across Slovakia",
   "description": "Ušetri Slovensko finds the best deals on groceries by comparing prices at multiple supermarkets in real-time.",
@@ -7,7 +7,7 @@
   "learn_more": "Learn More",
   "supermarkets_count": "4+",
   "supermarkets": "Supermarkets",
-  "products_count": "1000+",
+  "products_count": "10000+",
   "products": "Products",
   "savings_percentage": "20%",
   "avg_savings": "Avg. Savings",
@@ -575,5 +575,18 @@
         "answer": "Updates are available through the App Store (iOS) or Google Play Store (Android). We recommend enabling automatic updates to ensure you always have the latest features and bug fixes."
       }
     }
+  },
+
+  "newsletter": {
+    "heading": "Stay Informed",
+    "subheading": "Full app launch planned for",
+    "releaseDate": "December 2025",
+    "description": "Subscribe to our newsletter and be the first to hear about new features and the full launch.",
+    "emailPlaceholder": "Enter your email",
+    "subscribeButton": "Subscribe",
+    "success": "Thanks for subscribing! We'll keep you updated.",
+    "alreadySubscribed": "This email is already subscribed.",
+    "invalidEmail": "Please enter a valid email address.",
+    "privacyNote": "We respect your privacy. You can unsubscribe at any time."
   }
 }

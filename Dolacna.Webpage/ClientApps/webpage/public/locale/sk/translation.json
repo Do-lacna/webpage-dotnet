@@ -1,5 +1,5 @@
 {
-  "save_money": "Ušetrite peniaze pri každom nákupe",
+  "save_money": "Plánované spustenie - December 2025",
   "compare_prices": "Porovnajte ceny potravín",
   "across_slovakia": "naprieč Slovenskom",
   "description": "Ušetri nájde najlepšie ponuky na potraviny porovnaním cien v rôznych supermarketoch v reálnom čase.",
@@ -7,7 +7,7 @@
   "learn_more": "Viac informácií",
   "supermarkets_count": "4+",
   "supermarkets": "Supermarketov",
-  "products_count": "1000+",
+  "products_count": "10000+",
   "products": "Produktov",
   "savings_percentage": "20%",
   "avg_savings": "Priemerne ušetríte",
@@ -573,5 +573,18 @@
         "answer": "Aktualizácie sú dostupné cez App Store (iOS) alebo Google Play Store (Android). Odporúčame povoliť automatické aktualizácie, aby ste vždy mali najnovšie funkcie a opravy chýb."
       }
     }
+  },
+
+  "newsletter": {
+    "heading": "Zostaňte informovaní",
+    "subheading": "Plné spustenie aplikácie je plánované na",
+    "releaseDate": "December 2025",
+    "description": "Prihláste sa na odber nášho newslettera a buďte prví, ktorí sa dozvedia o nových funkciách, a plnom spustení.",
+    "emailPlaceholder": "Zadajte svoj e-mail",
+    "subscribeButton": "Odoberať",
+    "success": "Ďakujeme za prihlásenie! Budeme vás informovať.",
+    "alreadySubscribed": "Tento e-mail je už prihlásený.",
+    "invalidEmail": "Prosím zadajte platnú e-mailovú adresu.",
+    "privacyNote": "Rešpektujeme vaše súkromie. Odhlásiť sa môžete kedykoľvek."
   }
 }

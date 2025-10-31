@@ -13,7 +13,6 @@ const Faq = () => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    // Initialize intersection observer for reveal animations
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
