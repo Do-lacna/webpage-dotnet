@@ -13,8 +13,7 @@ const Logo: React.FC = () => {
   };
 
   return (
-    <main className="min-h-screen flex items-center justify-center bg-brand-light p-6">
-      <div className="text-center space-y-6">
+
         <img
           src={remoteSrc}
           alt="Ušetri Slovensko Logo"
@@ -22,8 +21,7 @@ const Logo: React.FC = () => {
           onError={handleError}
           className="max-w-[280px] w-full h-auto drop-shadow-md"
         />
-      </div>
-    </main>
+
   );
 };
 
