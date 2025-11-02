@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import {
   ShoppingCart,
@@ -8,27 +8,11 @@ import {
   ShieldCheck,
   Tags,
 } from 'lucide-react';
+import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 
 const Features = () => {
   const { t } = useTranslation();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
-
-    const elements = document.querySelectorAll('.reveal-animation');
-    elements.forEach((el) => observer.observe(el));
-
-    return () => elements.forEach((el) => observer.unobserve(el));
-  }, []);
+  useRevealAnimation();
 
   const features = [
     {
@@ -66,7 +50,7 @@ const Features = () => {
   return (
     <section id="features" className="py-20 bg-brand-light">
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 reveal-animation">
+        <div className="text-center max-w-3xl mx-auto mb-16 reveal-animation" data-anim="up">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-dark">
             {t('features.heading')}{' '}
             <span className="text-brand-accent">
@@ -84,6 +68,7 @@ const Features = () => {
               key={i}
               className="glass-panel p-6 transition-all duration-300 hover:shadow-md hover:translate-y-[-5px] reveal-animation"
               style={{ animationDelay: `${i * 0.1}s` }}
+              data-anim="scale"
             >
               <div className="p-3 bg-brand-light rounded-xl inline-block mb-4">
                 {feature.icon}

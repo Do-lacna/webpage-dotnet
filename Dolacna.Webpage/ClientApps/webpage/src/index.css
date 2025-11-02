@@ -144,7 +144,33 @@
   .pricing-badge {
     @apply absolute -top-3 right-3 bg-brand-dark text-brand-accent text-sm font-medium px-2 py-1 rounded-full shadow-soft;
   }
+
+  /* Additional decorative section divider animations */
+  .wave-divider {
+    animation: waveFloat 12s linear infinite;
+    color: var(--background);
+  }
+  .text-gradient-divider {
+    /* fallback color; path uses currentColor */
+    color: #ffffff;
+  }
+  .section-divider-fade {
+    @apply relative w-full h-24 bg-gradient-to-b from-transparent to-black/5 dark:to-white/5;
+  }
 }
+
+@keyframes waveFloat {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-2%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes gradientShift {
+  0%,100% { filter: hue-rotate(0deg); }
+  50% { filter: hue-rotate(25deg); }
+}
+
+.animate-gradient-shift { animation: gradientShift 18s ease-in-out infinite; }
 
 /* Animations */
 .reveal-animation {
@@ -159,6 +185,17 @@
   opacity: 1;
   transform: translateY(0);
 }
+
+.reveal-animation[data-anim='left'] { transform: translateX(-40px); }
+.reveal-animation[data-anim='right'] { transform: translateX(40px); }
+.reveal-animation[data-anim='up'] { transform: translateY(40px); }
+.reveal-animation[data-anim='down'] { transform: translateY(-40px); }
+.reveal-animation[data-anim='scale'] { transform: scale(.95); opacity: 0; }
+.reveal-animation.revealed[data-anim='left'],
+.reveal-animation.revealed[data-anim='right'],
+.reveal-animation.revealed[data-anim='up'],
+.reveal-animation.revealed[data-anim='down'] { transform: translateX(0) translateY(0); }
+.reveal-animation.revealed[data-anim='scale'] { transform: scale(1); opacity: 1; }
 
 /* Scroll behavior */
 html {

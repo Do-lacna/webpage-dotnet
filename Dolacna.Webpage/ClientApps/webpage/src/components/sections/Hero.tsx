@@ -1,29 +1,15 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import BlackTitaniumPng from '@/../public/images/iPhone 16 Pro.png';
+import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 
 const Hero = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
   const phoneRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('revealed');
-        }
-      },
-      { threshold: 0.1 },
-    );
-
-    const elements = document.querySelectorAll('.reveal-animation');
-    elements.forEach((el) => observer.observe(el));
-
-    return () => elements.forEach((el) => observer.unobserve(el));
-  }, []);
+  useRevealAnimation();
 
   return (
     <section className="relative min-h-screen flex items-center pt-0 overflow-hidden bg-gradient-to-b from-brand-dark from-10% to-brand-light to-65%">
@@ -32,7 +18,7 @@ const Hero = () => {
         style={{ paddingTop: '6rem' }}
       >
         {/* Text Content */}
-        <div className="text-left space-y-6 reveal-animation">
+        <div className="text-left space-y-6 reveal-animation" data-anim="left">
           <div className="inline-block px-3 py-1 rounded-full bg-brand-accent/70 text-white font-medium text-sm mb-4">
             {t('save_money')}
           </div>
@@ -66,6 +52,7 @@ const Hero = () => {
         <div
           ref={phoneRef}
           className="relative h-[900px] w-full max-w-[450px] mx-auto md:mx-0 md:ml-auto reveal-animation flex items-center"
+          data-anim="right"
         >
           <img src={BlackTitaniumPng} alt={'PhoneImage'}></img>
         </div>

@@ -4,6 +4,7 @@ import BillaLogo from '@/../public/images/stores/billa.png';
 import KauflandLogo from '@/../public/images/stores/kaufland.png';
 import LidlLogo from '@/../public/images/stores/lidl.png';
 import TescoLogo from '@/../public/images/stores/tesco.jpg';
+import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 
 interface StoreInfo {
   id: string;
@@ -15,6 +16,7 @@ interface StoreInfo {
 
 const StoresSection: React.FC = () => {
   const { t } = useTranslation();
+  useRevealAnimation();
 
   const stores: StoreInfo[] = [
     { id: 'billa', name: t('storesSection.storeLabels.billa'), logo: BillaLogo, products: 2500, accent: 'from-yellow-500 to-red-500' },
@@ -26,7 +28,7 @@ const StoresSection: React.FC = () => {
   return (
     <section className="relative py-24 bg-gradient-to-b from-brand-light via-brand-light/70 to-brand-dark overflow-hidden">
       <div className="section-container relative z-10">
-        <div className="max-w-3xl mb-12 reveal-animation">
+        <div className="max-w-3xl mb-12 reveal-animation" data-anim="left">
           <h2 className="text-3xl md:text-5xl font-bold text-brand-dark/90">
             {t('storesSection.heading')}{' '}
             <span className="text-brand-accent">{t('storesSection.headingAccent')}</span>
@@ -41,6 +43,7 @@ const StoresSection: React.FC = () => {
               aria-label={store.name}
               style={{ backgroundImage: `url(${store.logo})` }}
               className="group relative aspect-square rounded-2xl overflow-hidden reveal-animation shadow-[0_0_0_1px_rgba(255,255,255,0.08)] bg-center bg-cover bg-no-repeat hover:shadow-xl hover:shadow-brand-accent/30 transition-all duration-500"
+              data-anim="scale"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-brand-dark/30 to-transparent opacity-80 group-hover:opacity-0 transition-opacity duration-500" />
 

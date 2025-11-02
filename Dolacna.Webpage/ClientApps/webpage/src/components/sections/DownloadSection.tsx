@@ -1,30 +1,14 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 15 Pro Max.png';
 import { useNavigate } from 'react-router-dom';
+import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 
 const DownloadSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
-
-    const elements = document.querySelectorAll('.reveal-animation');
-    elements.forEach((el) => observer.observe(el));
-
-    return () => elements.forEach((el) => observer.unobserve(el));
-  }, []);
+  useRevealAnimation();
 
   return (
     <section
@@ -33,7 +17,7 @@ const DownloadSection = () => {
     >
       <div className="section-container">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
-          <div className="md:w-1/2 text-left reveal-animation">
+          <div className="md:w-1/2 text-left reveal-animation" data-anim="left">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-dark">
               {t('download.heading')}{' '}
               <span className="text-brand-accent">
@@ -51,7 +35,7 @@ const DownloadSection = () => {
               </Button>
             </div>
           </div>
-          <div className="md:w-1/2 relative reveal-animation">
+          <div className="md:w-1/2 relative reveal-animation" data-anim="right">
             <div className="relative max-w-[280px] mx-auto">
               <img
                 src={IPhoneMockupPng}
