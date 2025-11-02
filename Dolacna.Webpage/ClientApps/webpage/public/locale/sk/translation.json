@@ -182,7 +182,7 @@
     "joinedBy": "Pripojili sa k nám",
     "smartShoppers": "šikovní nakupujúci",
     "pageTitle": "Stiahnuť aplikáciu",
-    "pageSubtitle": "Získajte aplikáciu Ušetri Slovensko a začnite šetriť peniaze pri nákupoch potravín už dnes.",
+    "pageSubtitle": "Získajte aplikáciu Ušetri Slovensko a začnite šetriť peniaze pri nákupoch potravín.",
     "features": {
       "realtimeComparison": {
         "title": "Porovnanie cien v reálnom čase",
@@ -232,6 +232,12 @@
       "downloadOn": "Stiahnuť z",
       "getItOn": "Získať z",
       "trustedBy": "Dôveruje nám viac ako 10 000 používateľov po celom Slovensku"
+    },
+    "releaseBanner": {
+      "heading": "Plné spustenie plánované na",
+      "date": "December 2025",
+      "description": "Odkazy na stiahnutie z App Store a Google Play budú dostupné pri spustení.",
+      "disabledTooltip": "Prichádza v decembri 2025"
     }
   },
 

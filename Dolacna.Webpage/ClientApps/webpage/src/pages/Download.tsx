@@ -37,6 +37,10 @@ const Download = () => {
   const benefits = t('download.benefits.list', {
     returnObjects: true,
   }) as string[];
+  const releaseHeading = t('download.releaseBanner.heading');
+  const releaseDate = t('download.releaseBanner.date');
+  const releaseDesc = t('download.releaseBanner.description');
+  const disabledTooltip = t('download.releaseBanner.disabledTooltip');
 
   return (
     <div className="min-h-screen">
@@ -57,9 +61,18 @@ const Download = () => {
                       {t('download.pageTitle').split(' ').slice(1).join(' ')}
                     </span>
                   </h1>
-                  <p className="text-xl text-gray-600 mb-8 leading-relaxed">
+                  <p className="text-xl text-gray-600 mb-6 leading-relaxed">
                     {t('download.pageSubtitle')}
                   </p>
+
+                  {/* Release Banner */}
+                  <div className="mb-8 inline-flex flex-col gap-1 bg-brand-accent/10 border border-brand-accent/30 rounded-lg px-4 py-3 text-sm text-brand-dark max-w-xs mx-auto lg:mx-0">
+                    <div className="font-semibold">
+                      {releaseHeading}{' '}
+                      <span className="text-brand-accent">{releaseDate}</span>
+                    </div>
+                    <div className="text-gray-600 text-xs">{releaseDesc}</div>
+                  </div>
 
                   {/* Device Compatibility Info */}
                   <div className="flex items-center justify-center lg:justify-start gap-2 mb-8">
@@ -83,28 +96,46 @@ const Download = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <Button className="flex items-center justify-center gap-3 bg-brand-accent text-brand-dark hover:bg-brand-dark hover:text-white button-hover-effect text-lg py-6 px-8">
-                      <Apple className="w-6 h-6" />
-                      <div className="text-left">
-                        <div className="text-xs">
-                          {t('download.finalCta.downloadOn')}
+                    <div className="relative group">
+                      <Button
+                        className="flex items-center justify-center gap-3 bg-gray-300 text-gray-500 cursor-not-allowed text-lg py-6 px-8"
+                        aria-disabled="true"
+                        disabled
+                      >
+                        <Apple className="w-6 h-6" />
+                        <div className="text-left">
+                          <div className="text-xs">
+                            {t('download.finalCta.downloadOn')}
+                          </div>
+                          <div className="font-semibold">
+                            {t('download.appStore')}
+                          </div>
                         </div>
-                        <div className="font-semibold">
-                          {t('download.appStore')}
+                      </Button>
+                      <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        {disabledTooltip}
+                      </span>
+                    </div>
+                    <div className="relative group">
+                      <Button
+                        className="flex items-center justify-center gap-3 bg-gray-300 text-gray-500 cursor-not-allowed text-lg py-6 px-8"
+                        aria-disabled="true"
+                        disabled
+                      >
+                        <ShoppingBag className="w-6 h-6" />
+                        <div className="text-left">
+                          <div className="text-xs">
+                            {t('download.finalCta.getItOn')}
+                          </div>
+                          <div className="font-semibold">
+                            {t('download.googlePlay')}
+                          </div>
                         </div>
-                      </div>
-                    </Button>
-                    <Button className="flex items-center justify-center gap-3 bg-brand-accent text-brand-dark hover:bg-brand-dark hover:text-white button-hover-effect text-lg py-6 px-8">
-                      <ShoppingBag className="w-6 h-6" />
-                      <div className="text-left">
-                        <div className="text-xs">
-                          {t('download.finalCta.getItOn')}
-                        </div>
-                        <div className="font-semibold">
-                          {t('download.googlePlay')}
-                        </div>
-                      </div>
-                    </Button>
+                      </Button>
+                      <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                        {disabledTooltip}
+                      </span>
+                    </div>
                   </div>
                 </div>
 
