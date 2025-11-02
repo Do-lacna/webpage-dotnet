@@ -594,5 +594,19 @@
     "alreadySubscribed": "This email is already subscribed.",
     "invalidEmail": "Please enter a valid email address.",
     "privacyNote": "We respect your privacy. You can unsubscribe at any time."
+  },
+  "storesSection": {
+    "heading": "Track Prices Across",
+    "headingAccent": "Major Stores",
+    "subheading": "We monitor prices daily across Slovakia's leading supermarket chains so you always know where to save.",
+    "productsTracked": "Products tracked",
+    "footerBlurb": "We are continuously expanding our coverage to include more stores and products.",
+    "liveUpdating": "Live updating",
+    "storeLabels": {
+      "billa": "Billa",
+      "kaufland": "Kaufland",
+      "lidl": "Lidl",
+      "tesco": "Tesco"
+    }
   }
 }

@@ -592,5 +592,19 @@
     "alreadySubscribed": "Tento e-mail je už prihlásený.",
     "invalidEmail": "Prosím zadajte platnú e-mailovú adresu.",
     "privacyNote": "Rešpektujeme vaše súkromie. Odhlásiť sa môžete kedykoľvek."
+  },
+  "storesSection": {
+    "heading": "Sledujeme ceny v",
+    "headingAccent": "hlavných obchodoch",
+    "subheading": "Denne monitorujeme ceny v popredných supermarketových reťazcoch na Slovensku, aby ste vedeli kde ušetriť.",
+    "productsTracked": "Sledovaných produktov",
+    "footerBlurb": "Počty produktov a supermarketov sa snažíme neustále zvyšovať.",
+    "liveUpdating": "Živé aktualizácie",
+    "storeLabels": {
+      "billa": "Billa",
+      "kaufland": "Kaufland",
+      "lidl": "Lidl",
+      "tesco": "Tesco"
+    }
   }
 }

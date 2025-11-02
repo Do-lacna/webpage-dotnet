@@ -4,6 +4,7 @@ import Hero from '@/components/sections/Hero';
 import Features from '@/components/sections/Features';
 import DownloadSection from '@/components/sections/DownloadSection';
 import Footer from '@/components/layout/Footer';
+import StoresSection from '@/components/sections/StoresSection.tsx';
 
 const Index = () => {
   useEffect(() => {
@@ -38,6 +39,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <StoresSection />
         <Features />
         <DownloadSection />
       </main>
