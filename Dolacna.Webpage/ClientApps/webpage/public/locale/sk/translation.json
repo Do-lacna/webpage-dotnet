@@ -37,11 +37,11 @@
     },
     "dealAlerts": {
       "title": "Upozornenia na zľavy",
-      "description": "Dostávajte upozornenia, keď sa produkty vo vašom zozname sledovaných dostanú do zľavy alebo zlacnia."
+      "description": "Dostávajte upozornenia, keď sa produkty vo vašom zozname sledovaných dostanú do zľavy."
     },
     "realTimeUpdates": {
       "title": "Aktuálne údaje",
-      "description": "Ceny sa aktualizujú denne, aby ste vždy mali najnovšie informácie."
+      "description": "Ceny sa aktualizujú pravidelne, aby ste vždy mali najnovšie informácie."
     },
     "priceHistory": {
       "title": "História cien",
@@ -205,7 +205,6 @@
       "title": "Čo získate",
       "subtitle": "Funkcie navrhnuté na maximalizáciu vašich úspor",
       "list": [
-        "Ušetrite až 20% na vašich nákupoch potravín",
         "Sledujte históriu cien a trendy",
         "Vytvárajte a zdieľajte nákupné zoznamy",
         "Dostávajte upozornenia na pokles cien",

@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
-import { Apple, ShoppingBag } from 'lucide-react';
 import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 15 Pro Max.png';
+import { useNavigate } from 'react-router-dom';
 
 const DownloadSection = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -42,41 +43,14 @@ const DownloadSection = () => {
             <p className="text-lg text-gray-600 mb-8">
               {t('download.subheading')}
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="flex items-center justify-center gap-2 bg-brand-accent text-brand-dark hover:bg-white button-hover-effect text-lg py-6">
-                <Apple className="w-6 h-6" />
-                <span>{t('download.appStore')}</span>
+            <div className="flex items-center gap-4">
+              <Button
+                onClick={() => navigate('/Download')}
+                className="flex items-center justify-center gap-2 bg-brand-accent text-brand-dark hover:bg-white button-hover-effect text-lg p-6">
+                <span>{t('download_now')}</span>
               </Button>
-              <Button className="flex items-center justify-center gap-2 bg-brand-accent text-brand-dark hover:bg-white button-hover-effect text-lg py-6">
-                <ShoppingBag className="w-6 h-6" />
-                <span>{t('download.googlePlay')}</span>
-              </Button>
-            </div>
-
-            <div className="mt-8 flex items-center gap-4">
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 rounded-full bg-brand-light flex items-center justify-center text-brand-dark font-medium">
-                  JD
-                </div>
-                <div className="w-10 h-10 rounded-full bg-brand-accent flex items-center justify-center text-brand-dark font-medium">
-                  KL
-                </div>
-                <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-brand-dark font-medium">
-                  MN
-                </div>
-                <div className="w-10 h-10 rounded-full border border-gray-400 flex items-center justify-center text-gray-600 font-medium">
-                  +
-                </div>
-              </div>
-              <div className="text-sm text-gray-600">
-                {t('download.joinedBy')}{' '}
-                <span className="font-bold text-brand-dark">10,000+</span>{' '}
-                {t('download.smartShoppers')}
-              </div>
             </div>
           </div>
-
           <div className="md:w-1/2 relative reveal-animation">
             <div className="relative max-w-[280px] mx-auto">
               <img
