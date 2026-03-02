@@ -1,9 +1,8 @@
-import React from 'react';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
 import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 15 Pro Max.png';
-import { useNavigate } from 'react-router-dom';
+import { Button } from '@/components/ui/button';
 import { useRevealAnimation } from '@/hooks/use-reveal-animation';
+import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 
 const DownloadSection = () => {
   const { t } = useTranslation();
@@ -13,34 +12,48 @@ const DownloadSection = () => {
   return (
     <section
       id="download"
-      className="py-20 bg-gradient-to-b from-brand-light via-brand-dark/10 to-brand-dark"
+      className="relative py-24 bg-brand-primary-dark overflow-hidden"
     >
-      <div className="section-container">
+      {/* Decorative blobs — mirror of hero */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -bottom-24 -left-24 w-[480px] h-[480px] rounded-full bg-brand-primary opacity-50 blur-[100px]" />
+        <div className="absolute top-0 right-0 w-[320px] h-[320px] rounded-full bg-brand-lilac opacity-15 blur-[80px]" />
+      </div>
+
+      <div className="section-container relative z-10">
         <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* Text */}
           <div className="md:w-1/2 text-left reveal-animation" data-anim="left">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-brand-dark">
+            <div className="inline-block px-3 py-1 rounded-full bg-brand-secondary/15 border border-brand-secondary/30 text-brand-secondary font-medium text-sm mb-6">
+              {t('download.pageTitle')}
+            </div>
+            <h2 className="text-3xl md:text-4xl font-black mb-5 text-white leading-tight">
               {t('download.heading')}{' '}
-              <span className="text-brand-accent">
+              <span className="text-brand-secondary">
                 {t('download.headingAccent')}
               </span>
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-white/60 mb-8 leading-relaxed">
               {t('download.subheading')}
             </p>
-            <div className="flex items-center gap-4">
+            <div className="flex flex-col sm:flex-row items-start gap-4">
               <Button
                 onClick={() => navigate('/Download')}
-                className="flex items-center justify-center gap-2 bg-brand-accent text-brand-dark hover:bg-white button-hover-effect text-lg p-6">
-                <span>{t('download_now')}</span>
+                className="button-hover-effect flex items-center justify-center gap-2 bg-brand-secondary text-brand-indigo hover:bg-white hover:text-brand-primary font-bold text-base px-8 py-6 rounded-xl shadow-glow-yellow transition-all duration-300"
+              >
+                {t('download_now')}
               </Button>
             </div>
           </div>
+
+          {/* Phone mockup */}
           <div className="md:w-1/2 relative reveal-animation" data-anim="right">
-            <div className="relative max-w-[280px] mx-auto">
+            <div className="relative max-w-[320px] mx-auto">
+              <div className="absolute inset-0 bg-brand-primary/40 blur-3xl rounded-full scale-75 translate-y-8" />
               <img
                 src={IPhoneMockupPng}
-                alt="usetri.sk app preview"
-                className="w-full h-auto"
+                alt="Usetri app preview"
+                className="relative w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
               />
             </div>
           </div>

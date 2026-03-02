@@ -22,7 +22,7 @@ const Contact = () => {
   const contactSections = [
     {
       title: t('contact.emailTitle'),
-      content: `<a href="mailto:${t('contact.emailValue')}" class="text-brand-accent underline">${t('contact.emailValue')}</a>`,
+      content: `<a href="mailto:${t('contact.emailValue')}" class="text-brand-primary underline">${t('contact.emailValue')}</a>`,
       isHtml: true,
     },
   ];
@@ -106,10 +106,10 @@ const Contact = () => {
           <div className="section-container max-w-4xl mx-auto px-4">
             <div className="text-center mb-16 reveal-animation">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-                <span className="text-brand-dark">
+                <span className="text-brand-indigo">
                   {t('contact.header').split(' ')[0]}{' '}
                 </span>
-                <span className="text-brand-accent">
+                <span className="text-brand-primary">
                   {t('contact.header').split(' ').slice(1).join(' ')}
                 </span>
               </h2>
@@ -124,7 +124,7 @@ const Contact = () => {
                     animationDelay: `${contactSections.indexOf(section) * 0.1}s`,
                   }}
                 >
-                  <h3 className="text-xl font-bold mb-2 text-brand-dark">
+                  <h3 className="text-xl font-bold mb-2 text-brand-indigo">
                     {section.title}
                   </h3>
                   {section.isHtml ? (
@@ -145,7 +145,7 @@ const Contact = () => {
                 className="glass-panel p-6 reveal-animation"
                 style={{ animationDelay: `${contactSections.length * 0.1}s` }}
               >
-                <h3 className="text-xl font-bold mb-6 text-brand-dark">
+                <h3 className="text-xl font-bold mb-6 text-brand-indigo">
                   {t('contact.form.title')}
                 </h3>
 
@@ -166,7 +166,7 @@ const Contact = () => {
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-sm font-medium text-brand-dark mb-2"
+                        className="block text-sm font-medium text-brand-indigo mb-2"
                       >
                         {t('contact.form.name')}
                       </label>
@@ -178,14 +178,14 @@ const Contact = () => {
                         onChange={handleInputChange}
                         placeholder={t('contact.form.namePlaceholder')}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-colors"
                       />
                     </div>
 
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-medium text-brand-dark mb-2"
+                        className="block text-sm font-medium text-brand-indigo mb-2"
                       >
                         {t('contact.form.email')}
                       </label>
@@ -197,7 +197,7 @@ const Contact = () => {
                         onChange={handleInputChange}
                         placeholder={t('contact.form.emailPlaceholder')}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-colors"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-colors"
                       />
                     </div>
                   </div>
@@ -205,7 +205,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="subject"
-                      className="block text-sm font-medium text-brand-dark mb-2"
+                      className="block text-sm font-medium text-brand-indigo mb-2"
                     >
                       {t('contact.form.subject')}
                     </label>
@@ -217,14 +217,14 @@ const Contact = () => {
                       onChange={handleInputChange}
                       placeholder={t('contact.form.subjectPlaceholder')}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-colors"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-colors"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium text-brand-dark mb-2"
+                      className="block text-sm font-medium text-brand-indigo mb-2"
                     >
                       {t('contact.form.message')}
                     </label>
@@ -236,14 +236,14 @@ const Contact = () => {
                       placeholder={t('contact.form.messagePlaceholder')}
                       rows={6}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-accent focus:border-transparent outline-none transition-colors resize-vertical"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-primary focus:border-transparent outline-none transition-colors resize-vertical"
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-brand-accent text-white font-semibold py-3 px-6 rounded-lg hover:bg-brand-accent/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                    className="w-full bg-brand-primary text-white font-semibold py-3 px-6 rounded-lg hover:bg-brand-primary/90 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
                   >
                     {isSubmitting
                       ? t('contact.form.sending')

@@ -1,18 +1,21 @@
-import React from 'react';
+import { Facebook, Instagram, Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { Facebook, Twitter, Instagram, Mail } from 'lucide-react';
 
 const Footer = () => {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-dark text-white">
+    <footer className="bg-brand-indigo text-white">
       <div className="section-container py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div className="md:col-span-1">
-            <div className="text-2xl font-bold mb-4">
-              Ušetri<span className="text-brand-accent"> Slovensko</span>
+            <div className="mb-5">
+              <img
+                src="/images/logos/usetri-logo_claim-purple.png"
+                alt="Usetri"
+                className="h-9 w-auto brightness-0 invert"
+              />
             </div>
             <p className="text-white/70 mb-6">{t('footer.description')}</p>
             <div className="flex space-x-4">

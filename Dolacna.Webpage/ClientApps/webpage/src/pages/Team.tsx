@@ -65,7 +65,7 @@ const Team: React.FC = () => {
         >
           <div className="section-container max-w-6xl mx-auto px-4 relative z-10">
             <div className="text-center mb-16 reveal-animation">
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl md:text-5xl font-bold text-brand-indigo mb-4">
                 {t('team.aboutUs.header')}
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-accent to-green-500 mx-auto rounded-full"></div>
@@ -138,7 +138,7 @@ const Team: React.FC = () => {
 
           <div className="section-container max-w-6xl mx-auto px-4 relative z-10">
             <div className="text-center mb-20 reveal-animation">
-              <h2 className="text-3xl md:text-5xl font-bold text-brand-dark mb-6">
+              <h2 className="text-3xl md:text-5xl font-bold text-brand-indigo mb-6">
                 {t('team.header')}
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-accent to-green-500 mx-auto rounded-full mb-6"></div>
@@ -172,7 +172,7 @@ const Team: React.FC = () => {
 
                     {/* Content */}
                     <div className="space-y-3">
-                      <h3 className="text-xl font-bold text-brand-dark group-hover:text-accent transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-brand-indigo group-hover:text-accent transition-colors duration-300">
                         {member.name}
                       </h3>
                       <div className="w-12 h-0.5 bg-gradient-to-r from-accent to-green-500 mx-auto opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>

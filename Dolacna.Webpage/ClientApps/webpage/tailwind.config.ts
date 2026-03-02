@@ -22,6 +22,9 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        expose: ['Expose', 'system-ui', 'sans-serif'],
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -67,9 +70,18 @@ export default {
           ring: 'hsl(var(--sidebar-ring))',
         },
         brand: {
-          dark: '#2B2B2B',
-          light: '#F2F2F2',
-          accent: '#62E46D',
+          primary: '#5645cc',
+          'primary-dark': '#432dcb',
+          secondary: '#f5d130',
+          lilac: '#cfb0ff',
+          nude: '#f1f8fd',
+          'soft-lilac': '#fdf8f1',
+          orange: '#fb8200',
+          indigo: '#001122',
+          // backward-compat aliases (used across existing components)
+          dark: '#001122',
+          light: '#f1f8fd',
+          accent: '#f5d130',
         },
       },
       borderRadius: {
@@ -118,7 +130,8 @@ export default {
       },
       boxShadow: {
         soft: '0px 10px 40px rgba(0, 0, 0, 0.08)',
-        glow: '0px 0px 30px rgba(98, 228, 109, 0.3)',
+        glow: '0px 0px 30px rgba(86, 69, 204, 0.35)',
+        'glow-yellow': '0px 0px 30px rgba(245, 209, 48, 0.45)',
       },
       fontSize: {
         '2xs': '0.625rem',

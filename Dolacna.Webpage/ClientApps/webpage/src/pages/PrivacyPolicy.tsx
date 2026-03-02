@@ -50,17 +50,17 @@ const PrivacyPolicy = () => {
                 const titleWords = t('privacyPolicy.pageTitle').split(' ');
                 if (titleWords.length === 3) {
                   return (
-                    <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+                    <h2 className="text-3xl md:text-4xl font-bold text-brand-indigo mb-4">
                       {titleWords[0]}{' '}
-                      <span className="text-brand-accent">{titleWords[1]}</span>{' '}
+                      <span className="text-brand-primary">{titleWords[1]}</span>{' '}
                       {titleWords[2]}
                     </h2>
                   );
                 }
                 return (
-                  <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+                  <h2 className="text-3xl md:text-4xl font-bold text-brand-indigo mb-4">
                     {titleWords[0]}{' '}
-                    <span className="text-brand-accent">{titleWords[1]}</span>
+                    <span className="text-brand-primary">{titleWords[1]}</span>
                   </h2>
                 );
               })()}
@@ -76,7 +76,7 @@ const PrivacyPolicy = () => {
                   className="glass-panel p-6 reveal-animation"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <h3 className="text-xl font-bold mb-2 text-brand-dark">
+                  <h3 className="text-xl font-bold mb-2 text-brand-indigo">
                     {section.title}
                   </h3>
                   <p className="text-muted-foreground">{section.content}</p>

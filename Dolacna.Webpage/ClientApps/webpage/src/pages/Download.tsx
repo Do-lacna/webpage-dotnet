@@ -54,10 +54,10 @@ const Download = () => {
                 {/* Left Content */}
                 <div className="text-center lg:text-left reveal-animation">
                   <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                    <span className="text-brand-dark">
+                    <span className="text-brand-indigo">
                       {t('download.pageTitle').split(' ')[0]}{' '}
                     </span>
-                    <span className="text-brand-accent">
+                    <span className="text-brand-primary">
                       {t('download.pageTitle').split(' ').slice(1).join(' ')}
                     </span>
                   </h1>
@@ -66,10 +66,10 @@ const Download = () => {
                   </p>
 
                   {/* Release Banner */}
-                  <div className="mb-8 inline-flex flex-col gap-1 bg-brand-accent/10 border border-brand-accent/30 rounded-lg px-4 py-3 text-sm text-brand-dark max-w-xs mx-auto lg:mx-0">
+                  <div className="mb-8 inline-flex flex-col gap-1 bg-brand-primary/10 border border-brand-primary/30 rounded-lg px-4 py-3 text-sm text-brand-indigo max-w-xs mx-auto lg:mx-0">
                     <div className="font-semibold">
                       {releaseHeading}{' '}
-                      <span className="text-brand-accent">{releaseDate}</span>
+                      <span className="text-brand-primary">{releaseDate}</span>
                     </div>
                     <div className="text-gray-600 text-xs">{releaseDesc}</div>
                   </div>
@@ -81,14 +81,14 @@ const Download = () => {
                     </span>
                     <div className="flex items-center gap-4">
                       <div className="flex items-center gap-2">
-                        <Smartphone className="w-4 h-4 text-brand-accent" />
-                        <span className="text-sm font-medium text-brand-dark">
+                        <Smartphone className="w-4 h-4 text-brand-primary" />
+                        <span className="text-sm font-medium text-brand-indigo">
                           {t('download.compatibility.ios')}
                         </span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <Smartphone className="w-4 h-4 text-brand-accent" />
-                        <span className="text-sm font-medium text-brand-dark">
+                        <Smartphone className="w-4 h-4 text-brand-primary" />
+                        <span className="text-sm font-medium text-brand-indigo">
                           {t('download.compatibility.android')}
                         </span>
                       </div>
@@ -112,7 +112,7 @@ const Download = () => {
                           </div>
                         </div>
                       </Button>
-                      <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-indigo text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                         {disabledTooltip}
                       </span>
                     </div>
@@ -132,7 +132,7 @@ const Download = () => {
                           </div>
                         </div>
                       </Button>
-                      <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-dark text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
+                      <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-indigo text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
                         {disabledTooltip}
                       </span>
                     </div>
@@ -159,7 +159,7 @@ const Download = () => {
           <div className="section-container">
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12 reveal-animation">
-                <h2 className="text-2xl md:text-3xl font-bold text-brand-dark mb-4">
+                <h2 className="text-2xl md:text-3xl font-bold text-brand-indigo mb-4">
                   {t('download.benefits.title')}
                 </h2>
                 <p className="text-lg text-gray-600">
@@ -173,7 +173,7 @@ const Download = () => {
                     key={benefit}
                     className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm reveal-animation"
                   >
-                    <div className="flex-shrink-0 w-6 h-6 bg-brand-accent rounded-full flex items-center justify-center">
+                    <div className="flex-shrink-0 w-6 h-6 bg-brand-primary rounded-full flex items-center justify-center">
                       <Check className="w-4 h-4 text-white" />
                     </div>
                     <span className="text-gray-700">{benefit}</span>

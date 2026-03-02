@@ -123,14 +123,14 @@ const Faq = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-20 pb-12 bg-gradient-to-br from-brand-primary/5 via-brand-accent/5 to-transparent">
+      <section className="pt-20 pb-12 bg-gradient-to-br from-brand-primary/5 via-brand-primary/5 to-transparent">
         <div className="container mx-auto px-4">
           <div className="text-center reveal-animation opacity-0 translate-y-8 transition-all duration-700">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-brand-dark">
+              <span className="text-brand-indigo">
                 {t('faq.title').split(' ')[0]}{' '}
               </span>
-              <span className="text-brand-accent">
+              <span className="text-brand-primary">
                 {t('faq.title').split(' ').slice(1).join(' ')}
               </span>
             </h1>
@@ -179,7 +179,7 @@ const Faq = () => {
           ))}
 
           {/* Contact Section */}
-          <div className="reveal-animation opacity-0 translate-y-8 transition-all duration-700 mt-16 text-center bg-gradient-to-r from-brand-primary/5 to-brand-accent/5 rounded-2xl p-8">
+          <div className="reveal-animation opacity-0 translate-y-8 transition-all duration-700 mt-16 text-center bg-gradient-to-r from-brand-primary/5 to-brand-primary/5 rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-brand-text mb-4">
               {t('faq.contactTitle')}
             </h3>
@@ -188,7 +188,7 @@ const Faq = () => {
             </p>
             <a
               href="/Contact"
-              className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-brand-primary to-brand-accent rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
+              className="inline-flex items-center justify-center px-8 py-3 text-lg font-semibold text-white bg-gradient-to-r from-brand-primary to-brand-primary rounded-full hover:shadow-lg hover:scale-105 transition-all duration-300"
             >
               {t('faq.contactButton')}
             </a>

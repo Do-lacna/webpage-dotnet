@@ -89,20 +89,20 @@ const Premium = () => {
       <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 bg-gradient-to-b from-brand-light to-white">
+      <section className="pt-32 bg-gradient-to-b from-brand-nude to-white">
         <div className="section-container">
           <div className="text-center max-w-4xl mx-auto reveal-animation">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              <span className="text-brand-dark">{t('premium.heading')} </span>
-              <span className="text-brand-accent">
+              <span className="text-brand-indigo">{t('premium.heading')} </span>
+              <span className="text-brand-primary">
                 {t('premium.headingAccent')}
               </span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
               {t('premium.betaSubheading')}
             </p>
-            <div className="inline-flex items-center px-4 py-2 bg-brand-accent/10 rounded-full text-brand-dark font-medium">
-              <Star className="w-5 h-5 mr-2 text-brand-accent" />
+            <div className="inline-flex items-center px-4 py-2 bg-brand-primary/10 rounded-full text-brand-indigo font-medium">
+              <Star className="w-5 h-5 mr-2 text-brand-primary" />
               {t('premium.freePhaseBadge')} • {t('premium.contactForTesting')}
             </div>
           </div>
@@ -118,7 +118,7 @@ const Premium = () => {
                 key={plan.name}
                 className={`relative rounded-2xl overflow-hidden transition-all duration-500 reveal-animation hover:scale-105 ${
                   plan.highlighted
-                    ? 'bg-brand-accent text-brand-dark border-2 border-brand-accent shadow-2xl'
+                    ? 'bg-brand-primary text-brand-indigo border-2 border-brand-primary shadow-2xl'
                     : 'bg-white border border-border shadow-lg'
                 }`}
                 style={{ animationDelay: `${i * 0.2}s` }}
@@ -126,8 +126,8 @@ const Premium = () => {
                 <div className="pricing-badge mt-5">{plan.badge}</div>
                 <div className="p-8">
                   <div className="flex items-center mb-4">
-                    <plan.icon className="w-8 h-8 mr-3 text-brand-dark" />
-                    <h3 className="text-2xl font-bold text-brand-dark">
+                    <plan.icon className="w-8 h-8 mr-3 text-brand-indigo" />
+                    <h3 className="text-2xl font-bold text-brand-indigo">
                       {plan.name}
                     </h3>
                   </div>
@@ -158,7 +158,7 @@ const Premium = () => {
                           className="flex items-start"
                         >
                           {feature.included ? (
-                            <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                            <Check className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                           ) : (
                             <X className="w-5 h-5 text-muted-foreground mt-0.5 flex-shrink-0" />
                           )}
@@ -173,8 +173,8 @@ const Premium = () => {
                   <Button
                     className={`w-full py-6 text-lg font-semibold transition-all duration-300 ${
                       plan.highlighted
-                        ? 'bg-brand-dark text-white hover:bg-brand-dark/90 button-hover-effect transform hover:scale-105'
-                        : 'bg-brand-dark text-white hover:bg-brand-accent hover:text-brand-dark border border-brand-dark'
+                        ? 'bg-brand-indigo text-white hover:bg-brand-indigo/90 button-hover-effect transform hover:scale-105'
+                        : 'bg-brand-indigo text-white hover:bg-brand-primary hover:text-brand-indigo border border-brand-indigo'
                     }`}
                     disabled={!plan.highlighted}
                     onClick={() => plan.highlighted && navigate('/Contact')}
@@ -193,14 +193,14 @@ const Premium = () => {
       </section>
 
       {/* Roadmap Section */}
-      <section className="py-20 bg-gradient-to-b from-white to-brand-light">
+      <section className="py-20 bg-gradient-to-b from-white to-brand-nude">
         <div className="section-container">
           <div className="text-center mb-16 reveal-animation">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="text-brand-dark">
+              <span className="text-brand-indigo">
                 {t('premium.roadmap.heading').split(' ')[0]}{' '}
               </span>
-              <span className="text-brand-accent">
+              <span className="text-brand-primary">
                 {t('premium.roadmap.heading').split(' ').slice(1).join(' ')}
               </span>
             </h2>
@@ -213,32 +213,32 @@ const Premium = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Phase 1 - Current */}
               <div className="reveal-animation">
-                <div className="relative bg-white rounded-2xl p-8 border-2 border-brand-accent shadow-lg">
+                <div className="relative bg-white rounded-2xl p-8 border-2 border-brand-primary shadow-lg">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-brand-accent text-brand-dark px-4 py-2 rounded-full text-sm font-bold">
+                    <div className="bg-brand-primary text-brand-indigo px-4 py-2 rounded-full text-sm font-bold">
                       {t('premium.roadmap.phase1.badge')}
                     </div>
                   </div>
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-brand-accent/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Rocket className="w-8 h-8 text-brand-accent" />
+                    <div className="w-16 h-16 bg-brand-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Rocket className="w-8 h-8 text-brand-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold text-brand-dark mb-2">
+                    <h3 className="text-2xl font-bold text-brand-indigo mb-2">
                       {t('premium.roadmap.phase1.title')}
                     </h3>
-                    <p className="text-lg font-semibold text-brand-accent">
+                    <p className="text-lg font-semibold text-brand-primary">
                       {t('premium.roadmap.phase1.subtitle')}
                     </p>
                   </div>
                   <ul className="space-y-3 text-left">
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t('premium.roadmap.phase1.features.productSearch')}
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t(
                           'premium.roadmap.phase1.features.shoppingListTesting',
@@ -246,13 +246,13 @@ const Premium = () => {
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t('premium.roadmap.phase1.features.basicPriceHistory')}
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Check className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <Check className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t('premium.roadmap.phase1.features.contactForTesting')}
                       </span>
@@ -273,36 +273,36 @@ const Premium = () => {
               >
                 <div className="relative bg-white rounded-2xl p-8 border border-border shadow-lg">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <div className="bg-brand-dark text-white px-4 py-2 rounded-full text-sm font-bold">
+                    <div className="bg-brand-indigo text-white px-4 py-2 rounded-full text-sm font-bold">
                       {t('premium.roadmap.phase2.badge')}
                     </div>
                   </div>
                   <div className="text-center mb-6">
-                    <div className="w-16 h-16 bg-brand-dark/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Crown className="w-8 h-8 text-brand-dark" />
+                    <div className="w-16 h-16 bg-brand-indigo/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <Crown className="w-8 h-8 text-brand-indigo" />
                     </div>
-                    <h3 className="text-2xl font-bold text-brand-dark mb-2">
+                    <h3 className="text-2xl font-bold text-brand-indigo mb-2">
                       {t('premium.roadmap.phase2.title')}
                     </h3>
-                    <p className="text-lg font-semibold text-brand-dark">
+                    <p className="text-lg font-semibold text-brand-indigo">
                       {t('premium.roadmap.phase2.subtitle')}
                     </p>
                   </div>
                   <ul className="space-y-3 text-left">
                     <li className="flex items-start">
-                      <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <Star className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t('premium.roadmap.phase2.features.unlimitedSearch')}
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <Star className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t('premium.roadmap.phase2.features.smartShoppingList')}
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <Star className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t(
                           'premium.roadmap.phase2.features.discountNotifications',
@@ -310,7 +310,7 @@ const Premium = () => {
                       </span>
                     </li>
                     <li className="flex items-start">
-                      <Star className="w-5 h-5 text-brand-accent mt-0.5 flex-shrink-0" />
+                      <Star className="w-5 h-5 text-brand-primary mt-0.5 flex-shrink-0" />
                       <span className="ml-3 text-foreground">
                         {t(
                           'premium.roadmap.phase2.features.extendedPriceHistory',
@@ -341,7 +341,7 @@ const Premium = () => {
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500/10 to-pink-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <Sparkles className="w-8 h-8 text-purple-500" />
                     </div>
-                    <h3 className="text-2xl font-bold text-brand-dark mb-2">
+                    <h3 className="text-2xl font-bold text-brand-indigo mb-2">
                       {t('premium.roadmap.phase3.title')}
                     </h3>
                     <p className="text-lg font-semibold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -391,10 +391,10 @@ const Premium = () => {
         <div className="section-container">
           <div className="text-center mb-12 reveal-animation">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              <span className="text-brand-dark">
+              <span className="text-brand-indigo">
                 {t('premium.featureComparison.heading').split(' ')[0]}{' '}
               </span>
-              <span className="text-brand-accent">
+              <span className="text-brand-primary">
                 {t('premium.featureComparison.heading')
                   .split(' ')
                   .slice(1)
@@ -408,18 +408,18 @@ const Premium = () => {
 
           <div className="max-w-4xl mx-auto reveal-animation">
             <div className="bg-white rounded-2xl border border-border shadow-lg overflow-hidden">
-              <div className="grid grid-cols-3 bg-brand-light">
+              <div className="grid grid-cols-3 bg-brand-nude">
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-brand-dark">
+                  <h3 className="text-xl font-bold text-brand-indigo">
                     {t('premium.featureComparison.features')}
                   </h3>
                 </div>
                 <div className="p-6 text-center">
-                  <h3 className="text-xl font-bold text-brand-dark">
+                  <h3 className="text-xl font-bold text-brand-indigo">
                     {t('premium.featureComparison.free')}
                   </h3>
                 </div>
-                <div className="p-6 text-center bg-brand-dark text-white">
+                <div className="p-6 text-center bg-brand-indigo text-white">
                   <h3 className="text-xl font-bold">
                     {t('premium.featureComparison.premium')}
                   </h3>
@@ -474,14 +474,14 @@ const Premium = () => {
                   </div>
                   <div className="p-4 text-center">
                     {feature.free ? (
-                      <Check className="w-5 h-5 text-brand-accent mx-auto" />
+                      <Check className="w-5 h-5 text-brand-primary mx-auto" />
                     ) : (
                       <X className="w-5 h-5 text-muted-foreground mx-auto" />
                     )}
                   </div>
                   <div className="p-4 text-center">
                     {feature.premium ? (
-                      <Check className="w-5 h-5 text-brand-accent mx-auto" />
+                      <Check className="w-5 h-5 text-brand-primary mx-auto" />
                     ) : (
                       <X className="w-5 h-5 text-muted-foreground mx-auto" />
                     )}
@@ -494,7 +494,7 @@ const Premium = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-brand-dark">
+      <section className="py-20 bg-brand-indigo">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto reveal-animation">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white">
@@ -505,7 +505,7 @@ const Premium = () => {
             </p>
             <div className="flex justify-center">
               <Button
-                className="bg-brand-accent text-brand-dark hover:bg-white hover:text-brand-dark px-8 py-6 text-lg font-semibold button-hover-effect"
+                className="bg-brand-primary text-brand-indigo hover:bg-white hover:text-brand-indigo px-8 py-6 text-lg font-semibold button-hover-effect"
                 onClick={() => navigate('/Contact')}
               >
                 {t('premium.callToAction.contactUs')}

@@ -46,7 +46,7 @@ const TermsOfService = () => {
         <section className="py-20 bg-white" id="terms-of-service">
           <div className="section-container max-w-4xl mx-auto px-4">
             <div className="text-center mb-16 reveal-animation">
-              <h2 className="text-3xl md:text-4xl font-bold text-brand-dark mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-brand-indigo mb-4">
                 {t('termsOfService.pageTitle')}
               </h2>
               <p className="text-lg text-muted-foreground">
@@ -61,7 +61,7 @@ const TermsOfService = () => {
                   className="glass-panel p-6 reveal-animation"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <h3 className="text-xl font-bold mb-2 text-brand-dark">
+                  <h3 className="text-xl font-bold mb-2 text-brand-indigo">
                     {section.title}
                   </h3>
                   <p className="text-muted-foreground whitespace-pre-line">

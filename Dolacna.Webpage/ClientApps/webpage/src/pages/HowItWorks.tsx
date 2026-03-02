@@ -67,15 +67,15 @@ const HowItWorks = () => {
                   .split(' ')
                   .map((word, i, arr) =>
                     i === arr.length - 2 ? (
-                      <span key={i} className="text-brand-dark">
+                      <span key={i} className="text-brand-indigo">
                         {word}{' '}
                       </span>
                     ) : i === arr.length - 1 ? (
-                      <span key={i} className="text-brand-accent">
+                      <span key={i} className="text-brand-primary">
                         {word}
                       </span>
                     ) : (
-                      <span key={i} className="text-brand-dark">
+                      <span key={i} className="text-brand-indigo">
                         {word}{' '}
                       </span>
                     ),
@@ -116,11 +116,11 @@ const HowItWorks = () => {
                       {/* Content section */}
                       <div className="flex-1 flex flex-col">
                         <div className="flex items-center gap-4 mb-4">
-                          <div className="w-12 h-12 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg flex-shrink-0">
+                          <div className="w-12 h-12 bg-brand-primary text-white rounded-full flex items-center justify-center font-bold text-lg shadow-lg flex-shrink-0">
                             {step.number}
                           </div>
                           <h3
-                            className={`text-xl md:text-2xl font-bold text-brand-dark text-left ${
+                            className={`text-xl md:text-2xl font-bold text-brand-indigo text-left ${
                               idx % 2 === 0 ? 'md:text-left' : 'md:text-right'
                             }`}
                           >
@@ -128,7 +128,7 @@ const HowItWorks = () => {
                           </h3>
                         </div>
 
-                        <p className="text-brand-accent font-medium mb-4 text-left">
+                        <p className="text-brand-primary font-medium mb-4 text-left">
                           {step.subtitle}
                         </p>
                         <p className="text-muted-foreground mb-6 text-base md:text-lg text-left">
@@ -137,7 +137,7 @@ const HowItWorks = () => {
 
                         <div className={`flex justify-start `}>
                           <button
-                            className="flex items-center gap-2 text-brand-accent hover:text-brand-accent/80 font-medium transition py-2 px-3 -ml-3 rounded-md hover:bg-gray-50 min-h-[44px]"
+                            className="flex items-center gap-2 text-brand-primary hover:text-brand-primary/80 font-medium transition py-2 px-3 -ml-3 rounded-md hover:bg-gray-50 min-h-[44px]"
                             onClick={() => handleToggle(step.number)}
                             aria-expanded={openStep === step.number}
                           >
@@ -156,7 +156,7 @@ const HowItWorks = () => {
                                   key={`${step.number}-detail-${detailIdx}`}
                                   className="flex items-start gap-3"
                                 >
-                                  <span className="w-2 h-2 bg-brand-accent rounded-full mt-2 flex-shrink-0"></span>
+                                  <span className="w-2 h-2 bg-brand-primary rounded-full mt-2 flex-shrink-0"></span>
                                   <span className="text-muted-foreground text-left">
                                     {detail}
                                   </span>
@@ -182,7 +182,7 @@ const HowItWorks = () => {
                         width="40"
                         height="60"
                         viewBox="0 0 40 60"
-                        className="text-brand-accent/70"
+                        className="text-brand-primary/70"
                       >
                         {/* Vertical line */}
                         <line

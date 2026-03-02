@@ -1,9 +1,9 @@
-import React, { useRef } from 'react';
+import BlackTitaniumPng from '@/../public/images/iPhone 16 Pro.png';
+import { Button } from '@/components/ui/button';
+import { useRevealAnimation } from '@/hooks/use-reveal-animation';
+import { useRef } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
-import BlackTitaniumPng from '@/../public/images/iPhone 16 Pro.png';
-import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -12,36 +12,48 @@ const Hero = () => {
   useRevealAnimation();
 
   return (
-    <section className="relative min-h-screen flex items-center pt-0 overflow-hidden bg-gradient-to-b from-brand-dark from-10% to-brand-light to-65%">
+    <section className="relative min-h-screen flex items-center pt-0 overflow-hidden bg-brand-primary-dark">
+      {/* Decorative background blobs */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-brand-primary opacity-60 blur-[120px]" />
+        <div className="absolute bottom-0 -left-24 w-[400px] h-[400px] rounded-full bg-brand-lilac opacity-20 blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-primary opacity-10 blur-[150px]" />
+      </div>
+
       <div
-        className="section-container relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-6 items-center"
-        style={{ paddingTop: '6rem' }}
+        className="section-container relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8 items-center"
+        style={{ paddingTop: '7rem' }}
       >
         {/* Text Content */}
-        <div className="text-left space-y-6 reveal-animation" data-anim="left">
-          <div className="inline-block px-3 py-1 rounded-full bg-brand-accent/70 text-white font-medium text-sm mb-4">
+        <div className="text-left space-y-7 reveal-animation" data-anim="left">
+          {/* Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-secondary/15 border border-brand-secondary/35 text-brand-secondary font-medium text-sm">
+            <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse-subtle" />
             {t('save_money')}
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight md:leading-tight text-balance text-white">
+          {/* Headline */}
+          <h1 className="text-5xl sm:text-6xl md:text-[4.25rem] font-black leading-[1.08] tracking-tight text-white">
             {t('compare_prices')}{' '}
-            <span className="text-brand-accent">{t('across_slovakia')}</span>
+            <span className="text-brand-secondary">{t('across_slovakia')}</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-white md:text-gray-700 max-w-lg">
+          {/* Description */}
+          <p className="text-lg md:text-xl text-white/65 max-w-[460px] leading-relaxed">
             {t('description')}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4 pt-2">
             <Button
-              className="button-hover-effect text-lg px-8 py-6 bg-brand-accent text-brand-dark hover:bg-brand-dark hover:text-white"
+              className="button-hover-effect text-base px-8 py-6 bg-brand-secondary text-brand-indigo hover:bg-white hover:text-brand-primary font-bold transition-all duration-300 shadow-glow-yellow rounded-xl"
               onClick={() => navigate('/Download')}
             >
               {t('download_app')}
             </Button>
             <Button
               variant="outline"
-              className="text-lg px-8 py-6 border-brand-dark text-brand-dark hover:bg-brand-dark hover:text-white"
+              className="text-base px-8 py-6 border-white/25 text-white bg-white/5 hover:bg-white/12 hover:border-white/50 transition-all duration-300 rounded-xl"
               onClick={() => navigate('/HowItWorks')}
             >
               {t('learn_more')}
@@ -49,12 +61,17 @@ const Hero = () => {
           </div>
         </div>
 
+        {/* Phone mockup */}
         <div
           ref={phoneRef}
-          className="relative h-[900px] w-full max-w-[450px] mx-auto md:mx-0 md:ml-auto reveal-animation flex items-center"
+          className="relative h-[740px] w-full max-w-[460px] mx-auto md:mx-0 md:ml-auto reveal-animation flex items-end justify-center"
           data-anim="right"
         >
-          <img src={BlackTitaniumPng} alt={'PhoneImage'}></img>
+          <img
+            src={BlackTitaniumPng}
+            alt="Usetri app screenshot"
+            className="w-full h-full object-contain drop-shadow-[0_40px_80px_rgba(0,0,0,0.5)]"
+          />
         </div>
       </div>
     </section>
