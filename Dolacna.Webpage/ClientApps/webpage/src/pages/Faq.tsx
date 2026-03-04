@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react';
-import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { useTranslation } from 'react-i18next';
+import Header from '@/components/layout/Header';
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Faq = () => {
   const { t } = useTranslation();
@@ -124,7 +124,7 @@ const Faq = () => {
 
       {/* Hero Section */}
       <section className="pt-20 pb-12 bg-gradient-to-br from-brand-primary/5 via-brand-primary/5 to-transparent">
-        <div className="container mx-auto px-4">
+        <div className="container pt-10 mx-auto px-4">
           <div className="text-center reveal-animation opacity-0 translate-y-8 transition-all duration-700">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
               <span className="text-brand-indigo">
