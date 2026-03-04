@@ -289,7 +289,7 @@
 
   "team": {
     "header": "Our Team",
-    "subheader": "Meet the people who make our mission possible.",
+    "subheader": "The people behind the app changing grocery shopping in Slovakia.",
     "aboutUs": {
       "header": "About Us",
       "paragraph1": "We are a group of longtime friends united not only by friendship, but also by a shared passion for technology and improving people's daily lives. We've known each other since high school and later studied together at the Slovak University of Technology in Bratislava. During years of shared study and extracurricular projects, we created a strong team that can complement and motivate each other.",
@@ -315,6 +315,11 @@
         "name": "Róbert Jačko",
         "role": "AI Engineer",
         "linkedin": "https://linkedin.com/in/robert-jacko"
+      },
+      {
+        "name": "Sandra Slobodová",
+        "role": "Marketing",
+        "linkedin": "https://www.linkedin.com/in/sandra-slobodov%C3%A1/"
       }
     ]
   },

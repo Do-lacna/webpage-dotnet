@@ -287,7 +287,7 @@
 
   "team": {
     "header": "Náš tím",
-    "subheader": "Zoznámte sa s ľuďmi, ktorí umožňujú našu misiu.",
+    "subheader": "Ľudia za aplikáciou, ktorá mení nakupovanie na Slovensku.",
     "aboutUs": {
       "header": "O nás",
       "paragraph1": "Sme skupina dlhoročných kamarátov, ktorých spojilo nielen priateľstvo, ale aj spoločná vášeň pre technológie a zlepšovanie každodenného života ľudí. Poznáme sa už od strednej školy a neskôr sme spolu študovali na Slovenskej technickej univerzite v Bratislave. Počas rokov spoločného štúdia a mimoškolských projektov sme si vytvorili silný tím, ktorý sa dokáže navzájom dopĺňať a motivovať.",
@@ -313,6 +313,11 @@
         "name": "Róbert Jačko",
         "role": "AI inžinier",
         "linkedin": "https://www.linkedin.com/in/r%C3%B3bert-ja%C4%8Dko-a695721a0/"
+      },
+      {
+        "name": "Sandra Slobodová",
+        "role": "Marketing",
+        "linkedin": "https://www.linkedin.com/in/sandra-slobodov%C3%A1/"
       }
     ]
   },
