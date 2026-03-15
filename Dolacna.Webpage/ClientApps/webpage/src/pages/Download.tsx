@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
-import { useTranslation } from 'react-i18next';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import { Button } from '@/components/ui/button';
-import { Apple, ShoppingBag, Smartphone, Check } from 'lucide-react';
 import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 15 Pro Max.png';
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import { Button } from '@/components/ui/button';
+import { Apple, ShoppingBag, Smartphone } from 'lucide-react';
+import { useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const Download = () => {
   const { t } = useTranslation();
@@ -154,35 +154,7 @@ const Download = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 bg-gray-50">
-          <div className="section-container">
-            <div className="max-w-4xl mx-auto">
-              <div className="text-center mb-12 reveal-animation">
-                <h2 className="text-2xl md:text-3xl font-bold text-brand-indigo mb-4">
-                  {t('download.benefits.title')}
-                </h2>
-                <p className="text-lg text-gray-600">
-                  {t('download.benefits.subtitle')}
-                </p>
-              </div>
 
-              <div className="grid md:grid-cols-2 gap-4">
-                {benefits.map((benefit) => (
-                  <div
-                    key={benefit}
-                    className="flex items-center gap-3 p-4 bg-white rounded-lg shadow-sm reveal-animation"
-                  >
-                    <div className="flex-shrink-0 w-6 h-6 bg-brand-primary rounded-full flex items-center justify-center">
-                      <Check className="w-4 h-4 text-white" />
-                    </div>
-                    <span className="text-gray-700">{benefit}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
       <Footer />
     </div>

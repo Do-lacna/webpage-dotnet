@@ -36,20 +36,21 @@
       "description": "Create and manage shopping lists that automatically calculate the best store for your entire list."
     },
     "dealAlerts": {
-      "title": "Deal Alerts",
-      "description": "Get notified when products on your watchlist go on sale or drop in price."
+      "title": "Discount Tracking",
+      "description": "We track all discount prices across supermarkets. Get notified about new deals and stay on top of the best offers."
     },
-    "realTimeUpdates": {
-      "title": "Real-time Updates",
-      "description": "Prices are updated daily to ensure you always have the latest information."
+    "savingsTracking": {
+      "title": "Savings Overview",
+      "description": "Save your shopping list and track how much you've saved in your profile."
     },
     "priceHistory": {
       "title": "Price History",
       "description": "View price trends over time to make informed purchasing decisions."
     },
-    "verifiedData": {
-      "title": "Verified Data",
-      "description": "All pricing data is verified for accuracy before being displayed in the app."
+    "discountRecipes": {
+      "title": "Recipes from Discounted Products",
+      "description": "Simple recipes made from products currently on sale \u2014 with a cost comparison across different stores. Powered by AI.",
+      "badge": "Coming soon"
     }
   },
 
@@ -82,10 +83,10 @@
       "currentAndFuture": "Current & Future Plans",
       "currentAndFutureSubheading": "Start with our free testing version today, premium features coming soon",
       "freeBeta": {
-        "name": "Free Testing",
-        "description": "Help us test and improve the core features during our testing phase",
-        "cta": "Join Testing Phase",
-        "badge": "AVAILABLE NOW"
+        "name": "Basic Version",
+        "description": "Free version with limited daily searches and basic price comparison features",
+        "cta": "Download for Free",
+        "badge": "FREE"
       },
       "free": {
         "name": "Free",
@@ -101,14 +102,14 @@
       }
     },
     "features": {
-      "limitedProductSearch": "Limited product search",
-      "basicPriceHistory": "Basic price history (limited time)",
-      "betaTestingAccess": "Beta testing access",
-      "communityFeedback": "Community feedback",
+      "limitedProductSearch": "Limited product searches (daily)",
+      "basicPriceHistory": "Basic price history",
       "unlimitedSearch": "Unlimited product searches",
-      "shoppingList": "Shopping list feature",
+      "shoppingList": "Shopping lists",
       "smartShoppingList": "Smart shopping lists",
-      "discountNotifications": "Discount notifications",
+      "discountNotifications": "Discount tracking & alerts",
+      "savingsTracking": "Savings overview in profile",
+      "aiRecipes": "AI recipes from discounted products",
       "extendedPriceHistory": "Extended price history",
       "prioritySupport": "Priority support"
     },
@@ -612,5 +613,16 @@
       "lidl": "Lidl",
       "tesco": "Tesco"
     }
+  },
+  "valueProposition": {
+    "heading": "Create a grocery list.",
+    "headingAccent": "See where it's cheapest.",
+    "subheading": "Build your shopping list and instantly compare the total price across multiple stores — all in one tap.",
+    "stepList": "1. Your grocery list",
+    "stepCompare": "2. Compare prices",
+    "arrowLabel": "Compare",
+    "groceryListAlt": "Grocery list screenshot",
+    "shopAlt": "Price comparison in shop {{number}}",
+    "footnote": "Swipe through the stores to see real price differences on the same grocery list."
   }
 }

@@ -85,7 +85,7 @@ const Header = () => {
             {t('how_it_works')}
           </a>
           <a
-            href="/Contact"
+            href="/Premium"
             className={cn(
               'nav-link transition-colors',
               isTransparent
@@ -93,9 +93,8 @@ const Header = () => {
                 : 'text-brand-indigo hover:text-brand-primary',
             )}
           >
-            {t('footer.contact')}
+            {t('premium_header')}
           </a>
-
           <a
             href="/FAQ"
             className={cn(
@@ -117,6 +116,17 @@ const Header = () => {
             )}
           >
             {t('footer.aboutUs')}
+          </a>
+          <a
+            href="/Contact"
+            className={cn(
+              'nav-link transition-colors',
+              isTransparent
+                ? 'text-white/90 hover:text-brand-secondary'
+                : 'text-brand-indigo hover:text-brand-primary',
+            )}
+          >
+            {t('footer.contact')}
           </a>
 
           <Button
@@ -160,6 +170,20 @@ const Header = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg border-t border-brand-lilac/20 animate-slide-down">
           <div className="px-4 py-6 space-y-4">
             <a
+              href="/HowItWorks"
+              className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('how_it_works')}
+            </a>
+            <a
+              href="/Premium"
+              className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('premium_header')}
+            </a>
+            <a
               href="#features"
               className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
               onClick={(e) => {
@@ -170,25 +194,25 @@ const Header = () => {
               {t('features_header')}
             </a>
             <a
-              href="/Contact"
-              className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {t('footer.contact')}
-            </a>
-            <a
-              href="/HowItWorks"
-              className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {t('how_it_works')}
-            </a>
-            <a
               href="/FAQ"
               className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('faq_header')}
+            </a>
+            <a
+              href="/AboutUs"
+              className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('footer.aboutUs')}
+            </a>
+            <a
+              href="/Contact"
+              className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('footer.contact')}
             </a>
             <Button
               className="w-full bg-brand-secondary text-brand-indigo hover:bg-brand-primary hover:text-white font-bold transition-all"

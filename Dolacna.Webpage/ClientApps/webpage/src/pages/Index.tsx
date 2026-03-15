@@ -1,10 +1,10 @@
-import React from 'react';
-import Header from '@/components/layout/Header';
-import Hero from '@/components/sections/Hero';
-import Features from '@/components/sections/Features';
-import DownloadSection from '@/components/sections/DownloadSection';
 import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import DownloadSection from '@/components/sections/DownloadSection';
+import Features from '@/components/sections/Features';
+import Hero from '@/components/sections/Hero';
 import StoresSection from '@/components/sections/StoresSection.tsx';
+import ValueProposition from '@/components/sections/ValueProposition';
 import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 
 const Index = () => {
@@ -15,6 +15,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <ValueProposition />
         <StoresSection />
         <Features />
         <DownloadSection />

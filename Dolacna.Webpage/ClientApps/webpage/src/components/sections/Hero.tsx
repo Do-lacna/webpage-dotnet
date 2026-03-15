@@ -13,6 +13,11 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center pt-0 overflow-hidden bg-brand-primary-dark">
+      {/* Pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none z-[1]"
+        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '250px' }}
+      />
       {/* Decorative background blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-brand-primary opacity-60 blur-[120px]" />

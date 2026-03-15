@@ -1,11 +1,11 @@
 import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 import {
-    BarChart3,
-    RefreshCw,
-    Search,
-    ShieldCheck,
-    ShoppingCart,
-    Tags,
+  BarChart3,
+  ChefHat,
+  PiggyBank,
+  Search,
+  ShoppingCart,
+  Tags,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
@@ -30,9 +30,9 @@ const Features = () => {
       description: t('features.dealAlerts.description'),
     },
     {
-      icon: <RefreshCw className="w-8 h-8 text-brand-primary" />,
-      title: t('features.realTimeUpdates.title'),
-      description: t('features.realTimeUpdates.description'),
+      icon: <PiggyBank className="w-8 h-8 text-brand-primary" />,
+      title: t('features.savingsTracking.title'),
+      description: t('features.savingsTracking.description'),
     },
     {
       icon: <BarChart3 className="w-8 h-8 text-brand-primary" />,
@@ -40,38 +40,67 @@ const Features = () => {
       description: t('features.priceHistory.description'),
     },
     {
-      icon: <ShieldCheck className="w-8 h-8 text-brand-primary" />,
-      title: t('features.verifiedData.title'),
-      description: t('features.verifiedData.description'),
+      icon: <ChefHat className="w-8 h-8 text-brand-primary" />,
+      title: t('features.discountRecipes.title'),
+      description: t('features.discountRecipes.description'),
+      badge: t('features.discountRecipes.badge'),
     },
   ];
 
   return (
-    <section id="features" className="py-20 bg-white">
-      <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto mb-16 reveal-animation" data-anim="up">
-          <div className="inline-block px-3 py-1 rounded-full bg-brand-lilac/30 text-brand-primary font-medium text-sm mb-4">
-            {t('features_header')}
+    <section id="features" className="py-12 bg-white relative overflow-hidden">
+      {/* Pattern background */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '300px' }}
+      />
+
+      <div className="section-container relative z-10">
+        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-16">
+          {/* Section heading */}
+          <div className="text-center lg:text-left max-w-2xl reveal-animation" data-anim="left">
+            <div className="inline-block px-3 py-1 rounded-full bg-brand-lilac/30 text-brand-primary font-medium text-sm mb-4">
+              {t('features_header')}
+            </div>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-indigo">
+              {t('features.heading')}{' '}
+              <span className="text-brand-primary">
+                {t('features.headingAccent')}
+              </span>
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              {t('features.subheading')}
+            </p>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-indigo">
-            {t('features.heading')}{' '}
-            <span className="text-brand-primary">
-              {t('features.headingAccent')}
-            </span>
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            {t('features.subheading')}
-          </p>
+
+          {/* Kosik graphic */}
+          <div className="flex-shrink-0 reveal-animation" data-anim="right">
+            <img
+              src="/images/featuredGraphics/kosik.png"
+              alt=""
+              className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain drop-shadow-[0_20px_40px_rgba(86,69,204,0.15)]"
+            />
+          </div>
+        </div>
+
+        {/* Decorative vozik image */}
+        <div className="absolute -left-12 bottom-8 w-40 h-40 opacity-[0.06] pointer-events-none hidden lg:block rotate-[-15deg]">
+          <img src="/images/featuredGraphics/vozik.png" alt="" className="w-full h-full object-contain" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <div
               key={i}
-              className="bg-brand-nude rounded-2xl p-6 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(86,69,204,0.12)] hover:-translate-y-1 reveal-animation border border-brand-lilac/20"
+              className="bg-brand-nude rounded-2xl p-6 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(86,69,204,0.12)] hover:-translate-y-1 reveal-animation border border-brand-lilac/20 relative"
               style={{ animationDelay: `${i * 0.1}s` }}
               data-anim="scale"
             >
+              {'badge' in feature && feature.badge && (
+                <span className="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-brand-primary/10 text-brand-primary text-xs font-semibold border border-brand-primary/20">
+                  {feature.badge}
+                </span>
+              )}
               <div className="p-3 bg-brand-lilac/25 rounded-xl inline-block mb-4">
                 {feature.icon}
               </div>

@@ -12,7 +12,7 @@ const DownloadSection = () => {
   return (
     <section
       id="download"
-      className="relative py-24 bg-brand-primary-dark overflow-hidden"
+      className="relative py-14 bg-brand-primary-dark overflow-hidden"
     >
       {/* Decorative blobs — mirror of hero */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">

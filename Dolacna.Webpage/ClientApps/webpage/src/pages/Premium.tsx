@@ -1,20 +1,20 @@
-import React, { useEffect } from 'react';
+import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import { Button } from '@/components/ui/button';
+import {
+  Calendar,
+  Check,
+  Crown,
+  Rocket,
+  Sparkles,
+  Star,
+  Users,
+  X,
+  Zap,
+} from 'lucide-react';
+import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import {
-  Check,
-  X,
-  Star,
-  Zap,
-  Crown,
-  Users,
-  Sparkles,
-  Calendar,
-  Rocket,
-} from 'lucide-react';
-import Header from '@/components/layout/Header';
-import Footer from '@/components/layout/Footer';
-import { Button } from '@/components/ui/button';
 
 const Premium = () => {
   const { t } = useTranslation();
@@ -53,11 +53,11 @@ const Premium = () => {
       features: [
         { name: t('premium.features.limitedProductSearch'), included: true },
         { name: t('premium.features.basicPriceHistory'), included: true },
-        { name: t('premium.features.betaTestingAccess'), included: true },
-        { name: t('premium.features.communityFeedback'), included: true },
-        { name: t('premium.features.unlimitedSearch'), included: false },
+        { name: t('premium.features.discountNotifications'), included: true },
         { name: t('premium.features.shoppingList'), included: false },
-        { name: t('premium.features.discountNotifications'), included: false },
+        { name: t('premium.features.savingsTracking'), included: false },
+        { name: t('premium.features.aiRecipes'), included: false },
+        { name: t('premium.features.unlimitedSearch'), included: false },
         { name: t('premium.features.extendedPriceHistory'), included: false },
       ],
       cta: t('premium.plans.freeBeta.cta'),
@@ -73,7 +73,9 @@ const Premium = () => {
       features: [
         { name: t('premium.features.unlimitedSearch'), included: true },
         { name: t('premium.features.smartShoppingList'), included: true },
+        { name: t('premium.features.savingsTracking'), included: true },
         { name: t('premium.features.discountNotifications'), included: true },
+        { name: t('premium.features.aiRecipes'), included: true },
         { name: t('premium.features.extendedPriceHistory'), included: true },
         { name: t('premium.features.prioritySupport'), included: true },
       ],
@@ -118,11 +120,18 @@ const Premium = () => {
                 key={plan.name}
                 className={`relative rounded-2xl overflow-hidden transition-all duration-500 reveal-animation hover:scale-105 ${
                   plan.highlighted
-                    ? 'bg-brand-primary text-brand-indigo border-2 border-brand-primary shadow-2xl'
-                    : 'bg-white border border-border shadow-lg'
+                    ? 'bg-white border-2 border-brand-primary shadow-2xl'
+                    : 'bg-brand-lilac/30 border-2 border-brand-primary/40 shadow-2xl'
                 }`}
                 style={{ animationDelay: `${i * 0.2}s` }}
               >
+                {/* Pattern background for premium card */}
+                {!plan.highlighted && (
+                  <div
+                    className="absolute inset-0 opacity-[0.1] pointer-events-none"
+                    style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '200px' }}
+                  />
+                )}
                 <div className="pricing-badge mt-5">{plan.badge}</div>
                 <div className="p-8">
                   <div className="flex items-center mb-4">
@@ -170,17 +179,14 @@ const Premium = () => {
                     })}
                   </div>
 
-                  <Button
-                    className={`w-full py-6 text-lg font-semibold transition-all duration-300 ${
-                      plan.highlighted
-                        ? 'bg-brand-indigo text-white hover:bg-brand-indigo/90 button-hover-effect transform hover:scale-105'
-                        : 'bg-brand-indigo text-white hover:bg-brand-primary hover:text-brand-indigo border border-brand-indigo'
-                    }`}
-                    disabled={!plan.highlighted}
-                    onClick={() => plan.highlighted && navigate('/Contact')}
-                  >
-                    {plan.cta}
-                  </Button>
+                  {plan.highlighted && (
+                    <Button
+                      className="w-full py-6 text-lg font-semibold transition-all duration-300 bg-brand-indigo text-white hover:bg-brand-indigo/90 button-hover-effect transform hover:scale-105"
+                      onClick={() => navigate('/Download')}
+                    >
+                      {plan.cta}
+                    </Button>
+                  )}
                 </div>
               </div>
             ))}
@@ -428,8 +434,18 @@ const Premium = () => {
 
               {[
                 {
+                  name: t('premium.features.limitedProductSearch'),
+                  free: true,
+                  premium: false,
+                },
+                {
                   name: t('premium.features.unlimitedSearch'),
                   free: false,
+                  premium: true,
+                },
+                {
+                  name: t('premium.features.basicPriceHistory'),
+                  free: true,
                   premium: true,
                 },
                 {
@@ -438,28 +454,28 @@ const Premium = () => {
                   premium: true,
                 },
                 {
-                  name: t('premium.features.betaTestingAccess'),
-                  free: true,
+                  name: t('premium.features.shoppingList'),
+                  free: false,
                   premium: true,
                 },
                 {
-                  name: t('premium.features.smartShoppingList'),
+                  name: t('premium.features.savingsTracking'),
                   free: false,
                   premium: true,
                 },
                 {
                   name: t('premium.features.discountNotifications'),
+                  free: true,
+                  premium: true,
+                },
+                {
+                  name: t('premium.features.aiRecipes'),
                   free: false,
                   premium: true,
                 },
                 {
                   name: t('premium.features.prioritySupport'),
                   free: false,
-                  premium: true,
-                },
-                {
-                  name: t('premium.features.communityFeedback'),
-                  free: true,
                   premium: true,
                 },
               ].map((feature, i) => (

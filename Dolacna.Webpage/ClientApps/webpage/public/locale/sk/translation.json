@@ -36,20 +36,21 @@
       "description": "Vytvárajte a spravujte nákupné zoznamy, ktoré automaticky určia najvýhodnejší obchod pre celý nákup."
     },
     "dealAlerts": {
-      "title": "Upozornenia na zľavy",
-      "description": "Dostávajte upozornenia, keď sa produkty vo vašom zozname sledovaných dostanú do zľavy."
+      "title": "Sledovanie zliav",
+      "description": "Sledujeme všetky akciové ceny naprieč supermarketmi. Dostávajte upozornenia na nové zľavy a majte prehľad o najlepších ponukách."
     },
-    "realTimeUpdates": {
-      "title": "Aktuálne údaje",
-      "description": "Ceny sa aktualizujú pravidelne, aby ste vždy mali najnovšie informácie."
+    "savingsTracking": {
+      "title": "Prehľad úspor",
+      "description": "Uložte si nákupný zoznam a sledujte vo svojom profile, koľko ste pri nákupoch ušetrili."
     },
     "priceHistory": {
       "title": "História cien",
       "description": "Sledujte vývoj cien v čase a robte lepšie rozhodnutia pri nákupe."
     },
-    "verifiedData": {
-      "title": "Overené údaje",
-      "description": "Všetky cenové údaje sú pred zverejnením v aplikácii dôkladne overené."
+    "discountRecipes": {
+      "title": "Recepty zo zľavnených produktov",
+      "description": "Jednoduché recepty z produktov, ktoré sú práve v akcii — s porovnaním ceny receptu v rôznych obchodoch. Poháňané umelou inteligenciou.",
+      "badge": "Čoskoro"
     }
   },
 
@@ -82,10 +83,10 @@
       "currentAndFuture": "Aktuálne a budúce plány",
       "currentAndFutureSubheading": "Začnite s našou bezplatnou testovacou verziou dnes, prémiové funkcie prichádzajú čoskoro",
       "freeBeta": {
-        "name": "Bezplatné testovanie",
-        "description": "Pomôžte nám testovať a zlepšovať základné funkcie počas našej testovacej fázy",
-        "cta": "Pripojiť sa k testovacej fáze",
-        "badge": "DOSTUPNÉ TERAZ"
+        "name": "Základná verzia",
+        "description": "Bezplatná verzia s obmedzeným počtom vyhľadávaní denne a základnými funkciami porovnávania cien",
+        "cta": "Stiahnuť zadarmo",
+        "badge": "ZADARMO"
       },
       "free": {
         "name": "Zdarma",
@@ -101,14 +102,14 @@
       }
     },
     "features": {
-      "limitedProductSearch": "Obmedzené vyhľadávanie produktov",
-      "basicPriceHistory": "Základná história cien (obmedzený čas)",
-      "betaTestingAccess": "Prístup k beta testovaniu",
-      "communityFeedback": "Spätná väzba komunity",
+      "limitedProductSearch": "Obmedzené vyhľadávanie produktov (denne)",
+      "basicPriceHistory": "Základná história cien",
       "unlimitedSearch": "Neobmedzené vyhľadávanie produktov",
-      "shoppingList": "Funkcia nákupného zoznamu",
+      "shoppingList": "Nákupné zoznamy",
       "smartShoppingList": "Inteligentné nákupné zoznamy",
-      "discountNotifications": "Upozornenia na zľavy",
+      "discountNotifications": "Sledovanie zliav a upozornenia",
+      "savingsTracking": "Prehľad úspor v profile",
+      "aiRecipes": "AI recepty zo zľavnených produktov",
       "extendedPriceHistory": "Rozšírená história cien",
       "prioritySupport": "Prioritná podpora"
     },
@@ -610,5 +611,16 @@
       "lidl": "Lidl",
       "tesco": "Tesco"
     }
+  },
+  "valueProposition": {
+    "heading": "Vytvor si nákupný zoznam.",
+    "headingAccent": "Zisti, kde nakúpiš najlacnejšie.",
+    "subheading": "Zostav si nákupný zoznam a okamžite porovnaj celkovú cenu vo viacerých obchodoch — jedným ťuknutím.",
+    "stepList": "1. Tvoj nákupný zoznam",
+    "stepCompare": "2. Porovnaj ceny",
+    "arrowLabel": "Porovnaj",
+    "groceryListAlt": "Snímka nákupného zoznamu",
+    "shopAlt": "Porovnanie cien v obchode {{number}}",
+    "footnote": "Prechádzajte obchodmi a pozrite si skutočné cenové rozdiely na rovnakom nákupnom zozname."
   }
 }

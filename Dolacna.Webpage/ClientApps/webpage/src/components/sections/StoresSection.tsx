@@ -26,12 +26,12 @@ const StoresSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-24 bg-brand-nude overflow-hidden">
+    <section className="relative py-12 bg-brand-nude overflow-hidden">
       {/* subtle top divider from dark hero */}
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-primary via-brand-lilac to-brand-secondary opacity-60" />
 
       <div className="section-container relative z-10">
-        <div className="max-w-3xl mb-14 reveal-animation" data-anim="left">
+        <div className="max-w-3xl mb-8 reveal-animation" data-anim="left">
           <h2 className="text-3xl md:text-5xl font-bold text-brand-indigo">
             {t('storesSection.heading')}{' '}
             <span className="text-brand-primary">{t('storesSection.headingAccent')}</span>
@@ -68,7 +68,7 @@ const StoresSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-12 reveal-animation">
+        <div className="mt-8 reveal-animation">
           <div className="text-brand-indigo/50 text-sm md:text-base max-w-xl">{t('storesSection.footerBlurb')}</div>
         </div>
       </div>
