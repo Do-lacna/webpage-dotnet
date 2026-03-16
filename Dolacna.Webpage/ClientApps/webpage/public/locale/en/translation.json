@@ -607,6 +607,11 @@
     "productsTracked": "Products tracked",
     "footerBlurb": "We are continuously expanding our coverage to include more stores and products.",
     "liveUpdating": "Live updating",
+    "keyPoints": {
+      "regularUpdates": "We regularly update prices",
+      "aiAutomation": "We use AI to automate the system",
+      "growingDatabase": "We continuously expand our database of supermarkets and products"
+    },
     "storeLabels": {
       "billa": "Billa",
       "kaufland": "Kaufland",

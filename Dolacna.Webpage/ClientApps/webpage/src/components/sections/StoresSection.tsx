@@ -3,6 +3,7 @@ import KauflandLogo from '@/../public/images/stores/kaufland.png';
 import LidlLogo from '@/../public/images/stores/lidl.png';
 import TescoLogo from '@/../public/images/stores/tesco.jpg';
 import { useRevealAnimation } from '@/hooks/use-reveal-animation';
+import { Bot, DatabaseZap, RefreshCw } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -26,7 +27,7 @@ const StoresSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-12 bg-brand-nude overflow-hidden">
+    <section className="relative py-8 bg-brand-nude overflow-hidden">
       {/* subtle top divider from dark hero */}
       <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-primary via-brand-lilac to-brand-secondary opacity-60" />
 
@@ -68,9 +69,20 @@ const StoresSection: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-8 reveal-animation">
-          <div className="text-brand-indigo/50 text-sm md:text-base max-w-xl">{t('storesSection.footerBlurb')}</div>
+        {/* Key points */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8 reveal-animation" data-anim="up">
+          {[
+            { icon: <RefreshCw className="w-5 h-5 text-brand-primary" />, text: t('storesSection.keyPoints.regularUpdates') },
+            { icon: <Bot className="w-5 h-5 text-brand-primary" />, text: t('storesSection.keyPoints.aiAutomation') },
+            { icon: <DatabaseZap className="w-5 h-5 text-brand-primary" />, text: t('storesSection.keyPoints.growingDatabase') },
+          ].map((point, i) => (
+            <div key={i} className="flex items-center gap-3 bg-white/60 rounded-xl px-4 py-3 border border-brand-lilac/20">
+              <div className="flex-shrink-0 p-2 bg-brand-lilac/20 rounded-lg">{point.icon}</div>
+              <span className="text-sm font-medium text-brand-indigo">{point.text}</span>
+            </div>
+          ))}
         </div>
+
       </div>
     </section>
   );

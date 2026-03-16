@@ -64,9 +64,7 @@ const Features = () => {
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-indigo">
               {t('features.heading')}{' '}
-              <span className="text-brand-primary">
-                {t('features.headingAccent')}
-              </span>
+    
             </h2>
             <p className="text-lg text-muted-foreground">
               {t('features.subheading')}
@@ -76,7 +74,7 @@ const Features = () => {
           {/* Kosik graphic */}
           <div className="flex-shrink-0 reveal-animation" data-anim="right">
             <img
-              src="/images/featuredGraphics/kosik.png"
+              src="/images/featuredGraphics/vozik.png"
               alt=""
               className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain drop-shadow-[0_20px_40px_rgba(86,69,204,0.15)]"
             />

@@ -1,4 +1,4 @@
-import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 15 Pro Max.png';
+import KosikPng from '@/../public/images/featuredGraphics/kosik.png';
 import { Button } from '@/components/ui/button';
 import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 import { useTranslation } from 'react-i18next';
@@ -46,14 +46,13 @@ const DownloadSection = () => {
             </div>
           </div>
 
-          {/* Phone mockup */}
+          {/* Kosik graphic */}
           <div className="md:w-1/2 relative reveal-animation" data-anim="right">
-            <div className="relative max-w-[320px] mx-auto">
-              <div className="absolute inset-0 bg-brand-primary/40 blur-3xl rounded-full scale-75 translate-y-8" />
+            <div className="relative max-w-[360px] mx-auto">
               <img
-                src={IPhoneMockupPng}
-                alt="Usetri app preview"
-                className="relative w-full h-auto drop-shadow-[0_30px_60px_rgba(0,0,0,0.4)]"
+                src={KosikPng}
+                alt="Usetri kosik"
+                className="relative w-full h-auto"
               />
             </div>
           </div>
