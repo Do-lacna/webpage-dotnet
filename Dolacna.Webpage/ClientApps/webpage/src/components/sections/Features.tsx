@@ -15,32 +15,32 @@ const Features = () => {
 
   const features = [
     {
-      icon: <Search className="w-8 h-8 text-brand-primary" />,
+      icon: <Search className="w-8 h-8 text-brand-secondary" />,
       title: t('features.searchCompare.title'),
       description: t('features.searchCompare.description'),
     },
     {
-      icon: <ShoppingCart className="w-8 h-8 text-brand-primary" />,
+      icon: <ShoppingCart className="w-8 h-8 text-brand-secondary" />,
       title: t('features.shoppingLists.title'),
       description: t('features.shoppingLists.description'),
     },
     {
-      icon: <Tags className="w-8 h-8 text-brand-primary" />,
+      icon: <Tags className="w-8 h-8 text-brand-secondary" />,
       title: t('features.dealAlerts.title'),
       description: t('features.dealAlerts.description'),
     },
     {
-      icon: <PiggyBank className="w-8 h-8 text-brand-primary" />,
+      icon: <PiggyBank className="w-8 h-8 text-brand-secondary" />,
       title: t('features.savingsTracking.title'),
       description: t('features.savingsTracking.description'),
     },
     {
-      icon: <BarChart3 className="w-8 h-8 text-brand-primary" />,
+      icon: <BarChart3 className="w-8 h-8 text-brand-secondary" />,
       title: t('features.priceHistory.title'),
       description: t('features.priceHistory.description'),
     },
     {
-      icon: <ChefHat className="w-8 h-8 text-brand-primary" />,
+      icon: <ChefHat className="w-8 h-8 text-brand-secondary" />,
       title: t('features.discountRecipes.title'),
       description: t('features.discountRecipes.description'),
       badge: t('features.discountRecipes.badge'),
@@ -48,10 +48,10 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-12 bg-white relative overflow-hidden">
+    <section id="features" className="py-12 bg-brand-primary-dark relative overflow-hidden">
       {/* Pattern background */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="absolute inset-0 opacity-[0.08] pointer-events-none z-[1]"
         style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '300px' }}
       />
 
@@ -59,14 +59,14 @@ const Features = () => {
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-16">
           {/* Section heading */}
           <div className="text-center lg:text-left max-w-2xl reveal-animation" data-anim="left">
-            <div className="inline-block px-3 py-1 rounded-full bg-brand-lilac/30 text-brand-primary font-medium text-sm mb-4">
+          <div className="inline-block px-3 py-1 rounded-full bg-brand-secondary/15 border border-brand-secondary/30 text-brand-secondary font-medium text-sm mb-4">
               {t('features_header')}
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-brand-indigo">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               {t('features.heading')}{' '}
     
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-white/60">
               {t('features.subheading')}
             </p>
           </div>
@@ -81,31 +81,26 @@ const Features = () => {
           </div>
         </div>
 
-        {/* Decorative vozik image */}
-        <div className="absolute -left-12 bottom-8 w-40 h-40 opacity-[0.06] pointer-events-none hidden lg:block rotate-[-15deg]">
-          <img src="/images/featuredGraphics/vozik.png" alt="" className="w-full h-full object-contain" />
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, i) => (
             <div
               key={i}
-              className="bg-brand-nude rounded-2xl p-6 transition-all duration-300 hover:shadow-[0_8px_32px_rgba(86,69,204,0.12)] hover:-translate-y-1 reveal-animation border border-brand-lilac/20 relative"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 transition-all duration-300 hover:bg-white/15 hover:-translate-y-1 reveal-animation border border-white/10 relative"
               style={{ animationDelay: `${i * 0.1}s` }}
               data-anim="scale"
             >
               {'badge' in feature && feature.badge && (
-                <span className="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-brand-primary/10 text-brand-primary text-xs font-semibold border border-brand-primary/20">
+                <span className="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-brand-secondary/20 text-brand-secondary text-xs font-semibold border border-brand-secondary/30">
                   {feature.badge}
                 </span>
               )}
-              <div className="p-3 bg-brand-lilac/25 rounded-xl inline-block mb-4">
+              <div className="p-3 bg-white/10 rounded-xl inline-block mb-4">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-bold mb-2 text-brand-indigo">
+              <h3 className="text-lg font-bold mb-2 text-white">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

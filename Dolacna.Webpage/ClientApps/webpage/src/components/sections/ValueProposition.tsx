@@ -41,9 +41,16 @@ const ValueProposition = () => {
 
   return (
     <section className="relative py-10 md:py-14 bg-brand-nude overflow-hidden">
+      {/* Pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '280px' }}
+      />
       {/* Subtle top divider */}
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-primary via-brand-lilac to-brand-secondary opacity-60" />
-      {/* Background decoration */}
+          <div
+        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '300px' }}
+      />
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-brand-primary opacity-[0.04] blur-[120px]" />
         <div className="absolute bottom-0 -left-32 w-[350px] h-[350px] rounded-full bg-brand-lilac opacity-[0.06] blur-[100px]" />

@@ -27,9 +27,9 @@ const StoresSection: React.FC = () => {
   ];
 
   return (
-    <section className="relative py-8 bg-brand-nude overflow-hidden">
+    <section className="relative py-12 bg-brand-nude overflow-hidden">
       {/* subtle top divider from dark hero */}
-      <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-brand-primary via-brand-lilac to-brand-secondary opacity-60" />
+      <div className="absolute inset-x-0 top-0 h-px bg-brand-indigo/10" />
 
       <div className="section-container relative z-10">
         <div className="max-w-3xl mb-8 reveal-animation" data-anim="left">
