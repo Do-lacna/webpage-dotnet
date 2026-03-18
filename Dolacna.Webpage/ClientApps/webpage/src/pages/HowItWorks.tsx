@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
+import Header from '@/components/layout/Header';
+import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const HowItWorks = () => {
@@ -21,7 +21,7 @@ const HowItWorks = () => {
     2: '/images/howItWorks/undraw_data-analysis_b7cp.png',
     3: '/images/howItWorks/undraw_discount_igfl.png',
     4: '/images/howItWorks/undraw_empty-cart_574u.png',
-    5: '/images/howItWorks/undraw_savings_uwjn.png',
+    5: '/images/howItWorks/undraw_savings_d97f.png',
     // Add more mappings as needed
   };
 

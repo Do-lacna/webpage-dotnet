@@ -1,5 +1,6 @@
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import WhyUsethriWasBorn from '@/components/sections/WhyUsethriWasBorn';
 import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -59,9 +60,12 @@ const Team: React.FC = () => {
     <div className="min-h-screen">
       <Header />
       <main>
+        {/* Why Ušetri Was Born Section */}
+        <WhyUsethriWasBorn />
+
         {/* Team Section */}
         <section
-          className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden"
+          className="pb-12 pt-4 bg-gradient-to-br from-gray-50 via-white to-gray-50 relative overflow-hidden"
           id="team"
         >
           {/* Background decorative elements */}
@@ -121,7 +125,7 @@ const Team: React.FC = () => {
                         <a
                           href={member.linkedin}
                           target="_blank"
-                          rel="noopener noreferrer"
+                          rel="noopener noreferre"
                           className="inline-flex items-center justify-center w-12 h-12 bg-[#0077b5] hover:bg-[#005582] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 transform group-hover:scale-100"
                           aria-label={`Visit ${member.name}'s LinkedIn profile`}
                         >
@@ -147,7 +151,7 @@ const Team: React.FC = () => {
 
         {/* About Us Section */}
         <section
-          className="pt-2 pb-20 bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden"
+          className="pb-20 pt-4  bg-gradient-to-br from-gray-50 to-gray-100 relative overflow-hidden"
           id="about"
         >
           <div className="section-container max-w-6xl mx-auto px-4 relative z-10">

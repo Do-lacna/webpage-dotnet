@@ -174,6 +174,25 @@
     }
   },
 
+  "whyUsethriWasBorn": {
+    "heading": "Prečo",
+    "headingAccent": "Ušetri",
+    "headingEnd": "vzniklo?",
+    "subheading": "Pôvod aplikácie leží v skutočných problémoch, ktorým čelí každý nakupujúci na Slovensku.",
+    "founders": [
+      {
+        "name": "Adam",
+        "image": "/images/team/adam.jpg",
+        "story": "Vždy som chcel mať rýchly prehľad o zľavách v supermarketoch, ale všetky stránky, ktoré som skúšal, boli plné reklám a chaosu. Strácal som čas scrollovaním a aj tak som často prehliadol dobré ponuky. Vtedy mi došlo, že musí existovať jednoduchší spôsob – miesto, kde si zľavy pozriem prehľadne a bez zbytočného balastu. Tak vzniklo Ušetri."
+      },
+      {
+        "name": "Martin",
+        "image": "/images/team/mato.jpg",
+        "story": "Chcel som si doma spraviť sushi, tak som vyrazil do obchodu. V prvom nemali nori riasy, v druhom chýbala sushi ryža. Po treťom obchode, v ktorom som stále pátral po všetkých surovinách, som si povedal, že toto predsa nemôže byť normálne. Musí existovať riešenie, ktoré bude transparentne ukazovať dostupnosť produktov a ich ceny naprieč obchodmi. A presne z tejto frustrácie vzniklo Ušetri."
+      }
+    ]
+  },
+
   "download": {
     "heading": "Začni šetriť na svojich",
     "headingAccent": "nákupoch",
