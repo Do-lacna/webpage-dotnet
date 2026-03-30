@@ -17,6 +17,16 @@
   "premium_header": "Premium",
   "faq_header": "FAQ",
   "download_app": "Download App",
+  "hero": {
+    "videoLabels": {
+      "search": "Search & Compare",
+      "searchAccent": "Prices",
+      "shoppingList": "Smart Shopping",
+      "shoppingListAccent": "Lists",
+      "sales": "Deals &",
+      "salesAccent": "Discounts"
+    }
+  },
   "toggle_menu": "Toggle menu",
   "language": {
     "english": "English (English)",

@@ -17,6 +17,16 @@
   "premium_header": "Prémium",
   "faq_header": "FAQ",
   "download_app": "Stiahnuť aplikáciu",
+  "hero": {
+    "videoLabels": {
+      "search": "Vyhľadávanie &",
+      "searchAccent": "Porovnanie cien",
+      "shoppingList": "Inteligentné nákupné",
+      "shoppingListAccent": "Zoznamy",
+      "sales": "Akcie &",
+      "salesAccent": "Zľavy"
+    }
+  },
   "toggle_menu": "Prepínať menu",
   "language": {
     "english": "Anglicky (English)",

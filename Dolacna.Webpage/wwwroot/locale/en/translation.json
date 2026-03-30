@@ -1,13 +1,13 @@
 {
-  "save_money": "Save money on every shopping trip",
-  "compare_prices": "Compare grocery prices across Slovakia",
-  "across_slovakia": "across Slovakia",
-  "description": "Ušetri Slovensko finds the best deals on groceries by comparing prices at multiple supermarkets in real-time.",
+  "save_money": "Coming soon",
+  "compare_prices": "Make sure you're not paying",
+  "across_slovakia": "more than you have to.",
+  "description": "Usetri finds the best deals on groceries by comparing prices at multiple supermarkets in real-time.",
   "download_now": "Download Now",
   "learn_more": "Learn More",
   "supermarkets_count": "4+",
   "supermarkets": "Supermarkets",
-  "products_count": "1000s",
+  "products_count": "10000+",
   "products": "Products",
   "savings_percentage": "20%",
   "avg_savings": "Avg. Savings",
@@ -17,6 +17,13 @@
   "premium_header": "Premium",
   "faq_header": "FAQ",
   "download_app": "Download App",
+  "hero": {
+    "videoLabels": {
+      "search": "Search & Compare Prices",
+      "shoppingList": "Smart Shopping Lists",
+      "sales": "Deals & Discounts"
+    }
+  },
   "toggle_menu": "Toggle menu",
   "language": {
     "english": "English (English)",
@@ -36,20 +43,21 @@
       "description": "Create and manage shopping lists that automatically calculate the best store for your entire list."
     },
     "dealAlerts": {
-      "title": "Deal Alerts",
-      "description": "Get notified when products on your watchlist go on sale or drop in price."
+      "title": "Discount Tracking",
+      "description": "We track all discount prices across supermarkets. Get notified about new deals and stay on top of the best offers."
     },
-    "realTimeUpdates": {
-      "title": "Real-time Updates",
-      "description": "Prices are updated daily to ensure you always have the latest information."
+    "savingsTracking": {
+      "title": "Savings Overview",
+      "description": "Save your shopping list and track how much you've saved in your profile."
     },
     "priceHistory": {
       "title": "Price History",
       "description": "View price trends over time to make informed purchasing decisions."
     },
-    "verifiedData": {
-      "title": "Verified Data",
-      "description": "All pricing data is verified for accuracy before being displayed in the app."
+    "discountRecipes": {
+      "title": "Recipes from Discounted Products",
+      "description": "Simple recipes made from products currently on sale \u2014 with a cost comparison across different stores. Powered by AI.",
+      "badge": "Coming soon"
     }
   },
 
@@ -57,7 +65,7 @@
     "heading": "Unlock Advanced",
     "headingAccent": "Shopping Features",
     "subheading": "Discover what's coming in our premium subscription to maximize your savings on every shopping trip.",
-    "betaSubheading": "Start with our free beta version and be the first to experience premium features when they launch soon.",
+    "betaSubheading": "Start with our free testing phase and be the first to experience premium features when they launch soon.",
     "contactForTesting": "Contact us for testing",
     "freePhaseBadge": "Free testing phase • Premium coming soon",
     "recommended": "Recommended",
@@ -69,23 +77,23 @@
         "title": "Unlimited Searches",
         "description": "Search for any product without daily limits"
       },
-      "adFreeExperience": {
-        "title": "Ad-Free Experience",
-        "description": "Browse without interruptions or advertisements"
+      "smartShoppingList": {
+        "title": "Smart Shopping Lists",
+        "description": "Create intelligent shopping lists with automatic optimization"
       },
-      "smartRecommendations": {
-        "title": "Smart Recommendations",
-        "description": "Get personalized store and product recommendations"
+      "discountNotifications": {
+        "title": "Discount Notifications",
+        "description": "Get instant alerts when your favorite products go on sale"
       }
     },
     "plans": {
       "currentAndFuture": "Current & Future Plans",
-      "currentAndFutureSubheading": "Start with our free beta version today, premium features coming soon",
+      "currentAndFutureSubheading": "Start with our free testing version today, premium features coming soon",
       "freeBeta": {
-        "name": "Free Beta",
-        "description": "Help us test and improve the core features",
-        "cta": "Join Beta Test",
-        "badge": "AVAILABLE NOW"
+        "name": "Basic Version",
+        "description": "Free version with limited daily searches and basic price comparison features",
+        "cta": "Download for Free",
+        "badge": "FREE"
       },
       "free": {
         "name": "Free",
@@ -95,25 +103,22 @@
       "premium": {
         "name": "Premium",
         "period": "per month",
-        "description": "Advanced features coming soon",
+        "description": "Advanced features for serious shoppers",
         "cta": "Learn More About Premium",
         "badge": "COMING SOON"
       }
     },
     "features": {
-      "searchCompare": "Search & compare prices",
-      "limitedViews": "View up to 5 products per day",
-      "basicHistory": "Basic price history (7 days)",
-      "betaTestingAccess": "Beta testing access",
-      "communityFeedback": "Community feedback",
-      "shoppingList": "Shopping list feature",
-      "dealAlerts": "Deal alerts",
-      "adFree": "Ad-free experience",
-      "unlimitedSearches": "Unlimited product searches",
-      "fullHistory": "Full price history (90 days)",
-      "smartLists": "Smart shopping lists",
-      "fullAlerts": "Deal alerts for any product",
-      "recommendations": "Store recommendations"
+      "limitedProductSearch": "Limited product searches (daily)",
+      "basicPriceHistory": "Basic price history",
+      "unlimitedSearch": "Unlimited product searches",
+      "shoppingList": "Shopping lists",
+      "smartShoppingList": "Smart shopping lists",
+      "discountNotifications": "Discount tracking & alerts",
+      "savingsTracking": "Savings overview in profile",
+      "aiRecipes": "AI recipes from discounted products",
+      "extendedPriceHistory": "Extended price history",
+      "prioritySupport": "Priority support"
     },
     "featureComparison": {
       "heading": "Feature Comparison",
@@ -127,52 +132,52 @@
       "subheading": "See what's coming next as we continue to enhance your shopping experience",
       "phase1": {
         "title": "Phase 1",
-        "subtitle": "Free Testing Version",
+        "subtitle": "Free Testing Phase",
         "badge": "CURRENT",
         "availableNow": "Available Now",
         "features": {
-          "corePriceComparison": "Core price comparison",
-          "basicSearchFunctionality": "Basic search functionality",
-          "essentialShopping": "Essential shopping features",
-          "feedbackCollection": "User feedback collection"
+          "productSearch": "Product search functionality",
+          "shoppingListTesting": "Shopping list testing",
+          "basicPriceHistory": "Basic price history",
+          "contactForTesting": "Contact us for testing access"
         }
       },
       "phase2": {
         "title": "Phase 2",
-        "subtitle": "Premium Features",
+        "subtitle": "Premium Launch",
         "badge": "COMING SOON",
         "timeline": "Coming soon",
         "features": {
-          "unlimitedSearches": "Unlimited searches",
-          "advancedPriceTracking": "Advanced price tracking",
-          "smartShoppingLists": "Smart shopping lists",
-          "personalizedAlerts": "Personalized alerts"
+          "unlimitedSearch": "Unlimited product searches",
+          "smartShoppingList": "Smart shopping lists",
+          "discountNotifications": "Discount notifications",
+          "extendedPriceHistory": "Extended price history"
         }
       },
       "phase3": {
         "title": "Phase 3",
-        "subtitle": "Innovation Ahead",
+        "subtitle": "Expansion & Innovation",
         "badge": "FUTURE",
         "timeline": "The future awaits...",
         "features": {
-          "aiRecommendations": "AI-powered recommendations",
-          "communityFeatures": "Community features",
-          "smartMealPlanning": "Smart meal planning",
-          "innovativeSurprises": "Innovative surprises"
+          "moreSupermarkets": "More supermarkets integration",
+          "moreProducts": "More products for better comparison",
+          "newFeatures": "New features based on discussion",
+          "customerFeedback": "Customer feedback implementation"
         }
       },
       "bePartOfJourney": {
         "heading": "Be Part of Our Journey",
         "description": "Start with our free testing version today and help shape the future of smart shopping in Slovakia.",
-        "cta": "Join the Beta Test"
+        "cta": "Join the Testing Phase"
       }
     },
     "callToAction": {
       "heading": "Start Your Smart Shopping Journey",
-      "description": "Join our free beta testing phase and help us build the future of grocery shopping in Slovakia. Premium features coming soon!",
-      "joinBetaTest": "Join Beta Test",
-      "learnMore": "Learn More",
-      "footer": "Free testing version • Premium features coming soon • No commitment required"
+      "description": "Join our free testing phase and help us build the future of grocery shopping in Slovakia. Contact us if you're interested in testing!",
+      "joinTesting": "Join Testing Phase",
+      "contactUs": "Contact Us",
+      "footer": "Free testing version • Premium features coming soon"
     }
   },
 
@@ -183,7 +188,64 @@
     "appStore": "App Store",
     "googlePlay": "Google Play",
     "joinedBy": "Joined by",
-    "smartShoppers": "smart shoppers"
+    "smartShoppers": "smart shoppers",
+    "pageTitle": "Download App",
+    "pageSubtitle": "Get the Ušetri Slovensko app and start saving money on your grocery shopping today.",
+    "features": {
+      "realtimeComparison": {
+        "title": "Real-time Price Comparison",
+        "description": "Compare prices across all major Slovak retailers instantly"
+      },
+      "storeLocator": {
+        "title": "Store Locator",
+        "description": "Find the nearest stores with the best deals in your area"
+      },
+      "trustedSecure": {
+        "title": "Trusted & Secure",
+        "description": "Your data is protected with enterprise-grade security"
+      },
+      "lightningFast": {
+        "title": "Lightning Fast",
+        "description": "Get instant results with our optimized search engine"
+      }
+    },
+    "benefits": {
+      "title": "What You Get",
+      "subtitle": "Features designed to maximize your savings",
+      "list": [
+        "Track price history and trends",
+        "Create and share shopping lists",
+        "Get notifications for price drops",
+        "Discover weekly deals and promotions"
+      ]
+    },
+    "stats": {
+      "activeUsers": "Active Users",
+      "partnerStores": "Partner Stores",
+      "totalSavings": "Total Savings",
+      "appRating": "App Rating"
+    },
+    "compatibility": {
+      "title": "Available on All Devices",
+      "subtitle": "Download Ušetri Slovensko on your preferred platform and start saving today.",
+      "ios": "iOS",
+      "iosDevices": "iPhone & iPad",
+      "android": "Android",
+      "androidDevices": "Phone & Tablet"
+    },
+    "finalCta": {
+      "title": "Ready to Start Saving?",
+      "subtitle": "Join the Ušetri Slovensko community and discover how much you can save on your next grocery trip.",
+      "downloadOn": "Download on the",
+      "getItOn": "Get it on",
+      "trustedBy": "Trusted by 10,000+ users across Slovakia"
+    },
+    "releaseBanner": {
+      "heading": "Full launch planned for",
+      "date": "December 2025",
+      "description": "App Store and Google Play download links will be available at release.",
+      "disabledTooltip": "Coming December 2025"
+    }
   },
 
   "footer": {
@@ -235,7 +297,7 @@
 
   "team": {
     "header": "Our Team",
-    "subheader": "Meet the people who make our mission possible.",
+    "subheader": "The people behind the app changing grocery shopping in Slovakia.",
     "aboutUs": {
       "header": "About Us",
       "paragraph1": "We are a group of longtime friends united not only by friendship, but also by a shared passion for technology and improving people's daily lives. We've known each other since high school and later studied together at the Slovak University of Technology in Bratislava. During years of shared study and extracurricular projects, we created a strong team that can complement and motivate each other.",
@@ -244,19 +306,28 @@
     "members": [
       {
         "name": "Adam Martiška",
-        "role": "CEO / Frontend Developer"
+        "role": "CEO / Frontend Developer",
+        "linkedin": "https://linkedin.com/in/adam-martiska"
       },
       {
         "name": "Juraj Paška",
-        "role": "Backend Developer"
+        "role": "Backend Developer",
+        "linkedin": "https://linkedin.com/in/juraj-paska"
       },
       {
         "name": "Martin Lauš",
-        "role": "UI/UX Designer"
+        "role": "UI/UX Designer",
+        "linkedin": "https://linkedin.com/in/martin-laus"
       },
       {
         "name": "Róbert Jačko",
-        "role": "AI Engineer"
+        "role": "AI Engineer",
+        "linkedin": "https://linkedin.com/in/robert-jacko"
+      },
+      {
+        "name": "Sandra Slobodová",
+        "role": "Marketing",
+        "linkedin": "https://www.linkedin.com/in/sandra-slobodov%C3%A1/"
       }
     ]
   },
@@ -453,7 +524,7 @@
     "subtitle": "Find answers to the most common questions about Ušetri Slovensko. Can't find what you're looking for? Contact our support team.",
     "contactTitle": "Still have questions?",
     "contactDescription": "Can't find the answer you're looking for? Our friendly support team is here to help.",
-    "contactButton": "Contact Support",
+    "contactButton": "Contact Us",
     "general": {
       "title": "General Questions",
       "q1": {
@@ -515,12 +586,55 @@
       },
       "q2": {
         "question": "I'm having trouble with the app. What should I do?",
-        "answer": "First, try restarting the app or checking your internet connection. If the problem persists, please <a href='/Contact' class='text-brand-accent hover:text-brand-accent/80 underline'>contact our support team</a> with details about your device and the issue you're experiencing."
+        "answer": "First, try restarting the app or checking your internet connection. If the problem persists, please <a href='/Contact' class='text-brand-accent hover:text-brand-accent/80 underline'>contact us</a> with details about your device and the issue you're experiencing."
       },
       "q3": {
         "question": "How do I update the app?",
         "answer": "Updates are available through the App Store (iOS) or Google Play Store (Android). We recommend enabling automatic updates to ensure you always have the latest features and bug fixes."
       }
     }
+  },
+
+  "newsletter": {
+    "heading": "Stay Informed",
+    "subheading": "Full app launch planned for",
+    "releaseDate": "December 2025",
+    "description": "Subscribe to our newsletter and be the first to hear about new features and the full launch.",
+    "emailPlaceholder": "Enter your email",
+    "subscribeButton": "Subscribe",
+    "success": "Thanks for subscribing! We'll keep you updated.",
+    "alreadySubscribed": "This email is already subscribed.",
+    "invalidEmail": "Please enter a valid email address.",
+    "privacyNote": "We respect your privacy. You can unsubscribe at any time."
+  },
+  "storesSection": {
+    "heading": "Track Prices Across",
+    "headingAccent": "Major Stores",
+    "subheading": "We monitor prices daily across Slovakia's leading supermarket chains so you always know where to save.",
+    "productsTracked": "Products tracked",
+    "footerBlurb": "We are continuously expanding our coverage to include more stores and products.",
+    "liveUpdating": "Live updating",
+    "keyPoints": {
+      "regularUpdates": "We regularly update prices",
+      "aiAutomation": "We use AI to automate the system",
+      "growingDatabase": "We continuously expand our database of supermarkets and products"
+    },
+    "storeLabels": {
+      "billa": "Billa",
+      "kaufland": "Kaufland",
+      "lidl": "Lidl",
+      "tesco": "Tesco"
+    }
+  },
+  "valueProposition": {
+    "heading": "Create a grocery list.",
+    "headingAccent": "See where it's cheapest.",
+    "subheading": "Build your shopping list and instantly compare the total price across multiple stores — all in one tap.",
+    "stepList": "1. Your grocery list",
+    "stepCompare": "2. Compare prices",
+    "arrowLabel": "Compare",
+    "groceryListAlt": "Grocery list screenshot",
+    "shopAlt": "Price comparison in shop {{number}}",
+    "footnote": "Swipe through the stores to see real price differences on the same grocery list."
   }
 }
