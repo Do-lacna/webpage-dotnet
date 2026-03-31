@@ -114,7 +114,7 @@ const Hero = () => {
         >
           {/* iPhone 16 Pro frame + dots */}
           <div className="flex flex-col items-center shrink-0">
-            <div className="relative w-[220px] aspect-[9/19.5] rounded-[2.2rem] border-[5px] border-[#2a2a2e] bg-black shadow-[0_30px_60px_rgba(0,0,0,0.5)] overflow-hidden">
+            <div className="relative w-[260px] aspect-[9/19.5] rounded-[2.5rem] border-[5px] border-[#2a2a2e] bg-black shadow-[0_30px_60px_rgba(0,0,0,0.5)] overflow-hidden">
               {/* Dynamic Island */}
               <div className="absolute top-2 left-1/2 -translate-x-1/2 w-[75px] h-[22px] bg-black rounded-full z-30" />
 
@@ -144,6 +144,7 @@ const Hero = () => {
                         opacity: isActive && !isFading ? 1 : isNext && isFading ? 1 : isActive && isFading ? 0 : 0,
                         zIndex: isNext ? 2 : isActive ? 1 : 0,
                         display: isVisible ? 'block' : 'none',
+                        willChange: 'transform',
                       }}
                     />
                   );

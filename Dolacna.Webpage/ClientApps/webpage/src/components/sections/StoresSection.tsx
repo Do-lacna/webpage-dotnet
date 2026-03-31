@@ -28,6 +28,11 @@ const StoresSection: React.FC = () => {
 
   return (
     <section className="relative py-12 bg-brand-nude overflow-hidden">
+      {/* Pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.1] pointer-events-none"
+        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '280px' }}
+      />
       {/* subtle top divider from dark hero */}
       <div className="absolute inset-x-0 top-0 h-px bg-brand-indigo/10" />
 

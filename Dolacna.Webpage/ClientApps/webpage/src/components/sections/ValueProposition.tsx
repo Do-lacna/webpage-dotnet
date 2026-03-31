@@ -4,10 +4,10 @@ import Shop3Png from '@/../public/images/valueProposition/3.png';
 import Shop4Png from '@/../public/images/valueProposition/4.png';
 import ZoznamPng from '@/../public/images/valueProposition/zoznam.png';
 import {
-    Carousel,
-    CarouselContent,
-    CarouselItem,
-    type CarouselApi,
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  type CarouselApi,
 } from '@/components/ui/carousel';
 import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 import { cn } from '@/lib/utils';
@@ -43,7 +43,7 @@ const ValueProposition = () => {
     <section className="relative py-10 md:py-14 bg-brand-nude overflow-hidden">
       {/* Pattern overlay */}
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 opacity-[0.1] pointer-events-none"
         style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '280px' }}
       />
       {/* Subtle top divider */}

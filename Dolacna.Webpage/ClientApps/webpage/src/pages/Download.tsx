@@ -1,4 +1,4 @@
-import IPhoneMockupPng from '@/../public/images/iMockup - iPhone 15 Pro Max.png';
+import IPhoneMockupPng from '@/../public/images/app_mockup.png';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import { Button } from '@/components/ui/button';
@@ -141,7 +141,7 @@ const Download = () => {
 
                 {/* Right Image */}
                 <div className="relative reveal-animation">
-                  <div className="relative max-w-[320px] mx-auto lg:ml-auto lg:mr-0">
+                  <div className="relative max-w-[420px] mx-auto lg:ml-auto lg:mr-0">
                     <img
                       src={IPhoneMockupPng}
                       alt="Ušetri Slovensko app preview"
