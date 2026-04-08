@@ -1,8 +1,7 @@
 import IPhoneMockupPng from '@/../public/images/app_mockup.png';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
-import { Button } from '@/components/ui/button';
-import { Apple, ShoppingBag, Smartphone } from 'lucide-react';
+import { Apple, Smartphone } from 'lucide-react';
 import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -39,8 +38,6 @@ const Download = () => {
   }) as string[];
   const releaseHeading = t('download.releaseBanner.heading');
   const releaseDate = t('download.releaseBanner.date');
-  const releaseDesc = t('download.releaseBanner.description');
-  const disabledTooltip = t('download.releaseBanner.disabledTooltip');
 
   return (
     <div className="min-h-screen">
@@ -66,12 +63,12 @@ const Download = () => {
                   </p>
 
                   {/* Release Banner */}
-                  <div className="mb-8 inline-flex flex-col gap-1 bg-brand-primary/10 border border-brand-primary/30 rounded-lg px-4 py-3 text-sm text-brand-indigo max-w-xs mx-auto lg:mx-0">
+                  <div className="mb-8 inline-flex items-center gap-2 bg-green-50 border border-green-200 rounded-lg px-4 py-3 text-sm text-green-800 max-w-xs mx-auto lg:mx-0">
+                    <div className="w-2 h-2 rounded-full bg-green-500 shrink-0" />
                     <div className="font-semibold">
                       {releaseHeading}{' '}
-                      <span className="text-brand-primary">{releaseDate}</span>
+                      <span className="text-green-600">{releaseDate}</span>
                     </div>
-                    <div className="text-gray-600 text-xs">{releaseDesc}</div>
                   </div>
 
                   {/* Device Compatibility Info */}
@@ -96,46 +93,40 @@ const Download = () => {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <div className="relative group">
-                      <Button
-                        className="flex items-center justify-center gap-3 bg-gray-300 text-gray-500 cursor-not-allowed text-lg py-6 px-8"
-                        aria-disabled="true"
-                        disabled
-                      >
-                        <Apple className="w-6 h-6" />
-                        <div className="text-left">
-                          <div className="text-xs">
-                            {t('download.finalCta.downloadOn')}
-                          </div>
-                          <div className="font-semibold">
-                            {t('download.appStore')}
-                          </div>
+                    <a
+                      href="https://apps.apple.com/sk/app/u%C5%A1etri/id6744099337"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 bg-black text-white rounded-xl px-6 py-3 hover:bg-black/80 transition-colors shadow-md hover:shadow-lg"
+                    >
+                      <Apple className="w-8 h-8" />
+                      <div className="text-left">
+                        <div className="text-[10px] leading-tight opacity-80">
+                          {t('download.finalCta.downloadOn')}
                         </div>
-                      </Button>
-                      <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-indigo text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                        {disabledTooltip}
-                      </span>
-                    </div>
-                    <div className="relative group">
-                      <Button
-                        className="flex items-center justify-center gap-3 bg-gray-300 text-gray-500 cursor-not-allowed text-lg py-6 px-8"
-                        aria-disabled="true"
-                        disabled
-                      >
-                        <ShoppingBag className="w-6 h-6" />
-                        <div className="text-left">
-                          <div className="text-xs">
-                            {t('download.finalCta.getItOn')}
-                          </div>
-                          <div className="font-semibold">
-                            {t('download.googlePlay')}
-                          </div>
+                        <div className="text-lg font-semibold leading-tight">
+                          {t('download.appStore')}
                         </div>
-                      </Button>
-                      <span className="absolute -bottom-7 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-indigo text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity">
-                        {disabledTooltip}
-                      </span>
-                    </div>
+                      </div>
+                    </a>
+                    <a
+                      href="https://play.google.com/store/apps/details?id=com.dutosvarc.usetri"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-3 bg-black text-white rounded-xl px-6 py-3 hover:bg-black/80 transition-colors shadow-md hover:shadow-lg"
+                    >
+                      <svg className="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.4 2.532 1.466c.564.327.564 1.127 0 1.454l-2.532 1.466-2.534-2.46 2.534-1.926zM5.864 2.658l10.937 6.333-2.302 2.302-8.635-8.635z" />
+                      </svg>
+                      <div className="text-left">
+                        <div className="text-[10px] leading-tight opacity-80">
+                          {t('download.finalCta.downloadOn')}
+                        </div>
+                        <div className="text-lg font-semibold leading-tight">
+                          {t('download.googlePlay')}
+                        </div>
+                      </div>
+                    </a>
                   </div>
                 </div>
 

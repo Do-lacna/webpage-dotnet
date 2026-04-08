@@ -100,7 +100,9 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="https://apps.apple.com/sk/app/u%C5%A1etri/id6744099337"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.appStore')}
@@ -108,7 +110,9 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href="#"
+                  href="https://play.google.com/store/apps/details?id=com.dutosvarc.usetri"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-white/70 hover:text-white transition-colors"
                 >
                   {t('footer.googlePlay')}
