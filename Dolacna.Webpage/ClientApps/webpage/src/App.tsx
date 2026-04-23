@@ -13,6 +13,7 @@ import Contact from './pages/Contact';
 import HowItWorks from './pages/HowItWorks';
 import Premium from './pages/Premium';
 import Download from './pages/Download';
+import AppRedirect from './pages/AppRedirect';
 import Faq from './pages/Faq';
 import LogoPage from './pages/Logo';
 
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/HowItWorks" element={<HowItWorks />} />
           <Route path="/Premium" element={<Premium />} />
           <Route path="/Download" element={<Download />} />
+          <Route path="/app" element={<AppRedirect />} />
           <Route path="/FAQ" element={<Faq />} />
           <Route path="/Logo" element={<LogoPage />} />
         </Routes>
