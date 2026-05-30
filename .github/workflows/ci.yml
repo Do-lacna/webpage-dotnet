@@ -82,5 +82,5 @@ jobs:
         uses: azure/container-apps-deploy-action@v1
         with:
           imageToDeploy: "docker.io/offli/webpage:${{ needs.calculate-version.outputs.semVer }}"
-          resourceGroup: Usetri
-          containerAppName: webpage
+          resourceGroup: usetri-migrated
+          containerAppName: webpage-dotnet
