@@ -335,6 +335,10 @@
 
   "howItWorksPage": {
     "title": "How It Works",
+    "nav": {
+      "process": "Background Process",
+      "shoppingList": "Shopping List"
+    },
     "subtitle": "Discover how our platform helps you save money on groceries through smart price comparison and AI-powered categorization.",
     "steps": [
       {
@@ -397,6 +401,12 @@
     "searchPlaceholder": "Search steps or features...",
     "noResults": "No results found.",
     "learnMoreDetails": "Learn more details"
+  },
+
+  "shoppingListPage": {
+    "title": "Shopping List",
+    "subtitle": "We'll add a description of the shopping list feature here.",
+    "body": "This content is just a placeholder for now. We'll soon add a detailed description of how the shopping list works, how to create one, and how it helps you save while shopping."
   },
 
   "privacyPolicy": {
