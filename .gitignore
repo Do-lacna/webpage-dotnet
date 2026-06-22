@@ -1,5 +1,43 @@
+# Build output
 bin/
 obj/
 /packages/
+wwwroot/
+
+# .NET / Visual Studio
+*.user
+*.suo
+*.userprefs
+.vs/
+*.binlog
+TestResults/
+[Tt]est[Rr]esult*/
+project.lock.json
+artifacts/
+
+# Rider / JetBrains
 riderModule.iml
 /_ReSharper.Caches/
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# OS files
+.DS_Store
+Thumbs.db

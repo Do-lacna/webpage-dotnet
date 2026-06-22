@@ -19,9 +19,12 @@
   "download_app": "Stiahnuť aplikáciu",
   "hero": {
     "videoLabels": {
-      "search": "Vyhľadávanie & Porovnanie cien",
-      "shoppingList": "Inteligentné nákupné zoznamy",
-      "sales": "Akcie & Zľavy"
+      "search": "Vyhľadávanie &",
+      "searchAccent": "Porovnanie cien",
+      "shoppingList": "Inteligentné nákupné",
+      "shoppingListAccent": "Zoznamy",
+      "sales": "Akcie &",
+      "salesAccent": "Zľavy"
     }
   },
   "toggle_menu": "Prepínať menu",
@@ -260,10 +263,8 @@
       "trustedBy": "Dôveruje nám viac ako 10 000 používateľov po celom Slovensku"
     },
     "releaseBanner": {
-      "heading": "Plné spustenie plánované na",
-      "date": "December 2025",
-      "description": "Odkazy na stiahnutie z App Store a Google Play budú dostupné pri spustení.",
-      "disabledTooltip": "Prichádza v decembri 2025"
+      "heading": "Aplikácia je dostupná od",
+      "date": "1. apríla 2025"
     }
   },
 
@@ -351,6 +352,10 @@
 
   "howItWorksPage": {
     "title": "Ako to funguje",
+    "nav": {
+      "process": "Proces na pozadí",
+      "shoppingList": "Nákupný zoznam"
+    },
     "subtitle": "Objav, ako naša platforma pomáha šetriť peniaze pri nákupoch potravín pomocou inteligentného porovnávania cien a AI kategorizácie.",
     "steps": [
       {
@@ -415,6 +420,12 @@
     "learnMoreDetails": "Zobraziť viac detailov"
   },
 
+  "shoppingListPage": {
+    "title": "Nákupný zoznam",
+    "subtitle": "Sem doplníme popis funkcie nákupného zoznamu.",
+    "body": "Tento obsah je zatiaľ len zástupný text. Čoskoro sem pridáme detailný popis toho, ako funguje nákupný zoznam, ako ho vytvoríš a ako ti pomôže ušetriť pri nákupe."
+  },
+
   "privacyPolicy": {
     "pageTitle": "Ochrana osobných údajov",
     "pageSubtitle": "Zisti, ako spracúvame tvoje údaje, aby bol tvoj zážitok bezpečný a súkromný.",
@@ -433,7 +444,7 @@
       },
       {
         "title": "4. Ako používame tvoje informácie",
-"content": "Údaje z fotoaparátu sa používajú **výlučne** v rámci aplikácie na funkčné účely. Konkrétne:\n\n- Údaje z fotoaparátu sa spracúvajú lokálne na tvojom zariadení\n- **Nezhromažďujeme, neprenášame ani neukladáme** tvoje fotografie alebo videá na našich serveroch, pokiaľ sa ich výslovne nerozhodneš nahrať alebo zdieľať\n- Údaje z fotoaparátu **nie sú** používané na reklamu, marketing alebo analytiku\n\nTvoje súkromie je ústredným bodom zážitku z našej aplikácie."
+        "content": "Údaje z fotoaparátu sa používajú **výlučne** v rámci aplikácie na funkčné účely. Konkrétne:\n\n- Údaje z fotoaparátu sa spracúvajú lokálne na tvojom zariadení\n- **Nezhromažďujeme, neprenášame ani neukladáme** tvoje fotografie alebo videá na našich serveroch, pokiaľ sa ich výslovne nerozhodneš nahrať alebo zdieľať\n- Údaje z fotoaparátu **nie sú** používané na reklamu, marketing alebo analytiku\n\nTvoje súkromie je ústredným bodom zážitku z našej aplikácie."
       },
       {
         "title": "5. Uchovávanie údajov a bezpečnosť",
