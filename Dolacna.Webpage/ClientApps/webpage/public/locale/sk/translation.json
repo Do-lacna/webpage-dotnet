@@ -352,8 +352,13 @@
 
   "howItWorksPage": {
     "title": "Ako to funguje",
+    "relatedTitle": "Súvisiace témy",
     "nav": {
       "process": "Proces na pozadí",
+      "discounts": "Ako fungujú zľavy",
+      "cheapestCart": "Najlacnejší košík",
+      "categories": "Kategórie a porovnanie",
+      "dataUpdates": "Zber a aktualizácia dát",
       "shoppingList": "Nákupný zoznam"
     },
     "subtitle": "Objav, ako naša platforma pomáha šetriť peniaze pri nákupoch potravín pomocou inteligentného porovnávania cien a AI kategorizácie.",
@@ -418,6 +423,94 @@
     "searchPlaceholder": "Vyhľadajte kroky alebo funkcie...",
     "noResults": "Nenašli sa žiadne výsledky.",
     "learnMoreDetails": "Zobraziť viac detailov"
+  },
+
+  "discountsPage": {
+    "title": "Ako fungujú zľavy",
+    "subtitle": "Aby si videl reálnu cenu, počítame so všetkými typmi zliav, ktoré sú v obchodoch dostupné.",
+    "sections": [
+      {
+        "heading": "Zobrazujeme všetky dostupné zľavy",
+        "body": "Pri každom produkte berieme do úvahy všetky aktuálne dostupné zľavy, nielen bežnú akciovú cenu. Vďaka tomu vidíš cenu, ktorú reálne zaplatíš pri pokladni."
+      },
+      {
+        "heading": "Počítame s vernostnými (clubcard) cenami",
+        "body": "Mnohé reťazce ponúkajú nižšie ceny po načítaní vernostnej karty. Tieto ceny zahŕňame do výpočtu, pretože predpokladáme, že vernostnú kartu pri nákupe použiješ. Ak teda obchod ponúka clubcard cenu, počítame práve s ňou."
+      },
+      {
+        "heading": "Počítame s množstevnými zľavami",
+        "body": "Niektoré zľavy platia až pri nákupe väčšieho množstva (napríklad „2+1 zdarma“ alebo „zľava pri kúpe 3 kusov“). Pri takýchto akciách počítame cenu tak, akoby si dané množstvo produktov naozaj kupoval – výsledná jednotková cena teda zodpovedá množstvu potrebnému na získanie zľavy."
+      },
+      {
+        "heading": "Prečo to robíme takto",
+        "body": "Cieľom je ukázať najnižšiu reálne dosiahnuteľnú cenu. Porovnania tak zodpovedajú tomu, čo naozaj zaplatíš, a nie len „papierovej“ základnej cene."
+      }
+    ]
+  },
+
+  "cheapestCartPage": {
+    "title": "Ako si zostaviť najlacnejší košík",
+    "subtitle": "Stačí pridať kategórie alebo konkrétne produkty a my dopočítame, kde nakúpiš najlacnejšie.",
+    "sections": [
+      {
+        "heading": "Pridávaj kategórie, ktoré podporujeme",
+        "body": "Najjednoduchší spôsob je skladať košík z kategórií (napríklad „mlieko“ alebo „kuracie prsia“). Pre každú kategóriu máme zvolenú najbežnejšiu jednotku, takže porovnanie je férové naprieč obchodmi."
+      },
+      {
+        "heading": "Alebo pridaj konkrétne produkty",
+        "body": "Ak chceš presne určitý produkt, môžeš ho do košíka pridať priamo. Pri produktoch sa však môže stať, že konkrétny produkt v danom obchode nie je dostupný – v takom prípade ho automaticky nahradíme najlacnejším porovnateľným variantom podľa gramáže alebo objemu, aby zostal košík kompletný a porovnateľný."
+      },
+      {
+        "heading": "Náhrada za najlacnejší variant",
+        "body": "Pri náhrade hľadáme variant s rovnakou alebo prepočítateľnou jednotkou (napríklad rovnaká gramáž alebo prepočet na cenu za kg/l) a vyberáme ten najvýhodnejší. Vďaka tomu nestrácaš položku z košíka, len ju vymeníme za lacnejšiu alternatívu."
+      },
+      {
+        "heading": "Výsledok: najlacnejší košík",
+        "body": "Po zostavení košíka dopočítame celkovú cenu pre jednotlivé obchody a ukážeme, kde nakúpiš najvýhodnejšie."
+      }
+    ]
+  },
+
+  "categoriesPage": {
+    "title": "Kategórie a zoradenie v porovnaní",
+    "subtitle": "Vysvetlíme, prečo používame kategórie a ako zoraďujeme výsledky porovnania.",
+    "sections": [
+      {
+        "heading": "Prečo kategórie a ako volíme jednotku",
+        "body": "Pre každú kategóriu sme zvolili najhľadanejšiu (najčastejšie nakupovanú) jednotku, aby bolo porovnanie zmysluplné. Napríklad v kategórii mäso sa najčastejšie nakupujú kuracie prsia v množstve 1 kg, a preto porovnávame práve túto jednotku. Podobne pri strukovinách počítame napríklad s fazuľou v konzerve s hmotnosťou 400 g."
+      },
+      {
+        "heading": "Ako funguje zoradenie v porovnaní",
+        "body": "Výsledky porovnania zoraďujeme tak, aby si hore videl najvýhodnejšie možnosti:",
+        "bullets": [
+          "Zoznamy (obchody), ktorým chýbajú niektoré produkty z tvojho košíka, posúvame na koniec – aby si najprv videl obchody, kde dostaneš všetko.",
+          "Kompletné košíky následne zoraďujeme od najlacnejšieho po najdrahší."
+        ]
+      },
+      {
+        "heading": "Čo to znamená pre teba",
+        "body": "Navrchu uvidíš obchod, kde nakúpiš celý košík najlacnejšie. Neúplné možnosti (kde niečo chýba) zostávajú dostupné nižšie, aby si mal kompletný prehľad."
+      }
+    ]
+  },
+
+  "dataUpdatesPage": {
+    "title": "Ako zbierame a aktualizujeme dáta",
+    "subtitle": "Ceny aktualizujeme pravidelne z verejne dostupných zdrojov supermarketov.",
+    "sections": [
+      {
+        "heading": "Týždenná aktualizácia cien",
+        "body": "Dáta o cenách aktualizujeme týždenne, aby porovnania zodpovedali aktuálnej ponuke v obchodoch."
+      },
+      {
+        "heading": "Z dostupných zdrojov supermarketov",
+        "body": "Ceny získavame z verejne dostupných zdrojov jednotlivých reťazcov. Údaje spracúvame a zjednocujeme do jednotnej databázy, vďaka čomu vieme produkty férovo porovnať naprieč obchodmi."
+      },
+      {
+        "heading": "Prečo na to dbáme",
+        "body": "Pravidelná aktualizácia zaručuje, že ti ukazujeme relevantné a aktuálne ceny – nie staré alebo neplatné akcie."
+      }
+    ]
   },
 
   "shoppingListPage": {

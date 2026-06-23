@@ -12,6 +12,10 @@ import Team from './pages/Team';
 import Contact from './pages/Contact';
 import HowItWorksLayout from './pages/how-it-works/HowItWorksLayout';
 import ProcessBackground from './pages/how-it-works/ProcessBackground';
+import Discounts from './pages/how-it-works/Discounts';
+import CheapestCart from './pages/how-it-works/CheapestCart';
+import Categories from './pages/how-it-works/Categories';
+import DataUpdates from './pages/how-it-works/DataUpdates';
 import ShoppingList from './pages/how-it-works/ShoppingList';
 import Premium from './pages/Premium';
 import Download from './pages/Download';
@@ -38,6 +42,10 @@ const App = () => (
           <Route path="/HowItWorks" element={<HowItWorksLayout />}>
             <Route index element={<Navigate to="process" replace />} />
             <Route path="process" element={<ProcessBackground />} />
+            <Route path="discounts" element={<Discounts />} />
+            <Route path="cheapest-cart" element={<CheapestCart />} />
+            <Route path="categories" element={<Categories />} />
+            <Route path="data-updates" element={<DataUpdates />} />
             <Route path="shopping-list" element={<ShoppingList />} />
           </Route>
           <Route path="/Premium" element={<Premium />} />

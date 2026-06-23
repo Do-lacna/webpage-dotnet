@@ -6,6 +6,19 @@ import { NavLink, Outlet } from 'react-router-dom';
 
 const navItems = [
   { to: '/HowItWorks/process', labelKey: 'howItWorksPage.nav.process' },
+  { to: '/HowItWorks/discounts', labelKey: 'howItWorksPage.nav.discounts' },
+  {
+    to: '/HowItWorks/cheapest-cart',
+    labelKey: 'howItWorksPage.nav.cheapestCart',
+  },
+  {
+    to: '/HowItWorks/categories',
+    labelKey: 'howItWorksPage.nav.categories',
+  },
+  {
+    to: '/HowItWorks/data-updates',
+    labelKey: 'howItWorksPage.nav.dataUpdates',
+  },
   {
     to: '/HowItWorks/shopping-list',
     labelKey: 'howItWorksPage.nav.shoppingList',

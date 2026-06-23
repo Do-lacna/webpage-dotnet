@@ -15,11 +15,11 @@ const ProcessBackground = () => {
 
   // Map images to step numbers - using public folder paths
   const stepImages: Record<number, string> = {
-    1: '/images/howItWorks/undraw_groceries_4via.png',
-    2: '/images/howItWorks/undraw_data-analysis_b7cp.png',
-    3: '/images/howItWorks/undraw_discount_igfl.png',
-    4: '/images/howItWorks/undraw_empty-cart_574u.png',
-    5: '/images/howItWorks/undraw_savings_d97f.png',
+    1: '/images/howItWorks/undraw/undraw_groceries_4via.png',
+    2: '/images/howItWorks/undraw/undraw_data-analysis_b7cp.png',
+    3: '/images/howItWorks/undraw/undraw_discount_igfl.png',
+    4: '/images/howItWorks/undraw/undraw_empty-cart_574u.png',
+    5: '/images/howItWorks/undraw/undraw_savings_d97f.png',
     // Add more mappings as needed
   };
 

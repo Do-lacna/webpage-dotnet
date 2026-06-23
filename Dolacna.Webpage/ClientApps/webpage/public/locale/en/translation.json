@@ -335,8 +335,13 @@
 
   "howItWorksPage": {
     "title": "How It Works",
+    "relatedTitle": "Related topics",
     "nav": {
       "process": "Background Process",
+      "discounts": "How discounts work",
+      "cheapestCart": "Cheapest cart",
+      "categories": "Categories & comparison",
+      "dataUpdates": "Data collection & updates",
       "shoppingList": "Shopping List"
     },
     "subtitle": "Discover how our platform helps you save money on groceries through smart price comparison and AI-powered categorization.",
@@ -401,6 +406,94 @@
     "searchPlaceholder": "Search steps or features...",
     "noResults": "No results found.",
     "learnMoreDetails": "Learn more details"
+  },
+
+  "discountsPage": {
+    "title": "How discounts work",
+    "subtitle": "To show you the real price, we factor in every type of discount available in stores.",
+    "sections": [
+      {
+        "heading": "We show all available discounts",
+        "body": "For every product we take into account all currently available discounts, not just the regular promotional price. That way you see the price you'll actually pay at the checkout."
+      },
+      {
+        "heading": "We account for loyalty (clubcard) prices",
+        "body": "Many chains offer lower prices when you scan a loyalty card. We include these prices in our calculation because we assume you'll use the loyalty card when shopping. So if a store offers a clubcard price, that's the one we use."
+      },
+      {
+        "heading": "We account for volume discounts",
+        "body": "Some discounts only apply when you buy a larger quantity (for example \"2+1 free\" or \"discount when buying 3 items\"). For these promotions we calculate the price as if you really bought that quantity – so the resulting unit price reflects the amount needed to unlock the discount."
+      },
+      {
+        "heading": "Why we do it this way",
+        "body": "The goal is to show the lowest price you can realistically reach. Comparisons then match what you actually pay, rather than just the \"paper\" base price."
+      }
+    ]
+  },
+
+  "cheapestCartPage": {
+    "title": "How to build the cheapest cart",
+    "subtitle": "Just add categories or specific products and we'll work out where you'll shop the cheapest.",
+    "sections": [
+      {
+        "heading": "Add the categories we support",
+        "body": "The easiest way is to build your cart from categories (for example \"milk\" or \"chicken breast\"). For each category we've chosen the most common unit, so the comparison is fair across stores."
+      },
+      {
+        "heading": "Or add specific products",
+        "body": "If you want a specific product, you can add it to the cart directly. With products, though, it can happen that a specific item isn't available in a given store – in that case we automatically replace it with the cheapest comparable variant by weight or volume, so the cart stays complete and comparable."
+      },
+      {
+        "heading": "Replacing with the cheapest variant",
+        "body": "When replacing, we look for a variant with the same or convertible unit (for example the same weight, or a price-per-kg/l conversion) and pick the most favourable one. That way you don't lose an item from the cart – we just swap it for a cheaper alternative."
+      },
+      {
+        "heading": "The result: the cheapest cart",
+        "body": "Once your cart is built, we calculate the total price for each store and show you where you'll shop most favourably."
+      }
+    ]
+  },
+
+  "categoriesPage": {
+    "title": "Categories & comparison sorting",
+    "subtitle": "We'll explain why we use categories and how we sort comparison results.",
+    "sections": [
+      {
+        "heading": "Why categories and how we choose the unit",
+        "body": "For each category we've chosen the most searched (most frequently bought) unit, so the comparison is meaningful. For example, in the meat category people most often buy chicken breast in a quantity of 1 kg, so that's the unit we compare. Similarly, for legumes we use, for instance, canned beans with a weight of 400 g."
+      },
+      {
+        "heading": "How comparison sorting works",
+        "body": "We sort comparison results so you see the most favourable options at the top:",
+        "bullets": [
+          "Lists (stores) that are missing some products from your cart are moved to the end – so you first see stores where you'll get everything.",
+          "Complete carts are then sorted from cheapest to most expensive."
+        ]
+      },
+      {
+        "heading": "What this means for you",
+        "body": "At the top you'll see the store where you'll buy the whole cart the cheapest. Incomplete options (where something is missing) remain available lower down, so you have the full picture."
+      }
+    ]
+  },
+
+  "dataUpdatesPage": {
+    "title": "How we collect and update data",
+    "subtitle": "We update prices regularly from publicly available supermarket sources.",
+    "sections": [
+      {
+        "heading": "Weekly price updates",
+        "body": "We update price data weekly, so comparisons match the current offering in stores."
+      },
+      {
+        "heading": "From available supermarket sources",
+        "body": "We obtain prices from publicly available sources of the individual chains. We process and unify the data into a single database, which lets us compare products fairly across stores."
+      },
+      {
+        "heading": "Why we care about this",
+        "body": "Regular updates ensure we show you relevant and current prices – not old or invalid promotions."
+      }
+    ]
   },
 
   "shoppingListPage": {
