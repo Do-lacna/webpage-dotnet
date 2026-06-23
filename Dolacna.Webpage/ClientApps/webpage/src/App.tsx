@@ -16,7 +16,6 @@ import Discounts from './pages/how-it-works/Discounts';
 import CheapestCart from './pages/how-it-works/CheapestCart';
 import Categories from './pages/how-it-works/Categories';
 import DataUpdates from './pages/how-it-works/DataUpdates';
-import ShoppingList from './pages/how-it-works/ShoppingList';
 import Premium from './pages/Premium';
 import Download from './pages/Download';
 import AppRedirect from './pages/AppRedirect';
@@ -46,7 +45,6 @@ const App = () => (
             <Route path="cheapest-cart" element={<CheapestCart />} />
             <Route path="categories" element={<Categories />} />
             <Route path="data-updates" element={<DataUpdates />} />
-            <Route path="shopping-list" element={<ShoppingList />} />
           </Route>
           <Route path="/Premium" element={<Premium />} />
           <Route path="/Download" element={<Download />} />

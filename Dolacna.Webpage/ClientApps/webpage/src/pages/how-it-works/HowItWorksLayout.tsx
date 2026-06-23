@@ -19,10 +19,6 @@ const navItems = [
     to: '/HowItWorks/data-updates',
     labelKey: 'howItWorksPage.nav.dataUpdates',
   },
-  {
-    to: '/HowItWorks/shopping-list',
-    labelKey: 'howItWorksPage.nav.shoppingList',
-  },
 ];
 
 const HowItWorksLayout = () => {
