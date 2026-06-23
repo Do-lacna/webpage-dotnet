@@ -11,9 +11,9 @@ const WhyUsethriWasBorn = () => {
   const { t } = useTranslation();
   useRevealAnimation();
 
-  const founders: Founder[] = (
-    t('whyUsethriWasBorn.founders', { returnObjects: true }) as Founder[]
-  ) || [];
+  const founders: Founder[] =
+    (t('whyUsethriWasBorn.founders', { returnObjects: true }) as Founder[]) ||
+    [];
 
   return (
     <section className="relative mt-10 pb-10 md:py-12 bg-gradient-to-br from-gray-50 via-white to-gray-50 overflow-hidden">
@@ -26,10 +26,12 @@ const WhyUsethriWasBorn = () => {
       <div className="section-container relative z-10">
         {/* Section heading - single line */}
         <div className="text-center mb-10 reveal-animation" data-anim="up">
-        <h2 className="text-3xl md:text-5xl font-bold text-brand-indigo mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-brand-indigo mb-4">
             {t('whyUsethriWasBorn.heading')}{' '}
-            <span className="text-brand-primary">{t('whyUsethriWasBorn.headingAccent')}</span>
-            {' '}{t('whyUsethriWasBorn.headingEnd')}
+            <span className="text-brand-primary">
+              {t('whyUsethriWasBorn.headingAccent')}
+            </span>{' '}
+            {t('whyUsethriWasBorn.headingEnd')}
           </h2>
           <p className="text-base md:text-lg text-brand-indigo/60 max-w-2xl mx-auto">
             {t('whyUsethriWasBorn.subheading')}
@@ -51,6 +53,7 @@ const WhyUsethriWasBorn = () => {
                 <img
                   src={founder.image}
                   alt={founder.name}
+                  loading="lazy"
                   className="relative w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-white shadow-lg"
                 />
               </div>
@@ -68,7 +71,9 @@ const WhyUsethriWasBorn = () => {
 
                   {/* Name below bubble */}
                   <div className="mt-4 text-center">
-                    <p className="text-lg font-bold text-brand-indigo">{founder.name}</p>
+                    <p className="text-lg font-bold text-brand-indigo">
+                      {founder.name}
+                    </p>
                   </div>
                 </div>
               </div>

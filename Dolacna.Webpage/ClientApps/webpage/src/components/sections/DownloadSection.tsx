@@ -10,14 +10,15 @@ const DownloadSection = () => {
   useRevealAnimation();
 
   return (
-    <section
-      id="download"
-      className="relative py-14 bg-white overflow-hidden"
-    >
+    <section id="download" className="relative py-14 bg-white overflow-hidden">
       {/* Pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
-        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '250px' }}
+        style={{
+          backgroundImage: 'url(/images/graphicMotives/pattern.png)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '250px',
+        }}
       />
       {/* Decorative blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -57,6 +58,7 @@ const DownloadSection = () => {
               <img
                 src={KosikPng}
                 alt="Usetri kosik"
+                loading="lazy"
                 className="relative w-full h-auto"
               />
             </div>

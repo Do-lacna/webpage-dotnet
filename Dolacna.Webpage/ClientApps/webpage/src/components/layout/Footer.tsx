@@ -44,6 +44,7 @@ const Footer = () => {
               <img
                 src="/images/logos/usetri-logo_claim-purple.png"
                 alt="Usetri"
+                loading="lazy"
                 className="h-9 w-auto brightness-0 invert"
               />
             </div>

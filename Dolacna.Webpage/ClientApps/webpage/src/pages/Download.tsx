@@ -133,6 +133,7 @@ const Download = () => {
                     <img
                       src={IPhoneMockupPng}
                       alt="Ušetri Slovensko app preview"
+                      loading="lazy"
                       className="w-full h-auto drop-shadow-xl"
                     />
                   </div>

@@ -48,27 +48,34 @@ const Features = () => {
   ];
 
   return (
-    <section id="features" className="py-12 bg-brand-primary-dark relative overflow-hidden">
+    <section
+      id="features"
+      className="py-12 bg-brand-primary-dark relative overflow-hidden"
+    >
       {/* Pattern background */}
       <div
         className="absolute inset-0 opacity-[0.08] pointer-events-none z-[1]"
-        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '300px' }}
+        style={{
+          backgroundImage: 'url(/images/graphicMotives/pattern.png)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '300px',
+        }}
       />
 
       <div className="section-container relative z-10">
         <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 mb-16">
           {/* Section heading */}
-          <div className="text-center lg:text-left max-w-2xl reveal-animation" data-anim="left">
-          <div className="inline-block px-3 py-1 rounded-full bg-brand-secondary/15 border border-brand-secondary/30 text-brand-secondary font-medium text-sm mb-4">
+          <div
+            className="text-center lg:text-left max-w-2xl reveal-animation"
+            data-anim="left"
+          >
+            <div className="inline-block px-3 py-1 rounded-full bg-brand-secondary/15 border border-brand-secondary/30 text-brand-secondary font-medium text-sm mb-4">
               {t('features_header')}
             </div>
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               {t('features.heading')}{' '}
-    
             </h2>
-            <p className="text-lg text-white/60">
-              {t('features.subheading')}
-            </p>
+            <p className="text-lg text-white/60">{t('features.subheading')}</p>
           </div>
 
           {/* Kosik graphic */}
@@ -76,6 +83,7 @@ const Features = () => {
             <img
               src="/images/featuredGraphics/vozik.png"
               alt=""
+              loading="lazy"
               className="w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 object-contain drop-shadow-[0_20px_40px_rgba(86,69,204,0.15)]"
             />
           </div>
@@ -100,7 +108,9 @@ const Features = () => {
               <h3 className="text-lg font-bold mb-2 text-white">
                 {feature.title}
               </h3>
-              <p className="text-white/60 text-sm leading-relaxed">{feature.description}</p>
+              <p className="text-white/60 text-sm leading-relaxed">
+                {feature.description}
+              </p>
             </div>
           ))}
         </div>

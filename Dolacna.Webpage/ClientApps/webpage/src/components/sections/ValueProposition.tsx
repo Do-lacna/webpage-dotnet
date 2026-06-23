@@ -34,22 +34,27 @@ const ValueProposition = () => {
     };
   }, [api]);
 
-  const scrollTo = useCallback(
-    (idx: number) => api?.scrollTo(idx),
-    [api],
-  );
+  const scrollTo = useCallback((idx: number) => api?.scrollTo(idx), [api]);
 
   return (
     <section className="relative py-10 md:py-14 bg-brand-nude overflow-hidden">
       {/* Pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.1] pointer-events-none"
-        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '280px' }}
+        style={{
+          backgroundImage: 'url(/images/graphicMotives/pattern.png)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '280px',
+        }}
       />
       {/* Subtle top divider */}
-          <div
+      <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
-        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '300px' }}
+        style={{
+          backgroundImage: 'url(/images/graphicMotives/pattern.png)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '300px',
+        }}
       />
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-brand-primary opacity-[0.04] blur-[120px]" />
@@ -58,10 +63,15 @@ const ValueProposition = () => {
 
       <div className="max-w-[60rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section header */}
-        <div className="text-center max-w-3xl mx-auto mb-8 md:mb-12 reveal-animation" data-anim="up">
+        <div
+          className="text-center max-w-3xl mx-auto mb-8 md:mb-12 reveal-animation"
+          data-anim="up"
+        >
           <h2 className="text-3xl md:text-5xl font-bold text-brand-indigo leading-tight">
             {t('valueProposition.heading')}{' '}
-            <span className="text-brand-primary">{t('valueProposition.headingAccent')}</span>
+            <span className="text-brand-primary">
+              {t('valueProposition.headingAccent')}
+            </span>
           </h2>
           <p className="mt-4 text-brand-indigo/60 text-lg md:text-xl max-w-2xl mx-auto">
             {t('valueProposition.subheading')}
@@ -80,12 +90,16 @@ const ValueProposition = () => {
             <img
               src={ZoznamPng}
               alt={t('valueProposition.groceryListAlt')}
+              loading="lazy"
               className="w-[220px] sm:w-[240px] md:w-[260px] h-auto"
             />
           </div>
 
           {/* ── Arrow connector ── */}
-          <div className="reveal-animation flex-shrink-0 flex flex-col items-center gap-2 lg:self-center" data-anim="scale">
+          <div
+            className="reveal-animation flex-shrink-0 flex flex-col items-center gap-2 lg:self-center"
+            data-anim="scale"
+          >
             {/* Horizontal arrow on lg+, vertical on smaller */}
             <div className="hidden lg:flex items-center text-brand-primary">
               <div className="w-16 h-[2px] bg-gradient-to-r from-transparent to-brand-primary" />
@@ -119,6 +133,7 @@ const ValueProposition = () => {
                     <img
                       src={src}
                       alt={t('valueProposition.shopAlt', { number: idx + 1 })}
+                      loading="lazy"
                       className="w-[220px] sm:w-[240px] md:w-[260px] h-auto"
                     />
                   </CarouselItem>
@@ -165,7 +180,10 @@ const ValueProposition = () => {
         </div>
 
         {/* Bottom tagline */}
-        <p className="text-center text-brand-indigo/40 text-sm mt-6 reveal-animation" data-anim="up">
+        <p
+          className="text-center text-brand-indigo/40 text-sm mt-6 reveal-animation"
+          data-anim="up"
+        >
           {t('valueProposition.footnote')}
         </p>
       </div>

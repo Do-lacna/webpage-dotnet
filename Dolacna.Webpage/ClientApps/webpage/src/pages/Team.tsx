@@ -104,6 +104,7 @@ const Team: React.FC = () => {
                       <img
                         src={member.image}
                         alt={member.name}
+                        loading="lazy"
                         className="relative w-28 h-28 rounded-full object-cover mx-auto shadow-xl ring-4 ring-white group-hover:ring-brand-primary/20 transition-all duration-500"
                       />
                     </div>
