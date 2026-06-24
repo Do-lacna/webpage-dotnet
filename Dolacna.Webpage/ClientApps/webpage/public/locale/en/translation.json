@@ -503,11 +503,16 @@
     "sections": [
       {
         "heading": "Weekly price updates",
-        "body": "We update price data weekly, so comparisons match the current offering in stores."
+        "body": "We update price data weekly, so comparisons match the current offering in stores. We currently cover Billa, Kaufland, Lidl and Tesco, and each chain launches its new discounts on a different day:",
+        "bullets": [
+          "Lidl – new discounts on Monday",
+          "Billa and Tesco – new discounts on Wednesday",
+          "Kaufland – new discounts on Thursday"
+        ]
       },
       {
         "heading": "From available supermarket sources",
-        "body": "We obtain prices from publicly available sources of the individual chains. We process and unify the data into a single database, which lets us compare products fairly across stores."
+        "body": "We obtain prices from publicly available sources of the individual chains – we use artificial intelligence (AI) to scan their promotional leaflets. We then process and unify the data into a single database, which lets us compare products fairly across stores."
       },
       {
         "heading": "Why we care about this",

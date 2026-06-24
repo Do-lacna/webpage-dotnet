@@ -520,11 +520,16 @@
     "sections": [
       {
         "heading": "Týždenná aktualizácia cien",
-        "body": "Dáta o cenách aktualizujeme týždenne, aby porovnania zodpovedali aktuálnej ponuke v obchodoch."
+        "body": "Dáta o cenách aktualizujeme týždenne, aby porovnania zodpovedali aktuálnej ponuke v obchodoch. Momentálne pokrývame Billu, Kaufland, Lidl a Tesco a každý reťazec spúšťa nové zľavy v iný deň:",
+        "bullets": [
+          "Lidl – nové zľavy v pondelok",
+          "Billa a Tesco – nové zľavy v stredu",
+          "Kaufland – nové zľavy vo štvrtok"
+        ]
       },
       {
         "heading": "Z dostupných zdrojov supermarketov",
-        "body": "Ceny získavame z verejne dostupných zdrojov jednotlivých reťazcov. Údaje spracúvame a zjednocujeme do jednotnej databázy, vďaka čomu vieme produkty férovo porovnať naprieč obchodmi."
+        "body": "Ceny získavame z verejne dostupných zdrojov jednotlivých reťazcov – pomocou umelej inteligencie (AI) skenujeme ich akciové letáky. Údaje následne spracúvame a zjednocujeme do jednotnej databázy, vďaka čomu vieme produkty férovo porovnať naprieč obchodmi."
       },
       {
         "heading": "Prečo na to dbáme",
