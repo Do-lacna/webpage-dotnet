@@ -4,11 +4,11 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import type { CategorySubgroup } from './categoriesTaxonomy';
 
 export interface CategoryGroup {
   name: string;
-  /** Subcategories a user can add to the list. Optional for now. */
-  items?: string[];
+  subgroups: CategorySubgroup[];
 }
 
 interface CategoryListProps {
@@ -20,8 +20,9 @@ interface CategoryListProps {
 }
 
 /**
- * Expandable overview of product categories. Each main category is an
- * accordion item that reveals its subcategories (rendered as chips) on expand.
+ * Expandable overview of product categories. Each main category is an accordion
+ * item that, once expanded, reveals its subcategories grouped into smaller
+ * named lists (rendered as chips).
  */
 const CategoryList = ({
   title,
@@ -43,35 +44,51 @@ const CategoryList = ({
       )}
 
       <Accordion type="multiple" className="w-full">
-        {groups.map((group) => (
-          <AccordionItem
-            key={group.name}
-            value={group.name}
-            className="border-brand-primary/15"
-          >
-            <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-brand-indigo hover:no-underline">
-              {group.name}
-            </AccordionTrigger>
-            <AccordionContent>
-              {group.items && group.items.length > 0 ? (
-                <div className="flex flex-wrap gap-2">
-                  {group.items.map((item) => (
-                    <span
-                      key={item}
-                      className="inline-flex items-center rounded-full bg-brand-primary/10 text-brand-indigo px-3 py-1 text-sm"
-                    >
-                      {item}
-                    </span>
-                  ))}
-                </div>
-              ) : (
-                emptyLabel && (
-                  <p className="text-muted-foreground italic">{emptyLabel}</p>
-                )
-              )}
-            </AccordionContent>
-          </AccordionItem>
-        ))}
+        {groups.map((group) => {
+          const hasItems = group.subgroups.some(
+            (subgroup) => subgroup.items.length > 0,
+          );
+          return (
+            <AccordionItem
+              key={group.name}
+              value={group.name}
+              className="border-brand-primary/15"
+            >
+              <AccordionTrigger className="text-left text-base md:text-lg font-semibold text-brand-indigo hover:no-underline">
+                {group.name}
+              </AccordionTrigger>
+              <AccordionContent>
+                {hasItems ? (
+                  <div className="space-y-4">
+                    {group.subgroups.map((subgroup, idx) => (
+                      <div key={subgroup.name ?? idx}>
+                        {subgroup.name && (
+                          <p className="text-sm font-semibold text-brand-indigo/80 mb-2">
+                            {subgroup.name}
+                          </p>
+                        )}
+                        <div className="flex flex-wrap gap-2">
+                          {subgroup.items.map((item) => (
+                            <span
+                              key={item}
+                              className="inline-flex items-center rounded-full bg-brand-primary/10 text-brand-indigo px-3 py-1 text-sm"
+                            >
+                              {item}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  emptyLabel && (
+                    <p className="text-muted-foreground italic">{emptyLabel}</p>
+                  )
+                )}
+              </AccordionContent>
+            </AccordionItem>
+          );
+        })}
       </Accordion>
     </div>
   );

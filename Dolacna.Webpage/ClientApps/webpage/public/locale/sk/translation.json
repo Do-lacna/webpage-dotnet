@@ -486,7 +486,11 @@
     "subtitle": "Vysvetlíme, prečo používame kategórie a ako pre ne volíme jednotku.",
     "sections": [
       {
-        "heading": "Prečo kategórie a ako volíme jednotku",
+        "heading": "Prečo používame kategórie",
+        "body": "Kategórie sme vytvorili kvôli schopnosti aplikácie porovnávať medzi sebou relevantné produkty. Na začiatku sme vytvorili približne __COUNT__ najčastejšie nakupovaných kategórií a do budúcna ich plánujeme neustále rozširovať."
+      },
+      {
+        "heading": "Ako volíme jednotku",
         "body": "Pre každú kategóriu sme zvolili najhľadanejšiu (najčastejšie nakupovanú) jednotku, aby bolo porovnanie zmysluplné. Napríklad v kategórii mäso sa najčastejšie nakupujú kuracie prsia v množstve 1 kg, a preto porovnávame práve túto jednotku. Podobne pri strukovinách počítame napríklad s fazuľou v konzerve s hmotnosťou 400 g."
       }
     ],
@@ -494,18 +498,19 @@
       "title": "Hlavné kategórie",
       "subtitle": "Toto sú hlavné kategórie, z ktorých si môžeš skladať nákupný zoznam. Postupne k nim pribúdajú jednotlivé podkategórie.",
       "emptyLabel": "Podkategórie čoskoro doplníme.",
-      "groups": [
-        { "name": "Mäso a ryby" },
-        { "name": "Mliečne výrobky a vajčia" },
-        { "name": "Ovocie a zelenina" },
-        { "name": "Pečivo" },
-        { "name": "Nápoje" },
-        { "name": "Trvanlivé potraviny" },
-        { "name": "Mrazené výrobky" },
-        { "name": "Vegan" },
-        { "name": "Údeniny a lahôdky" },
-        { "name": "Hotové jedlá a prílohy" }
-      ]
+      "names": {
+        "meatFish": "Mäso a ryby",
+        "dairyEggs": "Mliečne výrobky a vajčia",
+        "fruitVeg": "Ovocie a zelenina",
+        "bakery": "Pečivo",
+        "beverages": "Nápoje",
+        "pantry": "Trvanlivé potraviny",
+        "frozen": "Mrazené výrobky",
+        "vegan": "Vegan",
+        "deli": "Údeniny a lahôdky",
+        "readyMeals": "Hotové jedlá a prílohy",
+        "drugstore": "Drogéria"
+      }
     }
   },
 

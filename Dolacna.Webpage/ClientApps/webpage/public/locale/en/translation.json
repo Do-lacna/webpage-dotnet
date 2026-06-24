@@ -469,7 +469,11 @@
     "subtitle": "We'll explain why we use categories and how we choose the unit for each.",
     "sections": [
       {
-        "heading": "Why categories and how we choose the unit",
+        "heading": "Why we use categories",
+        "body": "We created the categories so the app can compare relevant products with each other. To start, we built around __COUNT__ of the most frequently bought categories, and we plan to keep expanding them over time."
+      },
+      {
+        "heading": "How we choose the unit",
         "body": "For each category we've chosen the most searched (most frequently bought) unit, so the comparison is meaningful. For example, in the meat category people most often buy chicken breast in a quantity of 1 kg, so that's the unit we compare. Similarly, for legumes we use, for instance, canned beans with a weight of 400 g."
       }
     ],
@@ -477,18 +481,19 @@
       "title": "Main categories",
       "subtitle": "These are the main categories you can build your shopping list from. Individual subcategories are being added gradually.",
       "emptyLabel": "Subcategories coming soon.",
-      "groups": [
-        { "name": "Meat & fish" },
-        { "name": "Dairy & eggs" },
-        { "name": "Fruit & vegetables" },
-        { "name": "Bakery" },
-        { "name": "Beverages" },
-        { "name": "Pantry staples" },
-        { "name": "Frozen foods" },
-        { "name": "Vegan" },
-        { "name": "Deli & cold cuts" },
-        { "name": "Ready meals & sides" }
-      ]
+      "names": {
+        "meatFish": "Meat & fish",
+        "dairyEggs": "Dairy & eggs",
+        "fruitVeg": "Fruit & vegetables",
+        "bakery": "Bakery",
+        "beverages": "Beverages",
+        "pantry": "Pantry staples",
+        "frozen": "Frozen foods",
+        "vegan": "Vegan",
+        "deli": "Deli & cold cuts",
+        "readyMeals": "Ready meals & sides",
+        "drugstore": "Drugstore"
+      }
     }
   },
 
