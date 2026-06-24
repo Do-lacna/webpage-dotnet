@@ -338,7 +338,7 @@
       "process": "Background Process",
       "discounts": "How discounts work",
       "cheapestCart": "Cheapest cart",
-      "categories": "Categories & comparison",
+      "categories": "Categories & units",
       "dataUpdates": "Data collection & updates",
       "shoppingList": "Shopping List"
     },
@@ -435,44 +435,61 @@
     "sections": [
       {
         "heading": "Add the categories we support",
-        "body": "The easiest way is to build your cart from categories (for example \"milk\" or \"chicken breast\"). For each category we've chosen the most common unit, so the comparison is fair across stores."
+        "body": "The easiest way is to build your cart from categories (for example \"milk\" or \"chicken breast\"). For each category we've chosen the most common unit, so the comparison is fair across stores. When you search in the app, the supported categories appear at the top of the list under \"Cheapest variant (category)\" – just pick the right one and add it to your cart."
       },
       {
         "heading": "Or add specific products",
-        "body": "If you want a specific product, you can add it to the cart directly. With products, though, it can happen that a specific item isn't available in a given store – in that case we automatically replace it with the cheapest comparable variant by weight or volume, so the cart stays complete and comparable."
+        "body": "If you want an exact product, you can add it to the cart directly instead of a category. The same product may not be available in every store, though – for example, Coca-Cola 1 L is only available at Billa and Tesco. So that you can still compare the whole cart in stores where the product is missing, we take care of a replacement – exactly how is explained below."
       },
       {
         "heading": "Replacing with the cheapest variant",
-        "body": "When replacing, we look for a variant with the same or convertible unit (for example the same weight, or a price-per-kg/l conversion) and pick the most favourable one. That way you don't lose an item from the cart – we just swap it for a cheaper alternative."
+        "body": "In stores where your product isn't available, we automatically replace it in the price comparison. We look for a variant with the same or convertible unit (for example the same weight, or a price-per-kg/l conversion) and pick the most favourable one – for instance, Coca-Cola 1 L is replaced with the cheapest Coca-Cola Zero 2 L. That way you don't lose an item from the cart and the whole shop stays complete and comparable."
+      },
+      {
+        "heading": "How comparison sorting works",
+        "body": "We sort comparison results so the most favourable option is always at the top – the store where you'll buy the whole cart the cheapest:",
+        "bullets": [
+          "Lists (stores) that are missing some products from your cart are moved to the end – so you first see stores where you'll get everything.",
+          "Complete carts are then sorted from cheapest to most expensive.",
+          "Incomplete options (where something is missing) remain available lower down, so you have the full picture."
+        ]
       },
       {
         "heading": "The result: the cheapest cart",
-        "body": "Once your cart is built, we calculate the total price for each store and show you where you'll shop most favourably."
+        "body": "Once your cart is built, we calculate the total price for each store and sort them from cheapest to most expensive. In our example, the same shop costs 50.88 € at the cheapest store and 58.66 € at the most expensive – so by picking the best store you save 7.78 € on the very same cart.",
+        "bullets": [
+          "The price shown in the list before comparison may differ from the final amount – the list assumes every product is available, while the exact total for a given store is calculated only in the comparison itself."
+        ]
       }
     ]
   },
 
   "categoriesPage": {
-    "title": "Categories & comparison sorting",
-    "subtitle": "We'll explain why we use categories and how we sort comparison results.",
+    "title": "Categories & choosing the unit",
+    "subtitle": "We'll explain why we use categories and how we choose the unit for each.",
     "sections": [
       {
         "heading": "Why categories and how we choose the unit",
         "body": "For each category we've chosen the most searched (most frequently bought) unit, so the comparison is meaningful. For example, in the meat category people most often buy chicken breast in a quantity of 1 kg, so that's the unit we compare. Similarly, for legumes we use, for instance, canned beans with a weight of 400 g."
-      },
-      {
-        "heading": "How comparison sorting works",
-        "body": "We sort comparison results so you see the most favourable options at the top:",
-        "bullets": [
-          "Lists (stores) that are missing some products from your cart are moved to the end – so you first see stores where you'll get everything.",
-          "Complete carts are then sorted from cheapest to most expensive."
-        ]
-      },
-      {
-        "heading": "What this means for you",
-        "body": "At the top you'll see the store where you'll buy the whole cart the cheapest. Incomplete options (where something is missing) remain available lower down, so you have the full picture."
       }
-    ]
+    ],
+    "categoryList": {
+      "title": "Main categories",
+      "subtitle": "These are the main categories you can build your shopping list from. Individual subcategories are being added gradually.",
+      "emptyLabel": "Subcategories coming soon.",
+      "groups": [
+        { "name": "Meat & fish" },
+        { "name": "Dairy & eggs" },
+        { "name": "Fruit & vegetables" },
+        { "name": "Bakery" },
+        { "name": "Beverages" },
+        { "name": "Pantry staples" },
+        { "name": "Frozen foods" },
+        { "name": "Vegan" },
+        { "name": "Deli & cold cuts" },
+        { "name": "Ready meals & sides" }
+      ]
+    }
   },
 
   "dataUpdatesPage": {

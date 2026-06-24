@@ -355,7 +355,7 @@
       "process": "Proces na pozadí",
       "discounts": "Ako fungujú zľavy",
       "cheapestCart": "Najlacnejší košík",
-      "categories": "Kategórie a porovnanie",
+      "categories": "Kategórie a jednotky",
       "dataUpdates": "Zber a aktualizácia dát",
       "shoppingList": "Nákupný zoznam"
     },
@@ -452,44 +452,61 @@
     "sections": [
       {
         "heading": "Pridávaj kategórie, ktoré podporujeme",
-        "body": "Najjednoduchší spôsob je skladať košík z kategórií (napríklad „mlieko“ alebo „kuracie prsia“). Pre každú kategóriu máme zvolenú najbežnejšiu jednotku, takže porovnanie je férové naprieč obchodmi."
+        "body": "Najjednoduchší spôsob je skladať košík z kategórií (napríklad „mlieko“ alebo „kuracie prsia“). Pre každú kategóriu máme zvolenú najbežnejšiu jednotku, takže porovnanie je férové naprieč obchodmi. Keď v aplikácii niečo vyhľadáš, podporované kategórie sa zobrazia v hornej časti zoznamu pod označením „Najlacnejšia varianta (kategória)“ – stačí si vybrať tú správnu a pridať ju do košíka."
       },
       {
         "heading": "Alebo pridaj konkrétne produkty",
-        "body": "Ak chceš presne určitý produkt, môžeš ho do košíka pridať priamo. Pri produktoch sa však môže stať, že konkrétny produkt v danom obchode nie je dostupný – v takom prípade ho automaticky nahradíme najlacnejším porovnateľným variantom podľa gramáže alebo objemu, aby zostal košík kompletný a porovnateľný."
+        "body": "Ak chceš presne určitý produkt, môžeš ho do košíka pridať priamo namiesto kategórie. Ten istý produkt však nemusí byť dostupný vo všetkých obchodoch – napríklad Coca-Cola 1 l je dostupná len v Bille a Tescu. Aby si vedel porovnať celý košík aj v obchodoch, kde produkt chýba, postaráme sa o jeho náhradu – ako presne, vysvetľujeme nižšie."
       },
       {
         "heading": "Náhrada za najlacnejší variant",
-        "body": "Pri náhrade hľadáme variant s rovnakou alebo prepočítateľnou jednotkou (napríklad rovnaká gramáž alebo prepočet na cenu za kg/l) a vyberáme ten najvýhodnejší. Vďaka tomu nestrácaš položku z košíka, len ju vymeníme za lacnejšiu alternatívu."
+        "body": "V obchodoch, kde tvoj produkt nie je dostupný, ho pri porovnaní cien automaticky nahradíme. Hľadáme variant s rovnakou alebo prepočítateľnou jednotkou (napríklad rovnaká gramáž alebo prepočet na cenu za kg/l) a vyberáme ten najvýhodnejší – napríklad Coca-Colu 1 l nahradíme najlacnejšou Coca-Colou Zero 2 l. Vďaka tomu nestrácaš položku z košíka a celý nákup ostáva kompletný a porovnateľný."
+      },
+      {
+        "heading": "Ako funguje zoradenie v porovnaní",
+        "body": "Výsledky porovnania zoraďujeme tak, aby si navrchu vždy videl najvýhodnejšiu možnosť – obchod, kde nakúpiš celý košík najlacnejšie:",
+        "bullets": [
+          "Zoznamy (obchody), ktorým chýbajú niektoré produkty z tvojho košíka, posúvame na koniec – aby si najprv videl obchody, kde dostaneš všetko.",
+          "Kompletné košíky následne zoraďujeme od najlacnejšieho po najdrahší.",
+          "Neúplné možnosti (kde niečo chýba) zostávajú dostupné nižšie, aby si mal kompletný prehľad."
+        ]
       },
       {
         "heading": "Výsledok: najlacnejší košík",
-        "body": "Po zostavení košíka dopočítame celkovú cenu pre jednotlivé obchody a ukážeme, kde nakúpiš najvýhodnejšie."
+        "body": "Po zostavení košíka dopočítame celkovú cenu pre každý obchod a zoradíme ich od najlacnejšieho po najdrahší. V našom príklade vyjde rovnaký nákup najlacnejšie na 50,88 € a najdrahšie na 58,66 € – výberom najvýhodnejšieho obchodu tak na tom istom košíku ušetríš 7,78 €.",
+        "bullets": [
+          "Cena v zozname pred porovnaním sa môže od finálnej sumy líšiť – zoznam počíta s tým, že každý produkt je dostupný, a konkrétnu sumu pre daný obchod vypočítame až v samotnom porovnaní."
+        ]
       }
     ]
   },
 
   "categoriesPage": {
-    "title": "Kategórie a zoradenie v porovnaní",
-    "subtitle": "Vysvetlíme, prečo používame kategórie a ako zoraďujeme výsledky porovnania.",
+    "title": "Kategórie a voľba jednotky",
+    "subtitle": "Vysvetlíme, prečo používame kategórie a ako pre ne volíme jednotku.",
     "sections": [
       {
         "heading": "Prečo kategórie a ako volíme jednotku",
         "body": "Pre každú kategóriu sme zvolili najhľadanejšiu (najčastejšie nakupovanú) jednotku, aby bolo porovnanie zmysluplné. Napríklad v kategórii mäso sa najčastejšie nakupujú kuracie prsia v množstve 1 kg, a preto porovnávame práve túto jednotku. Podobne pri strukovinách počítame napríklad s fazuľou v konzerve s hmotnosťou 400 g."
-      },
-      {
-        "heading": "Ako funguje zoradenie v porovnaní",
-        "body": "Výsledky porovnania zoraďujeme tak, aby si hore videl najvýhodnejšie možnosti:",
-        "bullets": [
-          "Zoznamy (obchody), ktorým chýbajú niektoré produkty z tvojho košíka, posúvame na koniec – aby si najprv videl obchody, kde dostaneš všetko.",
-          "Kompletné košíky následne zoraďujeme od najlacnejšieho po najdrahší."
-        ]
-      },
-      {
-        "heading": "Čo to znamená pre teba",
-        "body": "Navrchu uvidíš obchod, kde nakúpiš celý košík najlacnejšie. Neúplné možnosti (kde niečo chýba) zostávajú dostupné nižšie, aby si mal kompletný prehľad."
       }
-    ]
+    ],
+    "categoryList": {
+      "title": "Hlavné kategórie",
+      "subtitle": "Toto sú hlavné kategórie, z ktorých si môžeš skladať nákupný zoznam. Postupne k nim pribúdajú jednotlivé podkategórie.",
+      "emptyLabel": "Podkategórie čoskoro doplníme.",
+      "groups": [
+        { "name": "Mäso a ryby" },
+        { "name": "Mliečne výrobky a vajčia" },
+        { "name": "Ovocie a zelenina" },
+        { "name": "Pečivo" },
+        { "name": "Nápoje" },
+        { "name": "Trvanlivé potraviny" },
+        { "name": "Mrazené výrobky" },
+        { "name": "Vegan" },
+        { "name": "Údeniny a lahôdky" },
+        { "name": "Hotové jedlá a prílohy" }
+      ]
+    }
   },
 
   "dataUpdatesPage": {
