@@ -1,9 +1,10 @@
 /* Expose Variable Font */
 @font-face {
   font-family: 'Expose';
-  src: url('/fonts/WEB/fonts/Expose-Variable.woff2') format('woff2'),
-       url('/fonts/WEB/fonts/Expose-Variable.woff') format('woff'),
-       url('/fonts/WEB/fonts/Expose-Variable.ttf') format('truetype');
+  src:
+    url('/fonts/WEB/fonts/Expose-Variable.woff2') format('woff2'),
+    url('/fonts/WEB/fonts/Expose-Variable.woff') format('woff'),
+    url('/fonts/WEB/fonts/Expose-Variable.ttf') format('truetype');
   font-weight: 400 900;
   font-display: swap;
   font-style: normal;
@@ -11,40 +12,192 @@
 /* Expose individual weight fallbacks */
 @font-face {
   font-family: 'Expose';
-  src: url('/fonts/WEB/fonts/Expose-Regular.woff2') format('woff2'),
-       url('/fonts/WEB/fonts/Expose-Regular.woff') format('woff');
+  src:
+    url('/fonts/WEB/fonts/Expose-Regular.woff2') format('woff2'),
+    url('/fonts/WEB/fonts/Expose-Regular.woff') format('woff');
   font-weight: 400;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: 'Expose';
-  src: url('/fonts/WEB/fonts/Expose-Medium.woff2') format('woff2'),
-       url('/fonts/WEB/fonts/Expose-Medium.woff') format('woff');
+  src:
+    url('/fonts/WEB/fonts/Expose-Medium.woff2') format('woff2'),
+    url('/fonts/WEB/fonts/Expose-Medium.woff') format('woff');
   font-weight: 500;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: 'Expose';
-  src: url('/fonts/WEB/fonts/Expose-Bold.woff2') format('woff2'),
-       url('/fonts/WEB/fonts/Expose-Bold.woff') format('woff');
+  src:
+    url('/fonts/WEB/fonts/Expose-Bold.woff2') format('woff2'),
+    url('/fonts/WEB/fonts/Expose-Bold.woff') format('woff');
   font-weight: 700;
   font-display: swap;
   font-style: normal;
 }
 @font-face {
   font-family: 'Expose';
-  src: url('/fonts/WEB/fonts/Expose-Black.woff2') format('woff2'),
-       url('/fonts/WEB/fonts/Expose-Black.woff') format('woff');
+  src:
+    url('/fonts/WEB/fonts/Expose-Black.woff2') format('woff2'),
+    url('/fonts/WEB/fonts/Expose-Black.woff') format('woff');
   font-weight: 900;
   font-display: swap;
   font-style: normal;
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-sidebar: hsl(var(--sidebar-background));
+  --color-sidebar-foreground: hsl(var(--sidebar-foreground));
+  --color-sidebar-primary: hsl(var(--sidebar-primary));
+  --color-sidebar-primary-foreground: hsl(var(--sidebar-primary-foreground));
+  --color-sidebar-accent: hsl(var(--sidebar-accent));
+  --color-sidebar-accent-foreground: hsl(var(--sidebar-accent-foreground));
+  --color-sidebar-border: hsl(var(--sidebar-border));
+  --color-sidebar-ring: hsl(var(--sidebar-ring));
+
+  --color-brand-primary: #5645cc;
+  --color-brand-primary-dark: #432dcb;
+  --color-brand-secondary: #f5d130;
+  --color-brand-lilac: #cfb0ff;
+  --color-brand-nude: #f1f8fd;
+  --color-brand-soft-lilac: #fdf8f1;
+  --color-brand-orange: #fb8200;
+  --color-brand-indigo: #001122;
+  --color-brand-dark: #001122;
+  --color-brand-light: #f1f8fd;
+  --color-brand-accent: #f5d130;
+
+  --font-expose: 'Expose', system-ui, sans-serif;
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --shadow-soft: 0px 10px 40px rgba(0, 0, 0, 0.08);
+  --shadow-glow: 0px 0px 30px rgba(86, 69, 204, 0.35);
+  --shadow-glow-yellow: 0px 0px 30px rgba(245, 209, 48, 0.45);
+
+  --text-2xs: 0.625rem;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-pulse-subtle: pulse-subtle 3s ease-in-out infinite;
+  --animate-slide-up: slide-up 0.6s ease-out;
+  --animate-slide-down: slide-down 0.6s ease-out;
+  --animate-fade-in: fade-in 0.8s ease-out;
+}
+
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+  @media (width >= 640px) {
+    max-width: 640px;
+  }
+  @media (width >= 768px) {
+    max-width: 768px;
+  }
+  @media (width >= 1024px) {
+    max-width: 1024px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1280px;
+  }
+  @media (width >= 1400px) {
+    max-width: 1400px;
+  }
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes pulse-subtle {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+@keyframes slide-up {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-down {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 @layer base {
   :root {
@@ -87,8 +240,14 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 252 60% 65%;
 
-    font-family: 'Expose', system-ui, -apple-system, BlinkMacSystemFont,
-      'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-family:
+      'Expose',
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      'Segoe UI',
+      'Helvetica Neue',
+      sans-serif;
   }
 
   .dark {
@@ -198,17 +357,30 @@
 }
 
 @keyframes waveFloat {
-  0% { transform: translateX(0); }
-  50% { transform: translateX(-2%); }
-  100% { transform: translateX(0); }
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-2%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes gradientShift {
-  0%,100% { filter: hue-rotate(0deg); }
-  50% { filter: hue-rotate(25deg); }
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(25deg);
+  }
 }
 
-.animate-gradient-shift { animation: gradientShift 18s ease-in-out infinite; }
+.animate-gradient-shift {
+  animation: gradientShift 18s ease-in-out infinite;
+}
 
 /* Animations */
 .reveal-animation {
@@ -224,16 +396,32 @@
   transform: translateY(0);
 }
 
-.reveal-animation[data-anim='left'] { transform: translateX(-40px); }
-.reveal-animation[data-anim='right'] { transform: translateX(40px); }
-.reveal-animation[data-anim='up'] { transform: translateY(40px); }
-.reveal-animation[data-anim='down'] { transform: translateY(-40px); }
-.reveal-animation[data-anim='scale'] { transform: scale(.95); opacity: 0; }
+.reveal-animation[data-anim='left'] {
+  transform: translateX(-40px);
+}
+.reveal-animation[data-anim='right'] {
+  transform: translateX(40px);
+}
+.reveal-animation[data-anim='up'] {
+  transform: translateY(40px);
+}
+.reveal-animation[data-anim='down'] {
+  transform: translateY(-40px);
+}
+.reveal-animation[data-anim='scale'] {
+  transform: scale(0.95);
+  opacity: 0;
+}
 .reveal-animation.revealed[data-anim='left'],
 .reveal-animation.revealed[data-anim='right'],
 .reveal-animation.revealed[data-anim='up'],
-.reveal-animation.revealed[data-anim='down'] { transform: translateX(0) translateY(0); }
-.reveal-animation.revealed[data-anim='scale'] { transform: scale(1); opacity: 1; }
+.reveal-animation.revealed[data-anim='down'] {
+  transform: translateX(0) translateY(0);
+}
+.reveal-animation.revealed[data-anim='scale'] {
+  transform: scale(1);
+  opacity: 1;
+}
 
 /* Scroll behavior */
 html {

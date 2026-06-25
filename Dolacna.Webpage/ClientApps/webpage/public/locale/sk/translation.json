@@ -1,5 +1,4 @@
 {
-  "save_money": "Čoskoro dostupné",
   "compare_prices": "Maj istotu, že neplatíš",
   "across_slovakia": "viac, než musíš.",
   "description": "Ušetri ti prináša poriadok do každodenných nákupov.\nNa jednom mieste nájdeš najlepšie ceny potravín naprieč supermarketmi, aby si mal nákupy konečne pod kontrolou.",
@@ -263,8 +262,7 @@
       "trustedBy": "Dôveruje nám viac ako 10 000 používateľov po celom Slovensku"
     },
     "releaseBanner": {
-      "heading": "Aplikácia je dostupná od",
-      "date": "1. apríla 2025"
+      "heading": "Aplikácia je dostupná"
     }
   },
 
@@ -352,6 +350,15 @@
 
   "howItWorksPage": {
     "title": "Ako to funguje",
+    "relatedTitle": "Súvisiace témy",
+    "nav": {
+      "process": "Proces na pozadí",
+      "discounts": "Ako fungujú zľavy",
+      "cheapestCart": "Najlacnejší košík",
+      "categories": "Kategórie a jednotky",
+      "dataUpdates": "Zber a aktualizácia dát",
+      "shoppingList": "Nákupný zoznam"
+    },
     "subtitle": "Objav, ako naša platforma pomáha šetriť peniaze pri nákupoch potravín pomocou inteligentného porovnávania cien a AI kategorizácie.",
     "steps": [
       {
@@ -416,6 +423,127 @@
     "learnMoreDetails": "Zobraziť viac detailov"
   },
 
+  "discountsPage": {
+    "title": "Ako fungujú zľavy",
+    "subtitle": "Aby si videl reálnu cenu, počítame so všetkými typmi zliav, ktoré sú v obchodoch dostupné.",
+    "sections": [
+      {
+        "heading": "Zobrazujeme všetky dostupné zľavy",
+        "body": "Pri každom produkte berieme do úvahy všetky aktuálne dostupné zľavy, nielen bežnú akciovú cenu. Vďaka tomu vidíš cenu, ktorú reálne zaplatíš pri pokladni."
+      },
+      {
+        "heading": "Počítame s vernostnými (clubcard) cenami",
+        "body": "Mnohé reťazce ponúkajú nižšie ceny po načítaní vernostnej karty. Tieto ceny zahŕňame do výpočtu, pretože predpokladáme, že vernostnú kartu pri nákupe použiješ. Ak teda obchod ponúka clubcard cenu, počítame práve s ňou."
+      },
+      {
+        "heading": "Počítame s množstevnými zľavami",
+        "body": "Niektoré zľavy platia až pri nákupe väčšieho množstva (napríklad „2+1 zdarma“ alebo „zľava pri kúpe 3 kusov“). Pri takýchto akciách počítame cenu tak, akoby si dané množstvo produktov naozaj kupoval – výsledná jednotková cena teda zodpovedá množstvu potrebnému na získanie zľavy."
+      },
+      {
+        "heading": "Prečo to robíme takto",
+        "body": "Cieľom je ukázať najnižšiu reálne dosiahnuteľnú cenu. Porovnania tak zodpovedajú tomu, čo naozaj zaplatíš, a nie len „papierovej“ základnej cene."
+      }
+    ]
+  },
+
+  "cheapestCartPage": {
+    "title": "Ako si zostaviť najlacnejší košík",
+    "subtitle": "Stačí pridať kategórie alebo konkrétne produkty a my dopočítame, kde nakúpiš najlacnejšie.",
+    "sections": [
+      {
+        "heading": "Pridávaj kategórie, ktoré podporujeme",
+        "body": "Najjednoduchší spôsob je skladať košík z kategórií (napríklad „mlieko“ alebo „kuracie prsia“). Pre každú kategóriu máme zvolenú najbežnejšiu jednotku, takže porovnanie je férové naprieč obchodmi. Keď v aplikácii niečo vyhľadáš, podporované kategórie sa zobrazia v hornej časti zoznamu pod označením „Najlacnejšia varianta (kategória)“ – stačí si vybrať tú správnu a pridať ju do košíka."
+      },
+      {
+        "heading": "Alebo pridaj konkrétne produkty",
+        "body": "Ak chceš presne určitý produkt, môžeš ho do košíka pridať priamo namiesto kategórie. Ten istý produkt však nemusí byť dostupný vo všetkých obchodoch – napríklad Coca-Cola 1 l je dostupná len v Bille a Tescu. Aby si vedel porovnať celý košík aj v obchodoch, kde produkt chýba, postaráme sa o jeho náhradu – ako presne, vysvetľujeme nižšie."
+      },
+      {
+        "heading": "Náhrada za najlacnejší variant",
+        "body": "V obchodoch, kde tvoj produkt nie je dostupný, ho pri porovnaní cien automaticky nahradíme. Hľadáme variant s rovnakou alebo prepočítateľnou jednotkou (napríklad rovnaká gramáž alebo prepočet na cenu za kg/l) a vyberáme ten najvýhodnejší – napríklad Coca-Colu 1 l nahradíme najlacnejšou Coca-Colou Zero 2 l. Vďaka tomu nestrácaš položku z košíka a celý nákup ostáva kompletný a porovnateľný."
+      },
+      {
+        "heading": "Ako funguje zoradenie v porovnaní",
+        "body": "Výsledky porovnania zoraďujeme tak, aby si navrchu vždy videl najvýhodnejšiu možnosť – obchod, kde nakúpiš celý košík najlacnejšie:",
+        "bullets": [
+          "Zoznamy (obchody), ktorým chýbajú niektoré produkty z tvojho košíka, posúvame na koniec – aby si najprv videl obchody, kde dostaneš všetko.",
+          "Kompletné košíky následne zoraďujeme od najlacnejšieho po najdrahší.",
+          "Neúplné možnosti (kde niečo chýba) zostávajú dostupné nižšie, aby si mal kompletný prehľad."
+        ]
+      },
+      {
+        "heading": "Výsledok: najlacnejší košík",
+        "body": "Po zostavení košíka dopočítame celkovú cenu pre každý obchod a zoradíme ich od najlacnejšieho po najdrahší. V našom príklade vyjde rovnaký nákup najlacnejšie na 50,88 € a najdrahšie na 58,66 € – výberom najvýhodnejšieho obchodu tak na tom istom košíku ušetríš 7,78 €.",
+        "bullets": [
+          "Cena v zozname pred porovnaním sa môže od finálnej sumy líšiť – zoznam počíta s tým, že každý produkt je dostupný, a konkrétnu sumu pre daný obchod vypočítame až v samotnom porovnaní."
+        ]
+      }
+    ]
+  },
+
+  "categoriesPage": {
+    "title": "Kategórie a voľba jednotky",
+    "subtitle": "Vysvetlíme, prečo používame kategórie a ako pre ne volíme jednotku.",
+    "sections": [
+      {
+        "heading": "Prečo používame kategórie",
+        "body": "Kategórie sme vytvorili kvôli schopnosti aplikácie porovnávať medzi sebou relevantné produkty. Na začiatku sme vytvorili približne __COUNT__ najčastejšie nakupovaných kategórií a do budúcna ich plánujeme neustále rozširovať."
+      },
+      {
+        "heading": "Ako volíme jednotku",
+        "body": "Pre každú kategóriu sme zvolili najhľadanejšiu (najčastejšie nakupovanú) jednotku, aby bolo porovnanie zmysluplné. Napríklad v kategórii mäso sa najčastejšie nakupujú kuracie prsia v množstve 1 kg, a preto porovnávame práve túto jednotku. Podobne pri strukovinách počítame napríklad s fazuľou v konzerve s hmotnosťou 400 g."
+      }
+    ],
+    "categoryList": {
+      "title": "Hlavné kategórie",
+      "subtitle": "Toto sú hlavné kategórie, z ktorých si môžeš skladať nákupný zoznam. Postupne k nim pribúdajú jednotlivé podkategórie.",
+      "emptyLabel": "Podkategórie čoskoro doplníme.",
+      "names": {
+        "meatFish": "Mäso a ryby",
+        "dairyEggs": "Mliečne výrobky a vajčia",
+        "fruitVeg": "Ovocie a zelenina",
+        "bakery": "Pečivo",
+        "beverages": "Nápoje",
+        "pantry": "Trvanlivé potraviny",
+        "frozen": "Mrazené výrobky",
+        "vegan": "Vegan",
+        "deli": "Údeniny a lahôdky",
+        "readyMeals": "Hotové jedlá a prílohy",
+        "drugstore": "Drogéria"
+      }
+    }
+  },
+
+  "dataUpdatesPage": {
+    "title": "Ako zbierame a aktualizujeme dáta",
+    "subtitle": "Ceny aktualizujeme pravidelne z verejne dostupných zdrojov supermarketov.",
+    "sections": [
+      {
+        "heading": "Týždenná aktualizácia cien",
+        "body": "Dáta o cenách aktualizujeme týždenne, aby porovnania zodpovedali aktuálnej ponuke v obchodoch. Momentálne pokrývame Billu, Kaufland, Lidl a Tesco a každý reťazec spúšťa nové zľavy v iný deň:",
+        "bullets": [
+          "Lidl – nové zľavy v pondelok",
+          "Billa a Tesco – nové zľavy v stredu",
+          "Kaufland – nové zľavy vo štvrtok"
+        ]
+      },
+      {
+        "heading": "Z dostupných zdrojov supermarketov",
+        "body": "Ceny získavame z verejne dostupných zdrojov jednotlivých reťazcov – pomocou umelej inteligencie (AI) skenujeme ich akciové letáky. Údaje následne spracúvame a zjednocujeme do jednotnej databázy, vďaka čomu vieme produkty férovo porovnať naprieč obchodmi."
+      },
+      {
+        "heading": "Prečo na to dbáme",
+        "body": "Pravidelná aktualizácia zaručuje, že ti ukazujeme relevantné a aktuálne ceny – nie staré alebo neplatné akcie."
+      }
+    ]
+  },
+
+  "shoppingListPage": {
+    "title": "Nákupný zoznam",
+    "subtitle": "Sem doplníme popis funkcie nákupného zoznamu.",
+    "body": "Tento obsah je zatiaľ len zástupný text. Čoskoro sem pridáme detailný popis toho, ako funguje nákupný zoznam, ako ho vytvoríš a ako ti pomôže ušetriť pri nákupe."
+  },
+
   "privacyPolicy": {
     "pageTitle": "Ochrana osobných údajov",
     "pageSubtitle": "Zisti, ako spracúvame tvoje údaje, aby bol tvoj zážitok bezpečný a súkromný.",
@@ -434,7 +562,7 @@
       },
       {
         "title": "4. Ako používame tvoje informácie",
-"content": "Údaje z fotoaparátu sa používajú **výlučne** v rámci aplikácie na funkčné účely. Konkrétne:\n\n- Údaje z fotoaparátu sa spracúvajú lokálne na tvojom zariadení\n- **Nezhromažďujeme, neprenášame ani neukladáme** tvoje fotografie alebo videá na našich serveroch, pokiaľ sa ich výslovne nerozhodneš nahrať alebo zdieľať\n- Údaje z fotoaparátu **nie sú** používané na reklamu, marketing alebo analytiku\n\nTvoje súkromie je ústredným bodom zážitku z našej aplikácie."
+        "content": "Údaje z fotoaparátu sa používajú **výlučne** v rámci aplikácie na funkčné účely. Konkrétne:\n\n- Údaje z fotoaparátu sa spracúvajú lokálne na tvojom zariadení\n- **Nezhromažďujeme, neprenášame ani neukladáme** tvoje fotografie alebo videá na našich serveroch, pokiaľ sa ich výslovne nerozhodneš nahrať alebo zdieľať\n- Údaje z fotoaparátu **nie sú** používané na reklamu, marketing alebo analytiku\n\nTvoje súkromie je ústredným bodom zážitku z našej aplikácie."
       },
       {
         "title": "5. Uchovávanie údajov a bezpečnosť",

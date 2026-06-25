@@ -14,7 +14,11 @@ const Hero = () => {
       {/* Pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.1] pointer-events-none z-[1]"
-        style={{ backgroundImage: 'url(/images/graphicMotives/pattern.png)', backgroundRepeat: 'repeat', backgroundSize: '250px' }}
+        style={{
+          backgroundImage: 'url(/images/graphicMotives/pattern.png)',
+          backgroundRepeat: 'repeat',
+          backgroundSize: '250px',
+        }}
       />
       {/* Decorative background blobs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -29,12 +33,6 @@ const Hero = () => {
       >
         {/* Text Content */}
         <div className="text-left space-y-7 reveal-animation" data-anim="left">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-secondary/15 border border-brand-secondary/35 text-brand-secondary font-medium text-sm">
-            <span className="w-2 h-2 rounded-full bg-brand-secondary animate-pulse-subtle" />
-            {t('save_money')}
-          </div>
-
           {/* Headline */}
           <h1 className="text-5xl sm:text-6xl md:text-[4.25rem] font-black leading-[1.08] tracking-tight text-white">
             {t('compare_prices')}{' '}

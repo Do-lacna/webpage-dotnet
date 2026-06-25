@@ -19,9 +19,12 @@
   "download_app": "Download App",
   "hero": {
     "videoLabels": {
-      "search": "Search & Compare Prices",
-      "shoppingList": "Smart Shopping Lists",
-      "sales": "Deals & Discounts"
+      "search": "Search & Compare",
+      "searchAccent": "Prices",
+      "shoppingList": "Smart Shopping",
+      "shoppingListAccent": "Lists",
+      "sales": "Deals &",
+      "salesAccent": "Discounts"
     }
   },
   "toggle_menu": "Toggle menu",
@@ -241,10 +244,8 @@
       "trustedBy": "Trusted by 10,000+ users across Slovakia"
     },
     "releaseBanner": {
-      "heading": "Full launch planned for",
-      "date": "December 2025",
-      "description": "App Store and Google Play download links will be available at release.",
-      "disabledTooltip": "Coming December 2025"
+      "heading": "App is live since",
+      "date": "April 1, 2025"
     }
   },
 
@@ -334,6 +335,10 @@
 
   "howItWorksPage": {
     "title": "How It Works",
+    "nav": {
+      "process": "Background Process",
+      "shoppingList": "Shopping List"
+    },
     "subtitle": "Discover how our platform helps you save money on groceries through smart price comparison and AI-powered categorization.",
     "steps": [
       {
@@ -396,6 +401,12 @@
     "searchPlaceholder": "Search steps or features...",
     "noResults": "No results found.",
     "learnMoreDetails": "Learn more details"
+  },
+
+  "shoppingListPage": {
+    "title": "Shopping List",
+    "subtitle": "We'll add a description of the shopping list feature here.",
+    "body": "This content is just a placeholder for now. We'll soon add a detailed description of how the shopping list works, how to create one, and how it helps you save while shopping."
   },
 
   "privacyPolicy": {
