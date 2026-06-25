@@ -6,11 +6,6 @@ on:
     paths:
       - "**"
       - ".github/workflows/ci.yml"
-  pull_request:
-    branches: ["master"]
-    paths:
-      - "**"
-      - ".github/workflows/ci.yml"
 permissions: # needed to deploy
   id-token: write
   contents: read
