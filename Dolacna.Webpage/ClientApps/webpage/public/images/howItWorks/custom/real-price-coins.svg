@@ -1,0 +1,25 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Reálna cena">
+  <!-- soft background blob -->
+  <ellipse cx="200" cy="160" rx="155" ry="120" fill="#cfb0ff" fill-opacity="0.22" />
+
+  <!-- coin stack -->
+  <g>
+    <!-- coin 3 (bottom) -->
+    <ellipse cx="190" cy="214" rx="78" ry="26" fill="#d9a93f" />
+    <ellipse cx="190" cy="206" rx="78" ry="26" fill="#f5d130" />
+    <!-- coin 2 (middle) -->
+    <ellipse cx="190" cy="184" rx="78" ry="26" fill="#d9a93f" />
+    <ellipse cx="190" cy="176" rx="78" ry="26" fill="#f5d130" />
+    <!-- coin 1 (top) -->
+    <ellipse cx="190" cy="154" rx="78" ry="26" fill="#d9a93f" />
+    <ellipse cx="190" cy="146" rx="78" ry="26" fill="#f5d130" />
+    <text x="190" y="160" text-anchor="middle" font-family="'Poppins', 'Segoe UI', system-ui, sans-serif" font-size="34" font-weight="800" fill="#001122" fill-opacity="0.7">&#8364;</text>
+  </g>
+
+  <!-- check badge -->
+  <g transform="translate(284 118)">
+    <circle cx="0" cy="0" r="30" fill="#001122" fill-opacity="0.18" transform="translate(3 4)" />
+    <circle cx="0" cy="0" r="30" fill="#5645cc" />
+    <path d="M-13 1 L-3 11 L14 -10" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+  </g>
+</svg>
