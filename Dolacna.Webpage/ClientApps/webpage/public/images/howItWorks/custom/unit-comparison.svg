@@ -1,0 +1,58 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jednotka kategórie: mlieko 1 liter, fazuľa 400 gramov">
+  <defs>
+    <linearGradient id="canBody" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#d9ccff" />
+      <stop offset="0.18" stop-color="#ffffff" />
+      <stop offset="0.5" stop-color="#ffffff" />
+      <stop offset="0.82" stop-color="#efe9ff" />
+      <stop offset="1" stop-color="#cdbcff" />
+    </linearGradient>
+    <linearGradient id="cartonFront" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" />
+      <stop offset="1" stop-color="#f3eeff" />
+    </linearGradient>
+  </defs>
+
+  <!-- soft background blob -->
+  <ellipse cx="200" cy="162" rx="178" ry="126" fill="#cfb0ff" fill-opacity="0.22" />
+
+  <!-- ground shadows -->
+  <ellipse cx="116" cy="252" rx="50" ry="10" fill="#432dcb" fill-opacity="0.15" />
+  <ellipse cx="285" cy="252" rx="50" ry="10" fill="#432dcb" fill-opacity="0.15" />
+
+  <!-- ===== Milk carton (gable top, 3D) ===== -->
+  <g stroke="#5645cc" stroke-width="3" stroke-linejoin="round" stroke-linecap="round">
+    <!-- right side face (depth) -->
+    <polygon points="142,248 158,239 158,155 129,119 113,128 142,164" fill="#e3d8ff" />
+    <!-- front face (pentagon: body + gable) -->
+    <polygon points="84,248 142,248 142,164 113,128 84,164" fill="url(#cartonFront)" />
+    <!-- ridge / sealed top fin -->
+    <line x1="113" y1="128" x2="129" y2="119" />
+    <!-- gable fold creases -->
+    <line x1="113" y1="128" x2="113" y2="164" stroke-width="2" stroke-opacity="0.5" />
+    <line x1="84" y1="164" x2="142" y2="164" stroke-width="2" stroke-opacity="0.4" />
+  </g>
+  <!-- label band (no text) -->
+  <polygon points="86,190 140,190 140,216 86,216" fill="#5645cc" />
+  <polygon points="142,190 158,181 158,207 142,216" fill="#432dcb" />
+
+  <!-- ===== Bean can (cylinder, 3D) ===== -->
+  <!-- bottom -->
+  <path d="M 239 150 L 239 226 A 46 14 0 0 0 331 226 L 331 150 Z" fill="url(#canBody)" stroke="#5645cc" stroke-width="3" stroke-linejoin="round" />
+  <!-- label band (no text), curved to the cylinder -->
+  <path d="M 239 174 A 46 14 0 0 0 331 174 L 331 204 A 46 14 0 0 1 239 204 Z" fill="#5645cc" />
+  <!-- top rim -->
+  <ellipse cx="285" cy="150" rx="46" ry="14" fill="#e3d8ff" stroke="#5645cc" stroke-width="3" />
+  <!-- recessed lid -->
+  <ellipse cx="285" cy="150" rx="38" ry="10.5" fill="#d3c4ff" stroke="#5645cc" stroke-width="2" />
+
+  <!-- ===== Info bubble: 1 l ===== -->
+  <polygon points="150,128 172,128 148,152" fill="#5645cc" />
+  <rect x="140" y="84" width="72" height="46" rx="15" fill="#5645cc" />
+  <text x="176" y="114" text-anchor="middle" font-family="'Poppins', 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff">1&#8201;l</text>
+
+  <!-- ===== Info bubble: 400 g ===== -->
+  <polygon points="300,128 322,128 302,152" fill="#5645cc" />
+  <rect x="294" y="84" width="92" height="46" rx="15" fill="#5645cc" />
+  <text x="340" y="114" text-anchor="middle" font-family="'Poppins', 'Segoe UI', system-ui, sans-serif" font-size="24" font-weight="800" fill="#ffffff">400&#8201;g</text>
+</svg>
