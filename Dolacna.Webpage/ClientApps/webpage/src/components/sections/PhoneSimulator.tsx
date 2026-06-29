@@ -125,7 +125,7 @@ const KEYFRAMES = `
 /* Phone shell                                                         */
 /* ------------------------------------------------------------------ */
 
-function PhoneShell({
+const PhoneShell = React.memo(function PhoneShell({
   src,
   w,
   h,
@@ -221,13 +221,13 @@ function PhoneShell({
       />
     </div>
   );
-}
+});
 
 /* ------------------------------------------------------------------ */
 /* Flow connector + caption pill (dual mode)                           */
 /* ------------------------------------------------------------------ */
 
-function FlowConnector({
+const FlowConnector = React.memo(function FlowConnector({
   color,
   reverse,
 }: {
@@ -289,9 +289,9 @@ function FlowConnector({
       </g>
     </svg>
   );
-}
+});
 
-function CaptionPill({
+const CaptionPill = React.memo(function CaptionPill({
   text,
   color,
   visible,
@@ -361,13 +361,13 @@ function CaptionPill({
       />
     </div>
   );
-}
+});
 
 /* ------------------------------------------------------------------ */
 /* Single + dual phone stages                                          */
 /* ------------------------------------------------------------------ */
 
-function SinglePhone({
+const SinglePhone = React.memo(function SinglePhone({
   src,
   label,
   color,
@@ -408,7 +408,7 @@ function SinglePhone({
       </div>
     </div>
   );
-}
+});
 
 function DualPhoneStage({
   feat,
@@ -592,6 +592,7 @@ function PhoneMockup({
           filter: 'blur(70px)',
           animation: 'psim-glow 3s ease-in-out infinite',
           transition: 'background .6s ease',
+          willChange: 'opacity',
           pointerEvents: 'none',
         }}
       />
@@ -825,12 +826,6 @@ export function PhoneSimulator({
     [featIdx, autoplayProp],
   );
 
-  const advanceFeature = useCallback(() => {
-    setFeatIdx((i) => (i + 1) % features.length);
-    setFocusIdx(0);
-    setProgKey((k) => k + 1);
-  }, [features.length]);
-
   // Focus cycling for dual-screen features
   useEffect(() => {
     const feat = features[featIdx];
@@ -865,6 +860,7 @@ export function PhoneSimulator({
         alignItems: 'center',
         width: '100%',
         fontFamily: 'inherit',
+        contain: 'layout',
       }}
     >
       <style>{KEYFRAMES}</style>
