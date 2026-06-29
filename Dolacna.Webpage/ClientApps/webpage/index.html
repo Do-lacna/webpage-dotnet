@@ -14,13 +14,28 @@
       property="og:image"
       content="Dolacna.Webpage\ClientApps\webpage\public\images\logo.png"
     />
-    <script defer src="https://cloud.umami.is/script.js" data-website-id="8e96a4cb-d67c-4110-a74a-5faec6d4743d"></script>
+    <link
+      rel="preload"
+      as="font"
+      type="font/woff2"
+      href="/fonts/WEB/fonts/Expose-Variable.woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      as="fetch"
+      href="/locale/sk/translation.json"
+      crossorigin
+    />
+    <script
+      defer
+      src="https://cloud.umami.is/script.js"
+      data-website-id="8e96a4cb-d67c-4110-a74a-5faec6d4743d"
+    ></script>
   </head>
 
   <body>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

@@ -10,7 +10,7 @@ i18n
   .init({
     fallbackLng: 'sk',
     lng: 'sk', // Force Slovak as initial language
-    debug: true,
+    debug: false,
     interpolation: {
       escapeValue: false,
     },
