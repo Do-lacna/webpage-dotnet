@@ -1,4 +1,3 @@
-import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 import {
   BarChart3,
   ChefHat,
@@ -11,7 +10,6 @@ import { useTranslation } from 'react-i18next';
 
 const Features = () => {
   const { t } = useTranslation();
-  useRevealAnimation();
 
   const features = [
     {

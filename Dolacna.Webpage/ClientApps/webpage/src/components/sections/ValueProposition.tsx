@@ -9,7 +9,6 @@ import {
   CarouselItem,
   type CarouselApi,
 } from '@/components/ui/carousel';
-import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 import { cn } from '@/lib/utils';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
@@ -19,7 +18,6 @@ const shopImages = [Shop1Png, Shop2Png, Shop3Png, Shop4Png];
 
 const ValueProposition = () => {
   const { t } = useTranslation();
-  useRevealAnimation();
 
   const [api, setApi] = useState<CarouselApi>();
   const [current, setCurrent] = useState(0);

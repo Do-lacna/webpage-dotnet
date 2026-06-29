@@ -1,13 +1,11 @@
 import KosikPng from '@/../public/images/featuredGraphics/kosik.png';
 import { Button } from '@/components/ui/button';
-import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 const DownloadSection = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  useRevealAnimation();
 
   return (
     <section id="download" className="relative py-14 bg-white overflow-hidden">

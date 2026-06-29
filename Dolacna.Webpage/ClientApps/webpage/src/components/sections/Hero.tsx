@@ -1,13 +1,11 @@
 import { Button } from '@/components/ui/button';
 import { PhoneSimulator } from '@/components/sections/PhoneSimulator';
-import { useRevealAnimation } from '@/hooks/use-reveal-animation';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
 const Hero = () => {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  useRevealAnimation();
 
   return (
     <section className="relative min-h-screen flex items-center pt-0 overflow-hidden bg-brand-primary-dark">

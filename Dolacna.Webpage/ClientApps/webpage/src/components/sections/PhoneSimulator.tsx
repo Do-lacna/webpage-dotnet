@@ -17,7 +17,7 @@
  * To customise: edit the FEATURES array below.
  */
 
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 
 /* ------------------------------------------------------------------ */
 /* Data                                                                */
@@ -798,6 +798,20 @@ export function PhoneSimulator({
   const [focusIdx, setFocusIdx] = useState(0);
   const [autoplay, setAutoplay] = useState(autoplayProp);
   const [progKey, setProgKey] = useState(0);
+  const rootRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState(true);
+
+  // Pause all animations/timers while the simulator is off-screen.
+  useEffect(() => {
+    const el = rootRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.05 },
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   const goToFeature = useCallback(
     (idx: number) => {
@@ -821,26 +835,29 @@ export function PhoneSimulator({
   useEffect(() => {
     const feat = features[featIdx];
     if (feat.screens.length < 2) return;
+    if (!inView) return;
     const t = setTimeout(() => {
       setFocusIdx((f) => (f + 1) % feat.screens.length);
     }, FOCUS_DURATION);
     return () => clearTimeout(t);
-  }, [featIdx, focusIdx, features]);
+  }, [featIdx, focusIdx, features, inView]);
 
   // Auto-advance to the next feature. Lives at the top level so it runs
   // even when the tab bar (which also renders a ProgressBar) is hidden.
   useEffect(() => {
     if (!autoplay) return;
+    if (!inView) return;
     const t = setTimeout(() => {
       setFeatIdx((i) => (i + 1) % features.length);
       setFocusIdx(0);
       setProgKey((k) => k + 1);
     }, FEATURE_DURATION);
     return () => clearTimeout(t);
-  }, [autoplay, featIdx, progKey, features.length]);
+  }, [autoplay, featIdx, progKey, features.length, inView]);
 
   return (
     <div
+      ref={rootRef}
       style={{
         position: 'relative',
         display: 'flex',
