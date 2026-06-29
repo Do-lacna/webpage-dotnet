@@ -25,5 +25,15 @@ export default defineConfig(({ mode }) => ({
     outDir: path.resolve(__dirname, `../../wwwroot`), // Set output directory
     emptyOutDir: true, // Clear the output directory before building
     // minify: mode === 'production', // Disable minification for non-production builds
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (/react|react-dom|react-router/.test(id)) return 'react-vendor';
+            if (/i18next/.test(id)) return 'i18n';
+          }
+        },
+      },
+    },
   },
 }));
