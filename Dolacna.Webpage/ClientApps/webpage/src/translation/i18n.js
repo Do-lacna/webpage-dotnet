@@ -18,6 +18,9 @@ i18n
       sk: { translation: skTranslation },
     },
     partialBundledLanguages: true,
+    // Initialize synchronously so translations are ready on the very first
+    // render (avoids react-i18next suspending the tree on startup).
+    initImmediate: false,
     interpolation: {
       escapeValue: false,
     },
