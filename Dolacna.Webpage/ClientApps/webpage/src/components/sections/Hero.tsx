@@ -1,7 +1,13 @@
 import { Button } from '@/components/ui/button';
-import { PhoneSimulator } from '@/components/sections/PhoneSimulator';
+import { lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+
+const PhoneSimulator = lazy(() =>
+  import('@/components/sections/PhoneSimulator').then((m) => ({
+    default: m.PhoneSimulator,
+  })),
+);
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -65,7 +71,16 @@ const Hero = () => {
           className="relative w-full md:ml-auto md:mr-0 reveal-animation flex items-center justify-center"
           data-anim="right"
         >
-          <PhoneSimulator showDescription={false} />
+          <Suspense
+            fallback={
+              <div
+                className="w-[540px] max-w-full h-[580px]"
+                aria-hidden="true"
+              />
+            }
+          >
+            <PhoneSimulator showDescription={false} />
+          </Suspense>
         </div>
       </div>
     </section>
