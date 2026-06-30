@@ -42,8 +42,8 @@ const FEATURES: Feature[] = [
     tab: 'Hľadať',
     desc: 'Prehľadaj tisíce produktov a okamžite zisti, kde nakúpiš najlacnejšie.',
     screens: [
-      { src: IMG('search_1.png'), label: 'Prehľadaj kategórie produktov' },
-      { src: IMG('search_2.png'), label: 'Porovnaj ceny naprieč obchodmi' },
+      { src: IMG('search_1.webp'), label: 'Prehľadaj kategórie produktov' },
+      { src: IMG('search_2.webp'), label: 'Porovnaj ceny naprieč obchodmi' },
     ],
     color: '#7b6de0',
   },
@@ -53,9 +53,12 @@ const FEATURES: Feature[] = [
     tab: 'Zoznam',
     desc: 'Poskladaj nákupný košík a zisti, v ktorom obchode ušetríš tento týždeň najviac.',
     screens: [
-      { src: IMG('shopping_list_1.png'), label: 'Vyskladaj si nákupný zoznam' },
       {
-        src: IMG('shopping_list_2.png'),
+        src: IMG('shopping_list_1.webp'),
+        label: 'Vyskladaj si nákupný zoznam',
+      },
+      {
+        src: IMG('shopping_list_2.webp'),
         label: 'A porovnaj ceny v jednotlivých obchodoch',
       },
     ],
@@ -68,7 +71,7 @@ const FEATURES: Feature[] = [
     desc: 'Aktuálne akcie zo všetkých veľkých supermarketov na jednom mieste, každý týždeň.',
     screens: [
       {
-        src: IMG('discounts.png'),
+        src: IMG('discounts.webp'),
         label: 'Sleduj aktuálne zľavy každý týždeň',
       },
     ],
@@ -79,7 +82,7 @@ const FEATURES: Feature[] = [
     icon: '💰',
     tab: 'Profil',
     desc: 'Prehľad všetkých tvojich nákupov a celkových úspor na jednom mieste.',
-    screens: [{ src: IMG('profile.png'), label: 'Sleduj svoje úspory' }],
+    screens: [{ src: IMG('profile.webp'), label: 'Sleduj svoje úspory' }],
     color: '#cfb0ff',
   },
 ];

@@ -1,7 +1,7 @@
-import BillaLogo from '@/../public/images/stores/billa.png';
-import KauflandLogo from '@/../public/images/stores/kaufland.png';
-import LidlLogo from '@/../public/images/stores/lidl.png';
-import TescoLogo from '@/../public/images/stores/tesco.jpg';
+import BillaLogo from '@/../public/images/stores/billa.webp';
+import KauflandLogo from '@/../public/images/stores/kaufland.webp';
+import LidlLogo from '@/../public/images/stores/lidl.webp';
+import TescoLogo from '@/../public/images/stores/tesco.webp';
 import { Bot, DatabaseZap, RefreshCw } from 'lucide-react';
 import React from 'react';
 import { useTranslation } from 'react-i18next';

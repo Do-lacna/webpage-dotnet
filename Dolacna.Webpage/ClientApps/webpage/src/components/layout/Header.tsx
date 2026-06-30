@@ -63,6 +63,8 @@ const Header = () => {
             <img
               src="/images/logos/usetri-logo_claim-purple.png"
               alt="Usetri Logo"
+              width={280}
+              height={110}
               className={cn(
                 'h-12 w-auto transition-all duration-300',
                 isTransparent && 'brightness-0 invert',

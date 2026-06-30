@@ -1,48 +1,10 @@
-/* Expose Variable Font */
+/* Expose Variable Font — covers all weights 400–900 in a single file */
 @font-face {
   font-family: 'Expose';
   src:
     url('/fonts/WEB/fonts/Expose-Variable.woff2') format('woff2'),
-    url('/fonts/WEB/fonts/Expose-Variable.woff') format('woff'),
-    url('/fonts/WEB/fonts/Expose-Variable.ttf') format('truetype');
+    url('/fonts/WEB/fonts/Expose-Variable.woff') format('woff');
   font-weight: 400 900;
-  font-display: swap;
-  font-style: normal;
-}
-/* Expose individual weight fallbacks */
-@font-face {
-  font-family: 'Expose';
-  src:
-    url('/fonts/WEB/fonts/Expose-Regular.woff2') format('woff2'),
-    url('/fonts/WEB/fonts/Expose-Regular.woff') format('woff');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Expose';
-  src:
-    url('/fonts/WEB/fonts/Expose-Medium.woff2') format('woff2'),
-    url('/fonts/WEB/fonts/Expose-Medium.woff') format('woff');
-  font-weight: 500;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Expose';
-  src:
-    url('/fonts/WEB/fonts/Expose-Bold.woff2') format('woff2'),
-    url('/fonts/WEB/fonts/Expose-Bold.woff') format('woff');
-  font-weight: 700;
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Expose';
-  src:
-    url('/fonts/WEB/fonts/Expose-Black.woff2') format('woff2'),
-    url('/fonts/WEB/fonts/Expose-Black.woff') format('woff');
-  font-weight: 900;
   font-display: swap;
   font-style: normal;
 }
