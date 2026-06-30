@@ -314,7 +314,6 @@ const CaptionPill = React.memo(function CaptionPill({
           top: '18%',
           transform: `translateX(${side === 'left' ? '-100%' : '100%'}) translateY(${visible ? '0' : '8px'})`,
           background: 'rgba(18,15,36,0.95)',
-          backdropFilter: 'blur(14px)',
           border: `1px solid ${color}55`,
           borderRadius: 14,
           padding: '10px 14px',
@@ -393,7 +392,6 @@ const SinglePhone = React.memo(function SinglePhone({
         key={label}
         style={{
           background: 'rgba(18,15,36,0.95)',
-          backdropFilter: 'blur(14px)',
           border: `1px solid ${color}55`,
           borderRadius: 14,
           padding: '10px 14px',
@@ -453,7 +451,6 @@ function DualPhoneStage({
           width: 420,
           height: 50,
           background: `radial-gradient(ellipse at center, ${feat.color}22 0%, transparent 65%)`,
-          filter: 'blur(20px)',
           pointerEvents: 'none',
         }}
       />
@@ -528,8 +525,7 @@ function DualPhoneStage({
           display: 'flex',
           gap: 6,
           alignItems: 'center',
-          background: 'rgba(18,15,36,.7)',
-          backdropFilter: 'blur(10px)',
+          background: 'rgba(18,15,36,.82)',
           border: '1px solid rgba(86,69,204,.3)',
           borderRadius: 100,
           padding: '6px 12px',
@@ -590,12 +586,9 @@ function PhoneMockup({
           position: 'absolute',
           width: 440,
           height: 440,
-          background: `radial-gradient(circle, ${feat.color}33 0%, transparent 70%)`,
+          background: `radial-gradient(circle, ${feat.color}26 0%, transparent 70%)`,
           borderRadius: '50%',
-          filter: 'blur(70px)',
-          animation: 'psim-glow 3s ease-in-out infinite',
           transition: 'background .6s ease',
-          willChange: 'opacity',
           pointerEvents: 'none',
         }}
       />
@@ -881,7 +874,6 @@ export function PhoneSimulator({
           style={{
             display: 'flex',
             background: 'rgba(13,11,26,.92)',
-            backdropFilter: 'blur(20px)',
             border: '1px solid rgba(86,69,204,.2)',
             borderRadius: 14,
             overflow: 'hidden',

@@ -18,10 +18,22 @@ const DownloadSection = () => {
           backgroundSize: '250px',
         }}
       />
-      {/* Decorative blobs */}
+      {/* Decorative glows */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -bottom-24 -left-24 w-[480px] h-[480px] rounded-full bg-brand-lilac opacity-[0.06] blur-[100px]" />
-        <div className="absolute top-0 right-0 w-[320px] h-[320px] rounded-full bg-brand-primary opacity-[0.04] blur-[80px]" />
+        <div
+          className="absolute -bottom-24 -left-24 w-[560px] h-[560px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(207,176,255,0.07) 0%, rgba(207,176,255,0) 70%)',
+          }}
+        />
+        <div
+          className="absolute top-0 right-0 w-[400px] h-[400px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(86,69,204,0.05) 0%, rgba(86,69,204,0) 70%)',
+          }}
+        />
       </div>
 
       <div className="section-container relative z-10">

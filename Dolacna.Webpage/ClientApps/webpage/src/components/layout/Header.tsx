@@ -53,7 +53,7 @@ const Header = () => {
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-5 px-4 sm:px-6',
         isTransparent
           ? 'bg-transparent'
-          : 'bg-white/90 backdrop-blur-lg shadow-soft border-b border-brand-lilac/30',
+          : 'bg-white/90 shadow-soft border-b border-brand-lilac/30',
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -169,7 +169,7 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-lg shadow-lg border-t border-brand-lilac/20 animate-slide-down">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-brand-lilac/20 animate-slide-down">
           <div className="px-4 py-6 space-y-4">
             <a
               href="/HowItWorks"

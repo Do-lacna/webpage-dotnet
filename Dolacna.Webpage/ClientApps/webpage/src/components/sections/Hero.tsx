@@ -24,11 +24,29 @@ const Hero = () => {
           backgroundSize: '250px',
         }}
       />
-      {/* Decorative background blobs */}
+      {/* Decorative background glows — radial-gradients instead of blur() for WebKit/iOS perf */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full bg-brand-primary opacity-60 blur-[120px]" />
-        <div className="absolute bottom-0 -left-24 w-[400px] h-[400px] rounded-full bg-brand-lilac opacity-20 blur-[100px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full bg-brand-primary opacity-10 blur-[150px]" />
+        <div
+          className="absolute -top-40 -right-40 w-[700px] h-[700px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(86,69,204,0.55) 0%, rgba(86,69,204,0) 70%)',
+          }}
+        />
+        <div
+          className="absolute -bottom-20 -left-32 w-[520px] h-[520px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(207,176,255,0.18) 0%, rgba(207,176,255,0) 70%)',
+          }}
+        />
+        <div
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[900px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(86,69,204,0.10) 0%, rgba(86,69,204,0) 70%)',
+          }}
+        />
       </div>
 
       <div

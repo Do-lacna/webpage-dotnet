@@ -55,8 +55,20 @@ const ValueProposition = () => {
         }}
       />
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        <div className="absolute top-1/4 -right-40 w-[500px] h-[500px] rounded-full bg-brand-primary opacity-[0.04] blur-[120px]" />
-        <div className="absolute bottom-0 -left-32 w-[350px] h-[350px] rounded-full bg-brand-lilac opacity-[0.06] blur-[100px]" />
+        <div
+          className="absolute top-1/4 -right-40 w-[600px] h-[600px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(86,69,204,0.05) 0%, rgba(86,69,204,0) 70%)',
+          }}
+        />
+        <div
+          className="absolute bottom-0 -left-32 w-[450px] h-[450px] rounded-full"
+          style={{
+            background:
+              'radial-gradient(circle, rgba(207,176,255,0.07) 0%, rgba(207,176,255,0) 70%)',
+          }}
+        />
       </div>
 
       <div className="max-w-[60rem] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
