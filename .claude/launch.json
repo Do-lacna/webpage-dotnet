@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "webpage",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "Dolacna.Webpage/ClientApps/webpage", "--", "--port", "8090", "--strictPort"],
+      "port": 8090
+    }
+  ]
+}

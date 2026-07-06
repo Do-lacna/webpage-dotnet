@@ -24,6 +24,15 @@
       "shoppingListAccent": "Zoznamy",
       "sales": "Akcie &",
       "salesAccent": "Zľavy"
+    },
+    "screens": {
+      "switcherLabel": "Obrazovky aplikácie",
+      "search": "Vyhľadávanie produktov",
+      "productDetail": "Detail produktu",
+      "list": "Nákupný zoznam",
+      "listCompare": "Porovnanie cien",
+      "discounts": "Zľavy",
+      "savings": "Tvoje úspory"
     }
   },
   "toggle_menu": "Prepínať menu",

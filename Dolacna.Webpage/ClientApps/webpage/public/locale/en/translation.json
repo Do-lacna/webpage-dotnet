@@ -24,6 +24,15 @@
       "shoppingListAccent": "Lists",
       "sales": "Deals &",
       "salesAccent": "Discounts"
+    },
+    "screens": {
+      "switcherLabel": "App screens",
+      "search": "Product search",
+      "productDetail": "Product detail",
+      "list": "Shopping list",
+      "listCompare": "Price comparison",
+      "discounts": "Discounts",
+      "savings": "Your savings"
     }
   },
   "toggle_menu": "Toggle menu",
