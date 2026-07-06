@@ -17,14 +17,6 @@
   "faq_header": "FAQ",
   "download_app": "Download App",
   "hero": {
-    "videoLabels": {
-      "search": "Search & Compare",
-      "searchAccent": "Prices",
-      "shoppingList": "Smart Shopping",
-      "shoppingListAccent": "Lists",
-      "sales": "Deals &",
-      "salesAccent": "Discounts"
-    },
     "screens": {
       "switcherLabel": "App screens",
       "search": "Product search",

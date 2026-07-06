@@ -1,11 +1,10 @@
 /**
  * HeroPhoneShowcase.tsx
  *
- * Lightweight phone mockup for the hero section. Replaces the heavy
- * PhoneSimulator: a single CSS phone frame with screenshots stacked on top
- * of each other, crossfaded with opacity only. No animated blurs, no 3D
- * transforms, no backdrop filters, no re-mounting — smooth on low-end
- * devices.
+ * Lightweight phone mockup for the hero section: a single CSS phone frame
+ * with screenshots stacked on top of each other, crossfaded with opacity
+ * only. No animated blurs, no 3D transforms, no backdrop filters, no
+ * re-mounting — smooth on low-end devices.
  *
  * Screenshots live in public/images/landing_page/.
  */

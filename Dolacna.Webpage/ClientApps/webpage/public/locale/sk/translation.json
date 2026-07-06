@@ -17,14 +17,6 @@
   "faq_header": "FAQ",
   "download_app": "Stiahnuť aplikáciu",
   "hero": {
-    "videoLabels": {
-      "search": "Vyhľadávanie &",
-      "searchAccent": "Porovnanie cien",
-      "shoppingList": "Inteligentné nákupné",
-      "shoppingListAccent": "Zoznamy",
-      "sales": "Akcie &",
-      "salesAccent": "Zľavy"
-    },
     "screens": {
       "switcherLabel": "Obrazovky aplikácie",
       "search": "Vyhľadávanie produktov",
