@@ -1,4 +1,5 @@
 import IPhoneMockupPng from '@/../public/images/app_mockup.png';
+import Seo from '@/components/Seo';
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
 import { Apple, Smartphone } from 'lucide-react';
@@ -37,6 +38,11 @@ const Download = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title={t('seo.download.title')}
+        description={t('seo.download.description')}
+        path="/Download"
+      />
       <Header />
       <main>
         {/* Page Header */}

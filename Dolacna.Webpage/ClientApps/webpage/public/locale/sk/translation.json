@@ -27,6 +27,39 @@
       "savings": "Tvoje úspory"
     }
   },
+  "seo": {
+    "home": {
+      "title": "Ušetri – Porovnaj ceny potravín a nakupuj lacnejšie",
+      "description": "Porovnaj ceny potravín v slovenských supermarketoch na jednom mieste. Vyskladaj si nákupný zoznam, sleduj aktuálne zľavy a zisti, kde nakúpiš najlacnejšie. Stiahni si aplikáciu Ušetri zadarmo."
+    },
+    "download": {
+      "title": "Stiahnuť aplikáciu Ušetri – App Store a Google Play",
+      "description": "Stiahni si aplikáciu Ušetri zadarmo pre iOS aj Android a začni porovnávať ceny potravín v slovenských supermarketoch."
+    },
+    "howItWorks": {
+      "title": "Ako funguje Ušetri – porovnávanie cien potravín",
+      "description": "Zisti, ako Ušetri porovnáva ceny potravín, sleduje zľavy a nájde najlacnejší obchod pre celý tvoj nákupný zoznam."
+    },
+    "faq": {
+      "title": "Často kladené otázky – Ušetri",
+      "description": "Odpovede na najčastejšie otázky o aplikácii Ušetri, porovnávaní cien potravín a nákupných zoznamoch."
+    },
+    "premium": {
+      "title": "Ušetri Premium – viac funkcií, väčšie úspory",
+      "description": "Prémiové funkcie aplikácie Ušetri pre ešte väčšie úspory pri každodenných nákupoch potravín."
+    },
+    "contact": {
+      "title": "Kontakt – Ušetri",
+      "description": "Máš otázku alebo nápad? Kontaktuj tím Ušetri – radi ti pomôžeme."
+    },
+    "aboutUs": {
+      "title": "O nás – tím Ušetri",
+      "description": "Spoznaj tím, ktorý stojí za aplikáciou Ušetri, a náš príbeh o férovejších cenách potravín."
+    },
+    "privacy": { "title": "Ochrana osobných údajov – Ušetri" },
+    "terms": { "title": "Podmienky používania – Ušetri" },
+    "cookies": { "title": "Cookies – Ušetri" }
+  },
   "toggle_menu": "Prepínať menu",
   "language": {
     "english": "Anglicky (English)",
