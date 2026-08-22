@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Seo from '@/components/Seo';
 import Download from './Download';
 
 const APP_STORE_URL =
@@ -27,7 +28,12 @@ const AppRedirect = () => {
     if (target) window.location.replace(target);
   }, []);
 
-  return <Download />;
+  return (
+    <>
+      <Seo title="Ušetri" noindex />
+      <Download />
+    </>
+  );
 };
 
 export default AppRedirect;

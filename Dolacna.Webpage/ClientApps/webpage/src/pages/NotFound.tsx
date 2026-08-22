@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import Seo from '@/components/Seo';
 import { Home } from 'lucide-react';
 
 const NotFound = () => {
@@ -15,6 +16,7 @@ const NotFound = () => {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-brand-nude">
+      <Seo title="404 – Ušetri" noindex />
       <div className="text-center max-w-md mx-auto p-8">
         <div className="mb-8">
           <span className="text-6xl font-bold text-brand-indigo">404</span>

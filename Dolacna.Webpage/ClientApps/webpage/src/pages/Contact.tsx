@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Seo from '@/components/Seo';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { useTranslation } from 'react-i18next';
@@ -100,6 +101,11 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title={t('seo.contact.title')}
+        description={t('seo.contact.description')}
+        path="/Contact"
+      />
       <Header />
       <main>
         <section className="py-20 bg-white" id="contact">

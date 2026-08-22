@@ -17,14 +17,48 @@
   "faq_header": "FAQ",
   "download_app": "Download App",
   "hero": {
-    "videoLabels": {
-      "search": "Search & Compare",
-      "searchAccent": "Prices",
-      "shoppingList": "Smart Shopping",
-      "shoppingListAccent": "Lists",
-      "sales": "Deals &",
-      "salesAccent": "Discounts"
+    "screens": {
+      "switcherLabel": "App screens",
+      "search": "Product search",
+      "productDetail": "Product detail",
+      "list": "Shopping list",
+      "listCompare": "Price comparison",
+      "discounts": "Discounts",
+      "savings": "Your savings"
     }
+  },
+  "seo": {
+    "home": {
+      "title": "Ušetri – Compare grocery prices and shop cheaper",
+      "description": "Compare grocery prices across Slovak supermarkets in one place. Build a shopping list, track current discounts and find out where you'll shop cheapest. Download the Ušetri app for free."
+    },
+    "download": {
+      "title": "Download the Ušetri app – App Store and Google Play",
+      "description": "Download the free Ušetri app for iOS and Android and start comparing grocery prices across Slovak supermarkets."
+    },
+    "howItWorks": {
+      "title": "How Ušetri works – grocery price comparison",
+      "description": "Learn how Ušetri compares grocery prices, tracks discounts and finds the cheapest store for your whole shopping list."
+    },
+    "faq": {
+      "title": "Frequently asked questions – Ušetri",
+      "description": "Answers to the most common questions about the Ušetri app, price comparison and shopping lists."
+    },
+    "premium": {
+      "title": "Ušetri Premium – more features, bigger savings",
+      "description": "Premium features of the Ušetri app for even bigger savings on everyday grocery shopping."
+    },
+    "contact": {
+      "title": "Contact – Ušetri",
+      "description": "Have a question or an idea? Get in touch with the Ušetri team – we're happy to help."
+    },
+    "aboutUs": {
+      "title": "About us – the Ušetri team",
+      "description": "Meet the team behind the Ušetri app and our story about fairer grocery prices."
+    },
+    "privacy": { "title": "Privacy Policy – Ušetri" },
+    "terms": { "title": "Terms of Service – Ušetri" },
+    "cookies": { "title": "Cookies – Ušetri" }
   },
   "toggle_menu": "Toggle menu",
   "language": {

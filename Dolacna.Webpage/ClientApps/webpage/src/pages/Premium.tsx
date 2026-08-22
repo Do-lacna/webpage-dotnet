@@ -1,4 +1,5 @@
 import Footer from '@/components/layout/Footer';
+import Seo from '@/components/Seo';
 import Header from '@/components/layout/Header';
 import { Button } from '@/components/ui/button';
 import {
@@ -88,6 +89,11 @@ const Premium = () => {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title={t('seo.premium.title')}
+        description={t('seo.premium.description')}
+        path="/Premium"
+      />
       <Header />
 
       {/* Hero Section */}

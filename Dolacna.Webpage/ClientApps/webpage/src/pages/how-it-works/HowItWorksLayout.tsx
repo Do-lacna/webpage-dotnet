@@ -1,8 +1,9 @@
 import Footer from '@/components/layout/Footer';
 import Header from '@/components/layout/Header';
+import Seo from '@/components/Seo';
 import { cn } from '@/lib/utils';
 import { useTranslation } from 'react-i18next';
-import { NavLink, Outlet } from 'react-router-dom';
+import { NavLink, Outlet, useLocation } from 'react-router-dom';
 
 const navItems = [
   { to: '/HowItWorks/process', labelKey: 'howItWorksPage.nav.process' },
@@ -23,9 +24,15 @@ const navItems = [
 
 const HowItWorksLayout = () => {
   const { t } = useTranslation();
+  const location = useLocation();
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title={t('seo.howItWorks.title')}
+        description={t('seo.howItWorks.description')}
+        path={location.pathname}
+      />
       <Header />
       <main className="pt-24 md:pt-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">

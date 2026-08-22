@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Seo from '@/components/Seo';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { useTranslation } from 'react-i18next';
@@ -41,6 +42,7 @@ const Cookies = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo title={t('seo.cookies.title')} path="/Cookies" />
       <Header />
       <main>
         <section className="py-20 bg-white" id="cookies-policy">

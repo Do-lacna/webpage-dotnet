@@ -3,9 +3,9 @@ import { lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
 
-const PhoneSimulator = lazy(() =>
-  import('@/components/sections/PhoneSimulator').then((m) => ({
-    default: m.PhoneSimulator,
+const HeroPhoneShowcase = lazy(() =>
+  import('@/components/sections/HeroPhoneShowcase').then((m) => ({
+    default: m.HeroPhoneShowcase,
   })),
 );
 
@@ -84,7 +84,7 @@ const Hero = () => {
           </div>
         </div>
 
-        {/* Phone simulator */}
+        {/* Phone showcase */}
         <div
           className="relative w-full md:ml-auto md:mr-0 reveal-animation flex items-center justify-center"
           data-anim="right"
@@ -97,7 +97,7 @@ const Hero = () => {
               />
             }
           >
-            <PhoneSimulator showDescription={false} />
+            <HeroPhoneShowcase />
           </Suspense>
         </div>
       </div>

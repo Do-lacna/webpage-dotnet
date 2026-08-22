@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import Seo from '@/components/Seo';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { useTranslation } from 'react-i18next';
@@ -41,6 +42,7 @@ const TermsOfService = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo title={t('seo.terms.title')} path="/TermsOfService" />
       <Header />
       <main>
         <section className="py-20 bg-white" id="terms-of-service">

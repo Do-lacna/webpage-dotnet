@@ -1,4 +1,5 @@
 import Footer from '@/components/layout/Footer';
+import Seo from '@/components/Seo';
 import Header from '@/components/layout/Header';
 import WhyUsethriWasBorn from '@/components/sections/WhyUsethriWasBorn';
 import React, { useEffect } from 'react';
@@ -58,6 +59,11 @@ const Team: React.FC = () => {
 
   return (
     <div className="min-h-screen">
+      <Seo
+        title={t('seo.aboutUs.title')}
+        description={t('seo.aboutUs.description')}
+        path="/AboutUs"
+      />
       <Header />
       <main>
         {/* Why Ušetri Was Born Section */}

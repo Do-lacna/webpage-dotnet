@@ -1,4 +1,5 @@
 import React from 'react';
+import Seo from '@/components/Seo';
 
 const Logo: React.FC = () => {
   const remoteSrc = 'https://usetrislovensko.sk/images/usetri-logo.png';
@@ -12,6 +13,8 @@ const Logo: React.FC = () => {
   };
 
   return (
+    <>
+      <Seo title="Ušetri Logo" noindex />
 
         <img
           src={remoteSrc}
@@ -20,7 +23,7 @@ const Logo: React.FC = () => {
           onError={handleError}
           className="max-w-[280px] w-full h-auto drop-shadow-md"
         />
-
+    </>
   );
 };
 
