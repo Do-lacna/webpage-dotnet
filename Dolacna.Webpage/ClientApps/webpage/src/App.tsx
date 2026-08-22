@@ -27,6 +27,7 @@ const Download = lazy(() => import('./pages/Download'));
 const AppRedirect = lazy(() => import('./pages/AppRedirect'));
 const Faq = lazy(() => import('./pages/Faq'));
 const LogoPage = lazy(() => import('./pages/Logo'));
+const SearchProducts = lazy(() => import('./pages/SearchProducts'));
 
 const queryClient = new QueryClient();
 
@@ -58,6 +59,7 @@ const App = () => (
             <Route path="/app" element={<AppRedirect />} />
             <Route path="/FAQ" element={<Faq />} />
             <Route path="/Logo" element={<LogoPage />} />
+            <Route path="/SearchProducts" element={<SearchProducts />} />
           </Routes>
         </Suspense>
       </BrowserRouter>

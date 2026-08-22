@@ -782,5 +782,16 @@
     "groceryListAlt": "Snímka nákupného zoznamu",
     "shopAlt": "Porovnanie cien v obchode {{number}}",
     "footnote": "Jednoducho prechádzaj obchodmi a skontroluj skutočné cenové rozdiely v rovnakom nákupnom zozname."
+  },
+  "searchProductsPage": {
+    "searchPlaceholder": "Hľadať produkty...",
+    "categoriesLabel": "Kategórie",
+    "allProducts": "Všetky produkty",
+    "noResults": "Žiadne produkty nezodpovedajú zadaným kritériám.",
+    "loadErrorProducts": "Produkty sa nepodarilo načítať. Skúste to prosím znova.",
+    "loadErrorCategories": "Kategórie sa nepodarilo načítať.",
+    "previousPage": "Predošlá",
+    "nextPage": "Ďalšia",
+    "pageIndicator": "Strana {{page}}"
   }
 }

@@ -765,5 +765,16 @@
     "groceryListAlt": "Grocery list screenshot",
     "shopAlt": "Price comparison in shop {{number}}",
     "footnote": "Swipe through the stores to see real price differences on the same grocery list."
+  },
+  "searchProductsPage": {
+    "searchPlaceholder": "Search products...",
+    "categoriesLabel": "Categories",
+    "allProducts": "All products",
+    "noResults": "No products match the selected criteria.",
+    "loadErrorProducts": "Failed to load products. Please try again.",
+    "loadErrorCategories": "Failed to load categories.",
+    "previousPage": "Previous",
+    "nextPage": "Next",
+    "pageIndicator": "Page {{page}}"
   }
 }
