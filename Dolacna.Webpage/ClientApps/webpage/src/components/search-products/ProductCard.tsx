@@ -1,7 +1,15 @@
 import { ImageOff } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
 import type { ShopProductDto } from '@/lib/catalogApi';
+
+// Shop ids returned by the API are stable and match these known chains.
+// Files live in /public, so they're referenced by URL, not imported.
+const SHOP_LOGOS: Record<number, { src: string; name: string }> = {
+  1: { src: '/images/stores/store-logos/lidl_logo.png', name: 'Lidl' },
+  2: { src: '/images/stores/store-logos/billa_logo.png', name: 'Billa' },
+  3: { src: '/images/stores/store-logos/kaufland_logo.png', name: 'Kaufland' },
+  4: { src: '/images/stores/store-logos/tesco_logo.png', name: 'Tesco' },
+};
 
 const formatPrice = (price: number) =>
   new Intl.NumberFormat('sk-SK', {
@@ -50,14 +58,27 @@ const ProductCard = ({ shopProduct }: ProductCardProps) => {
             </span>
           )}
         </div>
-        <div className="flex items-center justify-between pt-1">
+        <div className="flex items-center justify-between gap-2 pt-1">
           <span className="text-lg font-semibold text-brand-primary">
             {cheapest !== null ? formatPrice(cheapest) : 'N/A'}
           </span>
           {prices.length > 0 && (
-            <Badge variant="secondary">
-              {prices.length} {prices.length === 1 ? 'obchod' : 'obchodov'}
-            </Badge>
+            <div className="flex items-center gap-1">
+              {prices.map((price) => {
+                const logo = SHOP_LOGOS[price.shop_id];
+                if (!logo) return null;
+                return (
+                  <img
+                    key={price.shop_id}
+                    src={logo.src}
+                    alt={logo.name}
+                    title={logo.name}
+                    loading="lazy"
+                    className="h-5 w-5 shrink-0 rounded-sm bg-white object-contain p-0.5 ring-1 ring-border"
+                  />
+                );
+              })}
+            </div>
           )}
         </div>
       </CardContent>
