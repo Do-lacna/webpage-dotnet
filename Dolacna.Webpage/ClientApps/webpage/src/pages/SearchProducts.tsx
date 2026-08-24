@@ -5,6 +5,7 @@ import {
   SlidersHorizontal,
   ChevronLeft,
   ChevronRight,
+  Loader2,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/layout/Header';
@@ -131,6 +132,13 @@ const SearchProducts = () => {
                 {SKELETON_KEYS.map((key) => (
                   <Skeleton key={key} className="h-64 w-full" />
                 ))}
+              </div>
+            )}
+
+            {productsQuery.isFetching && !productsQuery.isLoading && (
+              <div className="flex items-center justify-center gap-2 py-4 text-sm text-muted-foreground">
+                <Loader2 className="h-4 w-4 animate-spin" />
+                {t('searchProductsPage.loading')}
               </div>
             )}
 

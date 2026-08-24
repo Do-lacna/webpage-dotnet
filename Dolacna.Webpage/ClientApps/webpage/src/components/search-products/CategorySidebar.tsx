@@ -25,29 +25,31 @@ function buildCategoryTree(categories: CategoryDto[]): CategoryTreeNode[] {
   const allowedRootIds = new Set(ALLOWED_ROOT_CATEGORY_IDS);
   const nodesById = new Map<number, CategoryTreeNode>();
 
-  categories.forEach((category) => {
-    const ids = category.path_from_root_numeric;
-    const names = category.path_from_root;
-    if (!ids?.length || !names?.length || !allowedRootIds.has(ids[0])) return;
+  categories
+    .filter((category) => category.is_purchasable)
+    .forEach((category) => {
+      const ids = category.path_from_root_numeric;
+      const names = category.path_from_root;
+      if (!ids?.length || !names?.length || !allowedRootIds.has(ids[0])) return;
 
-    let parentNode: CategoryTreeNode | undefined;
-    ids.forEach((id, index) => {
-      let node = nodesById.get(id);
-      if (!node) {
-        node = { id, name: names[index] ?? '', category: null, children: [] };
-        nodesById.set(id, node);
-      }
-      const isLeaf = index === ids.length - 1;
-      if (isLeaf) {
-        node.category = category;
-        node.name = category.name ?? node.name;
-      }
-      if (parentNode && !parentNode.children.includes(node)) {
-        parentNode.children.push(node);
-      }
-      parentNode = node;
+      let parentNode: CategoryTreeNode | undefined;
+      ids.forEach((id, index) => {
+        let node = nodesById.get(id);
+        if (!node) {
+          node = { id, name: names[index] ?? '', category: null, children: [] };
+          nodesById.set(id, node);
+        }
+        const isLeaf = index === ids.length - 1;
+        if (isLeaf) {
+          node.category = category;
+          node.name = category.name ?? node.name;
+        }
+        if (parentNode && !parentNode.children.includes(node)) {
+          parentNode.children.push(node);
+        }
+        parentNode = node;
+      });
     });
-  });
 
   const sortNodes = (nodes: CategoryTreeNode[]) => {
     nodes.sort(

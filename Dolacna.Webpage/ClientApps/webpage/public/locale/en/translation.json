@@ -808,6 +808,7 @@
     "noResults": "No products match the selected criteria.",
     "loadErrorProducts": "Failed to load products. Please try again.",
     "loadErrorCategories": "Failed to load categories.",
+    "loading": "Loading...",
     "previousPage": "Previous",
     "nextPage": "Next",
     "pageIndicator": "Page {{page}}"

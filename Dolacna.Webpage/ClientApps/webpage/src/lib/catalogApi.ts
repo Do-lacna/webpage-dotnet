@@ -1,11 +1,6 @@
 // Thin client for the Ušetri backend public "Query" endpoints used by the
 // SearchProducts prototype. Docs: https://api.usetrislovensko.sk/swagger/v1/swagger.json
 //
-// Note: the backend also exposes /admin/products and /admin/categories with
-// richer data (available shops, cheapest price per category, etc.), but those
-// require a Bearer JWT and return 401 without one. Since this is a public,
-// unauthenticated page, we use the public /products and /categories endpoints
-// instead, which return the same product/category shapes.
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ?? 'https://api.usetrislovensko.sk';
 

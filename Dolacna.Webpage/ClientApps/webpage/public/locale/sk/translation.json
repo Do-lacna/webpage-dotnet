@@ -825,6 +825,7 @@
     "noResults": "Žiadne produkty nezodpovedajú zadaným kritériám.",
     "loadErrorProducts": "Produkty sa nepodarilo načítať. Skúste to prosím znova.",
     "loadErrorCategories": "Kategórie sa nepodarilo načítať.",
+    "loading": "Načítava sa...",
     "previousPage": "Predošlá",
     "nextPage": "Ďalšia",
     "pageIndicator": "Strana {{page}}"
