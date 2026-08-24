@@ -46,7 +46,7 @@ public static class CatalogProxyEndpoints
             var body = await upstreamResponse.Content.ReadAsStringAsync();
             if (upstreamResponse.IsSuccessStatusCode)
             {
-                body = TruncateProductPrices(body);
+                body = SanitizeProductsForPublicPreview(body);
             }
             return Results.Content(body, "application/json", statusCode: (int)upstreamResponse.StatusCode);
         }).CacheOutput("Products");
@@ -66,7 +66,7 @@ public static class CatalogProxyEndpoints
         return endpoints;
     }
 
-    private static string TruncateProductPrices(string json)
+    private static string SanitizeProductsForPublicPreview(string json)
     {
         var root = JsonNode.Parse(json)?.AsObject();
         if (root?["products"] is not JsonArray products)
@@ -80,6 +80,9 @@ public static class CatalogProxyEndpoints
             {
                 continue;
             }
+
+            // The public preview only teases the cheapest match, not the full cross-shop comparison.
+            KeepCheapestShopPrice(shopsPrices);
 
             foreach (var shopPrice in shopsPrices)
             {
@@ -97,6 +100,35 @@ public static class CatalogProxyEndpoints
         }
 
         return root.ToJsonString();
+    }
+
+    private static void KeepCheapestShopPrice(JsonArray shopsPrices)
+    {
+        if (shopsPrices.Count <= 1)
+        {
+            return;
+        }
+
+        JsonNode? cheapest = null;
+        var cheapestPrice = decimal.MaxValue;
+        foreach (var shopPrice in shopsPrices)
+        {
+            if (shopPrice?["actual_price"] is JsonValue value &&
+                value.TryGetValue(out decimal price) &&
+                price < cheapestPrice)
+            {
+                cheapestPrice = price;
+                cheapest = shopPrice;
+            }
+        }
+
+        if (cheapest is null)
+        {
+            return;
+        }
+
+        shopsPrices.Clear();
+        shopsPrices.Add(cheapest);
     }
 
     private static void TruncatePriceFields(JsonObject target, string[] fields)
