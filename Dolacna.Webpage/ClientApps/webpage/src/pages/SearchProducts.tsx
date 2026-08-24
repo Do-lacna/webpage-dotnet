@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useQuery, keepPreviousData } from '@tanstack/react-query';
 import {
-  Search,
   SlidersHorizontal,
   ChevronLeft,
   ChevronRight,
@@ -10,7 +10,6 @@ import {
 import { useTranslation } from 'react-i18next';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
-import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Skeleton } from '@/components/ui/skeleton';
 import {
@@ -24,29 +23,20 @@ import CategorySidebar from '@/components/search-products/CategorySidebar';
 import ProductCard from '@/components/search-products/ProductCard';
 import { fetchCategories, fetchProducts } from '@/lib/catalogApi';
 
-const PAGE_SIZE = 20;
+const PRODUCTS_LIMIT = 20;
+const VISIBLE_PRODUCTS_COUNT = 0;
 const SKELETON_KEYS = Array.from(
-  { length: PAGE_SIZE },
+  { length: PRODUCTS_LIMIT },
   (_, i) => `product-skeleton-${i}`,
 );
 
 const SearchProducts = () => {
   const { t } = useTranslation();
-  const [searchInput, setSearchInput] = useState('');
-  const [debouncedSearch, setDebouncedSearch] = useState('');
+  const navigate = useNavigate();
   const [selectedCategoryId, setSelectedCategoryId] = useState<number | null>(
     null,
   );
   const [page, setPage] = useState(1);
-
-  // Debounce the free-text search so we don't spam the API on every keystroke.
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setDebouncedSearch(searchInput.trim());
-      setPage(1);
-    }, 400);
-    return () => clearTimeout(timeout);
-  }, [searchInput]);
 
   const handleSelectCategory = (categoryId: number | null) => {
     setSelectedCategoryId(categoryId);
@@ -60,21 +50,19 @@ const SearchProducts = () => {
   });
 
   const productsQuery = useQuery({
-    queryKey: ['products', debouncedSearch, selectedCategoryId, page],
+    queryKey: ['products', selectedCategoryId, page],
     queryFn: () =>
       fetchProducts({
-        search: debouncedSearch || undefined,
         categoryId: selectedCategoryId ?? undefined,
-        limit: PAGE_SIZE,
-        offset: (page - 1) * PAGE_SIZE,
+        limit: PRODUCTS_LIMIT,
+        offset: (page - 1) * PRODUCTS_LIMIT,
       }),
     placeholderData: keepPreviousData,
   });
 
-  // The API's `count` field only reflects the number of items in the current
-  // page (not the total match count), so we can't compute a real page total.
-  // Instead we detect a next page by checking whether this page was full.
-  const hasNextPage = (productsQuery.data?.products?.length ?? 0) === PAGE_SIZE;
+  const allProducts = productsQuery.data?.products ?? [];
+  const visibleProducts = allProducts.slice(0, VISIBLE_PRODUCTS_COUNT);
+  const hiddenProducts = allProducts.slice(VISIBLE_PRODUCTS_COUNT);
 
   const sidebarContent = (
     <CategorySidebar
@@ -91,16 +79,7 @@ const SearchProducts = () => {
       <Header />
 
       <main className="flex-1 container mx-auto px-4 pt-24 pb-16">
-        <div className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <div className="relative flex-1">
-            <Search className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-            <Input
-              value={searchInput}
-              onChange={(e) => setSearchInput(e.target.value)}
-              placeholder={t('searchProductsPage.searchPlaceholder')}
-              className="pl-9"
-            />
-          </div>
+        <div className="mb-6 flex justify-end">
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="outline" className="sm:hidden">
@@ -150,45 +129,66 @@ const SearchProducts = () => {
 
             {productsQuery.data && (
               <>
-                {productsQuery.data.products?.length ? (
-                  <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-                    {productsQuery.data.products.map((shopProduct) => (
-                      <ProductCard
-                        key={shopProduct.detail.id}
-                        shopProduct={shopProduct}
-                      />
-                    ))}
-                  </div>
-                ) : (
+                {allProducts.length === 0 ? (
                   <p className="py-12 text-center text-muted-foreground">
                     {t('searchProductsPage.noResults')}
                   </p>
-                )}
+                ) : (
+                  <>
+                    {visibleProducts.length > 0 && (
+                      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+                        {visibleProducts.map((shopProduct) => (
+                          <ProductCard
+                            key={shopProduct.detail.id}
+                            shopProduct={shopProduct}
+                          />
+                        ))}
+                      </div>
+                    )}
 
-                {(page > 1 || hasNextPage) && (
-                  <div className="mt-8 flex items-center justify-center gap-4">
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      disabled={page <= 1}
-                      onClick={() => setPage((p) => Math.max(1, p - 1))}
-                    >
-                      <ChevronLeft className="h-4 w-4" />
-                      {t('searchProductsPage.previousPage')}
-                    </Button>
-                    <span className="text-sm text-muted-foreground">
-                      {t('searchProductsPage.pageIndicator', { page })}
-                    </span>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      disabled={!hasNextPage}
-                      onClick={() => setPage((p) => p + 1)}
-                    >
-                      {t('searchProductsPage.nextPage')}
-                      <ChevronRight className="h-4 w-4" />
-                    </Button>
-                  </div>
+                    {hiddenProducts.length > 0 && (
+                      <div className="relative mt-4">
+                        <div
+                          aria-hidden="true"
+                          className="grid grid-cols-2 gap-4 blur-sm select-none sm:grid-cols-3 lg:grid-cols-4"
+                        >
+                          {hiddenProducts.map((shopProduct) => (
+                            <ProductCard
+                              key={shopProduct.detail.id}
+                              shopProduct={shopProduct}
+                            />
+                          ))}
+                        </div>
+                        <div className="absolute inset-x-0 top-0 flex justify-center p-6">
+                          <div className="flex flex-col items-center gap-3 rounded-lg border border-white/40 bg-white/20 p-6 text-center shadow-lg backdrop-blur-md">
+                            <p className="font-semibold text-foreground">
+                              {t('searchProductsPage.moreProductsTitle')}
+                            </p>
+                            <p className="max-w-xs text-sm text-muted-foreground">
+                              {t('searchProductsPage.moreProductsSubtitle')}
+                            </p>
+                            <Button onClick={() => navigate('/Download')}>
+                              {t('download_now')}
+                            </Button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+
+                    <div className="mt-8 flex items-center justify-center gap-4">
+                      <Button variant="outline" size="sm" disabled>
+                        <ChevronLeft className="h-4 w-4" />
+                        {t('searchProductsPage.previousPage')}
+                      </Button>
+                      <span className="text-sm text-muted-foreground">
+                        {t('searchProductsPage.pageIndicator', { page })}
+                      </span>
+                      <Button variant="outline" size="sm" disabled>
+                        {t('searchProductsPage.nextPage')}
+                        <ChevronRight className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </>
                 )}
               </>
             )}

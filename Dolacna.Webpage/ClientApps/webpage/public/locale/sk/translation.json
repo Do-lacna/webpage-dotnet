@@ -819,7 +819,6 @@
     "footnote": "Jednoducho prechádzaj obchodmi a skontroluj skutočné cenové rozdiely v rovnakom nákupnom zozname."
   },
   "searchProductsPage": {
-    "searchPlaceholder": "Hľadať produkty...",
     "categoriesLabel": "Kategórie",
     "allProducts": "Všetky produkty",
     "noResults": "Žiadne produkty nezodpovedajú zadaným kritériám.",
@@ -828,6 +827,8 @@
     "loading": "Načítava sa...",
     "previousPage": "Predošlá",
     "nextPage": "Ďalšia",
-    "pageIndicator": "Strana {{page}}"
+    "pageIndicator": "Strana {{page}}",
+    "moreProductsTitle": "Chceš vidieť všetky vyhovujúce produkty?",
+    "moreProductsSubtitle": "Stiahni si aplikáciu Ušetri a prehliadaj celý katalóg s porovnaním cien."
   }
 }
