@@ -1,8 +1,8 @@
 // Thin client for the Ušetri backend public "Query" endpoints used by the
-// SearchProducts prototype. Docs: https://api.usetrislovensko.sk/swagger/v1/swagger.json
-//
+// SearchProducts prototype. Calls go through this app's own /api proxy so the
+// upstream catalog API host is never exposed to the browser.
 const API_BASE_URL =
-  import.meta.env.VITE_API_BASE_URL ?? 'https://api.usetrislovensko.sk';
+  import.meta.env.VITE_API_BASE_URL ?? window.location.origin;
 
 export interface UnitDto {
   original_amount: number;
@@ -102,7 +102,7 @@ async function catalogFetch<T>(
 
 export function fetchCategories(): Promise<GetCategoriesResponse> {
   // Fetch a large page so the full category tree can be built client-side.
-  return catalogFetch<GetCategoriesResponse>('/categories', {
+  return catalogFetch<GetCategoriesResponse>('/api/categories', {
     Limit: 1000,
     Offset: 0,
   });
@@ -111,7 +111,7 @@ export function fetchCategories(): Promise<GetCategoriesResponse> {
 export function fetchProducts(
   params: GetProductsParams,
 ): Promise<GetProductsResponse> {
-  return catalogFetch<GetProductsResponse>('/products', {
+  return catalogFetch<GetProductsResponse>('/api/products', {
     search: params.search,
     category_id: params.categoryId,
     Limit: params.limit,
@@ -120,7 +120,8 @@ export function fetchProducts(
 }
 
 // Root/intermediate categories aren't returned by /categories (only leaf
-// categories are), but their images still live on the CDN at this path.
+// categories are), but their images still live on the CDN; proxied through
+// this app so the storage host isn't exposed to the browser.
 export function getCategoryImageUrl(categoryId: number): string {
-  return `https://usetristorage.blob.core.windows.net/images/categories/${categoryId}.jpg`;
+  return `${API_BASE_URL}/api/categories/${categoryId}/image`;
 }

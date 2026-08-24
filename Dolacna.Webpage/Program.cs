@@ -35,6 +35,8 @@ builder.Services.AddResponseCompression(options =>
 builder.Services.Configure<BrotliCompressionProviderOptions>(o => o.Level = CompressionLevel.Optimal);
 builder.Services.Configure<GzipCompressionProviderOptions>(o => o.Level = CompressionLevel.Optimal);
 
+builder.Services.AddCatalogProxy(builder.Configuration);
+
 builder.Host.UseSerilog(
     (context, configuration) =>
     {
@@ -54,6 +56,10 @@ builder.Host.UseSerilog(
 var app = builder.Build();
 app.UseResponseCompression();
 app.UseCors("AllowAll");
+app.UseOutputCache();
+
+app.MapCatalogProxy();
+
 app.UseStaticFiles(new StaticFileOptions
 {
     OnPrepareResponse = ctx =>
