@@ -123,3 +123,9 @@ export function fetchProducts(
     Offset: params.offset,
   });
 }
+
+// Root/intermediate categories aren't returned by /categories (only leaf
+// categories are), but their images still live on the CDN at this path.
+export function getCategoryImageUrl(categoryId: number): string {
+  return `https://usetristorage.blob.core.windows.net/images/categories/${categoryId}.jpg`;
+}

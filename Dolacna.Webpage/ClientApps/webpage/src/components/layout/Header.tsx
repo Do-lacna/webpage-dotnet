@@ -76,6 +76,17 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
           <a
+            href="/SearchProducts"
+            className={cn(
+              'nav-link transition-colors',
+              isTransparent
+                ? 'text-white/90 hover:text-brand-secondary'
+                : 'text-brand-indigo hover:text-brand-primary',
+            )}
+          >
+            {t('search_products_header')}
+          </a>
+          <a
             href="/HowItWorks"
             className={cn(
               'nav-link transition-colors',
@@ -86,6 +97,7 @@ const Header = () => {
           >
             {t('how_it_works')}
           </a>
+
           <a
             href="/Premium"
             className={cn(
@@ -172,12 +184,20 @@ const Header = () => {
         <div className="md:hidden absolute top-full left-0 right-0 bg-white shadow-lg border-t border-brand-lilac/20 animate-slide-down">
           <div className="px-4 py-6 space-y-4">
             <a
+              href="/SearchProducts"
+              className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {t('search_products_header')}
+            </a>
+            <a
               href="/HowItWorks"
               className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
               {t('how_it_works')}
             </a>
+
             <a
               href="/Premium"
               className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
