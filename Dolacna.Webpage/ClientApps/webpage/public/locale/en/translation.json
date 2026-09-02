@@ -13,10 +13,22 @@
   "scroll_to_explore": "Scroll to explore",
   "features_header": "Features",
   "how_it_works": "How It Works",
-  "search_products_header": "Search Products",
+  "categories_overview_header": "Categories Overview",
   "premium_header": "Premium",
   "faq_header": "FAQ",
   "download_app": "Download App",
+  "searchProductsPage": {
+    "title": "Categories Overview",
+    "subtitle": "Browse thousands of products across stores and compare prices in one place.",
+    "searchPlaceholder": "Search categories...",
+    "noCategoryMatches": "No matching categories found.",
+    "categoriesTitle": "Categories",
+    "allCategories": "All categories",
+    "loadMore": "Load more",
+    "loading": "Loading products...",
+    "noResults": "We couldn't find any products. Try a different search or category.",
+    "errorLoading": "Failed to load products. Please try again."
+  },
   "hero": {
     "screens": {
       "switcherLabel": "App screens",
@@ -59,7 +71,11 @@
     },
     "privacy": { "title": "Privacy Policy – Ušetri" },
     "terms": { "title": "Terms of Service – Ušetri" },
-    "cookies": { "title": "Cookies – Ušetri" }
+    "cookies": { "title": "Cookies – Ušetri" },
+    "searchProducts": {
+      "title": "Browse categories and products – Ušetri",
+      "description": "Browse products by category and compare prices across Slovak supermarkets in one place."
+    }
   },
   "toggle_menu": "Toggle menu",
   "language": {
@@ -800,18 +816,5 @@
     "groceryListAlt": "Grocery list screenshot",
     "shopAlt": "Price comparison in shop {{number}}",
     "footnote": "Swipe through the stores to see real price differences on the same grocery list."
-  },
-  "searchProductsPage": {
-    "categoriesLabel": "Categories",
-    "allProducts": "All products",
-    "noResults": "No products match the selected criteria.",
-    "loadErrorProducts": "Failed to load products. Please try again.",
-    "loadErrorCategories": "Failed to load categories.",
-    "loading": "Loading...",
-    "previousPage": "Previous",
-    "nextPage": "Next",
-    "pageIndicator": "Page {{page}}",
-    "moreProductsTitle": "Want to see all matching products?",
-    "moreProductsSubtitle": "Download the Ušetri app to browse the full catalog and compare prices."
   }
 }

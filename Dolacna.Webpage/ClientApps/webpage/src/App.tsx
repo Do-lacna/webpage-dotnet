@@ -27,7 +27,9 @@ const Download = lazy(() => import('./pages/Download'));
 const AppRedirect = lazy(() => import('./pages/AppRedirect'));
 const Faq = lazy(() => import('./pages/Faq'));
 const LogoPage = lazy(() => import('./pages/Logo'));
-const SearchProducts = lazy(() => import('./pages/SearchProducts'));
+const SearchProducts = lazy(
+  () => import('./pages/search-products/SearchProducts'),
+);
 
 const queryClient = new QueryClient();
 

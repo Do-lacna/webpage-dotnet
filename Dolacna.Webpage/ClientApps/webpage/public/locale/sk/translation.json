@@ -13,10 +13,22 @@
   "scroll_to_explore": "Scrollnite pre viac",
   "features_header": "Funkcie",
   "how_it_works": "Ako to funguje",
-  "search_products_header": "Vyhľadať produkty",
+  "categories_overview_header": "Prehľad kategórií",
   "premium_header": "Prémium",
   "faq_header": "FAQ",
   "download_app": "Stiahnuť aplikáciu",
+  "searchProductsPage": {
+    "title": "Prehľad kategórií",
+    "subtitle": "Prehľadávaj tisíce produktov naprieč obchodmi a porovnaj ceny na jednom mieste.",
+    "searchPlaceholder": "Hľadať kategórie...",
+    "noCategoryMatches": "Nenašli sme žiadnu zodpovedajúcu kategóriu.",
+    "categoriesTitle": "Kategórie",
+    "allCategories": "Všetky kategórie",
+    "loadMore": "Načítať ďalšie",
+    "loading": "Načítavam produkty...",
+    "noResults": "Nenašli sme žiadne produkty. Skús zmeniť vyhľadávanie alebo kategóriu.",
+    "errorLoading": "Produkty sa nepodarilo načítať. Skús to prosím znova."
+  },
   "hero": {
     "screens": {
       "switcherLabel": "Obrazovky aplikácie",
@@ -59,7 +71,11 @@
     },
     "privacy": { "title": "Ochrana osobných údajov – Ušetri" },
     "terms": { "title": "Podmienky používania – Ušetri" },
-    "cookies": { "title": "Cookies – Ušetri" }
+    "cookies": { "title": "Cookies – Ušetri" },
+    "searchProducts": {
+      "title": "Prehľad kategórií a produktov – Ušetri",
+      "description": "Prehľadávaj produkty podľa kategórií a porovnaj ceny naprieč slovenskými supermarketmi na jednom mieste."
+    }
   },
   "toggle_menu": "Prepínať menu",
   "language": {
@@ -817,18 +833,5 @@
     "groceryListAlt": "Snímka nákupného zoznamu",
     "shopAlt": "Porovnanie cien v obchode {{number}}",
     "footnote": "Jednoducho prechádzaj obchodmi a skontroluj skutočné cenové rozdiely v rovnakom nákupnom zozname."
-  },
-  "searchProductsPage": {
-    "categoriesLabel": "Kategórie",
-    "allProducts": "Všetky produkty",
-    "noResults": "Žiadne produkty nezodpovedajú zadaným kritériám.",
-    "loadErrorProducts": "Produkty sa nepodarilo načítať. Skúste to prosím znova.",
-    "loadErrorCategories": "Kategórie sa nepodarilo načítať.",
-    "loading": "Načítava sa...",
-    "previousPage": "Predošlá",
-    "nextPage": "Ďalšia",
-    "pageIndicator": "Strana {{page}}",
-    "moreProductsTitle": "Chceš vidieť všetky vyhovujúce produkty?",
-    "moreProductsSubtitle": "Stiahni si aplikáciu Ušetri a prehliadaj celý katalóg s porovnaním cien."
   }
 }

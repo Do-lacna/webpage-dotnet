@@ -84,7 +84,7 @@ const Header = () => {
                 : 'text-brand-indigo hover:text-brand-primary',
             )}
           >
-            {t('search_products_header')}
+            {t('categories_overview_header')}
           </a>
           <a
             href="/HowItWorks"
@@ -188,7 +188,7 @@ const Header = () => {
               className="nav-link block py-2 text-brand-indigo hover:text-brand-primary transition-colors"
               onClick={() => setMobileMenuOpen(false)}
             >
-              {t('search_products_header')}
+              {t('categories_overview_header')}
             </a>
             <a
               href="/HowItWorks"
