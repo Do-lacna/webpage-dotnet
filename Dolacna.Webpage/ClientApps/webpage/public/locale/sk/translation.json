@@ -17,18 +17,6 @@
   "premium_header": "Prémium",
   "faq_header": "FAQ",
   "download_app": "Stiahnuť aplikáciu",
-  "searchProductsPage": {
-    "title": "Prehľad kategórií",
-    "subtitle": "Prehľadávaj tisíce produktov naprieč obchodmi a porovnaj ceny na jednom mieste.",
-    "searchPlaceholder": "Hľadať kategórie...",
-    "noCategoryMatches": "Nenašli sme žiadnu zodpovedajúcu kategóriu.",
-    "categoriesTitle": "Kategórie",
-    "allCategories": "Všetky kategórie",
-    "loadMore": "Načítať ďalšie",
-    "loading": "Načítavam produkty...",
-    "noResults": "Nenašli sme žiadne produkty. Skús zmeniť vyhľadávanie alebo kategóriu.",
-    "errorLoading": "Produkty sa nepodarilo načítať. Skús to prosím znova."
-  },
   "hero": {
     "screens": {
       "switcherLabel": "Obrazovky aplikácie",
@@ -76,6 +64,18 @@
       "title": "Prehľad kategórií a produktov – Ušetri",
       "description": "Prehľadávaj produkty podľa kategórií a porovnaj ceny naprieč slovenskými supermarketmi na jednom mieste."
     }
+  },
+  "categorySearch": {
+    "heading": "Nájdi najlepšiu cenu podľa kategórie",
+    "subheading": "Vyhľadaj kategóriu a okamžite porovnaj jej ceny vo všetkých supermarketoch.",
+    "searchPlaceholder": "napr. mlieko, chlieb, vajcia...",
+    "noResults": "Nenašli sa žiadne zodpovedajúce kategórie",
+    "comparisonHeading": "{{category}} – porovnanie cien",
+    "avgPrice": "priem. cena",
+    "cheapest": "Najlacnejšie",
+    "product": "Produkt",
+    "noProducts": "Pre túto kategóriu zatiaľ neboli nájdené žiadne produkty.",
+    "loadError": "Nepodarilo sa načítať ceny pre túto kategóriu. Skús to prosím znova."
   },
   "toggle_menu": "Prepínať menu",
   "language": {

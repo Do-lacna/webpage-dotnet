@@ -17,18 +17,6 @@
   "premium_header": "Premium",
   "faq_header": "FAQ",
   "download_app": "Download App",
-  "searchProductsPage": {
-    "title": "Categories Overview",
-    "subtitle": "Browse thousands of products across stores and compare prices in one place.",
-    "searchPlaceholder": "Search categories...",
-    "noCategoryMatches": "No matching categories found.",
-    "categoriesTitle": "Categories",
-    "allCategories": "All categories",
-    "loadMore": "Load more",
-    "loading": "Loading products...",
-    "noResults": "We couldn't find any products. Try a different search or category.",
-    "errorLoading": "Failed to load products. Please try again."
-  },
   "hero": {
     "screens": {
       "switcherLabel": "App screens",
@@ -76,6 +64,18 @@
       "title": "Browse categories and products – Ušetri",
       "description": "Browse products by category and compare prices across Slovak supermarkets in one place."
     }
+  },
+  "categorySearch": {
+    "heading": "Find the best price by category",
+    "subheading": "Search for a category and instantly compare its prices across all supermarkets.",
+    "searchPlaceholder": "e.g. milk, bread, eggs...",
+    "noResults": "No matching categories found",
+    "comparisonHeading": "{{category}} – price comparison",
+    "avgPrice": "avg. price",
+    "cheapest": "Cheapest",
+    "product": "Product",
+    "noProducts": "No products found for this category yet.",
+    "loadError": "Couldn't load prices for this category. Please try again."
   },
   "toggle_menu": "Toggle menu",
   "language": {
