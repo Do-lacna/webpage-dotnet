@@ -1,12 +1,8 @@
-import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { type CategoryDto } from '@/lib/catalogApi';
-import { Trophy } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import {
-  formatPrice,
-  useCategoryPriceComparison,
-} from './useCategoryPriceComparison';
+import ProductPriceCard from './ProductPriceCard';
+import { useCategoryPriceComparison } from './useCategoryPriceComparison';
 
 interface CategoryPriceComparisonProps {
   category: CategoryDto;
@@ -16,13 +12,16 @@ const CategoryPriceComparison = ({
   category,
 }: CategoryPriceComparisonProps) => {
   const { t } = useTranslation();
-  const { products, shopCheapestPrices, cheapestShopId, isLoading, isError } =
-    useCategoryPriceComparison(category.id);
+  const { products, isLoading, isError } = useCategoryPriceComparison(
+    category.id,
+  );
 
   if (isLoading) {
     return (
-      <div className="mx-auto mt-10 max-w-4xl">
-        <Skeleton className="h-24 w-full rounded-2xl" />
+      <div className="mx-auto mt-10 max-w-4xl space-y-4">
+        <Skeleton className="h-32 w-full rounded-2xl" />
+        <Skeleton className="h-32 w-full rounded-2xl" />
+        <Skeleton className="h-32 w-full rounded-2xl" />
       </div>
     );
   }
@@ -49,30 +48,9 @@ const CategoryPriceComparison = ({
         {t('categorySearch.comparisonHeading', { category: category.name })}
       </h2>
 
-      {/* Cheapest price per shop */}
-      <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
-        {shopCheapestPrices.map((shop) => (
-          <div
-            key={shop.id}
-            className="relative flex flex-col items-center gap-2 rounded-2xl border border-brand-lilac/30 bg-white p-4 shadow-sm"
-          >
-            {shop.id === cheapestShopId && (
-              <Badge className="absolute -top-3 gap-1 border-transparent bg-brand-secondary text-brand-indigo">
-                <Trophy className="h-3 w-3" />
-                {t('categorySearch.cheapest')}
-              </Badge>
-            )}
-            <img
-              src={shop.logo}
-              alt={shop.name}
-              className="h-8 w-auto object-contain"
-            />
-            <span className="text-lg font-bold text-brand-indigo">
-              {shop.cheapestPrice !== null
-                ? formatPrice(shop.cheapestPrice)
-                : '—'}
-            </span>
-          </div>
+      <div className="mt-6 space-y-4">
+        {products.map((product) => (
+          <ProductPriceCard key={product.detail.id} product={product} />
         ))}
       </div>
     </div>

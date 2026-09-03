@@ -75,7 +75,8 @@
     "cheapest": "Najlacnejšie",
     "product": "Produkt",
     "noProducts": "Pre túto kategóriu zatiaľ neboli nájdené žiadne produkty.",
-    "loadError": "Nepodarilo sa načítať ceny pre túto kategóriu. Skús to prosím znova."
+    "loadError": "Nepodarilo sa načítať ceny pre túto kategóriu. Skús to prosím znova.",
+    "noImage": "Bez obrázku"
   },
   "toggle_menu": "Prepínať menu",
   "language": {

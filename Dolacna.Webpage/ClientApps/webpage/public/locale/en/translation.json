@@ -75,7 +75,8 @@
     "cheapest": "Cheapest",
     "product": "Product",
     "noProducts": "No products found for this category yet.",
-    "loadError": "Couldn't load prices for this category. Please try again."
+    "loadError": "Couldn't load prices for this category. Please try again.",
+    "noImage": "No image"
   },
   "toggle_menu": "Toggle menu",
   "language": {
