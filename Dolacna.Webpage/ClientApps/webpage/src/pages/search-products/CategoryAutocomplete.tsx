@@ -1,22 +1,13 @@
 import { useDebouncedValue } from '@/hooks/use-debounced-value';
-import { type CategoryDto, fetchCategories } from '@/lib/catalogApi';
-import { useQuery } from '@tanstack/react-query';
+import { type CategoryDto } from '@/lib/catalogApi';
 import { Loader2, Search } from 'lucide-react';
-import { useEffect, useMemo, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useCategorySearch } from './useCategorySearch';
 
 interface CategoryAutocompleteProps {
   onSelectCategory: (category: CategoryDto) => void;
 }
-
-const MAX_SUGGESTIONS = 8;
-
-const normalizeText = (text: string) =>
-  text
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .trim();
 
 const CategoryAutocomplete = ({
   onSelectCategory,
@@ -27,37 +18,7 @@ const CategoryAutocomplete = ({
   const debouncedQuery = useDebouncedValue(query, 150);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // Leaf categories only come back from the API in a single (large) page, so
-  // fetch once and filter on the client as the user types.
-  const { data, isLoading } = useQuery({
-    queryKey: ['categories'],
-    queryFn: fetchCategories,
-    staleTime: 5 * 60 * 1000,
-  });
-
-  const categories = useMemo(
-    () =>
-      (data?.categories ?? []).filter(
-        (category) => category.is_purchasable !== false,
-      ),
-    [data],
-  );
-
-  const suggestions = useMemo(() => {
-    const normalizedQuery = normalizeText(debouncedQuery);
-    if (!normalizedQuery) return [];
-    return categories
-      .filter((category) => {
-        const nameMatch =
-          category.name &&
-          normalizeText(category.name).includes(normalizedQuery);
-        const pathMatch = category.path_from_root?.some((segment) =>
-          normalizeText(segment).includes(normalizedQuery),
-        );
-        return Boolean(nameMatch || pathMatch);
-      })
-      .slice(0, MAX_SUGGESTIONS);
-  }, [categories, debouncedQuery]);
+  const { suggestions, isLoading } = useCategorySearch(debouncedQuery);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
