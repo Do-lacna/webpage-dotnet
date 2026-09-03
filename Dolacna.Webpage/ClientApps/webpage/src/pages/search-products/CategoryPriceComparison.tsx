@@ -98,7 +98,7 @@ const CategoryPriceComparison = ({
   }
 
   return (
-    <div className="mx-auto mt-10 max-w-4xl reveal-animation" data-anim="up">
+    <div className="mx-auto mt-10 max-w-4xl animate-slide-up">
       <h2 className="text-center text-2xl font-bold text-brand-indigo">
         {t('categorySearch.comparisonHeading', { category: category.name })}
       </h2>
