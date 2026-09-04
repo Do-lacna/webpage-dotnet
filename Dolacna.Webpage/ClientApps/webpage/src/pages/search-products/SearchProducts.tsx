@@ -7,6 +7,8 @@ import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import CategoryAutocomplete from './CategoryAutocomplete';
 import CategoryPriceComparison from './CategoryPriceComparison';
+import SearchLimitDialog from './SearchLimitDialog';
+import { useSearchLimit } from './useSearchLimit';
 
 const SearchProducts = () => {
   const { t } = useTranslation();
@@ -14,6 +16,18 @@ const SearchProducts = () => {
   const [selectedCategory, setSelectedCategory] = useState<CategoryDto | null>(
     null,
   );
+  const [isLimitDialogOpen, setIsLimitDialogOpen] = useState(false);
+  const { remainingSearches, isLimitReached, registerSearch } =
+    useSearchLimit();
+
+  const handleSelectCategory = (category: CategoryDto) => {
+    if (isLimitReached) {
+      setIsLimitDialogOpen(true);
+      return;
+    }
+    registerSearch();
+    setSelectedCategory(category);
+  };
 
   return (
     <div className="min-h-screen bg-brand-nude">
@@ -37,7 +51,14 @@ const SearchProducts = () => {
         </div>
 
         <div className="mt-10">
-          <CategoryAutocomplete onSelectCategory={setSelectedCategory} />
+          <CategoryAutocomplete onSelectCategory={handleSelectCategory} />
+          {!isLimitReached && (
+            <p className="mt-3 text-center text-sm text-brand-indigo/50">
+              {t('categorySearch.searchesRemaining', {
+                count: remainingSearches,
+              })}
+            </p>
+          )}
         </div>
 
         {selectedCategory && (
@@ -45,6 +66,10 @@ const SearchProducts = () => {
         )}
       </main>
       <Footer />
+      <SearchLimitDialog
+        open={isLimitDialogOpen}
+        onOpenChange={setIsLimitDialogOpen}
+      />
     </div>
   );
 };

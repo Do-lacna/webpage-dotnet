@@ -59,6 +59,7 @@ export function useCategorySearch(query: string, maxSuggestions = 8) {
         );
         return Boolean(nameMatch || pathMatch);
       })
+      .sort((a, b) => b.popularity - a.popularity)
       .slice(0, maxSuggestions);
   }, [categories, query, maxSuggestions]);
 

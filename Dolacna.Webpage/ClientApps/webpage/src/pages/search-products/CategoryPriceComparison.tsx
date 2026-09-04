@@ -1,7 +1,7 @@
 import { Skeleton } from '@/components/ui/skeleton';
 import { type CategoryDto } from '@/lib/catalogApi';
 import { useTranslation } from 'react-i18next';
-import ProductPriceCard from './ProductPriceCard';
+import ShopProductCard from './ShopProductCard';
 import { useCategoryPriceComparison } from './useCategoryPriceComparison';
 
 interface CategoryPriceComparisonProps {
@@ -12,16 +12,16 @@ const CategoryPriceComparison = ({
   category,
 }: CategoryPriceComparisonProps) => {
   const { t } = useTranslation();
-  const { products, isLoading, isError } = useCategoryPriceComparison(
-    category.id,
-  );
+  const { shopResults, cheapestShopId, hasMatches, isLoading, isError } =
+    useCategoryPriceComparison(category);
 
   if (isLoading) {
     return (
-      <div className="mx-auto mt-10 max-w-4xl space-y-4">
-        <Skeleton className="h-32 w-full rounded-2xl" />
-        <Skeleton className="h-32 w-full rounded-2xl" />
-        <Skeleton className="h-32 w-full rounded-2xl" />
+      <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-4 md:grid-cols-4">
+        <Skeleton className="h-48 w-full rounded-2xl" />
+        <Skeleton className="h-48 w-full rounded-2xl" />
+        <Skeleton className="h-48 w-full rounded-2xl" />
+        <Skeleton className="h-48 w-full rounded-2xl" />
       </div>
     );
   }
@@ -34,7 +34,7 @@ const CategoryPriceComparison = ({
     );
   }
 
-  if (products.length === 0) {
+  if (!hasMatches) {
     return (
       <p className="mt-10 text-center text-brand-indigo/60">
         {t('categorySearch.noProducts')}
@@ -48,9 +48,15 @@ const CategoryPriceComparison = ({
         {t('categorySearch.comparisonHeading', { category: category.name })}
       </h2>
 
-      <div className="mt-6 space-y-4">
-        {products.map((product) => (
-          <ProductPriceCard key={product.detail.id} product={product} />
+      <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
+        {shopResults.map((shop) => (
+          <ShopProductCard
+            key={shop.id}
+            shop={shop}
+            product={shop.product}
+            price={shop.price}
+            isCheapest={shop.id === cheapestShopId}
+          />
         ))}
       </div>
     </div>

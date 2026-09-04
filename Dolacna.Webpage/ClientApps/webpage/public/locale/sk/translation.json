@@ -76,7 +76,12 @@
     "product": "Produkt",
     "noProducts": "Pre túto kategóriu zatiaľ neboli nájdené žiadne produkty.",
     "loadError": "Nepodarilo sa načítať ceny pre túto kategóriu. Skús to prosím znova.",
-    "noImage": "Bez obrázku"
+    "noImage": "Bez obrázku",
+    "searchesRemaining": "Ostáva ti {{count}} z 3 bezplatných vyhľadávaní",
+    "searchLimitReached": {
+      "title": "Páči sa ti porovnávanie cien?",
+      "description": "Vyčerpal si všetky bezplatné vyhľadávania. Stiahni si aplikáciu Ušetri a porovnávaj ceny naprieč všetkými supermarketmi bez obmedzení."
+    }
   },
   "toggle_menu": "Prepínať menu",
   "language": {

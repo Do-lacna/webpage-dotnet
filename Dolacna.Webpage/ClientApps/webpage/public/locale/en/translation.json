@@ -76,7 +76,12 @@
     "product": "Product",
     "noProducts": "No products found for this category yet.",
     "loadError": "Couldn't load prices for this category. Please try again.",
-    "noImage": "No image"
+    "noImage": "No image",
+    "searchesRemaining": "{{count}} of 3 free searches left",
+    "searchLimitReached": {
+      "title": "Enjoying the price comparisons?",
+      "description": "You've used all your free searches. Download the Ušetri app for unlimited price comparisons across all supermarkets."
+    }
   },
   "toggle_menu": "Toggle menu",
   "language": {
