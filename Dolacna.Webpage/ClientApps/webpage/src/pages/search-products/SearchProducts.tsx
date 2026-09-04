@@ -37,7 +37,7 @@ const SearchProducts = () => {
         path="/SearchProducts"
       />
       <Header />
-      <main className="section-container pt-36 pb-20">
+      <main className="section-container pt-40 pb-50">
         <div
           className="mx-auto max-w-2xl text-center reveal-animation"
           data-anim="up"
@@ -52,13 +52,6 @@ const SearchProducts = () => {
 
         <div className="mt-10">
           <CategoryAutocomplete onSelectCategory={handleSelectCategory} />
-          {!isLimitReached && (
-            <p className="mt-3 text-center text-sm text-brand-indigo/50">
-              {t('categorySearch.searchesRemaining', {
-                count: remainingSearches,
-              })}
-            </p>
-          )}
         </div>
 
         {selectedCategory && (
