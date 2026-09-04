@@ -1,5 +1,5 @@
 import { Badge } from '@/components/ui/badge';
-import { type ShopProductDto } from '@/lib/catalogApi';
+import { type ShopPriceDto, type ShopProductDto } from '@/lib/catalogApi';
 import { Trophy } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { formatPrice, type ShopInfo } from './shopPricing';
@@ -8,6 +8,7 @@ interface ShopProductCardProps {
   shop: ShopInfo;
   product: ShopProductDto | null;
   price: number | null;
+  shopPrice: ShopPriceDto | null;
   isCheapest: boolean;
 }
 
@@ -15,6 +16,7 @@ const ShopProductCard = ({
   shop,
   product,
   price,
+  shopPrice,
   isCheapest,
 }: ShopProductCardProps) => {
   const { t } = useTranslation();
@@ -25,6 +27,8 @@ const ShopProductCard = ({
         unit.original_unit ?? unit.normalized_unit ?? ''
       }`.trim()
     : null;
+  const discount = shopPrice?.discount_price ?? null;
+  const originalPrice = shopPrice?.price ?? null;
 
   return (
     <div
@@ -38,6 +42,14 @@ const ShopProductCard = ({
         <Badge className="absolute -top-3 gap-1 border-transparent bg-brand-secondary text-brand-indigo">
           <Trophy className="h-4 w-4" />
           {t('categorySearch.cheapest')}
+        </Badge>
+      )}
+
+      {discount && (
+        <Badge className="absolute -right-2 -top-2 border-transparent bg-red-500 text-white">
+          {t('categorySearch.discount', {
+            percent: Math.round(discount.percentage_discount),
+          })}
         </Badge>
       )}
 
@@ -74,9 +86,18 @@ const ShopProductCard = ({
         )}
       </div>
 
-      <span className="text-lg font-bold text-brand-indigo">
-        {price !== null ? formatPrice(price) : '—'}
-      </span>
+      <div className="flex items-baseline gap-2">
+        {discount && originalPrice !== null && (
+          <span className="text-sm text-brand-indigo/50 line-through">
+            {formatPrice(originalPrice)}
+          </span>
+        )}
+        <span
+          className={`text-lg font-bold ${discount ? 'text-red-600' : 'text-brand-indigo'}`}
+        >
+          {price !== null ? formatPrice(price) : '—'}
+        </span>
+      </div>
     </div>
   );
 };

@@ -55,6 +55,7 @@ const CategoryPriceComparison = ({
             shop={shop}
             product={shop.product}
             price={shop.price}
+            shopPrice={shop.shopPrice}
             isCheapest={cheapestShopIds.has(shop.id)}
           />
         ))}

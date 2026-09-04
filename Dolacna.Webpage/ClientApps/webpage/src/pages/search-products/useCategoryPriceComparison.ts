@@ -1,5 +1,6 @@
 import {
   type CategoryDto,
+  type ShopPriceDto,
   type ShopProductDto,
   fetchProducts,
 } from '@/lib/catalogApi';
@@ -12,6 +13,9 @@ const CANDIDATE_LIMIT = 100;
 export interface ShopCheapestProduct extends ShopInfo {
   product: ShopProductDto | null;
   price: number | null;
+  // Full matched price entry (carries discount_price), so the UI can show the
+  // original price + discount badge when the cheapest match is discounted.
+  shopPrice: ShopPriceDto | null;
 }
 
 // Only compare products that match the category's default amount/unit (e.g. all "1 L" milks),
@@ -52,17 +56,24 @@ export function useCategoryPriceComparison(category: CategoryDto) {
     return SHOPS.map((shop) => {
       let cheapestProduct: ShopProductDto | null = null;
       let cheapestPrice: number | null = null;
+      let cheapestShopPrice: ShopPriceDto | null = null;
       for (const product of matchingProducts) {
         const shopPrice = product.shops_prices?.find(
           (sp) => sp.shop_id === shop.id,
-        )?.actual_price;
+        );
         if (shopPrice === undefined) continue;
-        if (cheapestPrice === null || shopPrice < cheapestPrice) {
-          cheapestPrice = shopPrice;
+        if (cheapestPrice === null || shopPrice.actual_price < cheapestPrice) {
+          cheapestPrice = shopPrice.actual_price;
           cheapestProduct = product;
+          cheapestShopPrice = shopPrice;
         }
       }
-      return { ...shop, product: cheapestProduct, price: cheapestPrice };
+      return {
+        ...shop,
+        product: cheapestProduct,
+        price: cheapestPrice,
+        shopPrice: cheapestShopPrice,
+      };
     });
   }, [matchingProducts]);
 

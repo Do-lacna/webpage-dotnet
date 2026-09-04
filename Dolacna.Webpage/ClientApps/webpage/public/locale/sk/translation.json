@@ -13,7 +13,7 @@
   "scroll_to_explore": "Scrollnite pre viac",
   "features_header": "Funkcie",
   "how_it_works": "Ako to funguje",
-  "categories_overview_header": "Prehľad kategórií",
+  "categories_overview_header": "Vyskúšaj Ušetri",
   "premium_header": "Prémium",
   "faq_header": "FAQ",
   "download_app": "Stiahnuť aplikáciu",
@@ -61,18 +61,19 @@
     "terms": { "title": "Podmienky používania – Ušetri" },
     "cookies": { "title": "Cookies – Ušetri" },
     "searchProducts": {
-      "title": "Prehľad kategórií a produktov – Ušetri",
+      "title": "Vyskúšaj Ušetri – porovnanie cien",
       "description": "Prehľadávaj produkty podľa kategórií a porovnaj ceny naprieč slovenskými supermarketmi na jednom mieste."
     }
   },
   "categorySearch": {
-    "heading": "Nájdi najlepšiu cenu podľa kategórie",
-    "subheading": "Vyhľadaj kategóriu a okamžite porovnaj jej ceny vo všetkých supermarketoch.",
+    "heading": "Vyskúšaj Ušetri",
+    "subheading": "Vyhľadaj kategóriu potravín a okamžite porovnaj jej ceny vo všetkých supermarketoch.",
     "searchPlaceholder": "napr. mlieko, chlieb, vajcia...",
     "noResults": "Nenašli sa žiadne zodpovedajúce kategórie",
     "comparisonHeading": "{{category}} – porovnanie cien",
     "avgPrice": "priem. cena",
     "cheapest": "Najlacnejšie",
+    "discount": "-{{percent}}%",
     "product": "Produkt",
     "noProducts": "Pre túto kategóriu zatiaľ neboli nájdené žiadne produkty.",
     "loadError": "Nepodarilo sa načítať ceny pre túto kategóriu. Skús to prosím znova.",

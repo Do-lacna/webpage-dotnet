@@ -13,7 +13,7 @@
   "scroll_to_explore": "Scroll to explore",
   "features_header": "Features",
   "how_it_works": "How It Works",
-  "categories_overview_header": "Categories Overview",
+  "categories_overview_header": "Try Ušetri",
   "premium_header": "Premium",
   "faq_header": "FAQ",
   "download_app": "Download App",
@@ -61,18 +61,19 @@
     "terms": { "title": "Terms of Service – Ušetri" },
     "cookies": { "title": "Cookies – Ušetri" },
     "searchProducts": {
-      "title": "Browse categories and products – Ušetri",
+      "title": "Try Ušetri – price comparison",
       "description": "Browse products by category and compare prices across Slovak supermarkets in one place."
     }
   },
   "categorySearch": {
-    "heading": "Find the best price by category",
-    "subheading": "Search for a category and instantly compare its prices across all supermarkets.",
+    "heading": "Try Ušetri",
+    "subheading": "Search for a groceries category and instantly compare its prices across all supermarkets.",
     "searchPlaceholder": "e.g. milk, bread, eggs...",
     "noResults": "No matching categories found",
     "comparisonHeading": "{{category}} – price comparison",
     "avgPrice": "avg. price",
     "cheapest": "Cheapest",
+    "discount": "-{{percent}}%",
     "product": "Product",
     "noProducts": "No products found for this category yet.",
     "loadError": "Couldn't load prices for this category. Please try again.",
