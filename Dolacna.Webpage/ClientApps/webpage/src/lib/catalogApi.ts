@@ -112,6 +112,7 @@ export function fetchProducts(
   params: GetProductsParams,
 ): Promise<GetProductsResponse> {
   return catalogFetch<GetProductsResponse>('/api/products', {
+    search_type: 'HybridSearch',
     search: params.search,
     category_id: params.categoryId,
     Limit: params.limit,
