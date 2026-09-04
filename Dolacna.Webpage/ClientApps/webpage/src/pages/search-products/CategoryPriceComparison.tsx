@@ -12,7 +12,7 @@ const CategoryPriceComparison = ({
   category,
 }: CategoryPriceComparisonProps) => {
   const { t } = useTranslation();
-  const { shopResults, cheapestShopId, hasMatches, isLoading, isError } =
+  const { shopResults, cheapestShopIds, hasMatches, isLoading, isError } =
     useCategoryPriceComparison(category);
 
   if (isLoading) {
@@ -48,14 +48,14 @@ const CategoryPriceComparison = ({
         {t('categorySearch.comparisonHeading', { category: category.name })}
       </h2>
 
-      <div className="mt-6 grid grid-cols-2 gap-4 md:grid-cols-4">
+      <div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">
         {shopResults.map((shop) => (
           <ShopProductCard
             key={shop.id}
             shop={shop}
             product={shop.product}
             price={shop.price}
-            isCheapest={shop.id === cheapestShopId}
+            isCheapest={cheapestShopIds.has(shop.id)}
           />
         ))}
       </div>

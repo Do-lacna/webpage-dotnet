@@ -10,6 +10,7 @@ export const ALLOWED_ROOT_CATEGORIES = new Set([
   'trvanlive potraviny',
   'vegan',
   'udeniny a lahodky',
+  'napoje',
 ]);
 
 export const normalizeText = (text: string) =>

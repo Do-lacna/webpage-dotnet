@@ -15,16 +15,20 @@ export interface ShopCheapestProduct extends ShopInfo {
 }
 
 // Only compare products that match the category's default amount/unit (e.g. all "1 L" milks),
-// so shops aren't compared on differently-sized products.
+// so shops aren't compared on differently-sized products. category.default_amount/default_unit
+// use the same scale as unit.original_amount/original_unit (e.g. 0.405 L), NOT the
+// normalized_amount/normalized_unit fields (which are in base units like Ml/G).
+const AMOUNT_EPSILON = 0.001;
+
 function matchesDefaultAmount(
   product: ShopProductDto,
   category: CategoryDto,
 ): boolean {
   if (category.default_amount == null || !category.default_unit) return true;
-  const { normalized_amount, normalized_unit } = product.detail.unit;
+  const { original_amount, original_unit } = product.detail.unit;
   return (
-    normalized_amount === category.default_amount &&
-    normalized_unit?.toLowerCase() === category.default_unit.toLowerCase()
+    Math.abs(original_amount - category.default_amount) < AMOUNT_EPSILON &&
+    original_unit?.toLowerCase() === category.default_unit.toLowerCase()
   );
 }
 
@@ -62,18 +66,28 @@ export function useCategoryPriceComparison(category: CategoryDto) {
     });
   }, [matchingProducts]);
 
-  const cheapestShopId = useMemo(() => {
-    return shopResults.reduce<number | null>((cheapestId, shop) => {
-      if (shop.price === null) return cheapestId;
-      const cheapest = shopResults.find((s) => s.id === cheapestId);
-      if (cheapest?.price == null) return shop.id;
-      return shop.price < cheapest.price ? shop.id : cheapestId;
-    }, null);
+  // All shops tied for the lowest matching price are considered cheapest (not just
+  // whichever one happens to come first in SHOPS order).
+  const cheapestShopIds = useMemo(() => {
+    const prices = shopResults
+      .map((shop) => shop.price)
+      .filter((price): price is number => price !== null);
+    if (prices.length === 0) return new Set<number>();
+    const minPrice = Math.min(...prices);
+    return new Set(
+      shopResults
+        .filter(
+          (shop) =>
+            shop.price !== null &&
+            Math.abs(shop.price - minPrice) < AMOUNT_EPSILON,
+        )
+        .map((shop) => shop.id),
+    );
   }, [shopResults]);
 
   return {
     shopResults,
-    cheapestShopId,
+    cheapestShopIds,
     hasMatches: matchingProducts.length > 0,
     isLoading,
     isError,

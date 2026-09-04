@@ -36,18 +36,20 @@ const ShopProductCard = ({
     >
       {isCheapest && (
         <Badge className="absolute -top-3 gap-1 border-transparent bg-brand-secondary text-brand-indigo">
-          <Trophy className="h-3 w-3" />
+          <Trophy className="h-4 w-4" />
           {t('categorySearch.cheapest')}
         </Badge>
       )}
 
-      <img
-        src={shop.logo}
-        alt={shop.name}
-        className="h-6 w-auto object-contain"
-      />
+      <div className="mb-3 flex h-12 w-24 items-center justify-center">
+        <img
+          src={shop.logo}
+          alt={shop.name}
+          className="h-full w-full object-contain"
+        />
+      </div>
 
-      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-xl bg-brand-nude">
+      <div className="flex h-40 w-40 items-center justify-center overflow-hidden rounded-xl bg-white">
         {detail?.image_url ? (
           <img
             src={detail.image_url}

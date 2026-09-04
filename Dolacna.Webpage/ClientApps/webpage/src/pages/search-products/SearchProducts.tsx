@@ -37,7 +37,7 @@ const SearchProducts = () => {
         path="/SearchProducts"
       />
       <Header />
-      <main className="section-container pt-40 pb-50">
+      <main className="section-container pt-40 pb-70">
         <div
           className="mx-auto max-w-2xl text-center reveal-animation"
           data-anim="up"
@@ -50,7 +50,7 @@ const SearchProducts = () => {
           </p>
         </div>
 
-        <div className="mt-10">
+        <div className="mt-20">
           <CategoryAutocomplete onSelectCategory={handleSelectCategory} />
         </div>
 
