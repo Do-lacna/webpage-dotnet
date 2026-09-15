@@ -46,7 +46,10 @@ export function PhoneMockup({
         className,
       )}
       style={
-        { '--phone-w': width ?? PHONE_MOCKUP_WIDTHS[size] } as CSSProperties
+        {
+          '--phone-w': width ?? PHONE_MOCKUP_WIDTHS[size],
+          filter: 'drop-shadow(0 16px 26px rgba(15, 12, 23, 0.38))',
+        } as CSSProperties
       }
     >
       {/* Buttons protrude from the case but stay inside --phone-w, so the whole
@@ -65,7 +68,8 @@ export function PhoneMockup({
           width: 'calc(var(--phone-w) - 6px)',
           aspectRatio: SCREEN_ASPECT_RATIO,
           borderRadius: 'calc((var(--phone-w) - 6px) * 0.18)',
-          boxShadow: 'inset 0 0 0 2px rgba(255,255,255,.05)',
+          boxShadow:
+            'inset 0 0 0 2px rgba(255,255,255,.05), 0 0 0 1px rgba(255,255,255,0.04)',
         }}
       >
         {children}
