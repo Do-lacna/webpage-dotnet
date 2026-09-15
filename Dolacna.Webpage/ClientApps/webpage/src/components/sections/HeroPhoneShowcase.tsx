@@ -15,15 +15,44 @@ import { useTranslation } from 'react-i18next';
 type Screen = { src: string; labelKey: string; icon: string };
 
 const SCREENS: Screen[] = [
-  { src: '/images/landing_page/discounts.webp', labelKey: 'hero.screens.discounts', icon: '🏷️' },
-  { src: '/images/landing_page/search_2.webp', labelKey: 'hero.screens.search', icon: '🔍' },
-  { src: '/images/landing_page/product.webp', labelKey: 'hero.screens.productDetail', icon: '🧾' },
-  { src: '/images/landing_page/shopping_list_1.webp', labelKey: 'hero.screens.list', icon: '🛒' },
-  { src: '/images/landing_page/shopping_list_2.webp', labelKey: 'hero.screens.listCompare', icon: '⚖️' },
-  { src: '/images/landing_page/profile.webp', labelKey: 'hero.screens.savings', icon: '💰' },
+  {
+    src: '/images/landing_page/discounts.png',
+    labelKey: 'hero.screens.discounts',
+    icon: '🏷️',
+  },
+  {
+    src: '/images/landing_page/recipes.png',
+    labelKey: 'hero.screens.recipes',
+    icon: '🍳',
+  },
+  {
+    src: '/images/landing_page/search.png',
+    labelKey: 'hero.screens.search',
+    icon: '🔍',
+  },
+  {
+    src: '/images/landing_page/product_detail.png',
+    labelKey: 'hero.screens.productDetail',
+    icon: '🧾',
+  },
+  {
+    src: '/images/landing_page/shopping_list.png',
+    labelKey: 'hero.screens.list',
+    icon: '🛒',
+  },
+  {
+    src: '/images/landing_page/price_comparison.png',
+    labelKey: 'hero.screens.listCompare',
+    icon: '⚖️',
+  },
+  {
+    src: '/images/landing_page/profile.png',
+    labelKey: 'hero.screens.savings',
+    icon: '💰',
+  },
 ];
 
-const SCREEN_DURATION = 4500; // ms per screenshot before auto-advance
+const SCREEN_DURATION = 4000; // ms per screenshot before auto-advance
 
 const KEYFRAMES = `
 @keyframes hps-float {
@@ -41,7 +70,9 @@ const KEYFRAMES = `
 
 function usePrefersReducedMotion() {
   const [reduced, setReduced] = useState(
-    () => typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    () =>
+      typeof window !== 'undefined' &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches,
   );
   useEffect(() => {
     const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
@@ -64,7 +95,10 @@ export function HeroPhoneShowcase() {
   useEffect(() => {
     const el = containerRef.current;
     if (!el || typeof IntersectionObserver === 'undefined') return;
-    const io = new IntersectionObserver(([entry]) => setInView(entry.isIntersecting), { threshold: 0.2 });
+    const io = new IntersectionObserver(
+      ([entry]) => setInView(entry.isIntersecting),
+      { threshold: 0.2 },
+    );
     io.observe(el);
     return () => io.disconnect();
   }, []);
@@ -73,7 +107,10 @@ export function HeroPhoneShowcase() {
 
   useEffect(() => {
     if (!playing) return;
-    const timer = setTimeout(() => setActive(i => (i + 1) % SCREENS.length), SCREEN_DURATION);
+    const timer = setTimeout(
+      () => setActive((i) => (i + 1) % SCREENS.length),
+      SCREEN_DURATION,
+    );
     return () => clearTimeout(timer);
   }, [playing, active]);
 
@@ -87,12 +124,18 @@ export function HeroPhoneShowcase() {
       <style>{KEYFRAMES}</style>
 
       {/* Phone */}
-      <div className="relative hps-float" style={{ animation: 'hps-float 7s ease-in-out infinite' }}>
+      <div
+        className="relative hps-float"
+        style={{ animation: 'hps-float 7s ease-in-out infinite' }}
+      >
         {/* Static glow — radial gradient, no blur filter, painted once */}
         <div
           aria-hidden
           className="absolute -inset-16 pointer-events-none"
-          style={{ background: 'radial-gradient(ellipse at center, rgba(123,109,224,0.28) 0%, transparent 65%)' }}
+          style={{
+            background:
+              'radial-gradient(ellipse at center, rgba(123,109,224,0.28) 0%, transparent 65%)',
+          }}
         />
 
         <div
@@ -101,7 +144,8 @@ export function HeroPhoneShowcase() {
             width: 'min(300px, 72vw)',
             aspectRatio: '252 / 540',
             borderRadius: 'min(54px, 13vw)',
-            boxShadow: '0 30px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06)',
+            boxShadow:
+              '0 30px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06)',
           }}
         >
           {/* Dynamic island */}
@@ -153,7 +197,9 @@ export function HeroPhoneShowcase() {
                   key={`progress-${active}`}
                   aria-hidden
                   className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-secondary origin-left"
-                  style={{ animation: `hps-fill ${SCREEN_DURATION}ms linear both` }}
+                  style={{
+                    animation: `hps-fill ${SCREEN_DURATION}ms linear both`,
+                  }}
                 />
               )}
             </button>

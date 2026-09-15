@@ -25,6 +25,7 @@
       "list": "Shopping list",
       "listCompare": "Price comparison",
       "discounts": "Discounts",
+      "recipes": "Recipes",
       "savings": "Your savings"
     }
   },
@@ -116,8 +117,7 @@
     },
     "discountRecipes": {
       "title": "Recipes from Discounted Products",
-      "description": "Simple recipes made from products currently on sale \u2014 with a cost comparison across different stores. Powered by AI.",
-      "badge": "Coming soon"
+      "description": "Simple recipes made from products currently on sale \u2014 with a cost comparison across different stores."
     }
   },
 

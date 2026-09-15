@@ -95,11 +95,6 @@ const Features = () => {
               style={{ animationDelay: `${i * 0.1}s` }}
               data-anim="scale"
             >
-              {'badge' in feature && feature.badge && (
-                <span className="absolute top-4 right-4 px-2.5 py-0.5 rounded-full bg-brand-secondary/20 text-brand-secondary text-xs font-semibold border border-brand-secondary/30">
-                  {feature.badge}
-                </span>
-              )}
               <div className="p-3 bg-white/10 rounded-xl inline-block mb-4">
                 {feature.icon}
               </div>

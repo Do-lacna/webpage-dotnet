@@ -25,6 +25,7 @@
       "list": "Nákupný zoznam",
       "listCompare": "Porovnanie cien",
       "discounts": "Zľavy",
+      "recipes": "Recepty",
       "savings": "Tvoje úspory"
     }
   },
@@ -116,8 +117,7 @@
     },
     "discountRecipes": {
       "title": "Recepty zo zľavnených produktov",
-      "description": "Jednoduché recepty z produktov, ktoré sú práve v akcii — s porovnaním ceny receptu v rôznych obchodoch. Poháňané umelou inteligenciou.",
-      "badge": "Čoskoro"
+      "description": "Jednoduché recepty z produktov, ktoré sú práve v akcii — s porovnaním ceny receptu v rôznych obchodoch."
     }
   },
 
