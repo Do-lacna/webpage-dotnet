@@ -9,6 +9,7 @@
  * Screenshots live in public/images/landing_page/.
  */
 
+import { PhoneMockup } from '@/components/ui/phone-mockup';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -138,19 +139,7 @@ export function HeroPhoneShowcase() {
           }}
         />
 
-        <div
-          className="relative overflow-hidden bg-[#0d0b1a] border-2 border-[#3a3450]"
-          style={{
-            width: 'min(300px, 72vw)',
-            aspectRatio: '252 / 540',
-            borderRadius: 'min(54px, 13vw)',
-            boxShadow:
-              '0 30px 60px rgba(0,0,0,.6), 0 0 0 1px rgba(255,255,255,.06)',
-          }}
-        >
-          {/* Dynamic island */}
-          <div className="absolute top-[3.5%] left-1/2 -translate-x-1/2 w-[33%] h-[3.2%] bg-black rounded-full z-20" />
-
+        <PhoneMockup size="lg">
           {/* Screenshots — stacked, opacity crossfade only */}
           {SCREENS.map((screen, i) => (
             <img
@@ -164,10 +153,7 @@ export function HeroPhoneShowcase() {
               style={{ opacity: i === active ? 1 : 0 }}
             />
           ))}
-
-          {/* Home indicator */}
-          <div className="absolute bottom-[1.8%] left-1/2 -translate-x-1/2 w-[38%] h-[3px] bg-white/25 rounded-full z-20" />
-        </div>
+        </PhoneMockup>
       </div>
 
       {/* Screen switcher */}

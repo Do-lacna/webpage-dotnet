@@ -9,6 +9,7 @@ import {
   CarouselItem,
   type CarouselApi,
 } from '@/components/ui/carousel';
+import { PhoneMockup } from '@/components/ui/phone-mockup';
 import { cn } from '@/lib/utils';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
@@ -97,12 +98,14 @@ const ValueProposition = () => {
                 {t('valueProposition.stepList')}
               </span>
             </div>
-            <img
-              src={ZoznamPng}
-              alt={t('valueProposition.groceryListAlt')}
-              loading="lazy"
-              className="w-[220px] sm:w-[240px] md:w-[260px] h-auto"
-            />
+            <PhoneMockup size="md">
+              <img
+                src={ZoznamPng}
+                alt={t('valueProposition.groceryListAlt')}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover object-top"
+              />
+            </PhoneMockup>
           </div>
 
           {/* ── Arrow connector ── */}
@@ -125,67 +128,76 @@ const ValueProposition = () => {
           </div>
 
           {/* ── Right: Comparison carousel ── */}
-          <div className="reveal-animation flex-shrink-0" data-anim="right">
+          <div
+            className="reveal-animation flex-shrink-0 flex flex-col items-center"
+            data-anim="right"
+          >
             <div className="text-center mb-4">
               <span className="inline-block px-4 py-1.5 rounded-full bg-brand-secondary/20 text-brand-orange text-sm font-medium border border-brand-secondary/40">
                 {t('valueProposition.stepCompare')}
               </span>
             </div>
 
-            <Carousel
-              opts={{ loop: true }}
-              setApi={setApi}
-              className="w-[220px] sm:w-[240px] md:w-[260px]"
-            >
-              <CarouselContent>
-                {shopImages.map((src, idx) => (
-                  <CarouselItem key={idx} className="min-w-0">
-                    <img
-                      src={src}
-                      alt={t('valueProposition.shopAlt', { number: idx + 1 })}
-                      loading="lazy"
-                      className="w-[220px] sm:w-[240px] md:w-[260px] h-auto"
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-
-              {/* Custom nav controls */}
-              <div className="flex items-center justify-center gap-4 mt-5">
-                <button
-                  onClick={() => api?.scrollPrev()}
-                  className="w-9 h-9 rounded-full border border-brand-primary/20 bg-brand-primary/5 hover:bg-brand-primary/15 flex items-center justify-center text-brand-primary transition-colors"
-                  aria-label="Previous shop"
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </button>
-
-                {/* Dot indicators */}
-                <div className="flex items-center gap-2">
-                  {shopImages.map((_, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => scrollTo(idx)}
-                      aria-label={`Go to shop ${idx + 1}`}
-                      className={cn(
-                        'w-2.5 h-2.5 rounded-full transition-all duration-300',
-                        current === idx
-                          ? 'bg-brand-primary w-6'
-                          : 'bg-brand-primary/20 hover:bg-brand-primary/40',
-                      )}
-                    />
+            {/* The frame stays put; only the screenshots inside the screen swipe.
+                `[&>div]:h-full` reaches CarouselContent's own inner wrapper div
+                (which forwards no className), so height:100% resolves all the
+                way down to the track/slide/image instead of collapsing to 0. */}
+            <PhoneMockup size="md">
+              <Carousel
+                opts={{ loop: true }}
+                setApi={setApi}
+                className="absolute inset-0 [&>div]:h-full"
+              >
+                <CarouselContent className="ml-0 h-full">
+                  {shopImages.map((src, idx) => (
+                    <CarouselItem key={idx} className="pl-0 h-full">
+                      <img
+                        src={src}
+                        alt={t('valueProposition.shopAlt', { number: idx + 1 })}
+                        loading="lazy"
+                        className="w-full h-full object-cover object-top"
+                      />
+                    </CarouselItem>
                   ))}
-                </div>
+                </CarouselContent>
+              </Carousel>
+            </PhoneMockup>
 
-                <button
-                  onClick={() => api?.scrollNext()}
-                  className="w-9 h-9 rounded-full border border-brand-primary/20 bg-brand-primary/5 hover:bg-brand-primary/15 flex items-center justify-center text-brand-primary transition-colors"
-                  aria-label="Next shop"
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </button>
+            {/* Custom nav controls */}
+            <div className="flex items-center justify-center gap-4 mt-5">
+              <button
+                onClick={() => api?.scrollPrev()}
+                className="w-9 h-9 rounded-full border border-brand-primary/20 bg-brand-primary/5 hover:bg-brand-primary/15 flex items-center justify-center text-brand-primary transition-colors"
+                aria-label="Previous shop"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+
+              {/* Dot indicators */}
+              <div className="flex items-center gap-2">
+                {shopImages.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => scrollTo(idx)}
+                    aria-label={`Go to shop ${idx + 1}`}
+                    className={cn(
+                      'w-2.5 h-2.5 rounded-full transition-all duration-300',
+                      current === idx
+                        ? 'bg-brand-primary w-6'
+                        : 'bg-brand-primary/20 hover:bg-brand-primary/40',
+                    )}
+                  />
+                ))}
               </div>
-            </Carousel>
+
+              <button
+                onClick={() => api?.scrollNext()}
+                className="w-9 h-9 rounded-full border border-brand-primary/20 bg-brand-primary/5 hover:bg-brand-primary/15 flex items-center justify-center text-brand-primary transition-colors"
+                aria-label="Next shop"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
           </div>
         </div>
 
