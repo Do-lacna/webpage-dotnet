@@ -23,7 +23,7 @@ const SearchLimitDialog = ({ open, onOpenChange }: SearchLimitDialogProps) => {
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="text-center">
+      <DialogContent className="w-[calc(100%-2rem)] max-w-md p-5 text-center sm:p-6">
         <DialogHeader>
           <DialogTitle className="text-center text-xl text-brand-indigo">
             {t('categorySearch.searchLimitReached.title')}
@@ -32,12 +32,12 @@ const SearchLimitDialog = ({ open, onOpenChange }: SearchLimitDialogProps) => {
             {t('categorySearch.searchLimitReached.description')}
           </DialogDescription>
         </DialogHeader>
-        <DialogFooter className="sm:justify-center">
+        <DialogFooter className="gap-2 sm:flex-row sm:justify-center sm:gap-3">
           <a
             href={APP_STORE_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-black px-5 py-3 text-white transition-colors hover:bg-black/80"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm text-white transition-colors hover:bg-black/80 sm:w-auto sm:px-5"
           >
             <Apple className="h-5 w-5" />
             {t('download.appStore')}
@@ -46,7 +46,7 @@ const SearchLimitDialog = ({ open, onOpenChange }: SearchLimitDialogProps) => {
             href={GOOGLE_PLAY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 rounded-xl bg-black px-5 py-3 text-white transition-colors hover:bg-black/80"
+            className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-black px-4 py-3 text-sm text-white transition-colors hover:bg-black/80 sm:w-auto sm:px-5"
           >
             <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
               <path d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-1.4 2.532 1.466c.564.327.564 1.127 0 1.454l-2.532 1.466-2.534-2.46 2.534-1.926zM5.864 2.658l10.937 6.333-2.302 2.302-8.635-8.635z" />
