@@ -11,17 +11,17 @@ RUN echo $(node -v && npm -v)
 
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["Dolacna.Webpage/Dolacna.Webpage.csproj", "Dolacna.Webpage/"]
-RUN dotnet restore "Dolacna.Webpage/Dolacna.Webpage.csproj"
+COPY ["Usetri.Webpage/Usetri.Webpage.csproj", "Usetri.Webpage/"]
+RUN dotnet restore "Usetri.Webpage/Usetri.Webpage.csproj"
 COPY . .
-WORKDIR "/src/Dolacna.Webpage"
-RUN dotnet build "Dolacna.Webpage.csproj" -c $BUILD_CONFIGURATION -o /app/build
+WORKDIR "/src/Usetri.Webpage"
+RUN dotnet build "Usetri.Webpage.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
-RUN dotnet publish "Dolacna.Webpage.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
+RUN dotnet publish "Usetri.Webpage.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "Dolacna.Webpage.dll"]
+ENTRYPOINT ["dotnet", "Usetri.Webpage.dll"]

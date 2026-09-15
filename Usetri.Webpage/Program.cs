@@ -1,4 +1,4 @@
-using Dolacna.Webpage;
+using Usetri.Webpage;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Net.Http.Headers;
 using System.IO.Compression;

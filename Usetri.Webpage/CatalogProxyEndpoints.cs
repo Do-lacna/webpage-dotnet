@@ -1,4 +1,4 @@
-namespace Dolacna.Webpage;
+namespace Usetri.Webpage;
 
 // BFF proxy: hides the upstream catalog API host/shape from the browser.
 public static class CatalogProxyEndpoints

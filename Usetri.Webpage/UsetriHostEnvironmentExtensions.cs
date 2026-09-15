@@ -1,4 +1,4 @@
-namespace Dolacna.Webpage;
+namespace Usetri.Webpage;
 
 public static class UsetriHostEnvironmentExtensions
 {

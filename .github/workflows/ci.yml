@@ -45,7 +45,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ./Dolacna.Webpage/Dockerfile
+          file: ./Usetri.Webpage/Dockerfile
           push: true
           tags: "offli/webpage:${{ needs.calculate-version.outputs.semVer }},offli/webpage"
   az-deploy:
