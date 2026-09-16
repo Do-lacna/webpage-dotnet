@@ -7,49 +7,48 @@
  * re-mounting — smooth on low-end devices.
  *
  * Screenshots live in public/images/landing_page/.
+ *
+ * Layout: the screen switcher is a numbered rail beside the phone on wide
+ * screens (xl and up, where the hero column is wide enough for both) and a
+ * compact underlined row below it otherwise. The active item's accent doubles
+ * as the autoplay progress indicator: it fills over SCREEN_DURATION while
+ * playing and sits solid while paused.
  */
 
 import { PhoneMockup } from '@/components/ui/phone-mockup';
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
-type Screen = { src: string; labelKey: string; icon: string };
+type Screen = { src: string; labelKey: string };
 
 const SCREENS: Screen[] = [
   {
     src: '/images/landing_page/discounts.png',
     labelKey: 'hero.screens.discounts',
-    icon: '🏷️',
   },
   {
     src: '/images/landing_page/recipes.png',
     labelKey: 'hero.screens.recipes',
-    icon: '🍳',
   },
   {
     src: '/images/landing_page/search.png',
     labelKey: 'hero.screens.search',
-    icon: '🔍',
   },
   {
     src: '/images/landing_page/product_detail.png',
     labelKey: 'hero.screens.productDetail',
-    icon: '🧾',
   },
   {
     src: '/images/landing_page/shopping_list.png',
     labelKey: 'hero.screens.list',
-    icon: '🛒',
   },
   {
     src: '/images/landing_page/price_comparison.png',
     labelKey: 'hero.screens.listCompare',
-    icon: '⚖️',
   },
   {
     src: '/images/landing_page/profile.png',
     labelKey: 'hero.screens.savings',
-    icon: '💰',
   },
 ];
 
@@ -63,6 +62,10 @@ const KEYFRAMES = `
 @keyframes hps-fill {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
+}
+@keyframes hps-fill-y {
+  from { transform: scaleY(0); }
+  to   { transform: scaleY(1); }
 }
 @media (prefers-reduced-motion: reduce) {
   .hps-float { animation: none !important; }
@@ -118,7 +121,7 @@ export function HeroPhoneShowcase() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col items-center gap-7 w-full"
+      className="flex flex-col xl:flex-row items-center justify-center gap-7 xl:gap-8 w-full"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
@@ -126,7 +129,7 @@ export function HeroPhoneShowcase() {
 
       {/* Phone */}
       <div
-        className="relative hps-float"
+        className="relative hps-float shrink-0"
         style={{ animation: 'hps-float 7s ease-in-out infinite' }}
       >
         {/* Static glow — radial gradient, no blur filter, painted once */}
@@ -156,37 +159,64 @@ export function HeroPhoneShowcase() {
         </PhoneMockup>
       </div>
 
-      {/* Screen switcher */}
+      {/* Screen switcher — numbered rail beside the phone, compact row below */}
       <div
         role="tablist"
         aria-label={t('hero.screens.switcherLabel')}
-        className="flex flex-wrap justify-center gap-2 max-w-[540px]"
+        className="flex flex-wrap justify-center gap-x-6 gap-y-2 max-w-[520px] xl:flex-col xl:flex-nowrap xl:gap-0 xl:w-[232px] xl:max-w-none"
       >
         {SCREENS.map((screen, i) => {
           const isActive = i === active;
+          // Solid while paused, filling while the slideshow runs.
+          const fill = (axis: 'x' | 'y') =>
+            playing
+              ? {
+                  animation: `hps-fill${axis === 'y' ? '-y' : ''} ${SCREEN_DURATION}ms linear both`,
+                }
+              : undefined;
           return (
             <button
               key={screen.src}
               role="tab"
               aria-selected={isActive}
               onClick={() => setActive(i)}
-              className={`relative overflow-hidden flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold transition-colors duration-300 border ${
-                isActive
-                  ? 'bg-white/10 border-brand-secondary/60 text-white'
-                  : 'bg-white/[0.04] border-white/10 text-white/50 hover:text-white/80 hover:border-white/25'
+              className={`relative text-left text-sm font-semibold transition-colors duration-300 pb-2 xl:flex xl:items-baseline xl:gap-3 xl:w-full xl:pt-3.5 xl:pb-3.5 xl:pl-5 xl:text-base ${
+                isActive ? 'text-white' : 'text-white/55 hover:text-white/90'
               }`}
             >
-              <span aria-hidden>{screen.icon}</span>
+              {/* Rail track — adjacent items butt together into one hairline */}
+              <span
+                aria-hidden
+                className="hidden xl:block absolute left-0 top-0 bottom-0 w-[2px] bg-white/12"
+              />
+              <span
+                aria-hidden
+                className={`hidden xl:block text-[11px] tabular-nums transition-colors duration-300 ${
+                  isActive ? 'text-brand-secondary' : 'text-white/30'
+                }`}
+              >
+                {String(i + 1).padStart(2, '0')}
+              </span>
+
               <span>{t(screen.labelKey)}</span>
-              {isActive && playing && (
-                <span
-                  key={`progress-${active}`}
-                  aria-hidden
-                  className="absolute bottom-0 left-0 right-0 h-[2px] bg-brand-secondary origin-left"
-                  style={{
-                    animation: `hps-fill ${SCREEN_DURATION}ms linear both`,
-                  }}
-                />
+
+              {isActive && (
+                <>
+                  {/* Underline (compact row) */}
+                  <span
+                    key={`bar-x-${active}-${playing}`}
+                    aria-hidden
+                    className="xl:hidden absolute bottom-0 left-0 right-0 h-[2px] bg-brand-secondary origin-left"
+                    style={fill('x')}
+                  />
+                  {/* Rail accent (wide layout) */}
+                  <span
+                    key={`bar-y-${active}-${playing}`}
+                    aria-hidden
+                    className="hidden xl:block absolute left-0 top-0 bottom-0 w-[2px] bg-brand-secondary origin-top"
+                    style={fill('y')}
+                  />
+                </>
               )}
             </button>
           );
