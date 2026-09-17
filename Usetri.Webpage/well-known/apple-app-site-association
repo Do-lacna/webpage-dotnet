@@ -1,0 +1,15 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["W7Q9YP35BN.com.dutosvarc.usetri"],
+        "components": [
+          {
+            "/": "/share/*",
+            "comment": "Shared shopping lists open in the Usetri app"
+          }
+        ]
+      }
+    ]
+  }
+}

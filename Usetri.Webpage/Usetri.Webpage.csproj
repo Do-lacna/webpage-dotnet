@@ -17,6 +17,15 @@
       <Folder Include="wwwroot\" />
     </ItemGroup>
 
+    <!-- Apple / Google app-link association files, served at /.well-known.
+         The SDK already picks up .json as Content, so that one is updated
+         rather than included; the Apple file has no extension and needs to be
+         added explicitly. -->
+    <ItemGroup>
+      <Content Include="well-known\apple-app-site-association" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+      <Content Update="well-known\assetlinks.json" CopyToOutputDirectory="PreserveNewest" CopyToPublishDirectory="PreserveNewest" />
+    </ItemGroup>
+
     <ItemGroup>
       <PackageReference Include="Serilog.AspNetCore" Version="10.0.0" />
     </ItemGroup>

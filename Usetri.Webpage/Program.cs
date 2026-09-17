@@ -83,5 +83,35 @@ app.UseStaticFiles(new StaticFileOptions
         }
     }
 });
+// Apple and Google fetch these two files to confirm that this domain vouches
+// for the Usetri mobile app, which is what lets a shared shopping list link
+// (https://usetrislovensko.sk/share/{token}) open the app instead of the site.
+//
+// They get their own provider rather than living in wwwroot, because the SPA
+// build empties that directory, the static file provider skips dot-prefixed
+// directories like `.well-known`, and `apple-app-site-association` carries no
+// extension — so the SPA fallback below would answer it with index.html.
+// They are served as explicit endpoints rather than static files: the SPA
+// fallback below matches any extension-less path, including
+// /.well-known/apple-app-site-association, and once routing has picked an
+// endpoint the static file middleware stands down — which is exactly how that
+// file ended up being answered with index.html. A concrete route outranks the
+// catch-all, so these two win. Both must be served as JSON, or Apple and
+// Google ignore them.
+var wellKnownDirectory = Path.Combine(app.Environment.ContentRootPath, "well-known");
+
+IResult ServeWellKnownFile(string fileName)
+{
+    var filePath = Path.Combine(wellKnownDirectory, fileName);
+    return File.Exists(filePath)
+        ? Results.File(filePath, "application/json")
+        : Results.NotFound();
+}
+
+app.MapGet("/.well-known/apple-app-site-association",
+    () => ServeWellKnownFile("apple-app-site-association"));
+app.MapGet("/.well-known/assetlinks.json",
+    () => ServeWellKnownFile("assetlinks.json"));
+
 app.MapFallbackToFile("/{*path:nonfile}", "index.html");
 app.Run();

@@ -1,0 +1,14 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dutosvarc.usetri",
+      "sha256_cert_fingerprints": [
+        "49:CA:C0:93:69:B4:BD:01:A1:16:5C:F3:9E:AD:22:7A:CF:AA:19:B7:34:E8:0E:7F:54:BD:C3:2C:C3:03:F1:05"
+      ]
+    }
+  }
+]
