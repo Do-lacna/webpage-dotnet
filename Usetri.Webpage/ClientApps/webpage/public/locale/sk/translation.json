@@ -840,5 +840,21 @@
     "groceryListAlt": "Snímka nákupného zoznamu",
     "shopAlt": "Porovnanie cien v obchode {{number}}",
     "footnote": "Jednoducho prechádzaj obchodmi a skontroluj skutočné cenové rozdiely v rovnakom nákupnom zozname."
+  },
+  "sharedList": {
+    "seoTitle": "Zdieľaný nákupný zoznam",
+    "seoDescription": "Niekto s tebou zdieľal nákupný zoznam v aplikácii Ušetri.",
+    "title": "Zdieľaný nákupný zoznam",
+    "subtitle": "Otvor ho v aplikácii Ušetri a pridaj si položky do svojho zoznamu.",
+    "expired": "Tento zdieľaný zoznam už neexistuje alebo je odkaz neplatný.",
+    "itemsCount_one": "{{count}} položka",
+    "itemsCount_few": "{{count}} položky",
+    "itemsCount_other": "{{count}} položiek",
+    "moreItems_one": "+ {{count}} ďalšia položka",
+    "moreItems_few": "+ {{count}} ďalšie položky",
+    "moreItems_other": "+ {{count}} ďalších položiek",
+    "openInApp": "Otvoriť v aplikácii",
+    "noAppYet": "Ešte nemáš aplikáciu Ušetri?",
+    "inAppBrowserHint": "Odkaz sa otvoril v prehliadači Messengera, ktorý ho nevie odovzdať aplikácii. Ťukni na ⋯ v rohu a zvoľ „Otvoriť v prehliadači“ — zoznam sa potom otvorí priamo v aplikácii."
   }
 }

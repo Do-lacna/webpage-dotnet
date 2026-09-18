@@ -823,5 +823,19 @@
     "groceryListAlt": "Grocery list screenshot",
     "shopAlt": "Price comparison in shop {{number}}",
     "footnote": "Swipe through the stores to see real price differences on the same grocery list."
+  },
+  "sharedList": {
+    "seoTitle": "Shared shopping list",
+    "seoDescription": "Someone shared a shopping list with you in the Ušetri app.",
+    "title": "Shared shopping list",
+    "subtitle": "Open it in the Ušetri app and add the items to your own list.",
+    "expired": "This shared list no longer exists or the link is invalid.",
+    "itemsCount_one": "{{count}} item",
+    "itemsCount_other": "{{count}} items",
+    "moreItems_one": "+ {{count}} more item",
+    "moreItems_other": "+ {{count}} more items",
+    "openInApp": "Open in the app",
+    "noAppYet": "Don't have the Ušetri app yet?",
+    "inAppBrowserHint": "This link opened in Messenger's browser, which cannot hand links to apps. Tap ⋯ in the corner and choose \"Open in browser\" — the list will then open straight in the app."
   }
 }

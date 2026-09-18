@@ -7,6 +7,7 @@ import { lazy, Suspense } from 'react';
 import Index from './pages/Index';
 
 const NotFound = lazy(() => import('./pages/NotFound'));
+const SharedList = lazy(() => import('./pages/SharedList'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
 const Cookies = lazy(() => import('./pages/Cookies'));
@@ -42,6 +43,7 @@ const App = () => (
         <Suspense fallback={null}>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/share/:token" element={<SharedList />} />
             <Route path="*" element={<NotFound />} />
             <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
             <Route path="/TermsOfService" element={<TermsOfService />} />
