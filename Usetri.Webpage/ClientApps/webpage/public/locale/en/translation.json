@@ -671,6 +671,14 @@
     ]
   },
 
+  "cookieConsent": {
+    "title": "Cookie consent",
+    "description": "May we use marketing cookies (Meta Pixel) to measure our ads on Facebook and Instagram?",
+    "learnMore": "More about cookies",
+    "accept": "Accept",
+    "decline": "Decline"
+  },
+
   "cookiePolicy": {
     "pageTitle": "Cookie Policy",
     "pageSubtitle": "Find out how and why we use cookies in our application.",
@@ -685,15 +693,15 @@
       },
       {
         "title": "3. Types of Cookies We Use",
-        "content": "- **Essential Cookies**: Required for the app to function properly.\n- **Analytics Cookies**: Help us track usage and performance.\n- **Preference Cookies**: Remember your preferences like language and layout."
+        "content": "- **Essential Cookies**: Required for the app to function properly.\n- **Analytics Cookies**: Help us track usage and performance.\n- **Preference Cookies**: Remember your preferences like language and layout.\n- **Marketing Cookies**: Only stored with your consent. We use Meta Pixel (the _fbp and _fbc cookies) to measure how our ads on Facebook and Instagram perform."
       },
       {
         "title": "4. Managing Cookies",
-        "content": "You can manage or disable cookies through your device or browser settings. However, disabling cookies may affect certain features or your user experience."
+        "content": "You can give or withdraw your consent to marketing cookies at any time via the “Cookie Settings” link in the page footer. You can also manage or disable cookies through your device or browser settings. However, disabling cookies may affect certain features or your user experience."
       },
       {
         "title": "5. Third-Party Cookies",
-        "content": "We may allow trusted third parties, such as analytics providers, to place cookies on our app to gather usage data or serve relevant ads."
+        "content": "We may allow trusted third parties, such as analytics providers, to place cookies on our app to gather usage data or serve relevant ads. If you give us your consent, we use Meta Pixel, a tool provided by Meta Platforms Ireland Ltd. Meta then receives data about your visit (such as the pages you view, your IP address and a browser identifier) and may link it to your Facebook or Instagram account."
       },
       {
         "title": "6. Updates to This Policy",

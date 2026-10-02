@@ -1,5 +1,6 @@
 import { Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { openCookieSettings } from '@/lib/cookieConsent';
 
 const Facebook = ({ size = 24 }: { size?: number }) => (
   <svg
@@ -165,7 +166,7 @@ const Footer = () => {
           <div className="text-white/50 text-sm">
             © {currentYear} usetrislovensko.sk. {t('footer.allRightsReserved')}
           </div>
-          <div className="mt-4 md:mt-0 flex space-x-6">
+          <div className="mt-4 md:mt-0 flex flex-wrap justify-center gap-x-6 gap-y-2">
             <a
               href="PrivacyPolicy"
               className="text-white/50 hover:text-white text-sm"
@@ -184,6 +185,13 @@ const Footer = () => {
             >
               {t('footer.cookiePolicy')}
             </a>
+            <button
+              type="button"
+              onClick={openCookieSettings}
+              className="text-white/50 hover:text-white text-sm"
+            >
+              {t('footer.cookieSettings')}
+            </button>
           </div>
         </div>
       </div>

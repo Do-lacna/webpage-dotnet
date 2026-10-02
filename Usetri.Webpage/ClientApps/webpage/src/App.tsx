@@ -4,6 +4,7 @@ import { TooltipProvider } from '@/components/ui/tooltip';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
+import CookieConsent from './components/CookieConsent';
 import Index from './pages/Index';
 
 const NotFound = lazy(() => import('./pages/NotFound'));
@@ -39,6 +40,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
+      <CookieConsent />
       <BrowserRouter>
         <Suspense fallback={null}>
           <Routes>

@@ -688,6 +688,14 @@
     ]
   },
 
+  "cookieConsent": {
+    "title": "Súhlas s cookies",
+    "description": "Môžeme použiť marketingové cookies (Meta Pixel) na meranie našich reklám na Facebooku a Instagrame?",
+    "learnMore": "Viac o cookies",
+    "accept": "Súhlasím",
+    "decline": "Odmietnuť"
+  },
+
   "cookiePolicy": {
     "pageTitle": "Zásady cookies",
     "pageSubtitle": "Zisti, ako a prečo používame cookies v našej aplikácii.",
@@ -702,15 +710,15 @@
       },
       {
         "title": "3. Typy cookies, ktoré používame",
-        "content": "- **Nevyhnutné cookies**: Potrebné pre správne fungovanie aplikácie.\n- **Analytické cookies**: Pomáhajú nám sledovať používanie a výkon.\n- **Preferenčné cookies**: Zapamätajú si tvoje preferencie, ako napríklad jazyk a rozloženie."
+        "content": "- **Nevyhnutné cookies**: Potrebné pre správne fungovanie aplikácie.\n- **Analytické cookies**: Pomáhajú nám sledovať používanie a výkon.\n- **Preferenčné cookies**: Zapamätajú si tvoje preferencie, ako napríklad jazyk a rozloženie.\n- **Marketingové cookies**: Ukladajú sa iba s tvojím súhlasom. Používame Meta Pixel (cookies _fbp a _fbc) na meranie účinnosti našich reklám na Facebooku a Instagrame."
       },
       {
         "title": "4. Správa cookies",
-        "content": "Cookies môžeš spravovať alebo zakázať prostredníctvom nastavení svojho zariadenia alebo prehliadača. Zakázanie cookies však môže ovplyvniť určité funkcie alebo tvoju používateľskú skúsenosť."
+        "content": "Súhlas s marketingovými cookies môžeš kedykoľvek udeliť alebo odvolať cez odkaz „Nastavenia cookies“ v pätičke stránky. Cookies môžeš tiež spravovať alebo zakázať prostredníctvom nastavení svojho zariadenia alebo prehliadača. Zakázanie cookies však môže ovplyvniť určité funkcie alebo tvoju používateľskú skúsenosť."
       },
       {
         "title": "5. Cookies tretích strán",
-        "content": "Môžeme povoliť dôveryhodným tretím stranám, ako sú poskytovatelia analytických služieb, umiestniť cookies v našej aplikácii na zhromažďovanie údajov o používaní alebo zobrazovanie relevantných reklám."
+        "content": "Môžeme povoliť dôveryhodným tretím stranám, ako sú poskytovatelia analytických služieb, umiestniť cookies v našej aplikácii na zhromažďovanie údajov o používaní alebo zobrazovanie relevantných reklám. Ak nám na to dáš súhlas, používame nástroj Meta Pixel od spoločnosti Meta Platforms Ireland Ltd. Meta tak získava údaje o tvojej návšteve (napríklad zobrazené stránky, IP adresu a identifikátor prehliadača) a môže ich spojiť s tvojím účtom na Facebooku alebo Instagrame."
       },
       {
         "title": "6. Aktualizácie týchto zásad",
