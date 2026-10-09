@@ -15,11 +15,17 @@ export interface CategoryDto {
   id: number;
   name: string | null;
   image_url: string | null;
+}
+
+// Full category shape as nested inside a ProductDto (richer than the
+// search-list CategoryDto above, which the backend already curates/filters).
+export interface ProductCategoryDto extends CategoryDto {
   parent_id: number | null;
   is_purchasable: boolean;
   popularity: number;
   default_amount: number | null;
   default_unit: string | null;
+  is_general: boolean;
   path_from_root: string[] | null;
   path_from_root_numeric: number[] | null;
 }
@@ -41,6 +47,7 @@ export interface ShopPriceDto {
   discount_price: DiscountPriceDto | null;
   valid_from: string | null;
   valid_to: string | null;
+  price_updated_at: string;
 }
 
 export interface ProductDto {
@@ -50,33 +57,27 @@ export interface ProductDto {
   brand: string | null;
   unit: UnitDto;
   image_url: string | null;
-  category: CategoryDto;
+  category: ProductCategoryDto;
   is_category_checked: boolean;
   is_free_weight_product: boolean;
   created_at: string;
   external_shop_ids: Record<string, string> | null;
 }
 
-export interface ShopProductDto {
-  detail: ProductDto;
-  shops_prices: ShopPriceDto[] | null;
+// One shop's best-matching product + price for a category, already resolved server-side.
+export interface ShopCategoryPriceDto {
+  shop_id: number;
+  product: ProductDto;
+  price: ShopPriceDto;
+  product_id: number;
 }
 
 export interface GetCategoriesResponse {
-  count: number;
   categories: CategoryDto[] | null;
 }
 
-export interface GetProductsResponse {
-  count: number;
-  products: ShopProductDto[] | null;
-}
-
-export interface GetProductsParams {
-  search?: string;
-  categoryId?: number;
-  limit?: number;
-  offset?: number;
+export interface GetCategoryPricesResponse {
+  shop_prices: ShopCategoryPriceDto[] | null;
 }
 
 async function catalogFetch<T>(
@@ -100,29 +101,18 @@ async function catalogFetch<T>(
   return response.json() as Promise<T>;
 }
 
-export function fetchCategories(): Promise<GetCategoriesResponse> {
-  // Fetch a large page so the full category tree can be built client-side.
+export function fetchCategories(
+  categoryName: string,
+): Promise<GetCategoriesResponse> {
   return catalogFetch<GetCategoriesResponse>('/api/categories', {
-    Limit: 1000,
-    Offset: 0,
+    category_name: categoryName,
   });
 }
 
-export function fetchProducts(
-  params: GetProductsParams,
-): Promise<GetProductsResponse> {
-  return catalogFetch<GetProductsResponse>('/api/products', {
-    search_type: 'HybridSearch',
-    search: params.search,
-    category_id: params.categoryId,
-    Limit: params.limit,
-    Offset: params.offset,
-  });
-}
-
-// Root/intermediate categories aren't returned by /categories (only leaf
-// categories are), but their images still live on the CDN; proxied through
-// this app so the storage host isn't exposed to the browser.
-export function getCategoryImageUrl(categoryId: number): string {
-  return `${API_BASE_URL}/api/categories/${categoryId}/image`;
+export function fetchCategoryPrices(
+  categoryId: number,
+): Promise<GetCategoryPricesResponse> {
+  return catalogFetch<GetCategoryPricesResponse>(
+    `/api/categories/${categoryId}/prices`,
+  );
 }

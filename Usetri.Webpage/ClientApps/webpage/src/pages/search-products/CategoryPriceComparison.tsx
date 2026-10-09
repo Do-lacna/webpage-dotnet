@@ -13,7 +13,7 @@ const CategoryPriceComparison = ({
 }: CategoryPriceComparisonProps) => {
   const { t } = useTranslation();
   const { shopResults, cheapestShopIds, hasMatches, isLoading, isError } =
-    useCategoryPriceComparison(category);
+    useCategoryPriceComparison(category.id);
 
   if (isLoading) {
     return (

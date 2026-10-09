@@ -1,12 +1,12 @@
 import { Badge } from '@/components/ui/badge';
-import { type ShopPriceDto, type ShopProductDto } from '@/lib/catalogApi';
+import { type ProductDto, type ShopPriceDto } from '@/lib/catalogApi';
 import { Trophy } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { formatPrice, type ShopInfo } from './shopPricing';
 
 interface ShopProductCardProps {
   shop: ShopInfo;
-  product: ShopProductDto | null;
+  product: ProductDto | null;
   price: number | null;
   shopPrice: ShopPriceDto | null;
   isCheapest: boolean;
@@ -20,8 +20,7 @@ const ShopProductCard = ({
   isCheapest,
 }: ShopProductCardProps) => {
   const { t } = useTranslation();
-  const detail = product?.detail;
-  const unit = detail?.unit;
+  const unit = product?.unit;
   const amountLabel = unit
     ? `${unit.original_amount ?? unit.normalized_amount} ${
         unit.original_unit ?? unit.normalized_unit ?? ''
@@ -62,10 +61,10 @@ const ShopProductCard = ({
       </div>
 
       <div className="flex h-40 w-40 items-center justify-center overflow-hidden rounded-xl bg-white">
-        {detail?.image_url ? (
+        {product?.image_url ? (
           <img
-            src={detail.image_url}
-            alt={detail.name ?? ''}
+            src={product.image_url}
+            alt={product.name ?? ''}
             className="h-full w-full object-contain"
           />
         ) : (
@@ -77,11 +76,11 @@ const ShopProductCard = ({
 
       <div className="min-w-0 w-full">
         <p className="truncate text-sm font-semibold text-brand-indigo">
-          {detail?.name ?? '—'}
+          {product?.name ?? '—'}
         </p>
-        {detail && (
+        {product && (
           <p className="truncate text-xs text-brand-indigo/60">
-            {[detail.brand, amountLabel].filter(Boolean).join(' · ')}
+            {[product.brand, amountLabel].filter(Boolean).join(' · ')}
           </p>
         )}
       </div>

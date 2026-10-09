@@ -9,15 +9,10 @@ public static class CatalogProxyEndpoints
         {
             client.BaseAddress = new Uri(configuration["Catalog:BaseUrl"]!);
         });
-        services.AddHttpClient("CatalogImages", client =>
-        {
-            client.BaseAddress = new Uri(configuration["Catalog:ImageBaseUrl"]!);
-        });
         services.AddOutputCache(options =>
         {
             options.AddPolicy("Categories", p => p.Expire(TimeSpan.FromMinutes(10)));
-            options.AddPolicy("Products", p => p.Expire(TimeSpan.FromSeconds(30)));
-            options.AddPolicy("CategoryImages", p => p.Expire(TimeSpan.FromHours(24)));
+            options.AddPolicy("CategoryPrices", p => p.Expire(TimeSpan.FromSeconds(30)));
         });
 
         return services;
@@ -28,30 +23,18 @@ public static class CatalogProxyEndpoints
         endpoints.MapGet("/api/categories", async (HttpRequest request, IHttpClientFactory httpClientFactory) =>
         {
             var client = httpClientFactory.CreateClient("CatalogApi");
-            using var upstreamResponse = await client.GetAsync($"/categories{request.QueryString}");
+            using var upstreamResponse = await client.GetAsync($"/public/categories{request.QueryString}");
             var body = await upstreamResponse.Content.ReadAsStringAsync();
             return Results.Content(body, "application/json", statusCode: (int)upstreamResponse.StatusCode);
         }).CacheOutput("Categories");
 
-        endpoints.MapGet("/api/products", async (HttpRequest request, IHttpClientFactory httpClientFactory) =>
+        endpoints.MapGet("/api/categories/{categoryId:int}/prices", async (int categoryId, HttpRequest request, IHttpClientFactory httpClientFactory) =>
         {
             var client = httpClientFactory.CreateClient("CatalogApi");
-            using var upstreamResponse = await client.GetAsync($"/products{request.QueryString}");
+            using var upstreamResponse = await client.GetAsync($"/public/categories/{categoryId}/prices{request.QueryString}");
             var body = await upstreamResponse.Content.ReadAsStringAsync();
             return Results.Content(body, "application/json", statusCode: (int)upstreamResponse.StatusCode);
-        }).CacheOutput("Products");
-
-        endpoints.MapGet("/api/categories/{id:int}/image", async (int id, IHttpClientFactory httpClientFactory) =>
-        {
-            var client = httpClientFactory.CreateClient("CatalogImages");
-            using var upstreamResponse = await client.GetAsync($"/images/categories/{id}.jpg");
-            if (!upstreamResponse.IsSuccessStatusCode)
-            {
-                return Results.NotFound();
-            }
-            var bytes = await upstreamResponse.Content.ReadAsByteArrayAsync();
-            return Results.File(bytes, "image/jpeg");
-        }).CacheOutput("CategoryImages");
+        }).CacheOutput("CategoryPrices");
 
         return endpoints;
     }

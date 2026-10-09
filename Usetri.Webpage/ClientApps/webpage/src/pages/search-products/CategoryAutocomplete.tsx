@@ -66,29 +66,17 @@ const CategoryAutocomplete = ({
             </p>
           ) : (
             <ul className="space-y-1">
-              {suggestions.map((category) => {
-                const breadcrumb =
-                  category.path_from_root && category.path_from_root.length > 1
-                    ? category.path_from_root.slice(0, -1).join(' > ')
-                    : null;
-
-                return (
-                  <li key={category.id}>
-                    <button
-                      type="button"
-                      onClick={() => handleSelect(category)}
-                      className="flex w-full flex-col items-start rounded-xl px-3 py-2 text-left text-brand-indigo transition-colors hover:bg-brand-nude focus:bg-brand-nude focus:outline-none"
-                    >
-                      <span className="font-medium">{category.name}</span>
-                      {breadcrumb && (
-                        <span className="text-xs text-brand-indigo/50">
-                          {breadcrumb}
-                        </span>
-                      )}
-                    </button>
-                  </li>
-                );
-              })}
+              {suggestions.map((category) => (
+                <li key={category.id}>
+                  <button
+                    type="button"
+                    onClick={() => handleSelect(category)}
+                    className="flex w-full flex-col items-start rounded-xl px-3 py-2 text-left text-brand-indigo transition-colors hover:bg-brand-nude focus:bg-brand-nude focus:outline-none"
+                  >
+                    <span className="font-medium">{category.name}</span>
+                  </button>
+                </li>
+              ))}
             </ul>
           )}
         </div>

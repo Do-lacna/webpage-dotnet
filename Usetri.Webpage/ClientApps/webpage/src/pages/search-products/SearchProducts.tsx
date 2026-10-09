@@ -52,6 +52,13 @@ const SearchProducts = () => {
 
         <div className="mt-20">
           <CategoryAutocomplete onSelectCategory={handleSelectCategory} />
+          {!isLimitReached && (
+            <p className="mt-3 text-center text-sm text-brand-indigo/60">
+              {t('categorySearch.searchesRemaining', {
+                count: remainingSearches,
+              })}
+            </p>
+          )}
         </div>
 
         {selectedCategory && (
